@@ -25,6 +25,13 @@ document.addEventListener( 'DOMContentLoaded', function( event ) {
     return "iOS";
   }
     $('link[href="index/css/hovers.css"]').prop('disabled', false);
+    $(".container > div")
+    .mouseover(function() {
+      $(this).find("div").show();
+    })
+    .mouseout(function() {
+      $(this).find("div").hide();
+    });
   return "Desktop";
 }
 
