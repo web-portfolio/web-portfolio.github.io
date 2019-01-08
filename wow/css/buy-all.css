@@ -1,0 +1,142 @@
+.bc {
+  background-image: url("../img/body-bg-bc.png");
+  background-position: top;
+}
+
+.lk {
+  background-image: url("../img/body-bg-lk.png");
+  background-position: top;
+}
+
+.cata {
+  background-image: url("../img/body-bg-cata.png");
+  background-position: center;
+}
+
+.pandaria {
+  background-image: url("../img/body-bg-pandaria.png");
+  background-position: top;
+}
+
+.wod {
+  background-image: url("../img/body-bg-wod.png");
+  background-position: center;
+}
+
+.legion {
+  background-image: url("../img/body-bg-home-page.png");
+  background-position: top;
+}
+
+.bfa {
+  background-image: url("../img/body-bg-bfa.png");
+  background-position: top;
+}
+
+.top-image{
+  margin-top: 74px;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.top-image img{
+  max-width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  border-bottom: 5px solid #34231a;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+.top-content{
+  text-align: center;
+  margin-bottom: 20px;
+}
+.top-content>*{
+  display: inline-block;
+  vertical-align: top;
+  width: 48%;
+  box-sizing: border-box;
+}
+
+.game-info-scroll{
+  text-align: left;
+  color: white;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+.purchase-content{
+  margin-right: 2%;
+}
+.purchase-content>*{
+  display: inline-block;
+  vertical-align: top;
+}
+.cover-art{
+  width: 58%;
+  padding-right: 2%;
+  box-sizing: border-box;
+}
+.cover-art-menu{
+  width: 40%;
+  margin-left: -6px;
+}
+.cover-art img{
+  max-width: 100%;
+}
+.cover-art-menu li{
+  cursor: pointer;
+  list-style: none;
+  border: 2px solid #34231a;
+  padding: 10px;
+  background-color: #0f0f0f;
+  border-top: 2px solid #34231a;
+  border-left: 2px solid #34231a;
+  border-bottom: 2px solid black;
+  border-right: 2px solid black;
+  border-top-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  margin-bottom: 10px;
+  color: #996019;
+  opacity: 0.85;
+}
+
+.cover-art-menu li span{
+  display: block;
+  text-align: center;
+}
+.cover-art-btn{
+  cursor: pointer;
+  display: block;
+  background-color: #0e86ca;
+  border-top: 2px solid #075b7d;
+  border-left: 2px solid #075b7d;
+  border-bottom: 2px solid #03212d;
+  border-right: 2px solid #03212d;
+  outline: none;
+  text-align: center;
+  color: white;
+  border-top-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  width: 100%;
+  padding: 10px;
+}
+
+.cover-art-tab-content{
+  display: none;
+  text-align: center;
+}
+.cover-art-current{
+  display: block;
+}
+.cover-art-menu .cover-art-current{
+  border-top: 2px solid black;
+  border-left: 2px solid black;
+  border-bottom: 2px solid #34231a;
+  border-right: 2px solid #34231a;
+  color: #c1b575;
+  background-color: #1e1e1e;
+  opacity: 0.85;
+}
