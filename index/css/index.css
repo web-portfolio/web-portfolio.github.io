@@ -7,7 +7,7 @@ body, nav, div, button, ul, li, ol {
 
 body {
   background-image: url("../img/bg-index.jpg");
-  background-position: top;
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
