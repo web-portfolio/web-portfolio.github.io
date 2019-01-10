@@ -5,14 +5,20 @@ body, nav, div, button, ul, li, ol {
   font-family: Verdana, Geneva, sans-serif
 }
 
-body {
+/* body {
   background-image: url("../img/bg-index.jpg");
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
+} */
+html {
+  background: url("../img/bg-index.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
-
 .container {
   width: 100%;
   max-width: 1024px;
