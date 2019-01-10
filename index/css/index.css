@@ -5,32 +5,25 @@ body, nav, div, button, ul, li, ol {
   font-family: Verdana, Geneva, sans-serif
 }
 
-body:before {
-  content: "";
-  display: block;
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  background: url("../img/bg-index.jpg") no-repeat center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
+body {
+  background-image: url("../img/bg-index.jpg");
+  background-position: top;
+  background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
 }
 
-.container{
+.container {
   width: 100%;
   max-width: 1024px;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  margin-bottom: 3%;
 }
 
-.container > div{
+.container>div {
   width: 30%;
   margin-top: 3%;
   border: 2px solid #60a9ca;
@@ -38,7 +31,7 @@ body:before {
   position: relative;
 }
 
-.container > div > div{
+.container>div>div {
   display: none;
   color: #ffffff;
   font-size: 1.5em;
@@ -49,14 +42,14 @@ body:before {
   padding: 5px;
 }
 
-.empty{
+.empty {
   background: rgba(1, 8, 16, 0.7);
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.wow{
+.wow {
   background-image: url("../img/bg-wow.jpg");
   background-position: top;
   background-repeat: no-repeat;
@@ -64,28 +57,34 @@ body:before {
 }
 
 @keyframes spin {
- from{
- transform: rotateY(0deg);
- moz-transform: rotateY(0deg);
- ms-transform: rotateY(0deg);
- }
- to{
- transform: rotateY(360deg);
- moz-transform: rotateY(360deg);
- ms-transform: rotateY(360deg);
- }
+  from {
+    transform: rotateY(0deg);
+    moz-transform: rotateY(0deg);
+    ms-transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+    moz-transform: rotateY(360deg);
+    ms-transform: rotateY(360deg);
+  }
 }
-@-webkit-keyframes spin{
- from{-webkit-transform: rotateY(0deg);}
- to{-webkit-transform: rotateY(360deg);}
+
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotateY(0deg);
+  }
+  to {
+    -webkit-transform: rotateY(360deg);
+  }
 }
-.image-spin{
- animation-name: spin;
- animation-timing-function: linear;
- animation-iteration-count: infinite;
- animation-duration: 4s;
- -webkit-animation-name: spin;
- -webkit-animation-timing-function: linear;
- -webkit-animation-iteration-count: infinite;
- -webkit-animation-duration: 4s;
+
+.image-spin {
+  animation-name: spin;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-duration: 4s;
+  -webkit-animation-name: spin;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-duration: 4s;
 }
