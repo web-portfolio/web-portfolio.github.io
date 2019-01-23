@@ -14,10 +14,6 @@
  * RESETS
  * ====================================================================================================================*/
 
-.flex-container a:hover, .flex-slider a:hover {
-  outline: none;
-}
-
 .slides, .slides>li, .flex-control-nav, .flex-direction-nav {
   margin: 0;
   padding: 0;
@@ -50,7 +46,6 @@
 .flexslider {
   position: relative;
   zoom: 1;
-  margin-top: 74px;
 }
 
 .flexslider .slides {
@@ -84,11 +79,6 @@
   cursor: pointer;
   text-indent: -9999px;
   margin-right: -9px;
-}
-
-.flex-control-paging li a:hover {
-  background: #c1b575;
-  opacity: 0.5;
 }
 
 .flex-control-paging li a.flex-active {
@@ -130,12 +120,4 @@
   border-top-left-radius: 6px;
   border-bottom-left-radius: 6px;
   border-right: none;
-}
-
-.flex-prev:hover, .flex-next:hover {
-  color: #c1b575;
-}
-
-.flexslider:hover .flex-next, .flexslider:hover .flex-prev {
-  display: block;
 }

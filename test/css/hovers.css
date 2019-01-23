@@ -1,5 +1,28 @@
-body * {
-  cursor: default !important;
+/* Slider Hovers */
+.flex-container a:hover, .flex-slider a:hover {
+  outline: none;
+}
+
+.flex-control-paging li a:hover {
+  background: #c1b575;
+  opacity: 0.5;
+}
+
+.flex-prev:hover, .flex-next:hover {
+  color: #c1b575;
+}
+
+.flexslider:hover .flex-next, .flexslider:hover .flex-prev {
+  display: block;
+}
+
+.flex-prev:hover, .flex-next:hover{
+  background-color: black;
+}
+/* Slider Hovers END*/
+
+.tabs li:hover, .months li:hover, .countries li:hover, .questions li:hover {
+  background: #1e1e1e
 }
 
 .footer-nav li:hover, .footer-email a:hover, .footer-phone a:hover, .footer-nav li:hover a  {
@@ -25,9 +48,7 @@ body * {
 .google-btn:hover, .reg-google-btn:hover {
   background: #ef5d58
 }
-.tabs li:hover, .months li:hover, .countries li:hover, .questions li:hover {
-  background: #1e1e1e
-}
+
 .inactive:hover  {
   border-color: #996019
 }
@@ -44,9 +65,7 @@ body * {
   border-top-left-radius: 10px;
   border-bottom-right-radius: 10px;
 }
-.flex-prev:hover, .flex-next:hover{
-  background-color: black;
-}
+
 .img_gallery h1 a:hover,
 .img_gallery h1 a:hover span {
     color: #666;
