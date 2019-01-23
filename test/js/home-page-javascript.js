@@ -13,7 +13,7 @@ document.addEventListener( 'DOMContentLoaded', function( event ) {
 
   $(window).on("load", function() {
     $(".header").load("header.html .container > *");
-    $("head").append($("<style type='text/css'>@import url('../css/header/header.css')</style>"));
+    $("head").append($("<style type='text/css'>@import url('css/header/header.css')</style>"));
   });
 
   // $(".login-btn").click(function() {
