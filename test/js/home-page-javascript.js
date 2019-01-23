@@ -1,10 +1,10 @@
 document.addEventListener( 'DOMContentLoaded', function( event ) {
   $(window).on("load resize", function() {
-    overlayResize();
-    policyFlowResize();
-    iframeResize();
-    hovers();
-    fixedDivPosition();
+    // overlayResize();
+    // policyFlowResize();
+    // iframeResize();
+    // hovers();
+    // fixedDivPosition();
     $(".last-patch-notes").css("height", "auto");
     containerH = $(".last-patch-notes").outerHeight();
     $(".patch-btn-content-current").hide().removeClass("patch-btn-content-current");
