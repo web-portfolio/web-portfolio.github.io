@@ -36,4 +36,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
   $(".wow").click(function() {
     window.location = "wow/home-page.html";
   });
+  $(".test").click(function() {
+    window.location = "test/home-page.html";
+  });
 });
