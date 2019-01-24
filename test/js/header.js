@@ -114,7 +114,7 @@ function getMobileOperatingSystem() {
 
   if (winPhone || ios || android) {
     $('link[href="css/hovers.css"]').prop('disabled', true);
-    $("body *").css({cursor : default !important});
+    $("body *").css({"cursor" : "default !important"});
     $(".mob-close").show();
     $(".game > img").click(function() {
       var hImg = $(this).outerHeight();
