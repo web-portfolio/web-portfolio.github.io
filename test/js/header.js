@@ -1,4 +1,4 @@
-// hovers();
+getMobileOperatingSystem();
 fixedLoginForm();
 navResize();
 
@@ -52,6 +52,12 @@ $(".lp-email").keypress(function(e) {
     }
 });
 
+$(".login-after-pass").keypress(function(e) {
+    if(e.which == 13) {
+      $(".login-btn").click();
+    }
+});
+
 function mailCheck() {
   if ($(".login-form-inputs input[type='text']").val() == "") {
     $(".login-user-error").show();
@@ -85,116 +91,25 @@ $(".profile").click(function() {
   $(".games").removeClass("games-active");
 });
 
-$(".alternative-signin").click(function() {
-  $(".alternative-signin-content").stop(true,false).slideToggle();
-  $(this).toggleClass("alternative-signin-active");
-});
-
 function fixedLoginForm(){
   var windowW = $(window).width();
   if (windowW > 1920){
     var x = (windowW - 1920)/2;
-    $(".alternative-signin-content, .login-form").css({right:x});
+    $(".login-form").css({right:x});
   } else{
-    $(".alternative-signin-content, .login-form").css({right:0});
+    $(".login-form").css({right:0});
   }
 }
 
-function hovers(){
-  if (window.matchMedia("(min-width: 768px)").matches){
-    $(".nav-logo, .free-acc-logo").hover(function() {
-      $(".nav-logo img, .free-acc-logo img").prop("src", "img/nav-logo-hover.png");
-    }, function() {
-      $(".nav-logo img, .free-acc-logo img").prop("src", "img/nav-logo.png");
-    });
-    $(".games").hover(function() {
-      $(".buy-game-icon").prop("src", "img/ico/buy-hover.png");
-    }, function() {
-      $(".buy-game-icon").prop("src", "img/ico/buy.png");
-    });
-    $(".profile").hover(function() {
-      $(".profile-icon").prop("src", "img/ico/profile-hover.png");
-    }, function() {
-      $(".profile-icon").prop("src", "img/ico/profile.png");
-    });
-    $(".home").hover(function() {
-      $(".home-icon").prop("src", "img/ico/home-hover.png");
-    }, function() {
-      $(".home-icon").prop("src", "img/ico/home.png");
-    });
-    $(".alternative-signin").hover(function() {
-      $(".setup").prop("src", "img/ico/setup-hover.png");
-    }, function() {
-      $(".setup").prop("src", "img/ico/setup.png");
-    });
+function getMobileOperatingSystem() {
+  var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+  var winPhone = /windows phone/i.test(userAgent);
+  var ios = /iPad|iPhone|iPod/.test(userAgent) && !window.MSStream;
+  var android = /android/i.test(userAgent);
 
-    $(".back-to-top").hover(function() {
-      x = true;
-      animate();
-    }, function() {
-      $(".back-to-top").stop(true, false);
-      $(".back-to-top").animate({
-        "padding": "0"
-      }, 300);
-      x = false;
-    });
-    $(".footer-phone").hover(function() {
-      $(this).css("background-image", "url('img/ico/phone-hover.png')");
-    }, function() {
-      $(this).css("background-image", "url('img/ico/phone.png')");
-    });
-    $(".footer-email").hover(function() {
-      $(this).css("background-image", "url('img/ico/mail-hover.png')");
-    }, function() {
-      $(this).css("background-image", "url('img/ico/mail.png')");
-    });
-    $(".live-chat").hover(function() {
-      $(this).css("background-image", "url('img/ico/chat-hover.png')");
-    }, function() {
-      $(this).css("background-image", "url('img/ico/chat.png')");
-    });
-    $(".cookie").hover(function() {
-      $(this).css("background-image", "url('img/ico/cookie-hover.png')");
-    }, function() {
-      $(this).css("background-image", "url('img/ico/cookie.png')");
-    });
-    $(".privacy").hover(function() {
-      $(this).css("background-image", "url('img/ico/privacy-hover.png')");
-    }, function() {
-      $(this).css("background-image", "url('img/ico/privacy.png')");
-    });
-    $(".f1").hover(function() {
-      $(this).css("background-image", "url('img/ico/f1-hover.png')");
-    }, function() {
-      $(this).css("background-image", "url('img/ico/f1.png')");
-    });
-    $(".f2").hover(function() {
-      $(this).css("background-image", "url('img/ico/f2-hover.png')");
-    }, function() {
-      $(this).css("background-image", "url('img/ico/f2.png')");
-    });
-    $(".f3").hover(function() {
-      $(this).css("background-image", "url('img/ico/f3-hover.png')");
-    }, function() {
-      $(this).css("background-image", "url('img/ico/f3.png')");
-    });
-    $(".f4").hover(function() {
-      $(this).css("background-image", "url('img/ico/f4-hover.png')");
-    }, function() {
-      $(this).css("background-image", "url('img/ico/f4.png')");
-    });
-    $(".game").hover(function() {
-      var hImg = $("img", this).outerHeight();
-      var wImg = $("img", this).outerWidth();
-      $(".buy-this", this).outerHeight(hImg);
-      $(".buy-this", this).outerWidth(wImg);
-      $(".buy-this", this).slideDown();
-    }, function() {
-      $(".buy-this", this).stop(true, false).slideUp();
-    });
-    // $(".buy-games").mCustomScrollbar("disable");
-  } else{
-    $("body *").unbind("mouseenter mouseleave");
+  if (winPhone || ios || android) {
+    $('link[href="css/hovers.css"]').prop('disabled', true);
+    // $("body *").unbind("mouseenter mouseleave");
     $(".game > img").click(function() {
       var hImg = $(this).outerHeight();
       var wImg = $(this).outerWidth();
@@ -206,6 +121,38 @@ function hovers(){
       $(this).parent().slideUp();
     });
     // $(".buy-games").mCustomScrollbar("update");
+    return "Phone Device";
+  } else {
+    $('link[href="css/hovers.css"]').prop('disabled', false);
+    $(".nav-logo").hover(function() {
+      $(".nav-logo img").prop("src", "img/nav-logo-hover.png");
+    }, function() {
+      $(".nav-logo img").prop("src", "img/nav-logo.png");
+    });
+
+    $(".games").hover(function() {
+      $(".buy-game-icon").prop("src", "img/ico/buy-hover.png");
+    }, function() {
+      $(".buy-game-icon").prop("src", "img/ico/buy.png");
+    });
+
+    $(".profile").hover(function() {
+      $(".profile-icon").prop("src", "img/ico/profile-hover.png");
+    }, function() {
+      $(".profile-icon").prop("src", "img/ico/profile.png");
+    });
+
+    $(".game").hover(function() {
+      var hImg = $("img", this).outerHeight();
+      var wImg = $("img", this).outerWidth();
+      $(".buy-this", this).outerHeight(hImg);
+      $(".buy-this", this).outerWidth(wImg);
+      $(".buy-this", this).slideDown();
+    }, function() {
+      $(".buy-this", this).stop(true, false).slideUp();
+    });
+    // $(".buy-games").mCustomScrollbar("disable");
+    return "Desktop";
   }
 }
 
@@ -213,20 +160,8 @@ function hovers(){
 $(".reg-btn").click(function() {
   window.location = "reg-form.html";
 });
-$(".home, .nav-logo, .free-acc-logo").click(function() {
+$(".home, .nav-logo").click(function() {
   window.location = "home-page.html";
-});
-$(".f1").click(function() {
-  window.location = "https://bg-bg.facebook.com/Warcraft/";
-});
-$(".f2").click(function() {
-  window.location = "https://twitter.com/warcraft?lang=bg";
-});
-$(".f3").click(function() {
-  window.location = "https://www.youtube.com/results?search_query=world+of+warcraft+trailers";
-});
-$(".f4").click(function() {
-  window.location = "https://plus.google.com/s/world%20of%20warcraft/top";
 });
 $(".purchase-btn-bc").click(function() {
   window.location = "bc.html";

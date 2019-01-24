@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
 
     if (winPhone || ios || android) {
       $('link[href="index/css/hovers.css"]').prop('disabled', true);
-      return "Not Desktop Device";
+      return "Phone Device";
     } else {
       $('link[href="index/css/hovers.css"]').prop('disabled', false);
       $(".container > div")
