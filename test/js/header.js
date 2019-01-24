@@ -18,18 +18,24 @@ $(".login-btn").click(function() {
 });
 
 function userCheck() {
+  let user;
   if ($(".login-form-inputs input[type='text']").val() == "") {
     $(".login-user-error").show();
+    user = false;
   } else {
     $(".login-user-error").hide();
+    user = true;
   }
 }
 
 function passCheck() {
+  let pass;
   if ($(".login-form-inputs input[type='password']").val() == "") {
     $(".login-pass-error").show();
+    pass = false;
   } else {
     $(".login-pass-error").hide();
+    pass = true;
   }
 }
 
@@ -53,7 +59,7 @@ $(".lp-email").keypress(function(e) {
 });
 
 $(".login-after-pass").keypress(function(e) {
-    if(e.which == 13) {
+    if(e.which == 13 && user == true && pass == true) {
       $(".login-btn").click();
     }
 });
