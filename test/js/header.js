@@ -17,8 +17,8 @@ $(".login-btn").click(function() {
   passCheck();
 });
 
+var user, pass;
 function userCheck() {
-  let user;
   if ($(".login-form-inputs input[type='text']").val() == "") {
     $(".login-user-error").show();
     user = false;
@@ -27,9 +27,7 @@ function userCheck() {
     user = true;
   }
 }
-
 function passCheck() {
-  let pass;
   if ($(".login-form-inputs input[type='password']").val() == "") {
     $(".login-pass-error").show();
     pass = false;
