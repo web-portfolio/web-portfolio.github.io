@@ -10,15 +10,7 @@ document.addEventListener( 'DOMContentLoaded', function( event ) {
   $(window).on("load", function() {
     $(".header").load("header.html .container > *");
     $("head").append($("<style type='text/css'>@import url('css/header.css')</style>"));
-    $.getScript("js/header.js")
-    .done(function() {
-      $(window).on("load resize", function() {
-        alert("ABCD");
-      });
-    })
-    .fail(function() {
-      //failed
-    });
+    $.getScript("js/header.js");
   });
 
   $(".flexslider").flexslider({
