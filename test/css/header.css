@@ -30,6 +30,18 @@
   width: 35px;
 }
 
+.mob-close{
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  border-radius: 5px !important;
+  width: 20px !important;
+  height: 20px !important;
+  line-height: 16px;
+  font-size: 0.9em;
+  display: none;
+}
+
 .buy-game-icon-hover, .profile-icon-hover, .up-arrow, .games-active .buy-game-icon,
 .games-active .down-arrow, .profile-active .profile-icon, .profile-active .down-arrow,
 .home-hover, .setup-hover, .reg-up-arrow, .alternative-signin-active .reg-down-arrow,
