@@ -114,6 +114,7 @@ function getMobileOperatingSystem() {
   if (winPhone || ios || android) {
     $('link[href="css/hovers.css"]').prop('disabled', true);
     // $("body *").unbind("mouseenter mouseleave");
+    $(".mob-close").show();
     $(".game > img").click(function() {
       var hImg = $(this).outerHeight();
       var wImg = $(this).outerWidth();
@@ -127,6 +128,7 @@ function getMobileOperatingSystem() {
     // $(".buy-games").mCustomScrollbar("update");
     return "Phone Device";
   } else {
+    $(".mob-close").hide();
     $('link[href="css/hovers.css"]').prop('disabled', false);
     $(".nav-logo").hover(function() {
       $(".nav-logo img").prop("src", "img/nav-logo-hover.png");
