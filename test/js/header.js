@@ -368,7 +368,7 @@ function hovers(){
     }, function() {
       $(".buy-this", this).stop(true, false).slideUp();
     });
-    $(".buy-games").mCustomScrollbar("disable");
+    // $(".buy-games").mCustomScrollbar("disable");
   } else{
     $("body *").unbind("mouseenter mouseleave");
     $(".game > img").click(function() {
@@ -381,7 +381,7 @@ function hovers(){
     $(".mob-close").click(function(){
       $(this).parent().slideUp();
     });
-    $(".buy-games").mCustomScrollbar("update");
+    // $(".buy-games").mCustomScrollbar("update");
   }
 }
 
