@@ -11,12 +11,14 @@ document.addEventListener( 'DOMContentLoaded', function( event ) {
     $(".header").load("header.html .container > *");
     $("head").append($("<style type='text/css'>@import url('css/header.css')</style>"));
     $.getScript("js/header.js");
-    // .done(function() {
-    //   //loaded
-    // })
-    // .fail(function() {
-    //   //failed
-    // });
+    .done(function() {
+      $(window).on("load resize", function() {
+        alert("ABCD");
+      });
+    })
+    .fail(function() {
+      //failed
+    });
   });
 
   $(".flexslider").flexslider({

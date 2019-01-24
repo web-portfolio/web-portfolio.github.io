@@ -4,7 +4,9 @@ $(window).on("load resize", function() {
   iframeResize();
   hovers();
   fixedDivPosition();
+  alert("on load resize");
 });
+alert("without load resize");
 
 $(".login-btn").click(function() {
   userCheck();
