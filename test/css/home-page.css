@@ -16,6 +16,7 @@ body {
 }
 
 .container{
+  min-width: 361px;
   margin: 0 auto;
 }
 
