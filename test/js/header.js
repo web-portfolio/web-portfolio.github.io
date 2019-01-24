@@ -9,7 +9,7 @@ $(window).on("resize", function() {
 
 function navResize(){
   var headerWidth = $(".header").width();
-  $(".nav-bar").width(headerWidth);
+  $(".nav-bar").outerWidth(headerWidth);
 }
 
 $(".login-btn").click(function() {
