@@ -3,6 +3,7 @@ fixedLoginForm();
 navResize();
 
 $(window).on("resize", function() {
+  getMobileOperatingSystem();
   navResize();
   fixedLoginForm();
 });
