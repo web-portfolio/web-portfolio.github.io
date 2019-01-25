@@ -9,8 +9,8 @@ document.addEventListener( 'DOMContentLoaded', function( event ) {
 
   $(window).on("load", function() {
     $(".header").load("header.html .container > *");
-    // $("head").append($("<style type='text/css'>@import url('css/header.css')</style>"));
-    $('<link rel="stylesheet" type="text/css" href="css/media.css">').before().append('<link rel="stylesheet" type="text/css" href="css/header.css">');
+    // $("head").append('<link rel="stylesheet" type="text/css" href="css/header.css">');
+    $('<link rel="stylesheet" type="text/css" href="css/media.css">').prepend('<link rel="stylesheet" type="text/css" href="css/header.css">');
     
     $.getScript("js/custom-scrollbar.js");
     $.getScript("js/header.js");    
