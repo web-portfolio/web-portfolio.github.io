@@ -11,6 +11,7 @@ document.addEventListener( 'DOMContentLoaded', function( event ) {
     $(".header").load("header.html .container > *");
     $("head").append($("<style type='text/css'>@import url('css/header.css')</style>"));
     $.getScript("js/header.js");
+    $.getScript("js/custom-scrollbar.js");
   });
 
   $(".flexslider").flexslider({
