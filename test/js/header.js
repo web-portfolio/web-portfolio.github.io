@@ -127,7 +127,7 @@ function getMobileOperatingSystem() {
     $(".mob-close").click(function(){
       $(this).parent().slideUp();
     });
-    $(".buy-games").mCustomScrollbar("update");
+    // $(".buy-games").mCustomScrollbar("update");
     return "Phone Device";
   } else {
     $('link[href="css/hovers.css"]').prop('disabled', false);
@@ -159,7 +159,7 @@ function getMobileOperatingSystem() {
     }, function() {
       $(".buy-this", this).stop(true, false).slideUp();
     });
-    $(".buy-games").mCustomScrollbar("disable");
+    // $(".buy-games").mCustomScrollbar("disable");
     return "Desktop";
   }
 }
