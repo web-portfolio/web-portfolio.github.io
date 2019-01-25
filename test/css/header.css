@@ -8,14 +8,15 @@
   opacity: .95;
   box-sizing: border-box;
   text-align: center;
+  width: 100%;
 }
 
-.nav-logo{
+.nav-logo {
   display: inline-block;
   cursor: pointer;
 }
 
-.games{
+.games {
   float: left;
   cursor: pointer;
   margin-left: 2%;
@@ -30,7 +31,7 @@
   width: 35px;
 }
 
-.mob-close{
+.mob-close {
   position: absolute;
   top: -1px;
   right: -1px;
@@ -42,15 +43,11 @@
   display: none;
 }
 
-.buy-game-icon-hover, .profile-icon-hover, .up-arrow, .games-active .buy-game-icon,
-.games-active .down-arrow, .profile-active .profile-icon, .profile-active .down-arrow,
-.home-hover, .setup-hover, .reg-up-arrow, .alternative-signin-active .reg-down-arrow,
-.alternative-signin-active .setup {
+.buy-game-icon-hover, .profile-icon-hover, .up-arrow, .games-active .buy-game-icon, .games-active .down-arrow, .profile-active .profile-icon, .profile-active .down-arrow, .home-hover, .setup-hover, .reg-up-arrow, .alternative-signin-active .reg-down-arrow, .alternative-signin-active .setup {
   display: none
 }
 
-.games-active .buy-game-icon-hover, .games-active .up-arrow, .profile-active .profile-icon-hover,
-.profile-active .up-arrow, .alternative-signin-active .setup-hover, .alternative-signin-active .reg-up-arrow {
+.games-active .buy-game-icon-hover, .games-active .up-arrow, .profile-active .profile-icon-hover, .profile-active .up-arrow, .alternative-signin-active .setup-hover, .alternative-signin-active .reg-up-arrow {
   display: block
 }
 
@@ -151,19 +148,22 @@
   outline: none;
 }
 
-.login-problems, .lp-email-send{
+.login-problems, .lp-email-send {
   text-align: center;
   display: none;
 }
-.lp-email-send p{
+
+.lp-email-send p {
   margin: 0 0 10px 0;
   font-size: 1.2em;
   padding: 0 10px 0 10px;
 }
-.lp-mail{
+
+.lp-mail {
   color: white;
 }
-.lp-error{
+
+.lp-error {
   color: #A50608;
   font-size: 1em;
   font-weight: bold;
@@ -217,13 +217,15 @@
   border-top-left-radius: 10px;
   border-bottom-right-radius: 10px
 }
-.login-problems button, .lp-email-send button{
+
+.login-problems button, .lp-email-send button {
   width: 150px;
 }
 
-.lp-email-send{
+.lp-email-send {
   color: #996019;
 }
+
 .game-logo {
   margin: 0 auto;
   margin-top: 10px;
@@ -293,18 +295,22 @@
   margin-top: 5px;
   margin-bottom: 5px
 }
+
 .or hr {
   width: 40%;
   border: 0;
   border-top: 1px solid white
 }
-.or hr:first-child{
+
+.or hr:first-child {
   float: left;
 }
-.or hr:last-child{
+
+.or hr:last-child {
   float: right;
 }
-.or span{
+
+.or span {
   display: inline-block;
   text-align: center;
   width: 20%;
