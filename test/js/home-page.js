@@ -9,11 +9,11 @@ document.addEventListener( 'DOMContentLoaded', function( event ) {
 
   $(window).on("load", function() {
     $(".header").load("header.html .container > *");
-    $("head").append('<link rel="stylesheet" type="text/css" href="css/header.css">');
-    // ('<link rel="stylesheet" type="text/css" href="css/media.css">').append('<link rel="stylesheet" type="text/css" href="css/header.css">');
-    
+    $("head")[0].append('<link rel="stylesheet" type="text/css" href="css/header.css">');
+    // $('<link rel="stylesheet" type="text/css" href="css/media.css">').append('<link rel="stylesheet" type="text/css" href="css/header.css">');
+
     $.getScript("js/custom-scrollbar.js");
-    $.getScript("js/header.js");    
+    $.getScript("js/header.js");
   });
 
   $(".flexslider").flexslider({
