@@ -10,7 +10,7 @@ document.addEventListener( 'DOMContentLoaded', function( event ) {
   $(window).on("load", function() {
     $(".header").load("header.html .container > *");
     // $("head > link:nth-child(3)").after('<link rel="stylesheet" href="css/header.css">');
-    $('head > *').attr('href','css/media.css').before('<link rel="stylesheet" href="css/header.css">');
+    $('head > *').attr('href','css/media.css').after('<link rel="stylesheet" href="css/header.css">');
     // $('<link rel="stylesheet" type="text/css" href="css/media.css">').after('<link rel="stylesheet" type="text/css" href="css/header.css">');
 
     $.getScript("js/custom-scrollbar.js");
