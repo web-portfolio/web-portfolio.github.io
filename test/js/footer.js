@@ -81,11 +81,11 @@ function overlayResize() {
 };
 function policyFlowResize() {
   pc = $(".privacy-content").outerHeight();
-  $(".privacy-content .policy-flow").outerHeight(pc - 152);
+  $(".privacy-content .policy-flow").outerHeight(pc - 118);
 }
 function cookieFlowResize() {
   pc = $(".cookie-content").outerHeight();
-  $(".cookie-content .policy-flow").outerHeight(pc - 178);
+  $(".cookie-content .policy-flow").outerHeight(pc - 118);
 }
 
 function getMobileOperatingSystem() {
