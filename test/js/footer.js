@@ -2,7 +2,7 @@
 overlayResize();
 
 $(window).on("resize", function() {
-  getMobileOperatingSystem();
+  // getMobileOperatingSystem();
   overlayResize();
   policyFlowResize();
   cookieFlowResize();
