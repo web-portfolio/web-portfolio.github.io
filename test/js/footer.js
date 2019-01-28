@@ -1,11 +1,12 @@
 getMobileOperatingSystem();
 overlayResize();
-policyFlowResize();
+// policyFlowResize();
 
 $(window).on("resize", function() {
   getMobileOperatingSystem();
   overlayResize();
   policyFlowResize();
+  cookieFlowResize();
 });
 
 $(window).scroll(function() {
@@ -59,6 +60,7 @@ $(".privacy, .policy-lin").click(function() {
 });
 $(".cookie").click(function() {
   $(".cookie-content").show();
+  cookieFlowResize();
   overlayResize();
   $(".overlay").show();
   $("body").css({
@@ -79,7 +81,11 @@ function overlayResize() {
 };
 function policyFlowResize() {
   pc = $(".privacy-content").outerHeight();
-  $(".policy-flow").outerHeight(pc - 178);
+  $(".privacy-content .policy-flow").outerHeight(pc - 178);
+}
+function cookieFlowResize() {
+  pc = $(".cookie-content").outerHeight();
+  $(".cookie-content .policy-flow").outerHeight(pc - 178);
 }
 
 function getMobileOperatingSystem() {
