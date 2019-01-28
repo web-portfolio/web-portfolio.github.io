@@ -100,7 +100,7 @@ function getMobileOperatingSystem() {
     return "Phone Device";
   } else {
     $('link[href="css/hovers.css"]').prop('disabled', false);
-    $("body *").unbind("mouseenter mouseleave");
+    $("body *").bind("mouseenter mouseleave");
     $(".back-to-top").hover(function() {
       x = true;
       animate();
