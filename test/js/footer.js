@@ -81,7 +81,7 @@ function overlayResize() {
 };
 function policyFlowResize() {
   pc = $(".privacy-content").outerHeight();
-  $(".privacy-content .policy-flow").outerHeight(pc - 178);
+  $(".privacy-content .policy-flow").outerHeight(pc - 152);
 }
 function cookieFlowResize() {
   pc = $(".cookie-content").outerHeight();
