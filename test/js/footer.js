@@ -1,4 +1,4 @@
-getMobileOperatingSystem();
+// getMobileOperatingSystem();
 overlayResize();
 
 $(window).on("resize", function() {
@@ -72,11 +72,11 @@ $(".policy-close-btn").click(function() {
     "overflow-y": "auto"
   })
 });
-function overlayResize() {
-  var ww = $(window).outerWidth();
-  var wh = $(window).outerHeight();
-  $(".overlay").outerWidth(ww).outerHeight(wh);
-};
+// function overlayResize() {
+//   var ww = $(window).outerWidth();
+//   var wh = $(window).outerHeight();
+//   $(".overlay").outerWidth(ww).outerHeight(wh);
+// };
 function policyFlowResize() {
   pc = $(".privacy-content").outerHeight();
   $(".privacy-content .policy-flow").outerHeight(pc - 118);
