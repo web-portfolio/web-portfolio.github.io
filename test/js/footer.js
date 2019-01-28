@@ -23,7 +23,6 @@ $(".back-to-top").click(function() {
 });
 
 var x;
-
 function animate() {
   if (x == true) {
     $(".back-to-top").animate({
