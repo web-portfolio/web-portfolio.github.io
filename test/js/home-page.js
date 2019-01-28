@@ -8,10 +8,14 @@ document.addEventListener( 'DOMContentLoaded', function( event ) {
   });
 
   $(window).on("load", function() {
+    // HEADER
     $(".header").load("header.html .container > *");
     $("head .media").before('<link rel="stylesheet" href="css/header.css">');
-    $.getScript("js/custom-scrollbar.js");
     $.getScript("js/header.js");
+    // FOOTER
+    $(".footer").load("footer.html .container > *");
+    $("head .media").before('<link rel="stylesheet" href="css/footer.css">');
+    $.getScript("js/footer.js");
   });
 
   $(".flexslider").flexslider({
