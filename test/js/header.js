@@ -135,9 +135,15 @@ function getMobileOperatingSystem() {
       $(".nav-logo img").prop("src", "img/nav-logo.png");
     });
 
-    $(".games").hover(function() {
+    // $(".games").hover(function() {
+    //   $(".buy-game-icon").prop("src", "img/ico/buy-hover.png");
+    // }, function() {
+    //   $(".buy-game-icon").prop("src", "img/ico/buy.png");
+    // });
+
+    $(".games").on("mouseenter", function() {
       $(".buy-game-icon").prop("src", "img/ico/buy-hover.png");
-    }, function() {
+    }).on("mouseleave", function() {
       $(".buy-game-icon").prop("src", "img/ico/buy.png");
     });
 
