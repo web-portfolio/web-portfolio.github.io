@@ -113,7 +113,6 @@ function getMobileOperatingSystem() {
   var android = /android/i.test(userAgent);
 
   if (winPhone || ios || android) {
-    $("body *").unbind("mouseenter mouseleave");
     $(".mob-close").show();
     $(".game > img").click(function() {
       var hImg = $(this).outerHeight();
