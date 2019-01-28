@@ -48,7 +48,7 @@ $(".footer-nav div ul").outerHeight(h);
 $(".footer-nav div ul").outerWidth(w);
 
 var pc;
-$(".privacy, .policy-link").click(function() {
+$(".privacy, .policy-lin").click(function() {
   $(".privacy-content").show();
   policyFlowResize();
   overlayResize();
@@ -60,6 +60,7 @@ $(".privacy, .policy-link").click(function() {
 $(".cookie").click(function() {
   $(".cookie-content").show();
   overlayResize();
+  policyFlowResize();
   $(".overlay").show();
   $("body").css({
     "overflow-y": "hidden"
@@ -72,13 +73,11 @@ $(".policy-close-btn").click(function() {
     "overflow-y": "auto"
   })
 });
-
 function overlayResize() {
   var ww = $(window).outerWidth();
   var wh = $(window).outerHeight();
   $(".overlay").outerWidth(ww).outerHeight(wh);
 };
-
 function policyFlowResize() {
   pc = $(".privacy-content").outerHeight();
   $(".policy-flow").outerHeight(pc - 178);
