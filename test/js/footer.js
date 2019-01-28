@@ -1,3 +1,13 @@
+getMobileOperatingSystem();
+overlayResize();
+policyFlowResize();
+
+$(window).on("resize", function() {
+  getMobileOperatingSystem();
+  overlayResize();
+  policyFlowResize();
+});
+
 $(window).scroll(function() {
   if ($(this).scrollTop() >= 250) {
     $(".back-to-top").fadeIn(500)
@@ -71,4 +81,25 @@ $(".back-to-top").click(function() {
 function policyFlowResize() {
   pc = $(".privacy-content").outerHeight();
   $(".policy-flow").outerHeight(pc - 178);
+}
+
+function getMobileOperatingSystem() {
+  var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+  var winPhone = /windows phone/i.test(userAgent);
+  var ios = /iPad|iPhone|iPod/.test(userAgent) && !window.MSStream;
+  var android = /android/i.test(userAgent);
+
+  if (winPhone || ios || android) {
+    $('link[href="css/hovers.css"]').prop('disabled', true);
+    $("body *").css("cursor" , "default");
+    $("body *").unbind("mouseenter mouseleave");
+    
+    // $(".buy-games").mCustomScrollbar("update");
+    return "Phone Device";
+  } else {
+    $('link[href="css/hovers.css"]').prop('disabled', false);
+    
+    // $(".buy-games").mCustomScrollbar("disable");
+    return "Desktop";
+  }
 }
