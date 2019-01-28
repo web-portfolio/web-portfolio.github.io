@@ -43,7 +43,8 @@
   display: inline-block;
   vertical-align: top;
   text-align: left;
-  margin-right: -6px
+  margin-right: -6px;
+  width: 230px;
 }
 
 .footer-nav div:not(:last-child) ul {
