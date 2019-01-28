@@ -59,8 +59,8 @@ $(".privacy, .policy-lin").click(function() {
 });
 $(".cookie").click(function() {
   $(".cookie-content").show();
-  overlayResize();
   policyFlowResize();
+  overlayResize();
   $(".overlay").show();
   $("body").css({
     "overflow-y": "hidden"
