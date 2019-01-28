@@ -26,7 +26,6 @@ document.addEventListener( 'DOMContentLoaded', function( event ) {
       return "Phone Device";
     } else {
       $('link[href="css/hovers.css"]').prop('disabled', false);
-      $("body *").bind("mouseenter mouseleave");
       $(".mob-close").hide();
       $(".nav-logo").hover(function() {
         $(".nav-logo img").prop("src", "img/nav-logo-hover.png");
