@@ -113,6 +113,7 @@ function getMobileOperatingSystem() {
   var android = /android/i.test(userAgent);
 
   if (winPhone || ios || android) {
+    $("body *").unbind("mouseenter mouseleave");
     $(".mob-close").show();
     $(".game > img").click(function() {
       var hImg = $(this).outerHeight();
@@ -126,6 +127,7 @@ function getMobileOperatingSystem() {
     });
     return "Phone Device";
   } else {
+    $("body *").bind("mouseenter mouseleave");
     $(".mob-close").hide();
     $(".nav-logo").hover(function() {
       $(".nav-logo img").prop("src", "img/nav-logo-hover.png");
