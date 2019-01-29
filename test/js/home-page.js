@@ -16,6 +16,8 @@ document.addEventListener( 'DOMContentLoaded', function( event ) {
     $(".footer").load("footer.html .container > *");
     $("head .media").before('<link rel="stylesheet" href="css/footer.css">');
     $.getScript("js/footer.js");
+    //OS SYSTEM
+    $.getScript("js/web-mobile.js");
   });
 
   $(".flexslider").flexslider({
