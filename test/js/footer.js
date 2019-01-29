@@ -83,3 +83,17 @@ function cookieFlowResize() {
   pc = $(".cookie-content").outerHeight();
   $(".cookie-content .policy-flow").outerHeight(pc - 118);
 }
+
+// JS LINKS
+$(".f1").click(function() {
+  window.location = "https://bg-bg.facebook.com/Warcraft/";
+});
+$(".f2").click(function() {
+  window.location = "https://twitter.com/warcraft?lang=bg";
+});
+$(".f3").click(function() {
+  window.location = "https://www.youtube.com/results?search_query=world+of+warcraft+trailers";
+});
+$(".f4").click(function() {
+  window.location = "https://plus.google.com/s/world%20of%20warcraft/top";
+});
