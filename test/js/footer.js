@@ -84,7 +84,7 @@ $(".f1").click(function() {
   window.location = "https://bg-bg.facebook.com/Warcraft";
 });
 $(".f2").click(function() {
-  window.open = ("https://twitter.com/warcraft?lang=bg", "_blank");
+  window.open("https://twitter.com/warcraft?lang=bg", "_blank");
 });
 $(".f3").click(function() {
   window.location = "https://www.youtube.com/results?search_query=world+of+warcraft+trailers";
