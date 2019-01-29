@@ -1,6 +1,7 @@
 document.addEventListener( 'DOMContentLoaded', function( event ) {
   $(window).on("load resize", function() {
     getMobileOperatingSystem();
+    alert("test");
   });
   function getMobileOperatingSystem() {
     var userAgent = navigator.userAgent || navigator.vendor || window.opera;
