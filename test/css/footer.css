@@ -2,8 +2,6 @@
   transform: rotate(90deg);
   -webkit-transform: rotate(90deg);
   -moz-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  -o-transform: rotate(90deg);
   background: #0f0f0f;
   border: 3px solid #34231a;
   color: #996019;
@@ -109,6 +107,7 @@
   background-size: 100% 100%;
   transition: background-image .5s ease-in-out;
   -webkit-transition: background-image .5s ease-in-out;
+  -moz-transition: background-image .5s ease-in-out;
 }
 
 .f2 {
@@ -117,6 +116,7 @@
   background-size: 100% 100%;
   transition: background-image .5s ease-in-out;
   -webkit-transition: background-image .5s ease-in-out;
+  -moz-transition: background-image .5s ease-in-out;
 }
 
 .f3 {
@@ -125,6 +125,7 @@
   background-size: 100% 100%;
   transition: background-image .5s ease-in-out;
   -webkit-transition: background-image .5s ease-in-out;
+  -moz-transition: background-image .5s ease-in-out;
 }
 
 .f4 {
@@ -133,6 +134,7 @@
   background-size: 100% 100%;
   transition: background-image .5s ease-in-out;
   -webkit-transition: background-image .5s ease-in-out;
+  -moz-transition: background-image .5s ease-in-out;
 }
 
 .overlay {
