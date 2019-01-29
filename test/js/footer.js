@@ -36,13 +36,8 @@ function animate() {
 var h1 = $(".footer-nav div:nth-child(1) ul").outerHeight();
 var h2 = $(".footer-nav div:nth-child(2) ul").outerHeight();
 var h3 = $(".footer-nav div:nth-child(3) ul").outerHeight();
-// var w1 = $(".footer-nav div:nth-child(1) ul").outerWidth();
-// var w2 = $(".footer-nav div:nth-child(2) ul").outerWidth();
-// var w3 = $(".footer-nav div:nth-child(3) ul").outerWidth();
 var h = Math.max(h1, h2, h3);
-// var w = Math.max(w1, w2, w3);
 $(".footer-nav div ul").outerHeight(h);
-// $(".footer-nav div ul").outerWidth(w);
 
 var pc;
 $(".privacy, .policy-lin").click(function() {
