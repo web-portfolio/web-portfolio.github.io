@@ -81,14 +81,14 @@ function cookieFlowResize() {
 
 // JS LINKS
 $(".f1").click(function() {
-  window.location = "https://bg-bg.facebook.com/Warcraft";
+  window.open("https://bg-bg.facebook.com/Warcraft" , "_blank");
 });
 $(".f2").click(function() {
-  window.open("https://twitter.com/warcraft?lang=bg", "_blank");
+  window.open("https://twitter.com/warcraft?lang=bg" , "_blank");
 });
 $(".f3").click(function() {
-  window.location = "https://www.youtube.com/results?search_query=world+of+warcraft+trailers";
+  window.open("https://www.youtube.com/results?search_query=world+of+warcraft+trailers" , "_blank");
 });
 $(".f4").click(function() {
-  window.location = "https://plus.google.com/s/world%20of%20warcraft/top";
+  window.open("https://plus.google.com/s/world%20of%20warcraft/top" , "_blank");
 });
