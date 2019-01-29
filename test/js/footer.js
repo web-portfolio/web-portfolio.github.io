@@ -1,8 +1,6 @@
-// getMobileOperatingSystem();
 overlayResize();
 
 $(window).on("resize", function() {
-  // getMobileOperatingSystem();
   overlayResize();
   policyFlowResize();
   cookieFlowResize();
@@ -85,78 +83,3 @@ function cookieFlowResize() {
   pc = $(".cookie-content").outerHeight();
   $(".cookie-content .policy-flow").outerHeight(pc - 118);
 }
-
-// function getMobileOperatingSystem() {
-//   var userAgent = navigator.userAgent || navigator.vendor || window.opera;
-//   var winPhone = /windows phone/i.test(userAgent);
-//   var ios = /iPad|iPhone|iPod/.test(userAgent) && !window.MSStream;
-//   var android = /android/i.test(userAgent);
-//
-//   if (winPhone || ios || android) {
-//     $('link[href="css/hovers.css"]').prop('disabled', true);
-//     $("body *").css("cursor", "default");
-//     $("body *").unbind("mouseenter mouseleave");
-//     // $(".buy-games").mCustomScrollbar("update");
-//     return "Phone Device";
-//   } else {
-//     $('link[href="css/hovers.css"]').prop('disabled', false);
-//     $("body *").bind("mouseenter mouseleave");
-//     $(".back-to-top").hover(function() {
-//       x = true;
-//       animate();
-//     }, function() {
-//       $(".back-to-top").stop(true, false);
-//       $(".back-to-top").animate({
-//         "padding": "0"
-//       }, 300);
-//       x = false;
-//     });
-//     $(".footer-phone").hover(function() {
-//       $(this).css("background-image", "url('img/ico/phone-hover.png')");
-//     }, function() {
-//       $(this).css("background-image", "url('img/ico/phone.png')");
-//     });
-//     $(".footer-email").hover(function() {
-//       $(this).css("background-image", "url('img/ico/mail-hover.png')");
-//     }, function() {
-//       $(this).css("background-image", "url('img/ico/mail.png')");
-//     });
-//     $(".live-chat").hover(function() {
-//       $(this).css("background-image", "url('img/ico/chat-hover.png')");
-//     }, function() {
-//       $(this).css("background-image", "url('img/ico/chat.png')");
-//     });
-//     $(".cookie").hover(function() {
-//       $(this).css("background-image", "url('img/ico/cookie-hover.png')");
-//     }, function() {
-//       $(this).css("background-image", "url('img/ico/cookie.png')");
-//     });
-//     $(".privacy").hover(function() {
-//       $(this).css("background-image", "url('img/ico/privacy-hover.png')");
-//     }, function() {
-//       $(this).css("background-image", "url('img/ico/privacy.png')");
-//     });
-//     $(".f1").hover(function() {
-//       $(this).css("background-image", "url('img/ico/f1-hover.png')");
-//     }, function() {
-//       $(this).css("background-image", "url('img/ico/f1.png')");
-//     });
-//     $(".f2").hover(function() {
-//       $(this).css("background-image", "url('img/ico/f2-hover.png')");
-//     }, function() {
-//       $(this).css("background-image", "url('img/ico/f2.png')");
-//     });
-//     $(".f3").hover(function() {
-//       $(this).css("background-image", "url('img/ico/f3-hover.png')");
-//     }, function() {
-//       $(this).css("background-image", "url('img/ico/f3.png')");
-//     });
-//     $(".f4").hover(function() {
-//       $(this).css("background-image", "url('img/ico/f4-hover.png')");
-//     }, function() {
-//       $(this).css("background-image", "url('img/ico/f4.png')");
-//     });
-//     // $(".buy-games").mCustomScrollbar("disable");
-//     return "Desktop";
-//   }
-// }
