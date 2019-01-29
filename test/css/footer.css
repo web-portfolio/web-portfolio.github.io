@@ -108,6 +108,7 @@
   background-repeat: no-repeat;
   background-size: 100% 100%;
   transition: background-image .5s ease-in-out;
+  -webkit-transition: background-image .5s ease-in-out;
 }
 
 .f2 {
@@ -115,6 +116,7 @@
   background-repeat: no-repeat;
   background-size: 100% 100%;
   transition: background-image .5s ease-in-out;
+  -webkit-transition: background-image .5s ease-in-out;
 }
 
 .f3 {
@@ -122,6 +124,7 @@
   background-repeat: no-repeat;
   background-size: 100% 100%;
   transition: background-image .5s ease-in-out;
+  -webkit-transition: background-image .5s ease-in-out;
 }
 
 .f4 {
@@ -129,6 +132,7 @@
   background-repeat: no-repeat;
   background-size: 100% 100%;
   transition: background-image .5s ease-in-out;
+  -webkit-transition: background-image .5s ease-in-out;
 }
 
 .overlay {
