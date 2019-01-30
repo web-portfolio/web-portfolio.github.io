@@ -3,8 +3,6 @@ document.addEventListener( 'DOMContentLoaded', function( event ) {
     iframeResize();
     $(".last-patch-notes").css("height", "auto");
     containerH = $(".last-patch-notes").outerHeight();
-    $(".patch-btn-content-current").hide().removeClass("patch-btn-content-current");
-    $(".patch-btn-active").removeClass("patch-btn-active");
   });
 
   $(window).on("load", function() {
