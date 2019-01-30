@@ -81,7 +81,7 @@ function cookieFlowResize() {
 
 function preload(arrayOfImages) {
     $(arrayOfImages).each(function(){
-        $('<img/>')[0].src = this;
+        $("<img/>")[0].src = this;
     });
 }
 preload([
