@@ -7,16 +7,17 @@ document.addEventListener( 'DOMContentLoaded', function( event ) {
 
   $(window).on("load", function() {
     // HEADER
-    $(".header").load("header.html .container > *");
     $("head .media").before('<link rel="stylesheet" href="css/header.css">');
-    $.getScript("js/header.js");
+    $(".header").load("header.html .container > *");    
+    $("head .hp").after('<script src="js/header.js"></script>');
+    // $.getScript("js/header.js");
     // FOOTER
     $(".footer").load("footer.html .container > *");
     $("head .media").before('<link rel="stylesheet" href="css/footer.css">');
+    // $("head .hp").after('<script src="js/footer.js"></script>');
     $.getScript("js/footer.js");
     //OS SYSTEM
     $.getScript("js/web-mobile.js");
-    // $('body').append('<script src="blah.js"></script>');
   });
 
   $(".flexslider").flexslider({
