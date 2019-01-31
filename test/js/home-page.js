@@ -16,6 +16,7 @@ document.addEventListener( 'DOMContentLoaded', function( event ) {
     $.getScript("js/footer.js");
     //OS SYSTEM
     $.getScript("js/web-mobile.js");
+    // $('body').append('<script src="blah.js"></script>');
   });
 
   $(".flexslider").flexslider({
