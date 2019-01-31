@@ -8,7 +8,7 @@ document.addEventListener( 'DOMContentLoaded', function( event ) {
   $(window).on("load", function() {
     // HEADER
     $(".header").load("header.html .container > *");
-      $("head .media").before('<link rel="stylesheet" href="css/header.css">');
+    $("head .media").before('<link rel="stylesheet" href="css/header.css">');
     var headerScript = document.createElement('script');
     headerScript.src = "js/header.js";
     document.head.appendChild(headerScript);
@@ -16,10 +16,14 @@ document.addEventListener( 'DOMContentLoaded', function( event ) {
     // FOOTER
     $(".footer").load("footer.html .container > *");
     $("head .media").before('<link rel="stylesheet" href="css/footer.css">');
-    // $("head .hp").after('<script src="js/footer.js"></script>');
-    $.getScript("js/footer.js");
+    var footerScript = document.createElement('script');
+    footerScript.src = "js/footer.js";
+    document.head.appendChild(footerScript);
+
     //OS SYSTEM
-    $.getScript("js/web-mobile.js");
+    var webMobileScript = document.createElement('script');
+    webMobileScript.src = "js/web-mobile.js";
+    document.head.appendChild(webMobileScript);
   });
 
   $(".flexslider").flexslider({
