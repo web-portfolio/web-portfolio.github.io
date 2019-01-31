@@ -9,7 +9,15 @@ document.addEventListener( 'DOMContentLoaded', function( event ) {
     // HEADER
     $("head .media").before('<link rel="stylesheet" href="css/header.css">');
     $(".header").load("header.html .container > *");
-    $("head").append('<script type="text/javascript" src="js/header.js"></script>');
+    // $("head").append('<script type="text/javascript" src="js/header.js"></script>');
+
+    var script = document.createElement('script');
+      script.onload = function () {
+          alert("loaded");
+      };
+    script.src = "js/header.js";    
+    document.head.appendChild(script); //or something of the likes
+
     // $.getScript("js/header.js");
     // FOOTER
     $(".footer").load("footer.html .container > *");
