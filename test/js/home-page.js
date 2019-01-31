@@ -8,8 +8,8 @@ document.addEventListener( 'DOMContentLoaded', function( event ) {
   $(window).on("load", function() {
     // HEADER
     $("head .media").before('<link rel="stylesheet" href="css/header.css">');
-    $(".header").load("header.html .container > *");    
-    $("head .hp").after('<script src="js/header.js"></script>');
+    $(".header").load("header.html .container > *");
+    $("head .hp").after('<script type="text/javascript" src="js/header.js"></script>');
     // $.getScript("js/header.js");
     // FOOTER
     $(".footer").load("footer.html .container > *");
