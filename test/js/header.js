@@ -9,7 +9,7 @@ $(window).on("resize", function() {
 function widthResize(){
   var headerWidth = $(".header").width();
   $(".nav-bar").outerWidth(headerWidth);
-  $.(".buy-games").outerWidth(headerWidth);
+  $(".buy-games").outerWidth(headerWidth);
 }
 
 $(".login-btn").click(function() {
