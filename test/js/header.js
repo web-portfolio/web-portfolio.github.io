@@ -1,14 +1,15 @@
 fixedLoginForm();
-navResize();
+widthResize();
 
 $(window).on("resize", function() {
-  navResize();
+  widthResize();
   fixedLoginForm();
 });
 
-function navResize(){
+function widthResize(){
   var headerWidth = $(".header").width();
   $(".nav-bar").outerWidth(headerWidth);
+  $.(".buy-games").outerWidth(headerWidth);
 }
 
 $(".login-btn").click(function() {
