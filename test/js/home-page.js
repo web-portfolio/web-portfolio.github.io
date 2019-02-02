@@ -1,4 +1,4 @@
-document.addEventListener( 'DOMContentLoaded', function( event ) {
+document.addEventListener( "DOMContentLoaded", function( event ) {
   $(window).on("load resize", function() {
     iframeResize();
     $(".last-patch-notes").css("height", "auto");
