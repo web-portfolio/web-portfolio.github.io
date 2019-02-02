@@ -1,13 +1,3 @@
-<?php
-    header("Content-type: text/javascript; charset: UTF-8");
-    header("Cache-Control: must-revalidate");
-    $offset = 60 * 60 * 24 * 3;
-    $ExpStr = "Expires: " .
-    gmdate("D, d M Y H:i:s",
-    time() + $offset) . " GMT";
-    header($ExpStr);
-?>
-
 document.addEventListener( "DOMContentLoaded", function( event ) {
   $(window).on("load resize", function() {
     iframeResize();
