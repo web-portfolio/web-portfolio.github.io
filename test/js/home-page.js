@@ -9,7 +9,17 @@ document.addEventListener( 'DOMContentLoaded', function( event ) {
     // HEADER
     $(".header").load("header.html .container > *");
     $("head .media").before('<link rel="stylesheet" href="css/header.css">');
-    $.getScript("js/header.js");
+    // $.getScript("js/header.js");
+    function headerScript (url, callback) {
+    callback = (typeof callback != "undefined") ? callback : {};
+      $.ajax({
+           type: "GET",
+           url: "js/header.js",
+           success: callback,
+           dataType: "script",
+           cache: true
+       });
+    }
 
     // FOOTER
     $(".footer").load("footer.html .container > *");
