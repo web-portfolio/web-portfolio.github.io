@@ -18,6 +18,7 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
     $.getScript("js/footer.js");
 
     //OS SYSTEM
+    $("head .media").before('<link rel="stylesheet" href="css/footer.css">');
     $.getScript("js/custom-scrollbar.js");
     $.getScript("js/web-mobile.js");
 
