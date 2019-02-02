@@ -1,10 +1,3 @@
-function header(){
-  $(".header").load("header.html .container > *");
-  $("head .media").before('<link rel="stylesheet" href="css/header.css">');
-  $.getScript("js/header.js");
-}
-header();
-
 document.addEventListener( 'DOMContentLoaded', function( event ) {
   $(window).on("load resize", function() {
     iframeResize();
@@ -14,9 +7,9 @@ document.addEventListener( 'DOMContentLoaded', function( event ) {
 
   $(window).on("load", function() {
     // HEADER
-    // $(".header").load("header.html .container > *");
-    // $("head .media").before('<link rel="stylesheet" href="css/header.css">');
-    // $.getScript("js/header.js");
+    $(".header").load("header.html .container > *");
+    $("head .media").before('<link rel="stylesheet" href="css/header.css">');
+    $.getScript("js/header.js");
 
     // FOOTER
     $(".footer").load("footer.html .container > *");
