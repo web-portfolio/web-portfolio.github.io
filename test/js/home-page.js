@@ -1,4 +1,5 @@
 document.addEventListener( "DOMContentLoaded", function( event ) {
+
   $(window).on("load resize", function() {
     iframeResize();
     $(".last-patch-notes").css("height", "auto");
@@ -6,6 +7,11 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
   });
 
   $(window).on("load", function() {
+    $.mobile.loadPage( "home-page.html", {
+      type: false,
+      reloadPage: false,
+      type: 'get'
+    });
     // HEADER
     $(".header").load("header.html .container > *");
     $("head .media").before('<link rel="stylesheet" href="css/header.css">');
