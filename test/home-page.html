@@ -17,6 +17,11 @@
 </head>
 
 <body>
+  <script>
+  $(".header").load("header.html .container > *");
+  $("head .media").before('<link rel="stylesheet" href="css/header.css">');
+  $.getScript("js/header.js");
+  </script>
   <div class="container">
     <div class="header"></div>
     <div class="flexslider">
