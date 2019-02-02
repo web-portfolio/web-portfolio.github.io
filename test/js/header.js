@@ -1,7 +1,8 @@
-fixedLoginForm();
-widthResize();
+document.addEventListener( 'DOMContentLoaded', function( event ) {
+// fixedLoginForm();
+// widthResize();
 
-$(window).on("resize", function() {
+$(window).on("load resize", function() {
   widthResize();
   fixedLoginForm();
 });
@@ -132,4 +133,5 @@ $(".purchase-btn-legion").click(function() {
 });
 $(".purchase-btn-bfa").click(function() {
   window.location = "bfa.html";
+});
 });
