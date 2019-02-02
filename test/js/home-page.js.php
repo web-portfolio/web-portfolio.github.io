@@ -1,3 +1,13 @@
+<?php
+    header("Content-type: text/javascript; charset: UTF-8");
+    header("Cache-Control: must-revalidate");
+    $offset = 60 * 60 * 24 * 3;
+    $ExpStr = "Expires: " .
+    gmdate("D, d M Y H:i:s",
+    time() + $offset) . " GMT";
+    header($ExpStr);
+?>
+
 document.addEventListener( "DOMContentLoaded", function( event ) {
   $(window).on("load resize", function() {
     iframeResize();
@@ -10,16 +20,16 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
     $(".header").load("header.html .container > *");
     $("head .media").before('<link rel="stylesheet" href="css/header.css">');
     $.getScript("js/header.js");
-    function headerScript (url, callback) {
-    callback = (typeof callback != "undefined") ? callback : {};
-      $.ajax({
-           type: "GET",
-           url: "js/header.js",
-           success: callback,
-           dataType: "script",
-           cache: true
-       });
-    }
+    // function headerScript (url, callback) {
+    // callback = (typeof callback != "undefined") ? callback : {};
+    //   $.ajax({
+    //        type: "GET",
+    //        url: "js/header.js",
+    //        success: callback,
+    //        dataType: "script",
+    //        cache: true
+    //    });
+    // }
 
     // FOOTER
     $(".footer").load("footer.html .container > *");
