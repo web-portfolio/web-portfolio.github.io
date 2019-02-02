@@ -15,11 +15,12 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
     // FOOTER
     $(".footer").load("footer.html .container > *");
     $("head .media").before('<link rel="stylesheet" href="css/footer.css">');
-      $.getScript("js/footer.js");
+    $.getScript("js/footer.js");
 
     //OS SYSTEM
-    $.getScript("js/web-mobile.js");
     $.getScript("js/custom-scrollbar.js");
+    $.getScript("js/web-mobile.js");
+
   });
 
   $(".flexslider").flexslider({
