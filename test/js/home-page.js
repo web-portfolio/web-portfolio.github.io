@@ -9,30 +9,15 @@ document.addEventListener( 'DOMContentLoaded', function( event ) {
     // HEADER
     $(".header").load("header.html .container > *");
     $("head .media").before('<link rel="stylesheet" href="css/header.css">');
-    $.getScript("js/header.js")
-      .done(function(){
-        console.log("header.js loaded");
-      }).fail(function (){
-        console.log("header.js failed loaded");
-    });
+    $.getScript("js/header.js");
 
     // FOOTER
     $(".footer").load("footer.html .container > *");
     $("head .media").before('<link rel="stylesheet" href="css/footer.css">');
-      $.getScript("js/footer.js")
-      .done(function(){
-        console.log("footer.js loaded");
-      }).fail(function (){
-        console.log("footer.js failed loaded");
-    });
+      $.getScript("js/footer.js");
 
     //OS SYSTEM
-    $.getScript("js/web-mobile.js")
-      .done(function(){
-        console.log("web-mobile.js loaded");
-      }).fail(function (){
-        console.log("web-mobile.js failed loaded");
-    });
+    $.getScript("js/web-mobile.js");
   });
 
   $(".flexslider").flexslider({
