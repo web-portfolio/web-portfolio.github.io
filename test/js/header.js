@@ -115,21 +115,21 @@ $(".home, .nav-logo").click(function() {
 $(".purchase-btn-bc, .bc-link").click(function() {
   window.location = "bc.html";
 });
-$(".purchase-btn-lk").click(function() {
+$(".purchase-btn-lk, .wolk-link").click(function() {
   window.location = "lk.html";
 });
-$(".purchase-btn-cata").click(function() {
+$(".purchase-btn-cata, .cata-link").click(function() {
   window.location = "cata.html";
 });
-$(".purchase-btn-pandaria").click(function() {
+$(".purchase-btn-pandaria, .pandaria-link").click(function() {
   window.location = "pandaria.html";
 });
-$(".purchase-btn-wod").click(function() {
+$(".purchase-btn-wod, .wod-link").click(function() {
   window.location = "wod.html";
 });
-$(".purchase-btn-legion").click(function() {
+$(".purchase-btn-legion, .legion-link").click(function() {
   window.location = "legion.html";
 });
-$(".purchase-btn-bfa").click(function() {
+$(".purchase-btn-bfa, .boa-link").click(function() {
   window.location = "bfa.html";
 });

@@ -19,6 +19,10 @@
 .flex-prev:hover, .flex-next:hover{
   background-color: black;
 }
+
+.slides li img:hover{
+  cursor: pointer;
+}
 /* Slider Hovers END*/
 
 .tabs li:hover, .months li:hover, .countries li:hover, .questions li:hover {
