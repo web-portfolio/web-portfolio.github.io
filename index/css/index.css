@@ -59,7 +59,7 @@ body, nav, div, button, ul, li, ol {
   background-size: cover;
 }
 
-@keyframes spin {
+@keyframes emptyDivRotate {
   from {
     transform: rotateY(0deg);
     moz-transform: rotateY(0deg);
@@ -72,7 +72,7 @@ body, nav, div, button, ul, li, ol {
   }
 }
 
-@-webkit-keyframes spin {
+@-webkit-keyframes emptyDivRotate {
   from {
     -webkit-transform: rotateY(0deg);
   }
