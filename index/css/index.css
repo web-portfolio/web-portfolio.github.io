@@ -82,11 +82,11 @@ body, nav, div, button, ul, li, ol {
 }
 
 .image-spin {
-  animation-name: spin;
+  animation-name: emptyDivRotate;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
   animation-duration: 4s;
-  -webkit-animation-name: spin;
+  -webkit-animation-name: emptyDivRotate;
   -webkit-animation-timing-function: linear;
   -webkit-animation-iteration-count: infinite;
   -webkit-animation-duration: 4s;
