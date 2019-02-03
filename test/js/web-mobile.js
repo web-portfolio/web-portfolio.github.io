@@ -14,7 +14,7 @@ function getMobileOperatingSystem() {
     $('link[href="css/hovers.css"]').prop('disabled', true);
     $("body *").css("cursor", "default");
     $("body *").unbind("mouseenter mouseleave");
-    $(".buy-games").mCustomScrollbar("update");
+    // $(".buy-games").mCustomScrollbar("update");
     //HEADER
     $(".mob-close").show();
     $(".game > img").click(function() {
@@ -124,7 +124,7 @@ function getMobileOperatingSystem() {
       $(this).css("background-image", "url('img/ico/f4.png')");
     });
 
-    $(".buy-games").mCustomScrollbar("disable");
+    // $(".buy-games").mCustomScrollbar("disable");
     return "Desktop";
   }
 }

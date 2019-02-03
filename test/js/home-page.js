@@ -7,8 +7,6 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
   });
 
   $(window).on("load", function() {
-    $("head .media").before('<link rel="stylesheet" href="css/custom-scrollbar.css">');
-    $.getScript("js/custom-scrollbar.js");
     // HEADER
     $(".header").load("header.html .container > *");
     $("head .media").before('<link rel="stylesheet" href="css/header.css">');
