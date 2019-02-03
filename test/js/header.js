@@ -112,7 +112,7 @@ $(".reg-btn").click(function() {
 $(".home, .nav-logo").click(function() {
   window.location = "home-page.html";
 });
-$(".purchase-btn-bc").click(function() {
+$(".purchase-btn-bc, .bc-link").click(function() {
   window.location = "bc.html";
 });
 $(".purchase-btn-lk").click(function() {
