@@ -7,10 +7,13 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
   });
 
   $(window).on("load", function() {
+    $.ajaxSetup({ cache: true });
     // HEADER
     $(".header").load("header.html .container > *");
     $("head .media").before('<link rel="stylesheet" href="css/header.css">');
-    $.getScript("js/header.js");
+    $.getScript("js/header.js", function(){
+      $.ajaxSetup({ cache: false });
+    });
 
     // FOOTER
     $(".footer").load("footer.html .container > *");
