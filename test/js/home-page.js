@@ -4,7 +4,6 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
     iframeResize();
     $(".last-patch-notes").css("height", "auto");
     containerH = $(".last-patch-notes").outerHeight();
-    $(".loader-bg").fadeOut("slow");
   });
 
   $(window).on("load", function() {
@@ -23,6 +22,7 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
 
     // $("head .media").before('<link rel="stylesheet" href="css/custom-scrollbar.css">');
     // $.getScript("js/custom-scrollbar.js");
+    $(".loader-bg").fadeOut("slow");
   });
 
   $(".flexslider").flexslider({

@@ -5,6 +5,10 @@ document.addEventListener('DOMContentLoaded', function(event) {
     $(".loader-bg").fadeOut("slow");
   });
 
+  $(window).on("load", function() {
+    $(".loader-bg").fadeOut("slow");
+  });
+
   function gridResize() {
     var w = $(".container > div").width();
     var h = (w * 56.2060889929742) / 100;
