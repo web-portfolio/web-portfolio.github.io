@@ -1,4 +1,4 @@
-document.addEventListener( "DOMContentLoaded", function( event ) {
+document.addEventListener( 'DOMContentLoaded', function( event ) {
   $(window).on("load resize", function() {
     overlayResize();
     policyFlowResize();
@@ -7,8 +7,7 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
     fixedDivPosition();
     $(".last-patch-notes").css("height", "auto");
     containerH = $(".last-patch-notes").outerHeight();
-    $(".patch-btn-content-current").hide().removeClass("patch-btn-content-current");
-    $(".patch-btn-active").removeClass("patch-btn-active");
+    $(".loader-bg").fadeOut("slow");
   });
 
   $(".login-btn").click(function() {
