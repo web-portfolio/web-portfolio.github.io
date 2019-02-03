@@ -18,9 +18,10 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
     $.getScript("js/footer.js");
 
     //OS SYSTEM
+    $.getScript("js/web-mobile.js");
+
     $("head .media").before('<link rel="stylesheet" href="css/custom-scrollbar.css">');
     $.getScript("js/custom-scrollbar.js");
-    $.getScript("js/web-mobile.js");
   });
 
   $(".flexslider").flexslider({
