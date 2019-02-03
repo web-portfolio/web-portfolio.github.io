@@ -34,7 +34,7 @@ body, nav, div, button, ul, li, ol {
   position: relative;
 }
 
-.container>div>div {
+.hover-info {
   display: none;
   color: #ffffff;
   font-size: 1.5em;
