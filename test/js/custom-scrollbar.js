@@ -36,6 +36,28 @@ the production-ready jquery.mCustomScrollbar.concat.min.js which contains the pl
 and dependencies (minified).
 */
 
+getMobileOperatingSystem();
+
+$(window).on("resize", function() {
+  getMobileOperatingSystem();
+});
+
+function getMobileOperatingSystem() {
+  var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+  var winPhone = /windows phone/i.test(userAgent);
+  var ios = /iPad|iPhone|iPod/.test(userAgent) && !window.MSStream;
+  var android = /android/i.test(userAgent);
+
+  if (winPhone || ios || android) {
+    $(".buy-games").mCustomScrollbar("update");
+    return "Phone Device";
+  } else {
+    $(".buy-games").mCustomScrollbar("disable");
+    return "Desktop";
+  }
+}
+
+
 (function(factory) {
   if (typeof define === "function" && define.amd) {
     define(["jquery"], factory);
