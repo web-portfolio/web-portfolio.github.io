@@ -18,15 +18,15 @@ document.addEventListener('DOMContentLoaded', function(event) {
 
     if (winPhone || ios || android) {
       $('link[href="index/css/hovers.css"]').prop('disabled', true);
-      $(".hover-info").hide();
+      $("body *").unbind("mouseenter mouseleave");
       return "Phone Device";
     } else {
       $('link[href="index/css/hovers.css"]').prop('disabled', false);
       $(".container > div")
-        .mouseover(function() {
+        .mouseenter(function() {
           $(this).find(".hover-info").show();
         })
-        .mouseout(function() {
+        .mouseleave(function() {
           $(this).find(".hover-info").hide();
         });
       return "Desktop";
