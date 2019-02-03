@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
 
     if (winPhone || ios || android) {
       $('link[href="index/css/hovers.css"]').prop('disabled', true);
-      $("body *").unbind("mouseenter mouseleave");
+      $("body *").off("mouseenter mouseleave");
       return "Phone Device";
     } else {
       $('link[href="index/css/hovers.css"]').prop('disabled', false);
