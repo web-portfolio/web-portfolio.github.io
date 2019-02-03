@@ -106,7 +106,6 @@
   background-size: 100% 100%;
   transition: background-image .5s ease-in-out;
   -webkit-transition: background-image .5s ease-in-out;
-  -moz-transition: background-image .5s ease-in-out;
 }
 
 .f2 {
@@ -115,7 +114,6 @@
   background-size: 100% 100%;
   transition: background-image .5s ease-in-out;
   -webkit-transition: background-image .5s ease-in-out;
-  -moz-transition: background-image .5s ease-in-out;
 }
 
 .f3 {
@@ -124,7 +122,6 @@
   background-size: 100% 100%;
   transition: background-image .5s ease-in-out;
   -webkit-transition: background-image .5s ease-in-out;
-  -moz-transition: background-image .5s ease-in-out;
 }
 
 .f4 {
@@ -133,7 +130,6 @@
   background-size: 100% 100%;
   transition: background-image .5s ease-in-out;
   -webkit-transition: background-image .5s ease-in-out;
-  -moz-transition: background-image .5s ease-in-out;
 }
 
 .overlay {
@@ -206,7 +202,6 @@
   padding-left: 26px !important;
   transition: background-image .1s ease-in-out;
   -webkit-transition: background-image .1s ease-in-out;
-  -moz-transition: background-image .1s ease-in-out;
 }
 
 .footer-email {
@@ -217,7 +212,6 @@
   padding-left: 26px !important;
   transition: background-image .1s ease-in-out;
   -webkit-transition: background-image .1s ease-in-out;
-  -moz-transition: background-image .1s ease-in-out;
 }
 
 .live-chat {
@@ -228,7 +222,6 @@
   padding-left: 26px !important;
   transition: background-image .1s ease-in-out;
   -webkit-transition: background-image .1s ease-in-out;
-  -moz-transition: background-image .1s ease-in-out;
 }
 
 .cookie {
@@ -239,7 +232,6 @@
   padding-left: 26px !important;
   transition: background-image .1s ease-in-out;
   -webkit-transition: background-image .1s ease-in-out;
-  -moz-transition: background-image .1s ease-in-out;
 }
 
 .privacy {
@@ -250,5 +242,4 @@
   padding-left: 26px !important;
   transition: background-image .1s ease-in-out;
   -webkit-transition: background-image .1s ease-in-out;
-  -moz-transition: background-image .1s ease-in-out;
 }
