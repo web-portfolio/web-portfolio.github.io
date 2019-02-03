@@ -4,6 +4,7 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
     iframeResize();
     $(".last-patch-notes").css("height", "auto");
     containerH = $(".last-patch-notes").outerHeight();
+    $(".loader-bg").fadeOut("slow");
   });
 
   $(window).on("load", function() {
