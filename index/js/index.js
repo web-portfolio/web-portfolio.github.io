@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
   $(window).on("load resize", function() {
     gridResize();
     getMobileOperatingSystem();
+    $(".loader-bg").fadeOut("slow");
   });
 
   function gridResize() {
