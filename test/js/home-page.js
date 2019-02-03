@@ -7,7 +7,7 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
   });
 
   $(window).on("load", function() {
-    $.ajaxSetup({ cache: true });
+    // $.ajaxSetup({ cache: true });
     // HEADER
     $(".header").load("header.html .container > *");
     $("head .media").before('<link rel="stylesheet" href="css/header.css">');
