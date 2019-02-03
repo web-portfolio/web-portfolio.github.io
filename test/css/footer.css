@@ -1,7 +1,6 @@
 .back-to-top {
   transform: rotate(90deg);
   -webkit-transform: rotate(90deg);
-  -moz-transform: rotate(90deg);
   background: #0f0f0f;
   border: 3px solid #34231a;
   color: #996019;

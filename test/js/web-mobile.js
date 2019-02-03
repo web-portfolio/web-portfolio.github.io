@@ -12,7 +12,6 @@ function getMobileOperatingSystem() {
 
   if (winPhone || ios || android) {
     $('link[href="css/hovers.css"]').prop('disabled', true);
-    // $("body *").css("cursor", "default");
     $("body *").unbind("mouseenter mouseleave");
     // $(".buy-games").mCustomScrollbar("update");
     //HEADER
