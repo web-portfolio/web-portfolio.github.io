@@ -7,27 +7,20 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
   });
 
   $(window).on("load", function() {
-    // $.ajaxSetup({ cache: true });
     // HEADER
     $(".header").load("header.html .container > *");
     $("head .media").before('<link rel="stylesheet" href="css/header.css">');
-    $.getScript("js/header.js", function(){
-      $.ajaxSetup({ cache: false });
-    });
+    $.getScript("js/header.js");
 
     // FOOTER
     $(".footer").load("footer.html .container > *");
     $("head .media").before('<link rel="stylesheet" href="css/footer.css">');
-    $.getScript("js/footer.js", function(){
-      $.ajaxSetup({ cache: false });
-    });
+    $.getScript("js/footer.js");
 
     //OS SYSTEM
     // $("head .media").before('<link rel="stylesheet" href="css/custom-scrollbar.css">');
     // $.getScript("js/custom-scrollbar.js");
-    $.getScript("js/web-mobile.js", function(){
-      $.ajaxSetup({ cache: false });
-    });
+    $.getScript("js/web-mobile.js");
   });
 
   $(".flexslider").flexslider({
