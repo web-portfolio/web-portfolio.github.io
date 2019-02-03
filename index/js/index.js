@@ -24,10 +24,10 @@ document.addEventListener('DOMContentLoaded', function(event) {
       $('link[href="index/css/hovers.css"]').prop('disabled', false);
       $(".container > div")
         .mouseover(function() {
-          $(".hover-info").show();
+          $(this).find(".hover-info").show();
         })
         .mouseout(function() {
-          $(".hover-info").hide();
+          $(this).find(".hover-info").hide();
         });
       return "Desktop";
     }
