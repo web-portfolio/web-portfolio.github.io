@@ -1,7 +1,4 @@
-fixedLoginForm();
-widthResize();
-
-$(window).on("load resize", function() {
+$(window).on("resize", function() {
   widthResize();
   fixedLoginForm();
 });

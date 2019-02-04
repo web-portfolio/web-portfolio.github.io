@@ -12,6 +12,10 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
     $("head .media").before('<link rel="stylesheet" href="css/header.css">');
     var headerScript = document.createElement("script");
     headerScript.src = "js/header.js";
+    headerScript.onload = function () {
+      fixedLoginForm();
+      widthResize();
+    };
     document.body.appendChild(headerScript);
 
     // FOOTER
@@ -19,12 +23,18 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
     $("head .media").before('<link rel="stylesheet" href="css/footer.css">');
     var footerScript = document.createElement("script");
     footerScript.src = "js/footer.js";
+    footerScript.onload = function () {
+      overlayResize();
+    };
     document.body.appendChild(footerScript);
 
     //OS SYSTEM
     $.getScript("js/web-mobile.js");
     var mobWebScript = document.createElement("script");
     mobWebScript.src = "js/web-mobile.js";
+    mobWebScript.onload = function () {
+      getMobileOperatingSystem();
+    };
     document.body.appendChild(mobWebScript);
 
     // $("head .media").before('<link rel="stylesheet" href="css/custom-scrollbar.css">');
