@@ -10,7 +10,10 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
     // HEADER
     $(".header").load("header.html .container > *");
     $("head .media").before('<link rel="stylesheet" href="css/header.css">');
-    $.getScript("js/header.js");
+    // $.getScript("js/header.js");
+    var headerScript = document.createElement("script");
+    headerScript.src = "js/header.js";
+    document.body.appendChild(headerScript);
 
     // FOOTER
     $(".footer").load("footer.html .container > *");
