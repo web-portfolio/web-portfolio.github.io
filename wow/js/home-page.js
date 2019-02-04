@@ -10,7 +10,6 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
     // HEADER
     $(".header").load("header.html .container > *");
     $("head .media").before('<link rel="stylesheet" href="css/header.css">');
-    // $.getScript("js/header.js");
     var headerScript = document.createElement("script");
     headerScript.src = "js/header.js";
     document.body.appendChild(headerScript);
@@ -18,10 +17,15 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
     // FOOTER
     $(".footer").load("footer.html .container > *");
     $("head .media").before('<link rel="stylesheet" href="css/footer.css">');
-    $.getScript("js/footer.js");
+    var footerScript = document.createElement("script");
+    footerScript.src = "js/footer.js";
+    document.body.appendChild(footerScript);
 
     //OS SYSTEM
     $.getScript("js/web-mobile.js");
+    var mobWebScript = document.createElement("script");
+    mobWebScript.src = "js/web-mobile.js";
+    document.body.appendChild(mobWebScript);
 
     // $("head .media").before('<link rel="stylesheet" href="css/custom-scrollbar.css">');
     // $.getScript("js/custom-scrollbar.js");
