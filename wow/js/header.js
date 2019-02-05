@@ -1,3 +1,6 @@
+widthResize();
+fixedLoginForm();
+
 $(window).on("resize", function() {
   widthResize();
   fixedLoginForm();

@@ -1,3 +1,5 @@
+getMobileOperatingSystem();
+
 $(window).on("resize", function() {
   getMobileOperatingSystem();
 });
