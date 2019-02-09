@@ -27,7 +27,11 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
     // HEADER
     $(".header").load("header.html .container > *");
     $("head .media").before('<link rel="stylesheet" href="css/header.css">');
-    LoadScript.load("js/header.js");
+    LoadScript.load("js/header.js", function(){
+      widthResize();
+      fixedLoginForm();
+    });
+
     // var headerScript = document.createElement("script");
     // headerScript.src = "js/header.js";
     // headerScript.async = false;
@@ -49,14 +53,18 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
     // FOOTER
     $(".footer").load("footer.html .container > *");
     $("head .media").before('<link rel="stylesheet" href="css/footer.css">');
-    LoadScript.load("js/footer.js");
+    LoadScript.load("js/footer.js", function(){
+      overlayResize();
+    });
     // var footerScript = document.createElement("script");
     // footerScript.src = "js/footer.js";
     // footerScript.async = false;
     // document.body.appendChild(footerScript);
 
     //OS SYSTEM
-    LoadScript.load("js/web-mobile.js");
+    LoadScript.load("js/web-mobile.js", function(){
+      getMobileOperatingSystem();
+    });
     // $.getScript("js/web-mobile.js");
     // var mobWebScript = document.createElement("script");
     // mobWebScript.src = "js/web-mobile.js";
