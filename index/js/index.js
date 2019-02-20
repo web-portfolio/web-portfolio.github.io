@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
   });
 
   $(window).on("load", function() {
-    $(".loader-bg").fadeOut("slow");
+    $(".loader-bg").fadeOut(1000);
   });
 
   function gridResize() {
