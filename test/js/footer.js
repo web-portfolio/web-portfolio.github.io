@@ -1,5 +1,3 @@
-// overlayResize();
-
 $(window).on("resize", function() {
   overlayResize();
   policyFlowResize();
