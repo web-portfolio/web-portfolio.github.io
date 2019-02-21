@@ -7,24 +7,40 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
   });
 
   $(window).on("load", function() {
-    // // HEADER
-    $(".header").load("header.html .container > *", function(){
+    // // // HEADER
+    // $(".header").load("header.html .container > *", function(){
+    //   $.getScript("js/header.js");
+    // });
+    // $("head .media").before('<link rel="stylesheet" href="css/header.css">');
+
+    // // // FOOTER
+    // $(".footer").load("footer.html .container > *", function(){
+    //   $.getScript("js/footer.js");
+    // });
+    // $("head .media").before('<link rel="stylesheet" href="css/footer.css">');
+
+
+    // $.getScript("js/web-mobile.js");
+    // $(".loader-bg").fadeOut(1000);
+    loadHeader();
+    loadFooter();
+    $.when(loadHeader, loadFooter).done(function (){
       $.getScript("js/header.js");
-    });
-    $("head .media").before('<link rel="stylesheet" href="css/header.css">');
-
-    // // FOOTER
-    $(".footer").load("footer.html .container > *", function(){
       $.getScript("js/footer.js");
+      $.getScript("js/web-mobile.js");
+      $(".loader-bg").fadeOut(1000);
     });
-    $("head .media").before('<link rel="stylesheet" href="css/footer.css">');
-
-
-    $.getScript("js/web-mobile.js");
-
-
-    $(".loader-bg").fadeOut(1000);
   });
+
+  function loadHeader(){
+    $(".header").load("header.html .container > *");
+    $("head .media").before('<link rel="stylesheet" href="css/header.css">');
+  };
+
+  function loadFooter(){
+    $(".footer").load("footer.html .container > *");
+    $("head .media").before('<link rel="stylesheet" href="css/footer.css">');
+  };
 
   $(".flexslider").flexslider({
     animation: "slide",
