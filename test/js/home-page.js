@@ -8,18 +8,21 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
 
   $(window).on("load", function() {
     // $.when(loadElements()).then(loadScripts());
-    // loadElements().done(loadScripts());
-    loadElements();
-    setTimeout(loadScripts, 5000);
+    loadElements().done(loadScripts());
+    // loadElements();
+    // setTimeout(loadScripts, 5000);
   });
 
   function loadElements() {
-    // var r = $.Deferred();
+    var r = $.Deferred();
+    var a = $.now();
     $(".header").load("header.html .container > *");
     $("head .media").before('<link rel="stylesheet" href="css/header.css">');
     $(".footer").load("footer.html .container > *");
     $("head .media").before('<link rel="stylesheet" href="css/footer.css">');
-    // return r;
+    var b = $.now();
+    console.log(a+" "+b+" "+(b-a));
+    return r;
   };
 
   function loadScripts() {
