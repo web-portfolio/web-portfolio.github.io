@@ -7,25 +7,45 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
   });
 
   $(window).on("load", function() {
-    loadHeader();
-    loadFooter();
-    $.when(loadHeader, loadFooter).done(function (){
-      $.getScript("js/header.js");
-      $.getScript("js/footer.js");
-      $.getScript("js/web-mobile.js");
-      $(".loader-bg").fadeOut(1000);
-    });
+    // loadHeader();
+    // loadFooter();
+    // $.when(loadHeader(), loadFooter()).done(function (){
+    //   $.getScript("js/header.js");
+    //   $.getScript("js/footer.js");
+    //   $.getScript("js/web-mobile.js");
+    //   $(".loader-bg").fadeOut(1000);
+    // });
+    loadElements().done(loadScripts());
   });
 
-  function loadHeader(){
+  var loadElements = function() {
+    var r = $.Deferred();
     $(".header").load("header.html .container > *");
     $("head .media").before('<link rel="stylesheet" href="css/header.css">');
-  };
-
-  function loadFooter(){
     $(".footer").load("footer.html .container > *");
     $("head .media").before('<link rel="stylesheet" href="css/footer.css">');
+    return r;
   };
+
+  var loadScripts = function() {
+    $.getScript("js/header.js");
+    $.getScript("js/footer.js");
+    $.getScript("js/web-mobile.js");
+    $(".loader-bg").fadeOut(1000);
+  };
+
+  // Now call the functions one after the other using the done method
+  loadElements().done(loadScripts());
+
+  // function loadHeader(){
+  //   $(".header").load("header.html .container > *");
+  //   $("head .media").before('<link rel="stylesheet" href="css/header.css">');
+  // };
+  //
+  // function loadFooter(){
+  //   $(".footer").load("footer.html .container > *");
+  //   $("head .media").before('<link rel="stylesheet" href="css/footer.css">');
+  // };
 
   $(".flexslider").flexslider({
     animation: "slide",
