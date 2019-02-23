@@ -7,32 +7,22 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
   });
 
   $(window).on("load", function() {
-    // $.when(loadElements()).then(loadScripts());
-    // loadElements().done(loadScripts());
-    loadElements();
-    setTimeout(loadScripts, b-a);
+    loadElements().done(loadScripts());
   });
-  
-  var a, b;
+
   function loadElements() {
-    // var r = $.Deferred();
-    a = $.now();
+    var r = $.Deferred();
     $(".header").load("header.html .container > *");
     $("head .media").before('<link rel="stylesheet" href="css/header.css">');
     $(".footer").load("footer.html .container > *");
     $("head .media").before('<link rel="stylesheet" href="css/footer.css">');
-    b = $.now();
-    // return r;
+    return r;
   };
 
   function loadScripts() {
-      var scripts = ["js/header.js", "js/footer.js", "js/web-mobile.js"];
-      for (index = 0; index < scripts.length; ++index) {
-          var script = document.createElement("script");
-          script.type="text/javascript";
-          script.src = scripts[index];
-          document.body.appendChild(script);
-      };
+      $.getScript("js/header.js");
+      $.getScript("js/footer.js");
+      $.getScript("js/web-mobile.js");
       $(".loader-bg").fadeOut(1000);
   };
 
