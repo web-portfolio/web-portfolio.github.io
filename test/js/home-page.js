@@ -7,18 +7,10 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
   });
 
   $(window).on("load", function() {
-    // loadHeader();
-    // loadFooter();
-    // $.when(loadHeader(), loadFooter()).done(function (){
-    //   $.getScript("js/header.js");
-    //   $.getScript("js/footer.js");
-    //   $.getScript("js/web-mobile.js");
-    //   $(".loader-bg").fadeOut(1000);
-    // });
     loadElements().done(loadScripts());
   });
 
-  var loadElements = function() {
+  function loadElements() {
     var r = $.Deferred();
     $(".header").load("header.html .container > *");
     $("head .media").before('<link rel="stylesheet" href="css/header.css">');
@@ -27,25 +19,22 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
     return r;
   };
 
-  var loadScripts = function() {
-    $.getScript("js/header.js");
-    $.getScript("js/footer.js");
-    $.getScript("js/web-mobile.js");
+  function loadScripts() {
+    var scripts = ["js/header.js", "js/footer.js", "js/web-mobile.js"];
+    for (index = 0; index < scripts.length; ++index) {
+        var script = document.createElement("script");
+        script.type="text/javascript";
+        script.src = scripts[index];
+        var done = false;
+        script.onload = script.onreadystatechange = function() {
+            if (!done && (!this.readyState || this.readyState == "loaded" || this.readyState == "complete")) {
+                done = true;
+            }
+        };
+        document.getElementsByTagName("body")[0].appendChild(script);
+    };
     $(".loader-bg").fadeOut(1000);
   };
-
-  // Now call the functions one after the other using the done method
-  loadElements().done(loadScripts());
-
-  // function loadHeader(){
-  //   $(".header").load("header.html .container > *");
-  //   $("head .media").before('<link rel="stylesheet" href="css/header.css">');
-  // };
-  //
-  // function loadFooter(){
-  //   $(".footer").load("footer.html .container > *");
-  //   $("head .media").before('<link rel="stylesheet" href="css/footer.css">');
-  // };
 
   $(".flexslider").flexslider({
     animation: "slide",
