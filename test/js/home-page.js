@@ -10,19 +10,18 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
     // $.when(loadElements()).then(loadScripts());
     loadElements().done(loadScripts());
   });
-  var loaded = false;
-  function loadElements() {
+
+  function loadElements(callback) {
     var r = $.Deferred();
     $(".header").load("header.html .container > *");
     $("head .media").before('<link rel="stylesheet" href="css/header.css">');
     $(".footer").load("footer.html .container > *");
     $("head .media").before('<link rel="stylesheet" href="css/footer.css">');
-    loaded = true;
+    if(callback) callback();
     return r;
   };
 
   function loadScripts() {
-    if (loaded == true){
       var scripts = ["js/header.js", "js/footer.js", "js/web-mobile.js"];
       for (index = 0; index < scripts.length; ++index) {
           var script = document.createElement("script");
@@ -31,7 +30,6 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
           document.body.appendChild(script);
       };
       $(".loader-bg").fadeOut(1000);
-    }
   };
 
   $(".flexslider").flexslider({
