@@ -25,14 +25,14 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
         var script = document.createElement("script");
         script.type="text/javascript";
         script.src = scripts[index];
-        var done = false;
-        script.onload = script.onreadystatechange = function() {
-            if (!done && (!this.readyState || this.readyState == "loaded" || this.readyState == "complete")) {
-                done = true;
-            }
-        };
-        // document.getElementsByTagName("body")[0].appendChild(script);
-        document.body.appendChild(script);
+        script.async = false;
+        // var done = false;
+        // script.onload = script.onreadystatechange = function() {
+        //     if (!done && (!this.readyState || this.readyState == "loaded" || this.readyState == "complete")) {
+        //         done = true;
+        //     }
+        // };
+        document.getElementsByTagName("body")[0].appendChild(script);
     };
     $(".loader-bg").fadeOut(1000);
   };
