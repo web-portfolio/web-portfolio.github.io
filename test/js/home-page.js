@@ -8,17 +8,18 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
 
   $(window).on("load", function() {
     // $.when(loadElements()).then(loadScripts());
-    loadElements().done(loadScripts());
+    // loadElements().done(loadScripts());
+    loadElements();
+    setTimeout(loadScripts, 5000);
   });
 
-  function loadElements(callback) {
-    var r = $.Deferred();
+  function loadElements() {
+    // var r = $.Deferred();
     $(".header").load("header.html .container > *");
     $("head .media").before('<link rel="stylesheet" href="css/header.css">');
     $(".footer").load("footer.html .container > *");
     $("head .media").before('<link rel="stylesheet" href="css/footer.css">');
-    if(callback) callback();
-    return r;
+    // return r;
   };
 
   function loadScripts() {
