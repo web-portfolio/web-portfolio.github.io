@@ -7,16 +7,17 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
   });
 
   $(window).on("load", function() {
-    loadElements().done(loadScripts());
+    $.when(loadElements()).then(loadScripts());
+    // loadElements().done(loadScripts());
   });
 
   function loadElements() {
-    var r = $.Deferred();
+    // var r = $.Deferred();
     $(".header").load("header.html .container > *");
     $("head .media").before('<link rel="stylesheet" href="css/header.css">');
     $(".footer").load("footer.html .container > *");
     $("head .media").before('<link rel="stylesheet" href="css/footer.css">');
-    return r;
+    // return r;
   };
 
   function loadScripts() {
