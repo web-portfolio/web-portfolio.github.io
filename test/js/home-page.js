@@ -7,28 +7,31 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
   });
 
   $(window).on("load", function() {
-    $.when(loadElements()).then(loadScripts());
-    // loadElements().done(loadScripts());
+    // $.when(loadElements()).then(loadScripts());
+    loadElements().done(loadScripts());
   });
-
+  var loaded = false;
   function loadElements() {
-    // var r = $.Deferred();
+    var r = $.Deferred();
     $(".header").load("header.html .container > *");
     $("head .media").before('<link rel="stylesheet" href="css/header.css">');
     $(".footer").load("footer.html .container > *");
     $("head .media").before('<link rel="stylesheet" href="css/footer.css">');
-    // return r;
+    loaded = true;
+    return r;
   };
 
   function loadScripts() {
-    var scripts = ["js/header.js", "js/footer.js", "js/web-mobile.js"];
-    for (index = 0; index < scripts.length; ++index) {
-        var script = document.createElement("script");
-        script.type="text/javascript";
-        script.src = scripts[index];
-        document.body.appendChild(script);
-    };
-    $(".loader-bg").fadeOut(1000);
+    if (loaded == true){
+      var scripts = ["js/header.js", "js/footer.js", "js/web-mobile.js"];
+      for (index = 0; index < scripts.length; ++index) {
+          var script = document.createElement("script");
+          script.type="text/javascript";
+          script.src = scripts[index];
+          document.body.appendChild(script);
+      };
+      $(".loader-bg").fadeOut(1000);
+    }
   };
 
   $(".flexslider").flexslider({
