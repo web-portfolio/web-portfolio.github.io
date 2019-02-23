@@ -7,10 +7,7 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
   });
 
   $(window).on("load", function() {
-    // $.when(loadElements()).then(loadScripts());
-    loadElements().done(function(){
-      loadScripts();
-    });
+    loadElements().done(function());
   });
 
   function loadElements() {
