@@ -31,7 +31,8 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
                 done = true;
             }
         };
-        document.getElementsByTagName("body")[0].appendChild(script);
+        // document.getElementsByTagName("body")[0].appendChild(script);
+        document.body.appendChild(script);
     };
     $(".loader-bg").fadeOut(1000);
   };
