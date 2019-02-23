@@ -7,8 +7,10 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
   });
 
   $(window).on("load", function() {
-    $.when(loadElements()).then(loadScripts());
-    // loadElements().promise().done(loadScripts());
+    // $.when(loadElements()).then(loadScripts());
+    loadElements().done(function(){
+      loadScripts();
+    });
   });
 
   function loadElements() {
@@ -26,7 +28,6 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
         var script = document.createElement("script");
         script.type="text/javascript";
         script.src = scripts[index];
-        script.async = false;
         document.body.appendChild(script);
     };
     $(".loader-bg").fadeOut(1000);
