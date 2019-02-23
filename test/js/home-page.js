@@ -10,7 +10,7 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
     loadElements().done(loadScripts());
   });
 
-  function loadElements() {
+  var loadElements = function() {
     var r = $.Deferred();
     $(".header").load("header.html .container > *");
     $("head .media").before('<link rel="stylesheet" href="css/header.css">');
@@ -19,7 +19,7 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
     return r;
   };
 
-  function loadScripts() {
+  var loadScripts = function() {
     var scripts = ["js/header.js", "js/footer.js", "js/web-mobile.js"];
     for (index = 0; index < scripts.length; ++index) {
         var script = document.createElement("script");
