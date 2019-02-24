@@ -13,7 +13,6 @@ function getMobileOperatingSystem() {
   if (winPhone || ios || android) {
     $('link[href="css/hovers.css"]').prop('disabled', true);
     $("body *").unbind("mouseenter mouseleave");
-    // $(".buy-games").mCustomScrollbar("update");
     //HEADER
     $(".mob-close").show();
     $(".game > img").click(function() {
@@ -134,8 +133,6 @@ function getMobileOperatingSystem() {
     }).mouseleave(function() {
       $(this).css("background-image", "url('img/ico/f4.png')");
     });
-
-    // $(".buy-games").mCustomScrollbar("disable");
     return "Desktop";
   }
 }
