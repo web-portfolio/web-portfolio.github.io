@@ -36,7 +36,7 @@
   cursor: pointer;
   color: #c1b575;
 }
-.policy-close-btn:hover, .btn-success:hover, .last-patch-notes button:hover {
+.policy-close-btn:hover, .btn-success:hover, .last-patch-notes button:hover, .cover-art-tab-link:hover {
   background-color: #1e1e1e;
   color: #c1b575
 }

@@ -1,4 +1,7 @@
-document.addEventListener( "DOMContentLoaded", function( event ) {
+document.addEventListener( "DOMContentLoaded", function(event) {
+  $(window).on("load", function() {
+    loadElements();
+  });
 
   $(window).on("load resize", function() {
     iframeResize();
@@ -6,75 +9,19 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
     containerH = $(".last-patch-notes").outerHeight();
   });
 
-  $(window).on("load", function() {
-    var LoadScript = {
-      load: function(src, callback) {
-        var script = document.createElement("script"),
-            loaded;
-        script.setAttribute("src", src);
-        if (callback) {
-          script.onreadystatechange = script.onload = function() {
-            if (!loaded) {
-              callback();
-            }
-            loaded = true;
-          };
-        }
-        document.body.appendChild(script);
-      }
-    };
-
-    // HEADER
-    $(".header").load("header.html .container > *");
+  function loadElements() {
+    $(".header").load("header.html .container > *", function(){
+      $.getScript("js/header.js");
+    });
     $("head .media").before('<link rel="stylesheet" href="css/header.css">');
-    LoadScript.load("js/header.js", function(){
-      widthResize();
-      fixedLoginForm();
+
+    $(".footer").load("footer.html .container > *", function(){
+      $.getScript("js/footer.js");
+      $.getScript("js/web-mobile.js");
+      $(".loader-bg").fadeOut(1000);
     });
-
-    // var headerScript = document.createElement("script");
-    // headerScript.src = "js/header.js";
-    // headerScript.async = false;
-    // document.body.appendChild(headerScript);
-    // ______________________________
-    // function requiresasd(script) {
-    //   $.ajax({
-    //       url: script,
-    //       dataType: "script",
-    //       async: false,           // <-- This is the key
-    //         error: function () {
-    //           throw new Error("Could not load script " + script);
-    //       }
-    //   });
-    // }
-    // requiresasd("js/header.js");
-    // ______________________________
-
-    // FOOTER
-    $(".footer").load("footer.html .container > *");
     $("head .media").before('<link rel="stylesheet" href="css/footer.css">');
-    LoadScript.load("js/footer.js", function(){
-      overlayResize();
-    });
-    // var footerScript = document.createElement("script");
-    // footerScript.src = "js/footer.js";
-    // footerScript.async = false;
-    // document.body.appendChild(footerScript);
-
-    //OS SYSTEM
-    LoadScript.load("js/web-mobile.js", function(){
-      getMobileOperatingSystem();
-    });
-    // $.getScript("js/web-mobile.js");
-    // var mobWebScript = document.createElement("script");
-    // mobWebScript.src = "js/web-mobile.js";
-    // mobWebScript.async = false;
-    // document.body.appendChild(mobWebScript);
-
-    // $("head .media").before('<link rel="stylesheet" href="css/custom-scrollbar.css">');
-    // $.getScript("js/custom-scrollbar.js");
-    $(".loader-bg").fadeOut("slow");
-  });
+  };
 
   $(".flexslider").flexslider({
     animation: "slide",
