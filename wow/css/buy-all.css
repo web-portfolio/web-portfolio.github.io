@@ -96,7 +96,6 @@ body *{
 .game-info-scroll{
   text-align: left;
   color: #ffffff;
-  overflow-y: scroll;
   box-sizing: border-box;
 }
 .purchase-content{
