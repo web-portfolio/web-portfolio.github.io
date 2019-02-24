@@ -6,8 +6,8 @@ body, nav, div, button, ul, li, ol {
 }
 
 body {
-  /* overflow-x: hidden;
-  background-color: #0f0f0f; */
+  overflow-x: hidden;
+  background-color: #0f0f0f;
   background-image: url("../img/body-bg-reg-form.png");
   background-position: center;
   background-repeat: no-repeat;
