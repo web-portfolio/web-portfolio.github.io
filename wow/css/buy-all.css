@@ -116,6 +116,8 @@ body *{
   margin-left: -6px;
 }
 .cover-art img{
+  -webkit-user-select: none;
+  user-select: none;
   max-width: 100%;
 }
 .cover-art-menu li{

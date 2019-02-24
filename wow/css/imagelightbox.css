@@ -7,6 +7,8 @@
 }
 
 .img_gallery *{
+  -webkit-user-select: none;
+  user-select: none;
   z-index: 999999;
 }
 
