@@ -69,7 +69,10 @@ document.addEventListener( "DOMContentLoaded", function(event) {
     $(this).toggleClass("patch-btn-active");
     $(this).next().toggleClass("patch-btn-content-current");
     element = $(".patch-btn-content-current").outerHeight();
-    $(this).next().slideToggle();
+    $(".last-patch-notes button").attr("disabled", true);
+    $(this).next().slideToggle(function(){
+      $(".last-patch-notes button").attr("disabled", false)
+    });
     if ($(this).next().hasClass("patch-btn-content-current")) {
       top1 = $(".patch-btn-content-current").position().top;
       top2 = $(".patch-btn-content-current").parent().position().top;
