@@ -11,6 +11,11 @@
   width: 100%;
 }
 
+.nav-bar *{
+  -webkit-user-select: none;
+  user-select: none;
+}
+
 .nav-logo {
   display: inline-block;
   cursor: pointer;
