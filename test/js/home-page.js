@@ -9,7 +9,6 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
   $(window).on("load", function() {
     loadElements().done(loadScripts());
   });
-
   function loadElements() {
     var r = $.Deferred();
     $(".header").load("header.html .container > *");
@@ -18,7 +17,6 @@ document.addEventListener( "DOMContentLoaded", function( event ) {
     $("head .media").before('<link rel="stylesheet" href="css/footer.css">');
     return r;
   };
-
   function loadScripts() {
       $.getScript("js/header.js");
       $.getScript("js/footer.js");

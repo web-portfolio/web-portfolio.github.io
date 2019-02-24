@@ -21,6 +21,19 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
+.policy-title {
+    border: 5px solid #34231a;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    font-size: 1.5em;
+    padding: 10px;
+    text-align: center;
+    position: relative;
+    color: #996019;
+    background-color: #0f0f0f;
+    opacity: 0.85;
+}
+
 .footer {
   background: url("../img/footer.png");
   background-position: center;

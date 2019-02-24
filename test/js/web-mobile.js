@@ -31,10 +31,10 @@ function getMobileOperatingSystem() {
     $('link[href="css/hovers.css"]').prop('disabled', false);
     // HEADER
     $(".mob-close").hide();
-    $(".nav-logo").mouseenter(function() {
-      $(".nav-logo img").prop("src", "img/nav-logo-hover.png");
+    $(".nav-logo, .free-acc-logo").mouseenter(function() {
+      $(".nav-logo img, .free-acc-logo img").prop("src", "img/nav-logo-hover.png");
     }).mouseleave(function() {
-      $(".nav-logo img").prop("src", "img/nav-logo.png");
+      $(".nav-logo img, .free-acc-logo img").prop("src", "img/nav-logo.png");
     });
 
     $(".games").mouseenter(function() {
@@ -58,6 +58,18 @@ function getMobileOperatingSystem() {
     }).mouseleave(function() {
       $(".buy-this", this).stop(true, false).slideUp();
     });
+
+    $(".home").mouseenter(function() {
+      $(".home-icon").prop("src", "img/ico/home-hover.png");
+    }).mouseleave(function() {
+      $(".home-icon").prop("src", "img/ico/home.png");
+    });
+    $(".alternative-signin").mouseenter(function() {
+      $(".setup").prop("src", "img/ico/setup-hover.png");
+    }).mouseleave(function() {
+      $(".setup").prop("src", "img/ico/setup.png");
+    });
+
     // FOOTER
     $(".back-to-top").mouseenter(function() {
       x = true;
