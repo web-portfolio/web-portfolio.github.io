@@ -17,9 +17,11 @@ document.addEventListener( 'DOMContentLoaded', function( event ) {
     $(".footer").load("footer.html .container > *", function(){
       $.getScript("js/footer.js");
       $.getScript("js/web-mobile.js");
+      $.getScript("js/simplebar.js");
       $(".loader-bg").fadeOut(1000);
     });
     $("head .media").before('<link rel="stylesheet" href="css/footer.css">');
+    $("head .media").before('<link rel="stylesheet" href="css/simplebar.css">');
   };
 
   function topResize(){
