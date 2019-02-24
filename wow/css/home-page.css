@@ -78,6 +78,8 @@ body *{
 }
 
 .patch-game-logo img {
+  -webkit-user-select: none;
+  user-select: none;
   max-width: 100%
 }
 
