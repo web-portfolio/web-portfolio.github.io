@@ -1,6 +1,6 @@
 document.addEventListener( 'DOMContentLoaded', function(event) {
   $(window).on("load", function() {
-    loadElements().done(loadScripts());
+    loadElements();
     fixedDivAlternative();
   });
 
@@ -9,10 +9,12 @@ document.addEventListener( 'DOMContentLoaded', function(event) {
   });
 
   function loadElements() {
-    var r = $.Deferred();
-    $(".footer").load("footer.html .container > *");
+    $(".footer").load("footer.html .container > *", function(){
+      $.getScript("js/footer.js");
+      $.getScript("js/web-mobile.js");
+      $(".loader-bg").fadeOut(1000);
+    });
     $("head .media").before('<link rel="stylesheet" href="css/footer.css">');
-    return r;
   };
 
   function loadScripts() {
