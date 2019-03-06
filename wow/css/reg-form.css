@@ -33,6 +33,11 @@ body *{
   height: 100%;
 }
 
+.home-icon, .free-acc-logo img, .setup{
+  -webkit-user-select: none;
+  user-select: none;
+}
+
 .free-acc{
   position: fixed;
   z-index: 10;
