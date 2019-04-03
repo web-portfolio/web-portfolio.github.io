@@ -160,7 +160,8 @@
     opacity: 0;
     width:25px;
     height:25px;
-    border-radius: 5px;    
+    border-radius: 5px;
+    -moz-transition: opacity .5s ease-in-out;    
     -webkit-transition: opacity .5s ease-in-out;
     transition: opacity .5s ease-in-out;
 }
