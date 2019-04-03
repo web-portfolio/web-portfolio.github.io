@@ -96,3 +96,7 @@
 .imagelightbox-arrow-left:hover, .imagelightbox-arrow-right:hover{
   color: #c1b575;
 }
+
+.f1:hover::after, .f2:hover::after, .f3:hover::after, .f4:hover::after {
+    opacity: 1;
+}
