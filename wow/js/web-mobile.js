@@ -109,30 +109,6 @@ function getMobileOperatingSystem() {
     }).mouseleave(function() {
       $(this).css("background-image", "url('img/ico/privacy.png')");
     });
-
-    $(".f1").mouseenter(function() {
-      $(this).css("background-image", "url('img/ico/f1-hover.png')");
-    }).mouseleave(function() {
-      $(this).css("background-image", "url('img/ico/f1.png')");
-    });
-
-    $(".f2").mouseenter(function() {
-      $(this).css("background-image", "url('img/ico/f2-hover.png')");
-    }).mouseleave(function() {
-      $(this).css("background-image", "url('img/ico/f2.png')");
-    });
-
-    $(".f3").mouseenter(function() {
-      $(this).css("background-image", "url('img/ico/f3-hover.png')");
-    }).mouseleave(function() {
-      $(this).css("background-image", "url('img/ico/f3.png')");
-    });
-
-    $(".f4").mouseenter(function() {
-      $(this).css("background-image", "url('img/ico/f4-hover.png')");
-    }).mouseleave(function() {
-      $(this).css("background-image", "url('img/ico/f4.png')");
-    });
     return "Desktop";
   }
 }
