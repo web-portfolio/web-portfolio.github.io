@@ -199,7 +199,8 @@
 }
 
 .policy-flow {
-  overflow: auto
+  overflow: auto;
+  text-align: justify;
 }
 
 .sub-title {
