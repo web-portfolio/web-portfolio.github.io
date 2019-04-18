@@ -40,7 +40,7 @@ document.addEventListener( 'DOMContentLoaded', function(event) {
     $(".months").stop(true, false).slideToggle();
     $(".months").outerWidth($(this).outerWidth());
   });
-  $(".country").click(function() {
+  $(".country").click(function() { 
     $(".months").slideUp();
     $(".questions").slideUp();
     $(".countries").stop(true, false).slideToggle();
