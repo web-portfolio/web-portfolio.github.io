@@ -66,11 +66,11 @@ body *{
 @keyframes emptyDivRotate {
   from {
     transform: rotateY(0deg);
-    /*-webkit-transform: rotateY(0deg);*/
+    -webkit-transform: rotateY(0deg);
   }
   to {
     transform: rotateY(360deg);
-    /*-webkit-transform: rotateY(360deg);*/
+    -webkit-transform: rotateY(360deg);
   }
 }
 
@@ -79,9 +79,9 @@ body *{
   animation-timing-function: linear;
   animation-iteration-count: infinite;
   animation-duration: 4s;
-  /*-webkit-animation-name: emptyDivRotate;*/
-  /*-webkit-animation-timing-function: linear;*/
-  /*-webkit-animation-iteration-count: infinite;*/
-  /*-webkit-animation-duration: 4s;*/
-  max-width: 20vw;
+  -webkit-animation-name: emptyDivRotate;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-duration: 4s;
+  /*max-width: 20vw;*/
 }
