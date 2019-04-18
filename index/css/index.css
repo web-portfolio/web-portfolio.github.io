@@ -66,10 +66,17 @@ body *{
 @keyframes emptyDivRotate {
   from {
     transform: rotateY(0deg);
-    -webkit-transform: rotateY(0deg);
   }
   to {
     transform: rotateY(360deg);
+  }
+}
+
+@-webkit-keyframes emptyDivRotate {
+  from {
+    -webkit-transform: rotateY(0deg);
+  }
+  to {
     -webkit-transform: rotateY(360deg);
   }
 }
