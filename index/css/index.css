@@ -63,7 +63,7 @@ body *{
   background-size: cover;
 }
 
-/*@keyframes emptyDivRotate {
+@keyframes emptyDivRotate {
   from {
     transform: rotateY(0deg);
     -webkit-transform: rotateY(0deg);
@@ -85,4 +85,3 @@ body *{
   -webkit-animation-duration: 4s;
   max-width: 20vw;
 }
-*/
