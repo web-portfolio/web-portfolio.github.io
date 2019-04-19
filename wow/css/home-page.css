@@ -20,7 +20,7 @@ body *{
 }
 
 .container{
-  min-width: 360px;
+  min-width: 320px;
   margin: 0 auto;
 }
 
@@ -37,7 +37,7 @@ body *{
 
 .last-patch-notes>div {
   display: inline-block;
-  width: 360px;
+  width: 320px;
   vertical-align: top;
   margin-bottom: 10px;
   position: relative

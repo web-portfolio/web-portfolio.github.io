@@ -122,4 +122,7 @@
   .img_gallery img{
     width: 11em;
   }
+  .tab-link{
+    width: 28% !important;
+  }
 }

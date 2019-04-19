@@ -5,6 +5,7 @@ document.addEventListener( "DOMContentLoaded", function(event) {
 
   $(window).on("load resize", function() {
     iframeResize();
+    // TabLinkHeight();
     $(".last-patch-notes").css("height", "auto");
     containerH = $(".last-patch-notes").outerHeight();
   });
@@ -91,6 +92,16 @@ document.addEventListener( "DOMContentLoaded", function(event) {
       });
     }
   });
+
+  function TabLinkHeight(){
+    var maxHeight = 0;
+    $(".tab-link").each(function(){
+       if ($(this).height() > maxHeight){ 
+        maxHeight = $(this).height();
+      }
+    });
+    $(".tab-link").height(maxHeight);
+  };
 
   $(".close-trailer-btn").click(function(){
     $(this).next().prop("src", "");
