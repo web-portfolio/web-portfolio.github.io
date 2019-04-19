@@ -61,6 +61,8 @@ body *{
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
+  perspective: 900000px;
+  -webkit-perspective: 900000px;
 }
 
 @keyframes emptyDivRotate {
