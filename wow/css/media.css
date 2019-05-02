@@ -133,4 +133,8 @@
   .game{
   	width: 44%;
   }
+  .tab-link {
+   width: 28vw !important;
+   font-size: 4vw;
+  }
 }
