@@ -30,6 +30,10 @@ body *{
   opacity: 0.85;
 }
 
+.container{
+  min-width: 320px;
+}
+
 .bc {
   background-image: url("../img/body-bg-bc.png");
   background-position: top;

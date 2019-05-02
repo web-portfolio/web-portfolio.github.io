@@ -20,7 +20,7 @@ body *{
 }
 
 .container{
-  min-width: 360px;
+  min-width: 320px;
   margin: 0 auto;
 }
 
@@ -50,6 +50,7 @@ body *{
   box-sizing: border-box;
   text-align: center;
   text-align: center;
+  min-width: 320px;
 }
 
 .free-acc>*{
@@ -144,7 +145,7 @@ body *{
   margin-left: -15px;
   margin-top: 15px;
 }
-.free-acc-text{
+.free-acc-text{  
   margin-top: 136px;
   margin-bottom: 50px;
 }
@@ -354,7 +355,7 @@ body *{
   border-bottom: 2px solid black;
   border-right: 2px solid black;
   color: #996019;
-  width: 300px;
+  width: 250px;
   display: block;
   margin: 0 auto;
   cursor: pointer;

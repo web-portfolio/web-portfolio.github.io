@@ -80,6 +80,8 @@
   }
   .game-info-scroll{
     height: 500px !important;
+    width: 95% !important;
+	margin: 0 auto;
   }
 }
 
@@ -95,7 +97,7 @@
     box-sizing: border-box;
   }
   .img_gallery img{
-    width: 12em;
+    width: 43vw;
   }
 }
 @media screen and (max-width: 444px) {
@@ -119,9 +121,6 @@
   .day, .year{
     width: 19.5%;
   }
-  .img_gallery img{
-    width: 11em;
-  }
   .tab-link{
     width: 28% !important;
   }
@@ -136,5 +135,8 @@
   .tab-link {
    width: 28vw !important;
    font-size: 4vw;
+  }
+  .free-acc-text p{
+  	font-size: 13vw;
   }
 }
