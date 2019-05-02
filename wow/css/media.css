@@ -126,3 +126,11 @@
     width: 28% !important;
   }
 }
+@media screen and (max-width: 360px){
+  .login-form-btns button:not(:first-child){
+	width: 100%;
+  }
+  .game{
+  	width: 44%;
+  }
+}
