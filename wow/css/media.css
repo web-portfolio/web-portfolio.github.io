@@ -11,13 +11,13 @@
   .trailers>div {
     width: 47%;
   }
-  .cover-art, .cover-art-menu{
+  .cover-art, .cover-art-menu {
     width: 50%;
   }
 }
 
 @media screen and (max-width: 767px) {
-  .login-form{
+  .login-form {
     width: 80%;
   }
   .trailers>div {
@@ -42,101 +42,103 @@
   .wide {
     right: 20px;
   }
-  .tabs{
+  .tabs {
     width: 100%;
   }
-
-  .tab-link{
+  .tab-link {
     width: 29% !important;
   }
-  .privacy-content>div, .cookie-content>div{
+  .privacy-content>div, .cookie-content>div {
     width: 95%;
   }
-  .mob-close{
+  .mob-close {
     display: block;
   }
-  .buy-games{
+  .buy-games {
     max-height: 460px;
     overflow-y: auto;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
     padding-right: 0px;
   }
-  .img_gallery{
+  .img_gallery {
     width: 100%;
   }
-  .img_gallery img{
+  .img_gallery img {
     width: 13em;
   }
   .img_gallery li {
     margin: 2px;
   }
-  .top-content>*{
+  .top-content>* {
     display: block;
     width: 100%;
   }
-  .game-info-scroll, .purchase-content{
+  .game-info-scroll, .purchase-content {
     padding: 0 2%;
   }
-  .game-info-scroll{
+  .game-info-scroll {
     height: 330px !important;
     width: 95% !important;
-	margin: 0 auto;
+    margin: 0 auto;
   }
 }
 
 @media screen and (max-width: 669px) {
-  .login-form{
+  .login-form {
     width: 90%;
   }
-  .footer-nav div:not(:last-child) ul{
+  .footer-nav div:not(:last-child) ul {
     border-right: none !important;
   }
-  .registration{
+  .registration {
     width: 99%;
     box-sizing: border-box;
   }
-  .img_gallery img{
+  .img_gallery img {
     width: 43vw;
   }
 }
+
 @media screen and (max-width: 444px) {
-  .footer-nav{
+  .footer-nav {
     margin-top: 60px;
   }
 }
+
 @media screen and (max-width: 440px) {
-  .footer-nav{
+  .footer-nav {
     margin-top: 60px;
   }
-  .login-form{
+  .login-form {
     width: 100%;
   }
-  .login-form-btns, .fb-google, .or, .login-form-inputs input{
+  .login-form-btns, .fb-google, .or, .login-form-inputs input {
     width: 90%;
   }
-  .month{
+  .month {
     width: 59.5%;
   }
-  .day, .year{
+  .day, .year {
     width: 19.5%;
   }
-  .tab-link{
+  .tab-link {
     width: 28% !important;
   }
 }
-@media screen and (max-width: 360px){
-  .login-form-btns button:not(:first-child){
-	width: 100%;
+
+@media screen and (max-width: 360px) {
+  .login-form-btns button:not(:first-child) {
+    width: 100%;
   }
-  .game{
-  	width: 44%;
+  .game {
+    width: 44%;
   }
   .tab-link {
-   width: 28vw !important;
-   font-size: 4vw;
+    width: 28vw !important;
+    font-size: 4vw;
   }
-  .free-acc-text p{
-  	font-size: 13vw;
+  .free-acc-text p {
+    font-size: 13vw;
   }
 }

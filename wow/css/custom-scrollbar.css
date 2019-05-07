@@ -3,6 +3,7 @@
 Plugin URI: http://manos.malihu.gr/jquery-custom-content-scroller
 */
 
+
 /*
 CONTENTS:
 	1. BASIC STYLE - Plugin's basic/essential CSS properties (normally, should not be edited).
@@ -13,6 +14,7 @@ CONTENTS:
 	6. SCROLLBAR COLORS, OPACITY AND BACKGROUNDS
 		6.1 THEMES - Scrollbar colors, opacity, dimensions, backgrounds etc. via ready-to-use themes.
 */
+
 
 /*
 ------------------------------------------------------------------------------------------------------------------------
@@ -48,6 +50,7 @@ CONTENTS:
   height: auto;
 }
 
+
 /*
 ------------------------------------------------------------------------------------------------------------------------
 2. VERTICAL SCROLLBAR
@@ -63,6 +66,7 @@ y-axis
   margin-right: 0;
 }
 
+
 /* non-visible scrollbar */
 
 .mCS-dir-rtl>.mCSB_inside>.mCSB_container {
@@ -74,6 +78,7 @@ y-axis
 .mCS-dir-rtl>.mCSB_inside>.mCSB_container.mCS_no_scrollbar_y.mCS_y_hidden {
   margin-left: 0;
 }
+
 
 /* RTL direction/left-side scrollbar */
 
@@ -92,6 +97,7 @@ y-axis
   right: -26px;
 }
 
+
 /* scrollbar position: outside */
 
 .mCS-dir-rtl>.mCSB_inside>.mCSB_scrollTools, .mCS-dir-rtl>.mCSB_outside+.mCSB_scrollTools {
@@ -103,6 +109,7 @@ y-axis
 .mCS-dir-rtl>.mCSB_outside+.mCSB_scrollTools {
   left: -26px;
 }
+
 
 /* RTL direction/left-side scrollbar (scrollbar position: outside) */
 
@@ -174,6 +181,7 @@ y-axis
   bottom: 0;
 }
 
+
 /*
 ------------------------------------------------------------------------------------------------------------------------
 3. HORIZONTAL SCROLLBAR
@@ -194,6 +202,7 @@ x-axis
   margin-bottom: 0;
 }
 
+
 /* non-visible scrollbar */
 
 .mCSB_scrollTools.mCSB_scrollTools_horizontal {
@@ -208,6 +217,7 @@ x-axis
 .mCustomScrollBox+.mCSB_scrollTools.mCSB_scrollTools_horizontal, .mCustomScrollBox+.mCSB_scrollTools+.mCSB_scrollTools.mCSB_scrollTools_horizontal {
   bottom: -26px;
 }
+
 
 /* scrollbar position: outside */
 
@@ -264,6 +274,7 @@ x-axis
   right: 0;
 }
 
+
 /*
 ------------------------------------------------------------------------------------------------------------------------
 4. VERTICAL AND HORIZONTAL SCROLLBARS
@@ -300,11 +311,13 @@ yx-axis
   right: 20px;
 }
 
+
 /* non-visible horizontal scrollbar */
 
 .mCSB_container_wrapper.mCS_no_scrollbar_x.mCS_x_hidden+.mCSB_scrollTools.mCSB_scrollTools_vertical {
   bottom: 0;
 }
+
 
 /* non-visible vertical scrollbar/RTL direction/left-side scrollbar */
 
@@ -312,11 +325,13 @@ yx-axis
   right: 0;
 }
 
+
 /* RTL direction/left-side scrollbar */
 
 .mCS-dir-rtl>.mCustomScrollBox.mCSB_vertical_horizontal.mCSB_inside>.mCSB_scrollTools.mCSB_scrollTools_horizontal {
   left: 20px;
 }
+
 
 /* non-visible scrollbar/RTL direction/left-side scrollbar */
 
@@ -344,11 +359,13 @@ yx-axis
   margin-left: 0;
 }
 
+
 /* non-visible horizontal scrollbar */
 
 .mCustomScrollBox.mCSB_vertical_horizontal.mCSB_inside>.mCSB_container_wrapper.mCS_no_scrollbar_x.mCS_x_hidden {
   margin-bottom: 0;
 }
+
 
 /*
 ------------------------------------------------------------------------------------------------------------------------
@@ -373,17 +390,20 @@ yx-axis
   transition: width .2s ease-out .2s, height .2s ease-out .2s, margin-left .2s ease-out .2s, margin-right .2s ease-out .2s, margin-top .2s ease-out .2s, margin-bottom .2s ease-out .2s, opacity .2s ease-in-out, background-color .2s ease-in-out;
 }
 
+
 /*
 ------------------------------------------------------------------------------------------------------------------------
 6. SCROLLBAR COLORS, OPACITY AND BACKGROUNDS
 ------------------------------------------------------------------------------------------------------------------------
 */
 
+
 /*
 	----------------------------------------
 	6.1 THEMES
 	----------------------------------------
 	*/
+
 
 /* default theme ("light") */
 
@@ -487,6 +507,7 @@ yx-axis
   -ms-filter: "alpha(opacity=90)";
 }
 
+
 /* theme: "dark" */
 
 .mCS-dark.mCSB_scrollTools .mCSB_draggerRail {
@@ -523,7 +544,9 @@ yx-axis
   background-position: -80px -56px;
 }
 
+
 /* ---------------------------------------- */
+
 
 /* theme: "light-2", "dark-2" */
 
@@ -577,6 +600,7 @@ yx-axis
   background-position: -40px -56px;
 }
 
+
 /* theme: "dark-2" */
 
 .mCS-dark-2.mCSB_scrollTools .mCSB_draggerRail {
@@ -621,7 +645,9 @@ yx-axis
   background-position: -120px -56px;
 }
 
+
 /* ---------------------------------------- */
+
 
 /* theme: "light-thick", "dark-thick" */
 
@@ -681,6 +707,7 @@ yx-axis
   background-position: -20px -56px;
 }
 
+
 /* theme: "dark-thick" */
 
 .mCS-dark-thick.mCSB_scrollTools .mCSB_draggerRail {
@@ -725,7 +752,9 @@ yx-axis
   background-position: -100px -56px;
 }
 
+
 /* ---------------------------------------- */
+
 
 /* theme: "light-thin", "dark-thin" */
 
@@ -747,6 +776,7 @@ yx-axis
   height: 2px;
   margin: 7px auto;
 }
+
 
 /* theme "dark-thin" */
 
@@ -786,7 +816,9 @@ yx-axis
   background-position: -80px -56px;
 }
 
+
 /* ---------------------------------------- */
+
 
 /* theme "rounded", "rounded-dark", "rounded-dots", "rounded-dots-dark" */
 
@@ -854,6 +886,7 @@ yx-axis
   background-position: 0 -128px;
 }
 
+
 /* theme "rounded-dark", "rounded-dots-dark" */
 
 .mCS-rounded-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, .mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
@@ -891,6 +924,7 @@ yx-axis
 .mCS-rounded-dark.mCSB_scrollTools .mCSB_buttonRight {
   background-position: -80px -128px;
 }
+
 
 /* theme "rounded-dots", "rounded-dots-dark" */
 
@@ -933,6 +967,7 @@ yx-axis
   background-position: -20px -128px;
 }
 
+
 /* theme "rounded-dots-dark" */
 
 .mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_draggerRail {
@@ -955,7 +990,9 @@ yx-axis
   background-position: -100px -128px;
 }
 
+
 /* ---------------------------------------- */
+
 
 /* theme "3d", "3d-dark", "3d-thick", "3d-thick-dark" */
 
@@ -978,6 +1015,7 @@ yx-axis
   background-image: -ms-linear-gradient(top, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
   background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
 }
+
 
 /* theme "3d", "3d-dark" */
 
@@ -1045,6 +1083,7 @@ yx-axis
   background-position: -40px -128px;
 }
 
+
 /* theme "3d-dark" */
 
 .mCS-3d-dark.mCSB_scrollTools .mCSB_draggerRail {
@@ -1073,7 +1112,9 @@ yx-axis
   background-position: -120px -128px;
 }
 
+
 /* ---------------------------------------- */
+
 
 /* theme: "3d-thick", "3d-thick-dark" */
 
@@ -1159,6 +1200,7 @@ yx-axis
   background-position: -40px -128px;
 }
 
+
 /* theme: "3d-thick-dark" */
 
 .mCS-3d-thick-dark.mCSB_scrollTools {
@@ -1207,7 +1249,9 @@ yx-axis
   background-position: -120px -128px;
 }
 
+
 /* ---------------------------------------- */
+
 
 /* theme: "minimal", "minimal-dark" */
 
@@ -1220,6 +1264,7 @@ yx-axis
   bottom: 0;
   margin: 0 12px;
 }
+
 
 /* RTL direction/left-side scrollbar */
 
@@ -1254,6 +1299,7 @@ yx-axis
   -ms-filter: "alpha(opacity=50)";
 }
 
+
 /* theme: "minimal-dark" */
 
 .mCS-minimal-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
@@ -1270,7 +1316,9 @@ yx-axis
   -ms-filter: "alpha(opacity=50)";
 }
 
+
 /* ---------------------------------------- */
+
 
 /* theme "light-3", "dark-3" */
 
@@ -1315,6 +1363,7 @@ yx-axis
   background-position: -40px -128px;
 }
 
+
 /* theme "dark-3" */
 
 .mCS-dark-3.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
@@ -1353,7 +1402,9 @@ yx-axis
   background-position: -120px -128px;
 }
 
+
 /* ---------------------------------------- */
+
 
 /* theme "inset", "inset-dark", "inset-2", "inset-2-dark", "inset-3", "inset-3-dark" */
 
@@ -1407,6 +1458,7 @@ yx-axis
   background-position: -40px -128px;
 }
 
+
 /* theme "inset-dark", "inset-2-dark", "inset-3-dark" */
 
 .mCS-inset-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, .mCS-inset-2-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, .mCS-inset-3-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
@@ -1445,6 +1497,7 @@ yx-axis
   background-position: -120px -128px;
 }
 
+
 /* theme "inset-2", "inset-2-dark" */
 
 .mCS-inset-2.mCSB_scrollTools .mCSB_draggerRail, .mCS-inset-2-dark.mCSB_scrollTools .mCSB_draggerRail {
@@ -1462,6 +1515,7 @@ yx-axis
   border-color: #000;
   border-color: rgba(0, 0, 0, 0.2);
 }
+
 
 /* theme "inset-3", "inset-3-dark" */
 
@@ -1504,5 +1558,6 @@ yx-axis
   background-color: #fff;
   background-color: rgba(255, 255, 255, 0.9);
 }
+
 
 /* ---------------------------------------- */

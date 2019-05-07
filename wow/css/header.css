@@ -11,7 +11,7 @@
   width: 100%;
 }
 
-.nav-bar *{
+.nav-bar * {
   -webkit-user-select: none;
   user-select: none;
 }

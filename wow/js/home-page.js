@@ -1,4 +1,4 @@
-document.addEventListener( "DOMContentLoaded", function(event) {
+document.addEventListener("DOMContentLoaded", function(event) {
   $(window).on("load", function() {
     loadElements();
   });
@@ -11,12 +11,12 @@ document.addEventListener( "DOMContentLoaded", function(event) {
   });
 
   function loadElements() {
-    $(".header").load("header.html .container > *", function(){
+    $(".header").load("header.html .container > *", function() {
       $.getScript("js/header.js");
     });
     $("head .media").before('<link rel="stylesheet" href="css/header.css">');
 
-    $(".footer").load("footer.html .container > *", function(){
+    $(".footer").load("footer.html .container > *", function() {
       $.getScript("js/footer.js");
       $.getScript("js/web-mobile.js");
       $.getScript("js/simplebar.js");
@@ -34,8 +34,8 @@ document.addEventListener( "DOMContentLoaded", function(event) {
   });
 
   $(".wide").click(function() {
-    $(".last-patch-notes").stop(true,false).slideUp();
-    $(".last-patch-notes-wide").stop(true,false).slideDown();
+    $(".last-patch-notes").stop(true, false).slideUp();
+    $(".last-patch-notes-wide").stop(true, false).slideDown();
     $(".grid").removeClass("grid-wide-active");
     $(this).addClass("grid-wide-active");
     $(this).removeClass("inactive");
@@ -43,8 +43,8 @@ document.addEventListener( "DOMContentLoaded", function(event) {
   });
 
   $(".grid").click(function() {
-    $(".last-patch-notes-wide").stop(true,false).slideUp();
-    $(".last-patch-notes").stop(true,false).slideDown();
+    $(".last-patch-notes-wide").stop(true, false).slideUp();
+    $(".last-patch-notes").stop(true, false).slideDown();
     $(".wide").removeClass("grid-wide-active");
     $(this).addClass("grid-wide-active");
     $(this).removeClass("inactive");
@@ -73,7 +73,7 @@ document.addEventListener( "DOMContentLoaded", function(event) {
     $(this).next().toggleClass("patch-btn-content-current");
     element = $(".patch-btn-content-current").outerHeight();
     $(".last-patch-notes button").attr("disabled", true);
-    $(this).next().slideToggle(function(){
+    $(this).next().slideToggle(function() {
       $(".last-patch-notes button").attr("disabled", false)
     });
     if ($(this).next().hasClass("patch-btn-content-current")) {
@@ -93,59 +93,60 @@ document.addEventListener( "DOMContentLoaded", function(event) {
     }
   });
 
-  function TabLinkHeight(){
+  function TabLinkHeight() {
     var maxHeight = 0;
-    $(".tab-link").each(function(){
-       if ($(this).height() > maxHeight){ 
+    $(".tab-link").each(function() {
+      if ($(this).height() > maxHeight) {
         maxHeight = $(this).height();
       }
     });
     $(".tab-link").height(maxHeight);
   };
 
-  $(".close-trailer-btn").click(function(){
+  $(".close-trailer-btn").click(function() {
     $(this).next().prop("src", "");
     $(this).toggle();
     $(this).prev().toggle();
   });
-  $(".game-trailer1 .start-trailer-btn").click(function(){
+  $(".game-trailer1 .start-trailer-btn").click(function() {
     $(".game-trailer1 iframe").prop("src", "https://www.youtube.com/embed/IBHL_-biMrQ?autoplay=1");
     $(this).toggle();
     $(this).next().toggle();
   });
-  $(".game-trailer2 .start-trailer-btn").click(function(){
+  $(".game-trailer2 .start-trailer-btn").click(function() {
     $(".game-trailer2 iframe").prop("src", "https://www.youtube.com/embed/BCr7y4SLhck?autoplay=1");
     $(this).toggle();
     $(this).next().toggle();
   });
-  $(".game-trailer3 .start-trailer-btn").click(function(){
+  $(".game-trailer3 .start-trailer-btn").click(function() {
     $(".game-trailer3 iframe").prop("src", "https://www.youtube.com/embed/Wq4Y7ztznKc?autoplay=1");
     $(this).toggle();
     $(this).next().toggle();
   });
-  $(".game-trailer4 .start-trailer-btn").click(function(){
+  $(".game-trailer4 .start-trailer-btn").click(function() {
     $(".game-trailer4 iframe").prop("src", "https://www.youtube.com/embed/wvYXoyxLv64?autoplay=1");
     $(this).toggle();
     $(this).next().toggle();
   });
-  $(".game-trailer5 .start-trailer-btn").click(function(){
+  $(".game-trailer5 .start-trailer-btn").click(function() {
     $(".game-trailer5 iframe").prop("src", "https://www.youtube.com/embed/TLzhlsEFcVQ?autoplay=1");
     $(this).toggle();
     $(this).next().toggle();
   });
-  $(".game-trailer6 .start-trailer-btn").click(function(){
+  $(".game-trailer6 .start-trailer-btn").click(function() {
     $(".game-trailer6 iframe").prop("src", "https://www.youtube.com/embed/eYNCCu0y-Is?autoplay=1");
     $(this).toggle();
     $(this).next().toggle();
   });
-  $(".game-trailer7 .start-trailer-btn").click(function(){
+  $(".game-trailer7 .start-trailer-btn").click(function() {
     $(".game-trailer7 iframe").prop("src", "https://www.youtube.com/embed/jSJr3dXZfcg?autoplay=1");
     $(this).toggle();
     $(this).next().toggle();
   });
-  function iframeResize(){
+
+  function iframeResize() {
     var w = $(".trailers > div").width();
-    var h = (w*56.2060889929742)/100;
+    var h = (w * 56.2060889929742) / 100;
     $(".trailers > div").height(h);
   }
 });

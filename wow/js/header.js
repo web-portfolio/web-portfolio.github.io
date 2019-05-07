@@ -6,7 +6,7 @@ $(window).on("resize", function() {
   fixedLoginForm();
 });
 
-function widthResize(){
+function widthResize() {
   var headerWidth = $(".header").width();
   $(".nav-bar").outerWidth(headerWidth);
   $(".buy-games").outerWidth(headerWidth);
@@ -18,6 +18,7 @@ $(".login-btn").click(function() {
 });
 
 var user, pass;
+
 function userCheck() {
   if ($(".login-form-inputs input[type='text']").val() == "") {
     $(".login-user-error").show();
@@ -27,6 +28,7 @@ function userCheck() {
     user = true;
   }
 }
+
 function passCheck() {
   if ($(".login-form-inputs input[type='password']").val() == "") {
     $(".login-pass-error").show();
@@ -37,7 +39,7 @@ function passCheck() {
   }
 }
 
-$(".lp-continue").click(function(){
+$(".lp-continue").click(function() {
   var re = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
     is_email = re.test($(".lp-email").val());
   if (is_email) {
@@ -51,15 +53,15 @@ $(".lp-continue").click(function(){
 });
 
 $(".lp-email").keypress(function(e) {
-    if(e.which == 13) {
-      $(".lp-continue").click();
-    }
+  if (e.which == 13) {
+    $(".lp-continue").click();
+  }
 });
 
 $(".login-after-pass").keypress(function(e) {
-    if(e.which == 13 && user == true && pass == true) {
-      $(".login-btn").click();
-    }
+  if (e.which == 13 && user == true && pass == true) {
+    $(".login-btn").click();
+  }
 });
 
 function mailCheck() {
@@ -70,38 +72,38 @@ function mailCheck() {
   }
 }
 
-$(".forgotten-pass, .lp-cansel").click(function(){
+$(".forgotten-pass, .lp-cansel").click(function() {
   $(".login").slideToggle();
   $(".login-problems").slideToggle();
 });
 
-$(".lp-email-send-bt").click(function(){
+$(".lp-email-send-bt").click(function() {
   $(".lp-email").val("");
   $(".lp-email-send").slideUp();
   $(".login").slideDown();
 });
 
 $(".games").click(function() {
-  $(".buy-games").stop(true,false).slideToggle();
+  $(".buy-games").stop(true, false).slideToggle();
   $(this).toggleClass("games-active");
   $(".login-form").slideUp();
   $(".profile").removeClass("profile-active");
 });
 
 $(".profile").click(function() {
-  $(".login-form").stop(true,false).slideToggle();
+  $(".login-form").stop(true, false).slideToggle();
   $(this).toggleClass("profile-active");
   $(".buy-games").slideUp();
   $(".games").removeClass("games-active");
 });
 
-function fixedLoginForm(){
+function fixedLoginForm() {
   var windowW = $(window).width();
-  if (windowW > 1920){
-    var x = (windowW - 1920)/2;
-    $(".login-form").css({right:x});
-  } else{
-    $(".login-form").css({right:0});
+  if (windowW > 1920) {
+    var x = (windowW - 1920) / 2;
+    $(".login-form").css({ right: x });
+  } else {
+    $(".login-form").css({ right: 0 });
   }
 }
 

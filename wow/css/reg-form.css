@@ -15,30 +15,30 @@ body {
   background-attachment: fixed;
 }
 
-body *{
+body * {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
-.container{
+.container {
   min-width: 320px;
   margin: 0 auto;
 }
 
-.nav-logo{
+.nav-logo {
   display: inline-block;
   cursor: pointer;
 }
 
-.nav-logo img{
+.nav-logo img {
   height: 100%;
 }
 
-.home-icon, .free-acc-logo img, .setup{
+.home-icon, .free-acc-logo img, .setup {
   -webkit-user-select: none;
   user-select: none;
 }
 
-.free-acc{
+.free-acc {
   position: fixed;
   z-index: 10;
   top: 0;
@@ -53,14 +53,16 @@ body *{
   min-width: 320px;
 }
 
-.free-acc>*{
+.free-acc>* {
   display: inline-block;
 }
-.free-acc-logo{
+
+.free-acc-logo {
   cursor: pointer;
 }
-.free-acc-logo img{
- height: 50px;
+
+.free-acc-logo img {
+  height: 50px;
 }
 
 .home {
@@ -69,10 +71,12 @@ body *{
   cursor: pointer;
   margin-top: 9px;
 }
-.home img, .alternative-signin img{
+
+.home img, .alternative-signin img {
   width: 35px;
 }
-.alternative-signin-content{
+
+.alternative-signin-content {
   position: fixed;
   top: 76px;
   right: 0px;
@@ -90,7 +94,8 @@ body *{
   opacity: 0.95;
   display: none;
 }
-.alternative-signin-content button{
+
+.alternative-signin-content button {
   width: 80%;
   color: white;
   height: 30px;
@@ -99,10 +104,12 @@ body *{
   border-bottom-right-radius: 10px;
   cursor: pointer;
 }
-.alternative-signin-content p{
+
+.alternative-signin-content p {
   margin: 10px;
 }
-.reg-fb-btn{
+
+.reg-fb-btn {
   background: #3b5998;
   border-top: 2px solid #1c3262;
   border-left: 2px solid #1c3262;
@@ -110,7 +117,8 @@ body *{
   border-right: 2px solid #060911;
   font-weight: bold;
 }
-.reg-google-btn{
+
+.reg-google-btn {
   background: #d9534f;
   border-top: 2px solid #af3531;
   border-left: 2px solid #af3531;
@@ -118,16 +126,19 @@ body *{
   border-right: 2px solid #5f1c1a;
   font-weight: bold;
 }
-.alternative-signin{
+
+.alternative-signin {
   float: right;
   margin-right: 2%;
   cursor: pointer;
   margin-top: 9px;
 }
-.alternative-signin div{
+
+.alternative-signin div {
   float: left;
 }
-.reg-down-arrow{
+
+.reg-down-arrow {
   width: 0;
   height: 0;
   border-top: 6px solid #996019;
@@ -136,7 +147,8 @@ body *{
   margin-left: -15px;
   margin-top: 15px;
 }
-.reg-up-arrow{
+
+.reg-up-arrow {
   width: 0;
   height: 0;
   border-bottom: 6px solid #c1b575;
@@ -145,23 +157,25 @@ body *{
   margin-left: -15px;
   margin-top: 15px;
 }
-.free-acc-text{  
+
+.free-acc-text {
   margin-top: 136px;
   margin-bottom: 50px;
 }
-.free-acc-text p{
+
+.free-acc-text p {
   text-align: center;
   font-size: 3em;
   font-weight: bold;
   color: #996019;
 }
 
-.home-hover, .setup-hover, .reg-up-arrow, .alternative-signin-active .reg-down-arrow,
-.alternative-signin-active .setup {
+.home-hover, .setup-hover, .reg-up-arrow, .alternative-signin-active .reg-down-arrow, .alternative-signin-active .setup {
   display: none
 }
+
 .alternative-signin-active .setup-hover, .alternative-signin-active .reg-up-arrow {
-    display: block;
+  display: block;
 }
 
 .registration {
@@ -364,6 +378,7 @@ body *{
   border-bottom-right-radius: 10px;
 }
 
+
 /* Check BOX */
 
 .label-item {
@@ -402,6 +417,7 @@ body *{
   position: absolute;
   display: none;
 }
+
 .label-item:hover input~.checkmark {
   background-color: #cccccc;
 }
@@ -425,6 +441,7 @@ body *{
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
+
 
 /* Check BOX END*/
 

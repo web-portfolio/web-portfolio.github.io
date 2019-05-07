@@ -5,7 +5,7 @@ body, nav, div, button, ul, li, ol {
   font-family: Verdana, Geneva, sans-serif
 }
 
-body *{
+body * {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
@@ -20,6 +20,7 @@ body *{
   height: 100vh;
   z-index: -1;
 }
+
 .container {
   width: 100%;
   max-width: 1024px;

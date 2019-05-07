@@ -1,4 +1,4 @@
-document.addEventListener( 'DOMContentLoaded', function(event) {
+document.addEventListener("DOMContentLoaded", function(event) {
   $(window).on("load", function() {
     loadElements();
     fixedDivAlternative();
@@ -9,7 +9,7 @@ document.addEventListener( 'DOMContentLoaded', function(event) {
   });
 
   function loadElements() {
-    $(".footer").load("footer.html .container > *", function(){
+    $(".footer").load("footer.html .container > *", function() {
       $.getScript("js/footer.js");
       $.getScript("js/web-mobile.js");
       $.getScript("js/simplebar.js");
@@ -19,18 +19,18 @@ document.addEventListener( 'DOMContentLoaded', function(event) {
     $("head .media").before('<link rel="stylesheet" href="css/simplebar.css">');
   };
 
-  function fixedDivAlternative(){
+  function fixedDivAlternative() {
     var windowW = $(window).width();
-    if (windowW > 1920){
-      var x = (windowW - 1920)/2;
-      $(".alternative-signin-content").css({right:x});
-    } else{
-      $(".alternative-signin-content").css({right:0});
+    if (windowW > 1920) {
+      var x = (windowW - 1920) / 2;
+      $(".alternative-signin-content").css({ right: x });
+    } else {
+      $(".alternative-signin-content").css({ right: 0 });
     }
   }
 
   $(".alternative-signin").click(function() {
-    $(".alternative-signin-content").stop(true,false).slideToggle();
+    $(".alternative-signin-content").stop(true, false).slideToggle();
     $(this).toggleClass("alternative-signin-active");
   });
 
@@ -40,7 +40,7 @@ document.addEventListener( 'DOMContentLoaded', function(event) {
     $(".months").stop(true, false).slideToggle();
     $(".months").outerWidth($(this).outerWidth());
   });
-  $(".country").click(function() { 
+  $(".country").click(function() {
     $(".months").slideUp();
     $(".questions").slideUp();
     $(".countries").stop(true, false).slideToggle();

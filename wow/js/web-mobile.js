@@ -22,7 +22,7 @@ function getMobileOperatingSystem() {
       $(this).next().outerWidth(wImg);
       $(this).next().slideDown();
     });
-    $(".mob-close").click(function(){
+    $(".mob-close").click(function() {
       $(this).parent().slideUp();
     });
     return "Phone Device";

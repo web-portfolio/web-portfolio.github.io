@@ -1,20 +1,20 @@
-document.addEventListener( 'DOMContentLoaded', function( event ) {
-  $(window).on("load", function(){
+document.addEventListener("DOMContentLoaded", function(event) {
+  $(window).on("load", function() {
     loadElements();
   });
 
-  $(window).on("load resize", function(){
+  $(window).on("load resize", function() {
     topResize();
     gameInfoResize();
   });
 
   function loadElements() {
-    $(".header").load("header.html .container > *", function(){
+    $(".header").load("header.html .container > *", function() {
       $.getScript("js/header.js");
     });
     $("head .media").before('<link rel="stylesheet" href="css/header.css">');
 
-    $(".footer").load("footer.html .container > *", function(){
+    $(".footer").load("footer.html .container > *", function() {
       $.getScript("js/footer.js");
       $.getScript("js/web-mobile.js");
       $.getScript("js/simplebar.js");
@@ -24,17 +24,17 @@ document.addEventListener( 'DOMContentLoaded', function( event ) {
     $("head .media").before('<link rel="stylesheet" href="css/simplebar.css">');
   };
 
-  function topResize(){
+  function topResize() {
     var topImgH = $(".top-image img").height();
     $(".top-image").height(topImgH);
   };
 
-  function gameInfoResize(){
+  function gameInfoResize() {
     var pcHeight = $(".purchase-content").height();
     var titleHeight = $(".title-notes").outerHeight();
     var camHeight = $(".cover-art-menu").height();
-    $(".game-info-scroll").height(pcHeight-titleHeight);
-    $(".cover-art-menu").css({"margin-top":(pcHeight-camHeight)/2});
+    $(".game-info-scroll").height(pcHeight - titleHeight);
+    $(".cover-art-menu").css({ "margin-top": (pcHeight - camHeight) / 2 });
   };
 
   $(".cover-art-menu li").click(function() {
