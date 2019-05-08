@@ -1,0 +1,36 @@
+.header {
+  position: relative;
+}
+
+.header img {
+  max-width: 100%;
+}
+
+.navigation {
+  position: absolute;
+  text-align: center;
+  bottom: 10%;
+  width: 100%;
+}
+
+.navigation li {
+  list-style: none;
+  display: inline-block;
+  color: #ffffff;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 0px 1% 3px 1%;
+  border: 1px solid red;
+}
+
+.navigation li:not(:last-of-type) {
+  margin-right: 4.5%;
+}
+
+.navigation-active {
+  color: #b53636 !important;
+  background-image: url("../img/nav-underline.png");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  /* background-position: */
+}

@@ -1,0 +1,16 @@
+body, nav, div, button, ul, li, ol, p {
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+  font-family: Verdana, Geneva, sans-serif
+}
+
+body * {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.container {
+  min-width: 320px;
+  max-width: 1132px;
+  margin: 0 auto;
+}
