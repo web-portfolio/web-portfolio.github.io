@@ -13,6 +13,11 @@
   width: 100%;
 }
 
+.header, .navigation * {
+  -webkit-user-select: none;
+  user-select: none;
+}
+
 .navigation li {
   list-style: none;
   display: inline-block;
@@ -20,17 +25,14 @@
   font-weight: bold;
   cursor: pointer;
   padding: 0px 1% 3px 1%;
-  border: 1px solid red;
 }
 
 .navigation li:not(:last-of-type) {
-  margin-right: 4.5%;
+  margin-right: 3%;
 }
 
-.navigation-active {
+.nav-active, .nav-active-hover {
   color: #b53636 !important;
-  background-image: url("../img/nav-underline.png");
-  background-repeat: no-repeat;
-  background-size: 100% auto;
-  /* background-position: */
+  background: url("../img/nav-underline.png") center 80% no-repeat;
+  background-position-y: 12px;
 }

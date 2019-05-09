@@ -11,6 +11,12 @@ body * {
 
 .container {
   min-width: 320px;
+  max-width: 1920px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.header {
   max-width: 1132px;
   margin: 0 auto;
 }
