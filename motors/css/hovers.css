@@ -1,0 +1,25 @@
+/* Slider Hovers */
+
+.flex-container a:hover, .flex-slider a:hover {
+  outline: none;
+}
+
+.flex-control-paging li a:hover {
+  background: #b53636;
+  opacity: 0.5;
+}
+
+.flex-prev:hover, .flex-next:hover {
+  color: #b53636;
+}
+
+.flexslider:hover .flex-next, .flexslider:hover .flex-prev {
+  display: block;
+}
+
+.slides li img:hover {
+  cursor: pointer;
+}
+
+
+/* Slider Hovers END*/

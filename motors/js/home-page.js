@@ -17,16 +17,16 @@ document.addEventListener("DOMContentLoaded", function(event) {
       $.getScript("js/footer.js");
       $.getScript("js/web-mobile.js");
       // $.getScript("js/simplebar.js");
-      // $(".loader-bg").fadeOut(1000);
+      $(".loader-bg").fadeOut(1000);
     });
     $("head .media").before('<link rel="stylesheet" href="css/footer.css">');
     // $("head .media").before('<link rel="stylesheet" href="css/simplebar.css">');
   };
 
-  // $(".flexslider").flexslider({
-  //   animation: "slide",
-  //   start: function(slider) {
-  //     $("body").removeClass("loading");
-  //   }
-  // });
+  $(".flexslider").flexslider({
+    animation: "slide",
+    start: function(slider) {
+      $("body").removeClass("loading");
+    }
+  });
 });

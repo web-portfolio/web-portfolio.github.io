@@ -36,9 +36,8 @@
   -webkit-backface-visibility: hidden;
 }
 
-.flexslider .slides img {
-  width: 100%;
-  display: block;
+.slides li div {
+  display: inline-block;
 }
 
 
@@ -62,8 +61,10 @@
 
 .flex-control-nav {
   position: absolute;
-  bottom: 0px;
-  right: 10px;
+  bottom: -30px;
+  right: 50%;
+  transform: translateX(50%);
+  -webkit-transform: translateX(50%);
 }
 
 .flex-control-nav li {
@@ -77,15 +78,15 @@
   width: 50px;
   height: 7px;
   display: block;
-  background: rgb(120, 120, 120);
-  opacity: 0.5;
+  background: #ffffff;
+  opacity: 0.6;
   cursor: pointer;
   text-indent: -9999px;
   margin-right: -9px;
 }
 
 .flex-control-paging li a.flex-active {
-  background: #996019;
+  background: #b53636;
   opacity: 1;
   cursor: pointer;
 }
@@ -102,10 +103,8 @@
   cursor: pointer;
   text-decoration: none;
   font-size: 60px;
-  background: #0f0f0f;
-  border: 3px solid #34231a;
   opacity: 0.9;
-  color: #996019;
+  color: #ffffff;
   width: 33px;
   height: 62px;
   line-height: 55px;
