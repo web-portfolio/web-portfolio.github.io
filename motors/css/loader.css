@@ -8,6 +8,7 @@
   background-image: url("../img/black-blur.jpg");
   background-size: cover;
   background-attachment: fixed;
+  background-position: center;
 }
 
 .loader {
