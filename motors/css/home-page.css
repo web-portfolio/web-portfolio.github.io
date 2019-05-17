@@ -24,7 +24,6 @@ body * {
 .top-content {
   height: 620px;
   background-image: url("../img/home-page-bg.jpg");
-  background-attachment: fixed;
   background-position: center;
   background-size: cover;
   border-radius: 70% / 4.5%;
