@@ -29,6 +29,9 @@
 .flexslider {
   margin: 0;
   padding: 0;
+  width: 80%;
+  margin: 0 auto;
+  box-sizing: border-box;
 }
 
 .flexslider .slides>li {
@@ -36,8 +39,17 @@
   -webkit-backface-visibility: hidden;
 }
 
-.slides li div {
+.slides li>div {
   display: inline-block;
+  vertical-align: top;
+}
+
+.slider-info {
+  color: #ffffff;
+}
+
+.slider-info h3 {
+  color: #b53636;
 }
 
 
@@ -114,6 +126,7 @@
   border-top-right-radius: 6px;
   border-bottom-right-radius: 6px;
   border-left: none;
+  left: -30px;
 }
 
 .flex-next {
@@ -122,4 +135,5 @@
   border-top-left-radius: 6px;
   border-bottom-left-radius: 6px;
   border-right: none;
+  right: -30px;
 }
