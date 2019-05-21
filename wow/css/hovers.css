@@ -1,4 +1,5 @@
 /* Slider Hovers */
+
 .flex-container a:hover, .flex-slider a:hover {
   outline: none;
 }
@@ -16,53 +17,64 @@
   display: block;
 }
 
-.flex-prev:hover, .flex-next:hover{
+.flex-prev:hover, .flex-next:hover {
   background-color: black;
 }
 
-.slides li img:hover{
+.slides li img:hover {
   cursor: pointer;
 }
+
+
 /* Slider Hovers END*/
 
 .tabs li:hover, .months li:hover, .countries li:hover, .questions li:hover {
   background: #1e1e1e
 }
 
-.footer-nav li:hover, .footer-email a:hover, .footer-phone a:hover, .footer-nav li:hover a  {
+.footer-nav li:hover, .footer-email a:hover, .footer-phone a:hover, .footer-nav li:hover a {
   color: #c1b575;
 }
-.purchase-close-btn:hover{
+
+.purchase-close-btn:hover {
   cursor: pointer;
   color: #c1b575;
 }
+
 .policy-close-btn:hover, .btn-success:hover, .last-patch-notes button:hover, .cover-art-tab-link:hover {
   background-color: #1e1e1e;
   color: #c1b575
 }
+
 .games:hover .down-arrow, .profile:hover .down-arrow, .alternative-signin:hover .reg-down-arrow {
   border-top-color: #c1b575;
 }
+
 .login-form-btns button:hover, .buy-this button:hover, .cover-art-btn:hover {
   background-color: #10a1de
 }
+
 .fb-btn:hover, .reg-fb-btn:hover {
   background: #4668af
 }
+
 .google-btn:hover, .reg-google-btn:hover {
   background: #ef5d58
 }
 
-.inactive:hover  {
+.inactive:hover {
   border-color: #996019
 }
+
 .inactive:hover div {
   background: #996019
 }
+
 .back-to-top:hover {
   opacity: 1;
   cursor: pointer
 }
+
 .submit:hover, .btn-success:hover {
   background-color: #1e1e1e;
   color: #c1b575;
@@ -70,33 +82,36 @@
   border-bottom-right-radius: 10px;
 }
 
-.img_gallery h1 a:hover,
-.img_gallery h1 a:hover span {
-    color: #666;
+.img_gallery h1 a:hover, .img_gallery h1 a:hover span {
+  color: #666;
 }
+
 .img_gallery img:hover {
-    border-color: #c1b575;
+  border-color: #c1b575;
 }
+
 .imagelightbox-close:hover:before, .imagelightbox-close:hover:after {
   background-color: #c1b575;
 }
-.imagelightbox-nav a:hover{
+
+.imagelightbox-nav a:hover {
   background-color: #c1b575;
   opacity: 0.5;
 }
 
-.imagelightbox-nav .active:hover  {
-    background-color: #996019;
-    opacity: 1;
+.imagelightbox-nav .active:hover {
+  background-color: #996019;
+  opacity: 1;
 }
-.imagelightbox-arrow:hover,
-.imagelightbox-arrow:focus, .imagelightbox-close:hover {
-    background-color: black;
+
+.imagelightbox-arrow:hover, .imagelightbox-arrow:focus, .imagelightbox-close:hover {
+  background-color: black;
 }
-.imagelightbox-arrow-left:hover, .imagelightbox-arrow-right:hover{
+
+.imagelightbox-arrow-left:hover, .imagelightbox-arrow-right:hover {
   color: #c1b575;
 }
 
 .f1:hover::after, .f2:hover::after, .f3:hover::after, .f4:hover::after {
-    opacity: 1;
+  opacity: 1;
 }

@@ -5,6 +5,10 @@ body, nav, div, button, ul, li, ol, p {
   font-family: Verdana, Geneva, sans-serif
 }
 
+body {
+  overflow-x: hidden;
+}
+
 body * {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
