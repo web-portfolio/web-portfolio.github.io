@@ -132,6 +132,8 @@
   width: 33px;
   height: 62px;
   line-height: 55px;
+  transition: .5s;
+  -webkit-transition: .5s;
 }
 
 .flex-prev {
@@ -139,8 +141,6 @@
   border-bottom-right-radius: 6px;
   border-left: none;
   left: -40px;
-  transition: .5s;
-  -webkit-transition: .5s;
 }
 
 .flex-next {
@@ -150,6 +150,4 @@
   border-bottom-left-radius: 6px;
   border-right: none;
   right: 40px;
-  transition: .5s;
-  -webkit-transition: .5s;
 }
