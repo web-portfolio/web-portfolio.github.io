@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   $(window).on("load resize", function() {
     gridResize();
     getMobileOperatingSystem();
+    alert("test 2");
   });
 
   function gridResize() {
