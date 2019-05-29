@@ -1,11 +1,11 @@
 document.addEventListener("DOMContentLoaded", function(event) {
+  $(window).on("load", function() {
+    $(".loader-bg").fadeOut(1000);
+  });
+
   $(window).on("load resize", function() {
     gridResize();
     getMobileOperatingSystem();
-  });
-
-  $(window).on("load", function() {
-    $(".loader-bg").fadeOut(1000);
   });
 
   function gridResize() {
@@ -40,5 +40,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
   // JS LINKS
   $(".wow").click(function() {
     window.location = "wow/home-page.html";
+  });
+  $(".motors").click(function() {
+    window.location = "motors/home-page.html";
   });
 });
