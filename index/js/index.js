@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function(event) {
-  $(window).on("load", function() {
+  $(window).load(function() {
     $(".loader-bg").fadeOut(1000);
     alert("test");
   });
