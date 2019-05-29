@@ -1,11 +1,11 @@
 document.addEventListener("DOMContentLoaded", function(event) {
-  $(window).on("load", function() {
-    hideLoader();
-  });
-
   $(window).on("load resize", function() {
     gridResize();
     getMobileOperatingSystem();
+  });
+
+  $(window).on("load", function() {
+    hideLoader();
   });
 
   function hideLoader() {
