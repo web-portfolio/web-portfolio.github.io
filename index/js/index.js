@@ -10,13 +10,13 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
   function hideLoader() {
     $(".loader-bg").fadeOut(1000);
-  }
+  };
 
   function gridResize() {
     var w = $(".container > div").width();
     var h = (w * 56.2060889929742) / 100;
     $(".container > div").height(h);
-  }
+  };
 
   function getMobileOperatingSystem() {
     var userAgent = navigator.userAgent || navigator.vendor || window.opera;
@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
         });
       return "Desktop";
     }
-  }
+  };
 
   // JS LINKS
   $(".wow").click(function() {
