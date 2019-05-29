@@ -1,16 +1,12 @@
 document.addEventListener("DOMContentLoaded", function(event) {
+  $(window).on("load", function() {
+    $(".loader-bg").fadeOut(1000);
+  });
+
   $(window).on("load resize", function() {
     gridResize();
     getMobileOperatingSystem();
   });
-
-  $(window).on("load", function() {
-    hideLoader();
-  });
-
-  function hideLoader() {
-    $(".loader-bg").fadeOut(1000);
-  };
 
   function gridResize() {
     var w = $(".container > div").width();
