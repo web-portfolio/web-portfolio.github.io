@@ -30,6 +30,7 @@
   margin: 0;
   padding: 0;
   width: 80%;
+  max-width: 1132px;
   margin: 0 auto;
   padding: 0px 40px;
   top: 50%;
@@ -48,6 +49,7 @@
 }
 
 .slider-info {
+  text-align: justify;
   color: #ffffff;
 }
 

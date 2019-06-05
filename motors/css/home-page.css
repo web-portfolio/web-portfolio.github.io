@@ -7,6 +7,7 @@ body, nav, div, button, ul, li, ol, p {
 
 body {
   overflow-x: hidden;
+  background-color: #EAE9EF;
 }
 
 body * {
@@ -33,4 +34,41 @@ body * {
   border-radius: 70% / 4.5%;
   border-top-left-radius: 0%;
   border-top-right-radius: 0%;
+}
+
+.about-container1, .about-container2, .about-container3 {
+  max-width: 1132px;
+  width: 90%;
+  margin: 0 auto;
+  text-align: justify;
+  display: flex;
+  align-items: stretch;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-color: #ffffff;
+}
+
+.about-container1>div {
+  width: 50%;
+  padding: 2%;
+}
+
+.about-container1 p {
+  margin-bottom: 15px;
+}
+
+.about-container1 h2 {
+  margin-top: 0;
+}
+
+.about-container1 .about-img {
+  background-image: url("../img/about-1.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.about-top-btn {
+  background-color: #F62F2F;
+  width: 200px;
+  height: 50px;
 }
