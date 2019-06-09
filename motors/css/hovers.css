@@ -23,3 +23,8 @@
 
 
 /* Slider Hovers END*/
+
+.about-btns:hover {
+  background-position: left bottom;
+  color: #b53636;
+}

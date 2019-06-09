@@ -7,7 +7,7 @@ body, nav, div, button, ul, li, ol, p {
 
 body {
   overflow-x: hidden;
-  background-color: #EAE9EF;
+  background-color: #d7d2ef;
 }
 
 body * {
@@ -70,14 +70,12 @@ body * {
   color: #ffffff;
   font-weight: bold;
   cursor: pointer;
-  background: linear-gradient(to right, #b53636 50%, #1e1e1e 50%);
-  background-size: 200% 100%;
-  /* background-position: right bottom; */
-  transition: all 0.5s ease;
-}
-
-.about-btns:hover {
+  background: linear-gradient(to left, #b53636 35%, #1e1e1e 65%);
+  background-size: 300% 100%;
   background-position: right bottom;
+  transition: all 0.5s ease;
+  box-sizing: border-box;
+  border-left: 5px solid #1e1e1e;
 }
 
 .about-content1, .about-content2, .about-content3 {
