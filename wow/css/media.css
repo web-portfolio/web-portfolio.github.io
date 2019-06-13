@@ -20,9 +20,6 @@
   .login-form {
     width: 80%;
   }
-  .footer-nav div:not(:last-child) ul {
-    border-right: none !important;
-  }
   .trailers>div {
     width: 95%;
   }
@@ -84,6 +81,12 @@
     height: 330px !important;
     width: 95% !important;
     margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 682px) {
+  .footer-nav div:not(:last-child) ul {
+    border-right: none !important;
   }
 }
 
