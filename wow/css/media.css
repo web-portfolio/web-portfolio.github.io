@@ -20,6 +20,9 @@
   .login-form {
     width: 80%;
   }
+  .footer-nav div:not(:last-child) ul {
+    border-right: none !important;
+  }
   .trailers>div {
     width: 95%;
   }
@@ -87,9 +90,6 @@
 @media screen and (max-width: 669px) {
   .login-form {
     width: 90%;
-  }
-  .footer-nav div:not(:last-child) ul {
-    border-right: none !important;
   }
   .registration {
     width: 99%;
