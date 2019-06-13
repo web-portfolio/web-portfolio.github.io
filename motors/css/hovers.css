@@ -28,3 +28,9 @@
   background-position: left bottom;
   color: #b53636;
 }
+
+.bottom-banner-btn:hover {
+  color: #1e1e1e;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+}
