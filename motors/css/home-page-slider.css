@@ -57,6 +57,10 @@
   color: #b53636;
 }
 
+.slider-info h3::selection {
+  color: #ffffff;
+}
+
 .slider-img {
   width: 234px;
   margin-right: 20px;
