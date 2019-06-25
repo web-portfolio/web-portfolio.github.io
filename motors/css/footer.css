@@ -9,6 +9,8 @@
   margin: 0 auto;
   max-width: 990px;
   position: relative;
+  box-sizing: border-box;
+  background-color: red;
 }
 
 .footer-bottom img {
