@@ -9,7 +9,7 @@
   opacity: 0.5;
 }
 
-.flex-prev:hover, .flex-next:hover {
+.flex-prev:hover, .flex-next:hover, .footer-menu ul li:not(:first-child):hover {
   color: #b53636;
 }
 
@@ -33,4 +33,8 @@
   color: #1e1e1e;
   transition: 0.5s;
   -webkit-transition: 0.5s;
+}
+
+.f1:hover::after, .f2:hover::after, .f3:hover::after, .f4:hover::after {
+  opacity: 1;
 }

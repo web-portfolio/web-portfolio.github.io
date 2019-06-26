@@ -3,18 +3,20 @@
   background: -webkit-linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/footer-bg.jpg") no-repeat left top;
   background-position: center;
   background-size: cover;
+  overflow: hidden;
 }
 
 .footer-bottom {
   margin: 0 auto;
-  max-width: 990px;
+  max-width: 960px;
   position: relative;
   box-sizing: border-box;
-  background-color: red;
 }
 
 .footer-bottom img {
   max-width: 100%;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 .footer-bottom p {
@@ -27,4 +29,101 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.footer-top {
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  margin-bottom: 100px;
+  margin-top: 40px;
+}
+
+.footer-menu, .footer-social {
+  width: 30%;
+}
+
+.footer-about {
+  width: 60%;
+  padding-right: 4%;
+}
+
+.footer-top ul li {
+  list-style: none;
+  margin: 15px 0px;
+}
+
+.footer-menu ul li:not(:first-child) {
+  font-weight: bold;
+  font-size: 1.1em;
+  cursor: pointer;
+}
+
+.footer-top {
+  color: #b4b4b4;
+}
+
+.footer-top-title {
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 1.3em;
+  margin-bottom: 10px;
+}
+
+.f1, .f2, .f3, .f4 {
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.f1 {
+  background-image: url("../img/socials/f1.png");
+}
+
+.f2 {
+  background-image: url("../img/socials/f2.png");
+}
+
+.f3 {
+  background-image: url("../img/socials/f3.png");
+}
+
+.f4 {
+  background-image: url("../img/socials/f4.png");
+}
+
+.f1::after {
+  background-image: url("../img/socials/f1-hover.png");
+}
+
+.f2::after {
+  background-image: url("../img/socials/f2-hover.png");
+}
+
+.f3::after {
+  background-image: url("../img/socials/f3-hover.png");
+}
+
+.f4::after {
+  background-image: url("../img/socials/f4-hover.png");
+}
+
+.f1::after, .f2::after, .f3::after, .f4::after {
+  content: "";
+  display: inline-block;
+  background-size: 100% 100%;
+  opacity: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  -webkit-transition: opacity .5s ease-in-out;
+  transition: opacity .5s ease-in-out;
+}
+
+.footer-follow {
+  display: flex;
+  justify-content: space-around;
 }
