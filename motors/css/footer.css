@@ -10,11 +10,11 @@
   margin: 0 auto;
   max-width: 960px;
   position: relative;
-  box-sizing: border-box;
 }
 
 .footer-bottom img {
   max-width: 100%;
+  display: block;
   -webkit-user-select: none;
   user-select: none;
 }
