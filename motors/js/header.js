@@ -4,6 +4,6 @@ $(".navigation li").click(function() {
 });
 
 // JS LINKS
-$(".nav-products").click(function() {
-  window.location = "products.html";
-});
+// $(".nav-products").click(function() {
+//   window.location = "products.html";
+// });

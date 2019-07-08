@@ -8,8 +8,15 @@ document.addEventListener("DOMContentLoaded", function(event) {
   });
 
   function loadElements() {
-    $(".header").load("header.html .container > *", function() {
+    $(".top-content").load("header.html .container > *", function() {
       $.getScript("js/header.js");
+
+      $(".flexslider").flexslider({
+        animation: "slide",
+        start: function(slider) {
+          $("body").removeClass("loading");
+        }
+      });
     });
     $("head .media").before('<link rel="stylesheet" href="css/header.css">');
 
@@ -21,11 +28,4 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
     $("head .media").before('<link rel="stylesheet" href="css/footer.css">');
   };
-
-  $(".flexslider").flexslider({
-    animation: "slide",
-    start: function(slider) {
-      $("body").removeClass("loading");
-    }
-  });
 });
