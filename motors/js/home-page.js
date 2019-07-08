@@ -28,4 +28,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
     $("head .media").before('<link rel="stylesheet" href="css/footer.css">');
   };
+
+  function changeCurrentLi() {
+
+  };
 });
