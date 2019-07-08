@@ -8,8 +8,17 @@ document.addEventListener("DOMContentLoaded", function(event) {
   });
 
   function loadElements() {
-    $(".header").load("header.html .container > *", function() {
+    $(".top-content").load("header.html .container > *", function() {
       $.getScript("js/header.js");
+
+      $(".flexslider").flexslider({
+        animation: "slide",
+        start: function(slider) {
+          $("body").removeClass("loading");
+        }
+      });
+
+      changeCurrentLi();
     });
     $("head .media").before('<link rel="stylesheet" href="css/header.css">');
 
@@ -18,7 +27,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
       $.getScript("js/web-mobile.js");
       $(".loader-bg").fadeOut(500);
     });
-
     $("head .media").before('<link rel="stylesheet" href="css/footer.css">');
+  };
+
+  function changeCurrentLi() {
+    $(".navigation li").removeClass("nav-active");
+    $(".nav-products").addClass("nav-active");
   };
 });

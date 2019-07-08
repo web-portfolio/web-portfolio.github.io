@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", function(event) {
   $(window).on("load", function() {
     loadElements();
+
   });
 
   $(window).on("load resize", function() {
@@ -17,6 +18,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
           $("body").removeClass("loading");
         }
       });
+
+      changeCurrentLi();
     });
     $("head .media").before('<link rel="stylesheet" href="css/header.css">');
 
@@ -25,11 +28,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
       $.getScript("js/web-mobile.js");
       $(".loader-bg").fadeOut(500);
     });
-
     $("head .media").before('<link rel="stylesheet" href="css/footer.css">');
   };
 
   function changeCurrentLi() {
-
+    $(".navigation li").removeClass("nav-active");
+    $(".nav-home").addClass("nav-active");
   };
 });
