@@ -21,12 +21,6 @@
     margin-top: 10px !important;
     padding: 10px 0 10px 0;
   }
-  /* .top-navigator {
-    display: none;
-  }
-  .topnavigator-mobile {
-    display: block;
-  } */
   .nav-content {
     display: none;
   }
@@ -40,9 +34,14 @@
     position: absolute;
     top: 49px;
     right: 0px;
+    box-shadow: -2px 5px 10px 0px rgba(235, 195, 23, 0.8);
   }
   .nav-content>div {
     display: block;
+    color: #ebc317;
+    font-family: 'Open Sans', sans-serif;
+    padding-top: 15px;
+    font-size: 15px;
   }
   .hamburger {
     width: 30px;
@@ -81,7 +80,7 @@
 }
 
 @media (min-width: 768px) {
-  /* .topnavigator-mobile {
-    display: none;
-  } */
+  .nav-content {
+    display: flex !important;
+  }
 }
