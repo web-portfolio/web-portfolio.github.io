@@ -6,6 +6,7 @@
   height: 100%;
   z-index: 9999;
   background-color: #0f0f0f;
+  font-family: "Roboto", sans-serif;
 }
 
 .loading {
