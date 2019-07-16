@@ -59,11 +59,18 @@ body * {
   -webkit-perspective: 900000px;
 }
 
-.wow {
-  background-image: url("../img/bg-wow.jpg");
+.wow, .motors {
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.wow {
+  background-image: url("../img/bg-wow.jpg");
+}
+
+.motors {
+  background-image: url("../img/bg-motors.jpg");
 }
 
 @keyframes emptyDivRotate {
