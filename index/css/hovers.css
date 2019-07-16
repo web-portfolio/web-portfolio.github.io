@@ -1,4 +1,3 @@
 .container>div:hover {
-  cursor: pointer;
   border-color: #a0dcf7;
 }
