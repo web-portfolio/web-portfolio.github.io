@@ -55,7 +55,7 @@ body *{
 
 .header-top-text{
   text-transform: uppercase;
-  color: white;
+  color: #ffffff;
   width: calc(90% - 320px);
   font-size: 2em;
   font-weight: bold;
@@ -145,7 +145,7 @@ body *{
 
 .reg-title{
   font-weight: bold;
-  color: white;
+  color: #ffffff;
   text-align: center;
   font-size: 5em;
   margin-bottom: 40px;
@@ -190,7 +190,7 @@ body *{
 }
 
 .reg-text-content{
-  color: white;
+  color: #ffffff;
   font-size: 1.5em;
   text-align: left;
   line-height: 15px;
@@ -254,7 +254,7 @@ body *{
 }
 
 .footer{
-  background-color: black;
+  background-color: #000000;
   text-align: center;
   padding-top: 30px;
   padding-bottom: 30px;
@@ -321,7 +321,7 @@ a{
 .pop-up {
   position: fixed;
   width: 100%;
-  background-color: black;
+  background-color: #000000;
   opacity: 0.9;
   box-sizing: border-box;
   bottom: 0;
@@ -345,7 +345,7 @@ a{
 
 .pop-up-btn {
   background-color: #ebc317;
-  color: black;
+  color: #000000;
   padding: 10px;
   border-radius: 5px;
   width: 100px;

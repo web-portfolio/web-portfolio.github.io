@@ -1,11 +1,11 @@
 @media screen and (max-width: 1024px) {
-  .container>div {
+  .top-section>div, .bottom-section>div {
     width: 40%;
   }
 }
 
 @media screen and (max-width: 767px) {
-  .container>div {
+  .top-section>div, .bottom-section>div {
     width: 90%;
   }
 }

@@ -9,9 +9,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
   });
 
   function gridResize() {
-    var w = $(".container > div").width();
+    var w = $(".top-section > div").width();
     var h = (w * 56.2060889929742) / 100;
-    $(".container > div").height(h);
+    $(".top-section > div, .bottom-section > div").height(h);
   };
 
   function getMobileOperatingSystem() {
@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
       return "Phone Device";
     } else {
       $('link[href="index/css/hovers.css"]').prop('disabled', false);
-      $(".container > div")
+      $(".top-section > div, .bottom-section > div")
         .mouseenter(function() {
           $(this).find(".hover-info").show();
         })
@@ -43,5 +43,17 @@ document.addEventListener("DOMContentLoaded", function(event) {
   });
   $(".motors").click(function() {
     window.location = "motors/home-page.html";
+  });
+  $(".efbet-liga").click(function() {
+    window.location = "efbet-landings/liga/liga.html";
+  });
+  $(".efbet-casino").click(function() {
+    window.location = "efbet-landings/casino/casino.html";
+  });
+  $(".efbet-sport").click(function() {
+    window.location = "efbet-landings/sport/sport.html";
+  });
+  $(".efbet-app").click(function() {
+    window.location = "efbet-landings/mobile/BG.html";
   });
 });

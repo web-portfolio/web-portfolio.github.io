@@ -25,18 +25,28 @@ body * {
   width: 100%;
   max-width: 1024px;
   margin: 0 auto;
+}
+
+.top-section, .bottom-section{
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  margin: 0 auto;
   margin-bottom: 3%;
 }
 
-.container>div {
+.top-section{
+  margin-bottom: 6%;
+}
+
+.top-section>div,  .bottom-section>div{
   width: 30%;
   margin-top: 3%;
   border: 2px solid #60a9ca;
   border-radius: 10px;
   position: relative;
+  cursor: pointer;
 }
 
 .hover-info {
@@ -62,7 +72,13 @@ body * {
   -webkit-perspective: 900000px;
 }
 
-.wow, .motors {
+.efbet{
+  color: #ebc317;
+  text-align: center;
+  font-size: 3em;
+}
+
+.wow, .motors, .efbet-liga, .efbet-casino, .efbet-sport, .efbet-app {
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
@@ -74,6 +90,22 @@ body * {
 
 .motors {
   background-image: url("../img/bg-motors.jpg");
+}
+
+.efbet-liga{
+  background-image: url("../img/bg-liga.jpg");
+}
+
+.efbet-casino{
+  background-image: url("../img/bg-casino.jpg");
+}
+
+.efbet-sport{
+  background-image: url("../img/bg-sport.jpg");
+}
+
+.efbet-app{
+  background-image: url("../img/bg-app.jpg");
 }
 
 @keyframes emptyDivRotate {
