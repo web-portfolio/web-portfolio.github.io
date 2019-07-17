@@ -1,0 +1,19 @@
+body, nav, div, button, ul, li, ol, p, h2, h3 {
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+  font-family: "Rubik", sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: #dadada;
+}
+
+::selection {
+  background: #b53636;
+}
+
+body * {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
