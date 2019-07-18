@@ -27,7 +27,7 @@ body * {
   margin: 0 auto;
 }
 
-.top-section, .bottom-section{
+.top-section, .bottom-section {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -36,11 +36,11 @@ body * {
   margin-bottom: 3%;
 }
 
-.top-section{
+.top-section {
   margin-bottom: 6%;
 }
 
-.top-section>div,  .bottom-section>div{
+.top-section>div, .bottom-section>div {
   width: 30%;
   margin-top: 3%;
   border: 2px solid #60a9ca;
@@ -59,8 +59,17 @@ body * {
   border-bottom-right-radius: 8px;
   width: 100%;
   bottom: 0px;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.8);
   padding: 5px;
+}
+
+.efbet-app .hover-info span {
+  display: block;
+}
+
+.hover-info-mobile {
+  color: #ff0000;
+  font-weight: bold;
 }
 
 .empty {
@@ -72,7 +81,7 @@ body * {
   -webkit-perspective: 900000px;
 }
 
-.efbet{
+.efbet {
   color: #ebc317;
   text-align: center;
   font-size: 3em;
@@ -92,19 +101,19 @@ body * {
   background-image: url("../img/bg-motors.jpg");
 }
 
-.efbet-liga{
+.efbet-liga {
   background-image: url("../img/bg-liga.jpg");
 }
 
-.efbet-casino{
+.efbet-casino {
   background-image: url("../img/bg-casino.jpg");
 }
 
-.efbet-sport{
+.efbet-sport {
   background-image: url("../img/bg-sport.jpg");
 }
 
-.efbet-app{
+.efbet-app {
   background-image: url("../img/bg-app.jpg");
 }
 
