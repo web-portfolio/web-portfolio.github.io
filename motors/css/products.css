@@ -7,7 +7,7 @@ body, nav, div, button, ul, li, ol, p, h2, h3 {
 
 body {
   overflow-x: hidden;
-  background-color: #dadada;
+  background-color: #eae9ef;
 }
 
 ::selection {
@@ -16,4 +16,20 @@ body {
 
 body * {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.container {
+  min-width: 320px;
+  max-width: 1920px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.middle-container{
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.top-text{
+  text-align: center;
 }

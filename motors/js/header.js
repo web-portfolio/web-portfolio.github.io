@@ -1,9 +1,8 @@
-// $(".navigation li").click(function() {
-//   $(".navigation li").removeClass("nav-active");
-//   $(this).addClass("nav-active");
-// });
-
 // JS LINKS
+$(".nav-home").click(function() {
+  window.location = "home-page.html";
+});
+
 $(".nav-products").click(function() {
   window.location = "products.html";
 });

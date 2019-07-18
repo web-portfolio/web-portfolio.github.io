@@ -1,3 +1,41 @@
+
+.bottom-banner {
+  max-width: 960px;
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  align-items: stretch;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.bottom-banner-btn {
+  width: 100px;
+  height: 100px;
+  background-color: #b53636;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  font-size: 4em;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+}
+
+.bottom-banner-info {
+  width: calc(100% - 100px);
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/banner-bg.jpg") no-repeat left top;
+  background: -webkit-linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/banner-bg.jpg") no-repeat left top;
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+}
+
+.bottom-banner-info * {
+  padding: 0px 20px;
+}
+
 .footer {
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/footer-bg.jpg") no-repeat left top;
   background: -webkit-linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/footer-bg.jpg") no-repeat left top;

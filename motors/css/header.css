@@ -6,6 +6,7 @@
 
 .top-content {
   height: 620px;
+  margin-bottom: 30px;
   background-image: url("../img/home-page-bg.jpg");
   background-position: center;
   background-size: cover;

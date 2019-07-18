@@ -153,6 +153,7 @@ h3{
   line-height: 55px;
   transition: .5s;
   -webkit-transition: .5s;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .flex-prev {

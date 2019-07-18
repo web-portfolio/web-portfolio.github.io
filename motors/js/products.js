@@ -22,7 +22,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
     });
     $("head .media").before('<link rel="stylesheet" href="css/header.css">');
 
-    $(".footer").load("footer.html .container > *", function() {
+    $(".bottom-banner").load("footer.html .footer-top-content > *");
+    $(".footer").load("footer.html .footer-bottom-content > *", function() {
       $.getScript("js/footer.js");
       $.getScript("js/web-mobile.js");
       $(".loader-bg").fadeOut(500);
