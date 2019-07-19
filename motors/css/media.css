@@ -14,9 +14,13 @@
   }
 }
 
-@media screen and (max-width: 766px) {
+@media screen and (max-width: 767px) {
   .about-container1, .about-container2, .about-container3{
     flex-direction: column;
+    width: 95%;
+  }
+
+  .bottom-banner, .footer-top{
     width: 95%;
   }
 
@@ -31,5 +35,71 @@
 
   .about-btns{
     margin: 0 auto;
+  }
+  .footer-top{
+    display: block;
+    padding: 0 2%;
+  }
+
+  .footer-top>div{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .footer-follow{
+    justify-content: center;
+  }
+
+  .footer-follow > div:not(:last-of-type){
+    margin-right: 10px;
+  }
+
+  .slides li{
+    flex-direction: column;
+  }
+  .slides li > div{
+    width: 100%;
+    text-align: center;
+  }
+  .slider-img{
+    margin: 20px 0px;
+  }
+  .flexslider{
+    width: auto;
+  }
+  .flex-control-nav{
+    bottom: -40px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .bottom-banner, .bottom-banner-info, .bottom-banner-info *{
+    display: block
+  }
+  .bottom-banner-info{
+    overflow: hidden;
+  }
+  .bottom-banner *{
+    width: 100%;
+  }
+  .bottom-banner-info h3, .bottom-banner-info p{
+    text-align: center;
+    box-sizing: border-box;
+  }
+  .bottom-banner-btn{
+    height: 70px;
+  }
+  .bottom-banner-info h3{
+    margin: 20px 0;
+  }
+  .bottom-banner-info p{
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .footer-bottom p{
+    font-size: 0.9em;
   }
 }
