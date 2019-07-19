@@ -1,0 +1,35 @@
+@media screen and (min-width: 1921px) {
+
+}
+
+@media screen and (max-width: 950px) {
+  .navigation li:not(:last-of-type) {
+    margin-right: 2%;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .navigation li:not(:last-of-type) {
+    margin-right: 1%;
+  }
+}
+
+@media screen and (max-width: 766px) {
+  .about-container1, .about-container2, .about-container3{
+    flex-direction: column;
+    width: 95%;
+  }
+
+  .about-content1, .about-content2, .about-content3{
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+  }
+  .about-content1 p, .about-content2 p, .about-content3 p{
+    text-align: justify;
+  }
+
+  .about-btns{
+    margin: 0 auto;
+  }
+}
