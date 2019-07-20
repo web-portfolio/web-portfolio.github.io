@@ -1,10 +1,6 @@
 document.addEventListener("DOMContentLoaded", function(event) {
-  $(window).on("load", function() {    
+  $(window).on("load", function() {
     $(".loader-bg").fadeOut(500);
-  });
-
-  $(window).on("resize", function() {
-    mobOverfllow();
   });
 
   $(window).on("load resize", function() {
@@ -22,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
   $(".hamburger").click(function() {
     $(this).toggleClass("hamburger-active");
-    $(".nav-content").stop(true, false).slideToggle();
+    $(".nav-content").stop(true, true).slideToggle();
     if ($(".hamburger").hasClass("hamburger-active")) {
       $("body").css("overflowY", "hidden");
     } else {
@@ -39,12 +35,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
     $(".rule-text-container").fadeOut(500);
     $("body").css("overflowY", "auto");
   });
-
-  function mobOverfllow() {
-    $(".hamburger").removeClass("hamburger-active");
-    $(".nav-content").slideUp();
-    $("body").css("overflowY", "auto");
-  }
 
   $(".rules").click(function() {
     $(".nav-content").hide();

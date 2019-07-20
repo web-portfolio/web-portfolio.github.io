@@ -13,6 +13,69 @@
 }
 
 @media screen and (max-width: 767px) {
+  .header img, .navigation {
+    display: none;
+  }
+  .navigation {
+    height: 100vh;
+    position: absolute;
+    top: 50px;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 1;
+  }
+  .navigation li {
+    margin: 0px;
+    display: block;
+  }
+  .navigation li:first-child {
+    margin-top: calc(50vh - 120px);
+  }
+  .navigation li:not(:first-of-type) {
+    margin-top: 20px;
+  }
+  .header {
+    background: rgba(0, 0, 0, 0.7);
+    box-shadow: 0px 5px 5px 0px rgba(181, 54, 54, 0.9);
+    height: 48px;
+    position: relative;
+  }
+  .hamburger {
+    position: absolute;
+    width: 30px;
+    height: 20px;
+    margin: 14px 20px;
+    cursor: pointer;
+    right: 0;
+    z-index: 2;
+  }
+  .hamburger div {
+    width: 100%;
+    background: #b53636;
+    height: 4px;
+    -webkit-transition: 0.30s ease-in-out;
+    transition: 0.30s ease-in-out;
+  }
+  .hamburger div:not(:last-child) {
+    margin-bottom: 3px;
+  }
+  .hamburger-active div:nth-child(1) {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    margin-top: 0.7em;
+  }
+  .hamburger-active div:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger-active div:nth-child(3) {
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    margin-top: -1em;
+  }
+  .hamburger ul {
+    position: absolute;
+    color: #ffffff;
+  }
   .about-container1, .about-container2, .about-container3 {
     flex-direction: column;
     width: 95%;
@@ -59,8 +122,8 @@
   }
   .flexslider {
     width: auto;
-    transform: translateY(-75%);
-    -webkit-transform: translateY(-75%);
+    transform: translateY(-65%);
+    -webkit-transform: translateY(-65%);
   }
   .flex-control-nav {
     bottom: -40px;
@@ -90,26 +153,20 @@
   .bottom-banner-info p {
     margin-bottom: 20px;
   }
-  .flexslider {
-    width: auto;
-    transform: translateY(-70%);
-    -webkit-transform: translateY(-70%);
-  }
   .slider-info p {
     text-align: justify;
     text-align-last: center;
   }
 }
 
-@media screen and (max-width: 411px) {
-  .flexslider {
-    transform: translateY(-65%);
-    -webkit-transform: translateY(-65%);
-  }
-}
-
 @media screen and (max-width: 360px) {
   .footer-bottom p {
     font-size: 0.9em;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .navigation {
+    display: block !important;
   }
 }

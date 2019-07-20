@@ -3,10 +3,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
     loadElements();
   });
 
-  $(window).on("load resize", function() {
-
-  });
-
   function loadElements() {
     $(".top-content").load("header.html .container > *", function() {
       $.getScript("js/header.js");
