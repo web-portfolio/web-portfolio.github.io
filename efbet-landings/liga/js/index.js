@@ -8,6 +8,10 @@ document.addEventListener("DOMContentLoaded", function(event) {
     fixedLogo();
   });
 
+  $(window).on("resize", function() {
+    mobOverfllow();
+  });
+
   setTimeout(function() {
     $(".pop-up").slideDown();
   }, 1500);
@@ -35,6 +39,12 @@ document.addEventListener("DOMContentLoaded", function(event) {
     $(".rule-text-container").fadeOut(500);
     $("body").css("overflowY", "auto");
   });
+
+  function mobOverfllow() {
+    $(".hamburger").removeClass("hamburger-active");
+    $(".nav-content").slideUp();
+    $("body").css("overflowY", "auto");
+  }
 
   $(".rules").click(function() {
     $(".nav-content").hide();

@@ -1,5 +1,5 @@
 $(window).on("resize", function() {
-  // slideUpNav();
+  slideUpNav();
 });
 
 $(".hamburger").click(function() {
