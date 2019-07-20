@@ -7,6 +7,13 @@ $(".hamburger").click(function() {
   $(".navigation").stop(true, true).slideToggle();
   if ($(".hamburger").hasClass("hamburger-active")) {
     $("body").css("overflowY", "hidden");
+
+    $(document).on('touchstart', function(event) {
+
+      event.preventDefault();
+
+    });
+
   } else {
     $("body").css("overflowY", "auto");
   }
