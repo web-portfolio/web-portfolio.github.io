@@ -35,4 +35,12 @@ document.addEventListener("DOMContentLoaded", function(event) {
     $(".navigation li").removeClass("nav-active");
     $(".nav-products").addClass("nav-active");
   };
+
+  // $(".cars > div")
+  // .mouseenter(function() {
+  //   $(this).find(".cars-hover").show();
+  // })
+  // .mouseleave(function() {
+  //   $(this).find(".cars-hover").hide();
+  // });
 });
