@@ -24,6 +24,14 @@ function getMobileOperatingSystem() {
       .mouseleave(function() {
         $(this).removeClass("nav-active-hover");
       });
+
+    $(".cars > div")
+      .mouseenter(function() {
+        $(this).find(".cars-hover").show();
+      })
+      .mouseleave(function() {
+        $(this).find(".cars-hover").hide();
+      });
     return "Desktop";
   }
 }

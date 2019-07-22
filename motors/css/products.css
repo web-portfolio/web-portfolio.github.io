@@ -25,28 +25,31 @@ body * {
   margin: 0 auto;
 }
 
-.middle-container{
+.middle-container {
+  width: 100%;
   max-width: 960px;
   margin: 0 auto;
 }
 
-.top-text{
+.top-text {
   text-align: center;
   margin-bottom: 20px;
 }
 
-.cars{
+.cars {
   display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
-.cars > div{
+.cars>div {
   display: flex;
+  /* justify-content: center; */
   cursor: pointer;
   position: relative;
 }
 
-
-.cars-hover{
+.cars-hover {
   position: absolute;
   bottom: 0;
   padding: 10px;
