@@ -25,10 +25,10 @@ body * {
   margin: 0 auto;
 }
 
-.middle-container {
-  width: 100%;
-  max-width: 960px;
+.top-text, .cars{
   margin: 0 auto;
+  max-width: 960px;
+  width: 90%;
 }
 
 .top-text {
@@ -44,7 +44,6 @@ body * {
 
 .cars>div {
   display: flex;
-  /* justify-content: center; */
   cursor: pointer;
   position: relative;
 }

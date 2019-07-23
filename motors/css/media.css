@@ -1,5 +1,12 @@
 @media screen and (min-width: 1921px) {}
 
+@media screen and (max-width: 1066px) {
+  .test{
+    /* flex-basis: 100%; */
+    /* flex-grow: 2; */
+  }
+}
+
 @media screen and (max-width: 950px) {
   .navigation li:not(:last-of-type) {
     margin-right: 2%;
@@ -80,7 +87,7 @@
     flex-direction: column;
     width: 95%;
   }
-  .bottom-banner, .footer-top {
+  .bottom-banner, .footer-top, .top-text, .cars {
     width: 95%;
   }
   .about-content1, .about-content2, .about-content3 {
