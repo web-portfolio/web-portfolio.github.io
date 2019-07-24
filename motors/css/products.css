@@ -67,7 +67,7 @@ body * {
 }
 
 .categories-nav{
-  width: 140px;
+  width: 220px;
 }
 
 .categories-title{
@@ -97,7 +97,7 @@ body * {
 }
 
 .categories-content{
-  width: calc(100% - 140px);
+  width: calc(100% - 220px);
   text-align: center;
 }
 
