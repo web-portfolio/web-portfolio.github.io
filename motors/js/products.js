@@ -3,8 +3,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
     loadElements();
   });
 
-  $(window).on("load resize", function() {
-
+  $(".categories-car-names li").click(function(){
+    $(".categories-car-names li").removeClass("car-names-active");
+    $(this).addClass("car-names-active");
   });
 
   function loadElements() {

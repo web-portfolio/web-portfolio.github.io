@@ -32,6 +32,15 @@ function getMobileOperatingSystem() {
       .mouseleave(function() {
         $(this).find(".cars-hover").hide();
       });
+
+    $(".categories-car-names li")
+    .mouseenter(function() {
+      $(this).addClass("car-names-active-hover");
+    })
+    .mouseleave(function() {
+      $(this).removeClass("car-names-active-hover");
+    });
+    $(".categories-car-names li")
     return "Desktop";
   }
 }
