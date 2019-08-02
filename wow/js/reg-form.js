@@ -30,26 +30,38 @@ document.addEventListener("DOMContentLoaded", function(event) {
   }
 
   $(".alternative-signin").click(function() {
-    $(".alternative-signin-content").stop(true, false).slideToggle();
+    $(this).css("pointer-events", "none");
+    $(".alternative-signin-content").slideToggle(function(){
+      $(".alternative-signin").css("pointer-events", "all");
+    });
     $(this).toggleClass("alternative-signin-active");
   });
 
   $(".month").click(function() {
     $(".countries").slideUp();
     $(".questions").slideUp();
-    $(".months").stop(true, false).slideToggle();
+    $(this).css("pointer-events", "none");
+    $(".months").slideToggle(function(){
+      $(".month").css("pointer-events", "all");
+    });
     $(".months").outerWidth($(this).outerWidth());
   });
   $(".country").click(function() {
     $(".months").slideUp();
     $(".questions").slideUp();
-    $(".countries").stop(true, false).slideToggle();
+    $(this).css("pointer-events", "none");
+    $(".countries").slideToggle(function(){
+      $(".country").css("pointer-events", "all");
+    });
     $(".countries").outerWidth($(this).outerWidth());
   });
   $(".question").click(function() {
     $(".months").slideUp();
     $(".countries").slideUp();
-    $(".questions").stop(true, false).slideToggle();
+    $(this).css("pointer-events", "none");
+    $(".questions").slideToggle(function(){
+      $(".question").css("pointer-events", "all");
+    });
     $(".questions").outerWidth($(this).outerWidth());
   });
 
