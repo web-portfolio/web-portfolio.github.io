@@ -34,13 +34,29 @@ function getMobileOperatingSystem() {
       });
 
     $(".categories-car-names li")
-    .mouseenter(function() {
-      $(this).addClass("car-names-active-hover");
-    })
-    .mouseleave(function() {
-      $(this).removeClass("car-names-active-hover");
-    });
-    $(".categories-car-names li")
+      .mouseenter(function() {
+        $(this).addClass("car-names-active-hover");
+      })
+      .mouseleave(function() {
+        $(this).removeClass("car-names-active-hover");
+      });
+
+    $("#car-tab-1 .car-item")
+      .mouseenter(function() {
+        $("img", this).prop("src", "img/products/categories/lamborghini2.jpg");
+      })
+      .mouseleave(function() {
+        $("img", this).prop("src", "img/products/categories/lamborghini1.jpg");
+      });
+
+    $("#car-tab-2 .car-item")
+      .mouseenter(function() {
+        $("img", this).prop("src", "img/products/categories/lamborghini4.jpg");
+      })
+      .mouseleave(function() {
+        $("img", this).prop("src", "img/products/categories/lamborghini3.jpg");
+      });
+
     return "Desktop";
   }
 }

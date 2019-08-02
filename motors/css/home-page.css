@@ -35,7 +35,7 @@ body * {
   box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.75);
 }
 
-.about-container2, .about-container3{
+.about-container2, .about-container3 {
   margin-top: 30px;
 }
 
@@ -48,7 +48,7 @@ body * {
   margin-bottom: 20px;
 }
 
-.about-container1{
+.about-container1 {
   display: flex;
   align-items: center;
 }
