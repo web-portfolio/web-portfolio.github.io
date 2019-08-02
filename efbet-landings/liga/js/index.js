@@ -22,7 +22,10 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
   $(".hamburger").click(function() {
     $(this).toggleClass("hamburger-active");
-    $(".nav-content").stop(true, true).slideToggle();
+    $(this).css("pointer-events", "none");
+    $(".nav-content").slideToggle(function(){
+      $(".hamburger").css("pointer-events", "all");
+    });
     if ($(".hamburger").hasClass("hamburger-active")) {
       $("body").css("overflowY", "hidden");
     } else {
