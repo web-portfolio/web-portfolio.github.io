@@ -3,12 +3,12 @@ document.addEventListener("DOMContentLoaded", function(event) {
     loadElements();
   });
 
-  $(".categories-car-names li").click(function(){
+  $(".categories-car-names li").click(function() {
     $(".categories-car-names li").removeClass("car-names-active");
     $(this).addClass("car-names-active");
   });
 
-  $(".tabs li").click(function() {
+  $(".categories-car-names li").click(function() {
     var data_id = $(this).attr("data-tab");
     $(this).parent().addClass("current-parent");
     $(".categories-content").addClass("current-parent");
@@ -17,6 +17,17 @@ document.addEventListener("DOMContentLoaded", function(event) {
     $(".current-parent " + "#" + data_id).addClass("current");
     $(this).parent().removeClass("current-parent");
     $(".categories-content").removeClass("current-parent");
+  });
+
+  $(".car-pages li").click(function() {
+    var data_id = $(this).attr("data-tab");
+    $(this).parent().addClass("current-parent-pages");
+    $(".car-pages-container").addClass("current-parent-pages");
+    $(".current-parent-pages .car-tab-link, .current-parent-pages .car-tab-content").removeClass("current");
+    $(this).addClass("current");
+    $(".current-parent-pages " + "#" + data_id).addClass("current");
+    $(this).parent().removeClass("current-parent-pages");
+    $(".car-pages-container").removeClass("current-parent-pages");
   });
 
   function loadElements() {
