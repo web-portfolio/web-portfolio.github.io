@@ -8,6 +8,17 @@ document.addEventListener("DOMContentLoaded", function(event) {
     $(this).addClass("car-names-active");
   });
 
+  $(".tabs li").click(function() {
+    var data_id = $(this).attr("data-tab");
+    $(this).parent().addClass("current-parent");
+    $(".categories-content").addClass("current-parent");
+    $(".current-parent .tab-link, .current-parent .tab-content").removeClass("current");
+    $(this).addClass("current");
+    $(".current-parent " + "#" + data_id).addClass("current");
+    $(this).parent().removeClass("current-parent");
+    $(".categories-content").removeClass("current-parent");
+  });
+
   function loadElements() {
     $(".top-content").load("header.html .container > *", function() {
       $.getScript("js/header.js");
