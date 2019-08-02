@@ -84,14 +84,20 @@ $(".lp-email-send-bt").click(function() {
 });
 
 $(".games").click(function() {
-  $(".buy-games").stop(true, false).slideToggle();
+  $(this).css("pointer-events", "none");
+  $(".buy-games").slideToggle(function(){
+    $(".games").css("pointer-events", "all");
+  });
   $(this).toggleClass("games-active");
   $(".login-form").slideUp();
   $(".profile").removeClass("profile-active");
 });
 
 $(".profile").click(function() {
-  $(".login-form").stop(true, false).slideToggle();
+  $(this).css("pointer-events", "none");
+  $(".login-form").slideToggle(function(){
+    $(".profile").css("pointer-events", "all");
+  });
   $(this).toggleClass("profile-active");
   $(".buy-games").slideUp();
   $(".games").removeClass("games-active");
