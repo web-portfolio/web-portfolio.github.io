@@ -44,7 +44,7 @@
 }
 
 .slides li{
-  display: flex !important;
+  /* display: flex !important; */
 }
 
 .slider-info{
