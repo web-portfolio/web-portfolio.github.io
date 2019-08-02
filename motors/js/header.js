@@ -4,7 +4,10 @@ $(window).on("resize", function() {
 
 $(".hamburger").click(function() {
   $(this).toggleClass("hamburger-active");
-  $(".navigation").stop(true, true).slideToggle();
+  $(this).css("pointer-events", "none");
+  $(".navigation").slideToggle(function(){
+    $(".hamburger").css("pointer-events", "all");
+  });
   if ($(".hamburger").hasClass("hamburger-active")) {
     $("body").css("overflowY", "hidden");
   } else {
