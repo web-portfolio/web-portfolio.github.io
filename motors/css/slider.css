@@ -43,8 +43,8 @@
   -webkit-backface-visibility: hidden;
 }
 
-.slides li{
-  /* display: flex !important; */
+.slider-content{
+  display: flex;
 }
 
 .slider-info{

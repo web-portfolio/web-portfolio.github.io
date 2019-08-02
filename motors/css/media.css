@@ -117,10 +117,10 @@
   .footer-follow>div:not(:last-of-type) {
     margin-right: 10px;
   }
-  .slides li {
+  .slider-content {
     flex-direction: column;
   }
-  .slides li>div {
+  .slider-content>div {
     width: 100%;
     text-align: center;
   }
