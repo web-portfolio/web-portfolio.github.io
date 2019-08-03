@@ -32,10 +32,12 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
   $(".car-item .car-img").click(function() {
     $(this).parent().find(".img-gallery-container").fadeIn(500);
+    $("body").css("overflowY", "hidden");
   });
 
   $(".img-gallery-container-close-btn").click(function() {
     $(".img-gallery-container").fadeOut(500);
+    $("body").css("overflowY", "auto");
   });
 
   function loadElements() {
