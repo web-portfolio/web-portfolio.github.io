@@ -1,47 +1,12 @@
 document.addEventListener("DOMContentLoaded", function(event) {
-  $('a[data-imagelightbox="a"]').imageLightbox({
-    activity: true
-  });
-
-  $('a[data-imagelightbox="allowedtypes"]').imageLightbox({
-    allowedTypes: "gif"
-  });
-
-  $('a[data-imagelightbox="b"]').imageLightbox({
-    overlay: true
-  });
-
-  $('a[data-imagelightbox="c"]').imageLightbox({
-    button: true,
-    quitOnDocClick: false
-  });
-
-  $('a[data-imagelightbox="d"]').imageLightbox({
-    caption: true
-  });
-
-  $('a[data-imagelightbox="e"]').imageLightbox({
-    navigation: true,
-    selector: 'a[data-imagelightbox="e"]'
-  });
-
-  $('a[data-imagelightbox="f"]').imageLightbox({
-    arrows: true
-  });
-
-  $('a[data-imagelightbox="fullscreen"]').imageLightbox({
-    fullscreen: true
-  });
-
-  $('a[data-imagelightbox="g"]').imageLightbox({
+  $('a[data-imagelightbox="1"], a[data-imagelightbox="2"], a[data-imagelightbox="3"], a[data-imagelightbox="4"], a[data-imagelightbox="5"], a[data-imagelightbox="6"], a[data-imagelightbox="7"], a[data-imagelightbox="8"], a[data-imagelightbox="9"]').imageLightbox({
     activity: true,
     arrows: true,
     button: true,
     caption: false,
     navigation: true,
     overlay: true,
-    quitOnDocClick: false,
-    selector: 'a[data-imagelightbox="f"]'
+    quitOnDocClick: false
   });
 
   /**
