@@ -30,6 +30,14 @@ document.addEventListener("DOMContentLoaded", function(event) {
     $(".car-pages-container").removeClass("current-parent-pages");
   });
 
+  $(".car-item .car-img").click(function() {
+    $(this).parent().find(".img-gallery-container").fadeIn(500);
+  });
+
+  $(".img-gallery-container-close-btn").click(function() {
+    $(".img-gallery-container").fadeOut(500);
+  });
+
   function loadElements() {
     $(".top-content").load("header.html .container > *", function() {
       $.getScript("js/header.js");

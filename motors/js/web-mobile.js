@@ -43,10 +43,10 @@ function getMobileOperatingSystem() {
 
     $("#car-tab-1 .car-item")
       .mouseenter(function() {
-        $("img", this).prop("src", "img/products/categories/lamborghini/1/lamborghini2.jpg");
+        $(".car-img", this).prop("src", "img/products/categories/lamborghini/1/lamborghini2.jpg");
       })
       .mouseleave(function() {
-        $("img", this).prop("src", "img/products/categories/lamborghini/1/lamborghini1.jpg");
+        $(".car-img", this).prop("src", "img/products/categories/lamborghini/1/lamborghini1.jpg");
       });
 
     $("#car-tab-2 .car-item")
