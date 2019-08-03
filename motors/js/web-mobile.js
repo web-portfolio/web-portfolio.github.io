@@ -43,18 +43,18 @@ function getMobileOperatingSystem() {
 
     $("#car-tab-1 .car-item")
       .mouseenter(function() {
-        $("img", this).prop("src", "img/products/categories/lamborghini2.jpg");
+        $("img", this).prop("src", "img/products/categories/lamborghini/1/lamborghini2.jpg");
       })
       .mouseleave(function() {
-        $("img", this).prop("src", "img/products/categories/lamborghini1.jpg");
+        $("img", this).prop("src", "img/products/categories/lamborghini/1/lamborghini1.jpg");
       });
 
     $("#car-tab-2 .car-item")
       .mouseenter(function() {
-        $("img", this).prop("src", "img/products/categories/lamborghini4.jpg");
+        $("img", this).prop("src", "img/products/categories/lamborghini/2/lamborghini2.jpg");
       })
       .mouseleave(function() {
-        $("img", this).prop("src", "img/products/categories/lamborghini3.jpg");
+        $("img", this).prop("src", "img/products/categories/lamborghini/2/lamborghini1.jpg");
       });
 
     return "Desktop";
