@@ -51,10 +51,10 @@ function getMobileOperatingSystem() {
 
     $("#car-tab-2 .car-item")
       .mouseenter(function() {
-        $("img", this).prop("src", "img/products/categories/lamborghini/2/lamborghini2.jpg");
+        $(".car-img", this).prop("src", "img/products/categories/lamborghini/2/lamborghini2.jpg");
       })
       .mouseleave(function() {
-        $("img", this).prop("src", "img/products/categories/lamborghini/2/lamborghini1.jpg");
+        $(".car-img", this).prop("src", "img/products/categories/lamborghini/2/lamborghini1.jpg");
       });
 
     return "Desktop";

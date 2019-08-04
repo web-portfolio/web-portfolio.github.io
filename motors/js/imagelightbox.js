@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function(event) {
-  $('a[data-imagelightbox="1"], a[data-imagelightbox="2"], a[data-imagelightbox="3"], a[data-imagelightbox="4"], a[data-imagelightbox="5"], a[data-imagelightbox="6"], a[data-imagelightbox="7"], a[data-imagelightbox="8"], a[data-imagelightbox="9"]').imageLightbox({
+  $('a[data-imagelightbox="1"], a[data-imagelightbox="2"], a[data-imagelightbox="3"], a[data-imagelightbox="4"], a[data-imagelightbox="5"], a[data-imagelightbox="6"], a[data-imagelightbox="7"], a[data-imagelightbox="8"], a[data-imagelightbox="9"], a[data-imagelightbox="10"], a[data-imagelightbox="11"], a[data-imagelightbox="12"], a[data-imagelightbox="13"], a[data-imagelightbox="14"], a[data-imagelightbox="15"], a[data-imagelightbox="16"], a[data-imagelightbox="17"], a[data-imagelightbox="18"]').imageLightbox({
     activity: true,
     arrows: true,
     button: true,
