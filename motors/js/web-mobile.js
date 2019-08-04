@@ -41,7 +41,7 @@ function getMobileOperatingSystem() {
         $(this).removeClass("car-names-active-hover");
       });
 
-    $("#car-tab-1 .car-item")
+    $(".lamborgini-page-1 .car-item")
       .mouseenter(function() {
         $(".car-img", this).prop("src", "img/products/categories/lamborghini/1/lamborghini2.jpg");
       })
@@ -49,12 +49,28 @@ function getMobileOperatingSystem() {
         $(".car-img", this).prop("src", "img/products/categories/lamborghini/1/lamborghini1.jpg");
       });
 
-    $("#car-tab-2 .car-item")
+    $(".lamborgini-page-2 .car-item")
       .mouseenter(function() {
         $(".car-img", this).prop("src", "img/products/categories/lamborghini/2/lamborghini2.jpg");
       })
       .mouseleave(function() {
         $(".car-img", this).prop("src", "img/products/categories/lamborghini/2/lamborghini1.jpg");
+      });
+
+    $(".porche-page-1 .car-item")
+      .mouseenter(function() {
+        $(".car-img", this).prop("src", "img/products/categories/porche/1/porche2.jpg");
+      })
+      .mouseleave(function() {
+        $(".car-img", this).prop("src", "img/products/categories/porche/1/porche1.jpg");
+      });
+
+    $(".porche-page-2 .car-item")
+      .mouseenter(function() {
+        $(".car-img", this).prop("src", "img/products/categories/porche/2/porche2.jpg");
+      })
+      .mouseleave(function() {
+        $(".car-img", this).prop("src", "img/products/categories/porche/2/porche1.jpg");
       });
 
     return "Desktop";
