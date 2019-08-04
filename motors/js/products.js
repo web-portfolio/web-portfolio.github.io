@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   $(".car-pages li").click(function() {
     var data_id = $(this).attr("data-tab");
     $(this).parent().addClass("current-parent-pages");
-    $(".car-pages-container").addClass("current-parent-pages");
+    $(this).parent().prev().addClass("current-parent-pages");
     $(".current-parent-pages .car-tab-link, .current-parent-pages .car-tab-content").removeClass("current");
     $(this).addClass("current");
     $(".current-parent-pages " + "#" + data_id).addClass("current");
