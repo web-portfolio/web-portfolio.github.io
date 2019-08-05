@@ -19,6 +19,7 @@
   margin-top: 10px;
   display: flex;
   align-items: center;
+  padding-left: 35px;
 }
 
 .img_gallery * {
