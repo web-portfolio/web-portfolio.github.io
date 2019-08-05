@@ -161,6 +161,9 @@
   .car-item:nth-child(odd) {
     margin-right: 6px;
   }
+  .img_gallery li {
+    width: 45%;
+  }
 }
 
 @media screen and (max-width: 550px) {

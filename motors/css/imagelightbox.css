@@ -11,6 +11,7 @@
 
 .img_gallery {
   width: 90%;
+  max-width: 960px;
   height: 100vh;
   margin: 0 auto;
   text-align: center;
@@ -63,6 +64,7 @@
 
 .img_gallery img {
   width: 15em;
+  max-width: 100%;
   border: 2px solid #5e0000;
   border-radius: 5px;
   -webkit-transition: -webkit-box-shadow .3s ease, border-color .3s ease;
