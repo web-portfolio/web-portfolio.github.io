@@ -91,6 +91,7 @@ body * {
   color: #ffffff;
   font-size: 1em;
   box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.75);
+  box-sizing: border-box;
 }
 
 .categories-car-names li {
@@ -98,6 +99,7 @@ body * {
   padding: 10px 20px;
   cursor: pointer;
   text-align: center;
+  margin-left: 35px;
 }
 
 .car-names-active, .car-names-active-hover {
@@ -108,7 +110,7 @@ body * {
 
 .categories-content {
   width: calc(100% - 220px);
-  text-align: center;
+  text-align: right;
 }
 
 .car-item hr {
@@ -116,23 +118,33 @@ body * {
   border-top: 1px solid #b53636;
 }
 
-.car-item img {
+.car-img {
   user-select: none;
   -webkit-user-select: none;
   box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.75);
   border-radius: 5px;
   cursor: pointer;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.car-item p, .car-pages{
+  text-align: center;
 }
 
 .car-item {
   padding: 10px;
   background-color: #ffffff;
   box-sizing: border-box;
-  max-width: 220px;
+  max-width: 31%;
   margin-bottom: 10px;
-  margin-right: 6px;
   display: inline-block;
   box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.75);
+  text-align: center;
+}
+
+.car-item:not(:nth-child(3n+3)){
+  margin-right: 6px;
 }
 
 .buy-car {

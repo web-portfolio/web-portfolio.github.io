@@ -1,9 +1,22 @@
-@media screen and (min-width: 1921px) {}
-
 @media screen and (max-width: 950px) {
   .navigation li:not(:last-of-type) {
     margin-right: 2%;
   }
+  .categories{
+    display: block;
+  }
+  .categories>div{
+    width: 100%;
+  }
+  .categories-car-names{
+    white-space: nowrap;
+    height: 50px;
+  }
+  .categories-car-names li{
+    display: inline-block;
+    margin-left: 10px;
+  }
+  
 }
 
 @media screen and (max-width: 850px) {
