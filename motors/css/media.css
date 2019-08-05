@@ -1,12 +1,5 @@
 @media screen and (min-width: 1921px) {}
 
-@media screen and (max-width: 1066px) {
-  .cars{
-    padding: 0px calc((100% - 480px)/3);
-    box-sizing: border-box;
-  }
-}
-
 @media screen and (max-width: 950px) {
   .navigation li:not(:last-of-type) {
     margin-right: 2%;

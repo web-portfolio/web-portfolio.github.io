@@ -47,6 +47,11 @@ body * {
   display: flex;
   cursor: pointer;
   position: relative;
+  width: 25%;
+}
+
+.cars>div img{
+  max-width: 100%;
 }
 
 .cars-hover {
@@ -128,7 +133,6 @@ body * {
   margin-right: 6px;
   display: inline-block;
   box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.75);
-  /* position: relative; */
 }
 
 .buy-car {
