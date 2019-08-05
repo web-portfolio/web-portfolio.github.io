@@ -151,7 +151,17 @@
   }
 }
 
-@media screen and (max-width: 650px) {}
+@media screen and (max-width: 650px) {
+  .car-item:not(:nth-child(3n+3)) {
+    margin-right: 0px;
+  }
+  .car-item {
+    width: 48%;
+  }
+  .car-item:nth-child(odd) {
+    margin-right: 6px;
+  }
+}
 
 @media screen and (max-width: 550px) {
   .bottom-banner, .bottom-banner-info, .bottom-banner-info * {
