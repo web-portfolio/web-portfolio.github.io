@@ -2,21 +2,29 @@
   .navigation li:not(:last-of-type) {
     margin-right: 2%;
   }
-  .categories{
+  .categories {
     display: block;
   }
-  .categories>div{
+  .categories>div {
     width: 100%;
   }
-  .categories-car-names{
+  .categories-car-names {
     white-space: nowrap;
     height: 50px;
   }
-  .categories-car-names li{
+  .categories-car-names li {
     display: inline-block;
     margin-left: 10px;
   }
-  
+  .categories-nav {
+    margin-bottom: 20px;
+  }
+  .categories-content {
+    text-align: center;
+  }
+  .car-item {
+    width: 32%;
+  }
 }
 
 @media screen and (max-width: 850px) {
@@ -142,6 +150,8 @@
     bottom: -40px;
   }
 }
+
+@media screen and (max-width: 650px) {}
 
 @media screen and (max-width: 550px) {
   .bottom-banner, .bottom-banner-info, .bottom-banner-info * {

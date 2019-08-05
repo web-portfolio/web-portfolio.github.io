@@ -50,7 +50,7 @@ body * {
   width: 25%;
 }
 
-.cars>div img{
+.cars>div img {
   max-width: 100%;
 }
 
@@ -128,7 +128,7 @@ body * {
   margin-bottom: 10px;
 }
 
-.car-item p, .car-pages{
+.car-item p, .car-pages {
   text-align: center;
 }
 
@@ -136,14 +136,14 @@ body * {
   padding: 10px;
   background-color: #ffffff;
   box-sizing: border-box;
-  max-width: 31%;
+  width: 31%;
   margin-bottom: 10px;
   display: inline-block;
   box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.75);
   text-align: center;
 }
 
-.car-item:not(:nth-child(3n+3)){
+.car-item:not(:nth-child(3n+3)) {
   margin-right: 6px;
 }
 
