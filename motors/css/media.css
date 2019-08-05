@@ -192,6 +192,17 @@
   }
 }
 
+@media screen and (max-width: 440px) {
+  .buy-car {
+    display: block;
+  }
+  .buy-car div:nth-child(2) {
+    width: 85px;
+    margin: 0 auto;
+    margin-top: 10px;
+  }
+}
+
 @media screen and (max-width: 360px) {
   .footer-bottom p {
     font-size: 0.9em;
