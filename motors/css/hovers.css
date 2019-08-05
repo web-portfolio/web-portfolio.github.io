@@ -35,7 +35,7 @@
   -webkit-transition: 0.5s;
 }
 
-.f1:hover::after, .f2:hover::after, .f3:hover::after, .f4:hover::after {
+.f1:hover::after, .f2:hover::after, .f3:hover::after, .f4:hover::after, .back-to-top:hover {
   opacity: 1;
 }
 

@@ -166,3 +166,29 @@
   display: flex;
   justify-content: space-between;
 }
+
+.back-to-top {
+  transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  background: #b53636;
+  cursor: pointer;
+  color: #ffffff;
+  /* border: 1px solid #b53636; */
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  font-size: 2.5em;
+  text-align: center;
+  opacity: 0.7;
+  /* display: none; */
+  box-sizing: border-box;
+  line-height: 34px;
+  padding: 0;
+  z-index: 19;
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-user-select: none;
+  user-select: none;
+}
