@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function(event) {
+document.addEventListener("DOMContentLoaded", function (event) {
   $(window).on("load", function() {
     loadElements();
   });
@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
       changeCurrentLi();
     });
-    $("head .media").before('<link rel="stylesheet" href="css/header.css">');    
+    $("head .media").before('<link rel="stylesheet" href="css/header.css">');
 
     $(".bottom-banner").load("footer.html .footer-top-content > *");
     $(".footer").load("footer.html .footer-bottom-content > *", function() {
@@ -29,6 +29,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
   function changeCurrentLi() {
     $(".navigation li").removeClass("nav-active");
-    $(".nav-home").addClass("nav-active");
+    $(".nav-services").addClass("nav-active");
   };
 });

@@ -29,3 +29,7 @@ $(".nav-home").click(function() {
 $(".nav-products").click(function() {
   window.location = "products.html";
 });
+
+$(".nav-services").click(function() {
+  window.location = "services.html";
+});
