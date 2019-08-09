@@ -1,73 +1,51 @@
-document.addEventListener("DOMContentLoaded", function (event) {
-  $(window).on("load", function () {
+document.addEventListener("DOMContentLoaded", function(event) {
+  $(window).on("load", function() {
     $(".loader-bg").fadeOut(500);
   });
 
-  $(window).on("load resize", function () {
+  $(window).on("load resize", function() {
     getMobileOperatingSystem();
     fixedLogo();
     mobOverfllow();
   });
 
-  $(window).on("resize", function () {
-    // mobOverfllow();
-  });
-
-  setTimeout(function () {
+  setTimeout(function() {
     $(".pop-up").slideDown();
   }, 1500);
 
-  $(".pop-up-btn").click(function () {
+  $(".pop-up-btn").click(function() {
     $(".pop-up").slideUp();
   });
 
-  $(".hamburger").click(function () {
+  $(".hamburger").click(function() {
     $(this).toggleClass("hamburger-active");
     $(this).css("pointer-events", "none");
-    $(".nav-content").slideToggle(function () {
+    $(".nav-content").slideToggle(function() {
       $(".hamburger").css("pointer-events", "all");
     });
-
-    // $(".nav-content").mouseenter(function(){
-    //   $("body").css("overflowY", "hidden");
-    // });
-
-    // if ($(".hamburger").hasClass("hamburger-active") && $(".hamburger").height()>0 ) {
-    //   $("body").css("overflowY", "hidden");
-    // } else {
-    //   $("body").css("overflowY", "auto");
-    // }
-
     mobOverfllow();
   });
 
-  // $(".top-img").mouseenter(function(){
-  //   $("body").css("overflowY", "hidden");
-  // });
-
-  $(".open-rules").click(function () {
+  $(".open-rules").click(function() {
     $(".rule-text-container").fadeIn(500);
     $("body").css("overflowY", "hidden");
   });
 
-  $(".close-btn").click(function () {
+  $(".close-btn").click(function() {
     $(".rule-text-container").fadeOut(500);
     $("body").css("overflowY", "auto");
   });
 
   function mobOverfllow() {
-    // $(".hamburger").removeClass("hamburger-active");
-    // $(".nav-content").slideUp();
-    // $("body").css("overflowY", "auto");
-
-    if ($(".hamburger").hasClass("hamburger-active") && $(".hamburger").height()>0 ) {
+    if ($(".hamburger").hasClass("hamburger-active") && $(".hamburger").height() > 0) {
       $("body").css("overflowY", "hidden");
+      $("html, body").scrollTop($("html, body").offset().top);
     } else {
       $("body").css("overflowY", "auto");
     }
-  }
+  };
 
-  $(".rules").click(function () {
+  $(".rules").click(function() {
     $(".nav-content").hide();
     $(".hamburger").removeClass("hamburger-active");
     $("body").css("overflowY", "auto");
@@ -95,25 +73,25 @@ document.addEventListener("DOMContentLoaded", function (event) {
     if (winPhone || ios || android) {
       $('link[href="css/hovers.css"]').prop("disabled", true);
       $("body *").unbind("mouseenter mouseleave");
-      $(".registration").click(function () {
+      $(".registration").click(function() {
         window.location = "https://mobile.efbet.com/register";
       });
-      $(".bet").click(function () {
+      $(".bet").click(function() {
         window.location = "https://mobile.efbet.com/sports/node/361881.1";
       });
-      $(".footer-btn, .winners").click(function () {
+      $(".footer-btn, .winners").click(function() {
         window.location = "https://liga.efbet.com/";
       });
       return "Phone Device";
     } else {
       $('link[href="css/hovers.css"]').prop("disabled", false);
-      $(".registration").click(function () {
+      $(".registration").click(function() {
         window.location = "https://www.efbet.com/BG/Registration#action=register";
       });
-      $(".bet").click(function () {
+      $(".bet").click(function() {
         window.location = "https://www.efbet.com/BG/sports#bo-navigation=282241.1,282242.1,361881.1&action=market-group-list";
       });
-      $(".footer-btn, .winners").click(function () {
+      $(".footer-btn, .winners").click(function() {
         window.location = "https://liga.efbet.com/";
       });
       return "Desktop";
