@@ -6,10 +6,11 @@ document.addEventListener("DOMContentLoaded", function (event) {
   $(window).on("load resize", function () {
     getMobileOperatingSystem();
     fixedLogo();
+    mobOverfllow();
   });
 
   $(window).on("resize", function () {
-    mobOverfllow();
+    // mobOverfllow();
   });
 
   setTimeout(function () {
@@ -31,16 +32,18 @@ document.addEventListener("DOMContentLoaded", function (event) {
     //   $("body").css("overflowY", "hidden");
     // });
 
-    if ($(".hamburger").hasClass("hamburger-active")) {
-      // $("body").css("overflowY", "hidden");
-    } else {
-      // $("body").css("overflowY", "auto");
-    }
+    // if ($(".hamburger").hasClass("hamburger-active") && $(".hamburger").height()>0 ) {
+    //   $("body").css("overflowY", "hidden");
+    // } else {
+    //   $("body").css("overflowY", "auto");
+    // }
+
+    mobOverfllow();
   });
 
-  $(".top-img").mouseenter(function(){
-    $("body").css("overflowY", "hidden");
-  });
+  // $(".top-img").mouseenter(function(){
+  //   $("body").css("overflowY", "hidden");
+  // });
 
   $(".open-rules").click(function () {
     $(".rule-text-container").fadeIn(500);
@@ -56,6 +59,12 @@ document.addEventListener("DOMContentLoaded", function (event) {
     // $(".hamburger").removeClass("hamburger-active");
     // $(".nav-content").slideUp();
     // $("body").css("overflowY", "auto");
+
+    if ($(".hamburger").hasClass("hamburger-active") && $(".hamburger").height()>0 ) {
+      $("body").css("overflowY", "hidden");
+    } else {
+      $("body").css("overflowY", "auto");
+    }
   }
 
   $(".rules").click(function () {
