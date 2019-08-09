@@ -1,24 +1,23 @@
 $(window).on("resize", function() {
-  slideUpNav();
+  mobOverfllow();
 });
 
 $(".hamburger").click(function() {
   $(this).toggleClass("hamburger-active");
   $(this).css("pointer-events", "none");
-  $(".navigation").slideToggle(function(){
+  $(".navigation").slideToggle(function() {
     $(".hamburger").css("pointer-events", "all");
   });
-  if ($(".hamburger").hasClass("hamburger-active")) {
+  mobOverfllow();
+});
+
+function mobOverfllow() {
+  if ($(".hamburger").hasClass("hamburger-active") && $(".hamburger").height() > 0) {
     $("body").css("overflowY", "hidden");
+    $("html, body").scrollTop($("html, body").offset().top);
   } else {
     $("body").css("overflowY", "auto");
   }
-});
-
-function slideUpNav() {
-  $(".hamburger").removeClass("hamburger-active");
-  $(".navigation").slideUp();
-  $("body").css("overflowY", "auto");
 };
 
 // JS LINKS

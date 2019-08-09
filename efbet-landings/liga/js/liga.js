@@ -48,7 +48,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
   $(".rules").click(function() {
     $(".nav-content").hide();
     $(".hamburger").removeClass("hamburger-active");
-    $("body").css("overflowY", "auto");
     $("html, body").animate({
       scrollTop: $(".scroll").offset().top
     }, 500);
