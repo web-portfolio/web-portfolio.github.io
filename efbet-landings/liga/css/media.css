@@ -69,9 +69,6 @@
     margin-top: 10px !important;
     padding: 10px 0 10px 0;
   }
-  .nav-content {
-    display: none;
-  }
   .nav-content * {
     all: initial;
     * {
@@ -79,6 +76,8 @@
     }
   }
   .nav-content {
+    touch-action: none;
+    display: none;
     background-color: rgba(5, 13, 28, 0.93);
     padding: 10px 20px;
     height: 100vh;
