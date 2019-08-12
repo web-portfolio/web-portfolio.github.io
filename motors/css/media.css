@@ -57,10 +57,12 @@
     margin-top: 20px;
   }
   .header {
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 1);
     box-shadow: 0px 5px 5px 0px rgba(181, 54, 54, 0.9);
     height: 48px;
-    position: relative;
+    position: fixed;
+    width: 100%;
+    z-index: 15;
   }
   .hamburger {
     position: absolute;
@@ -218,3 +220,4 @@
     display: block !important;
   }
 }
+
