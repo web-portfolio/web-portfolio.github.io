@@ -43,7 +43,7 @@
     position: absolute;
     top: 50px;
     width: 100%;
-    background: rgba(0, 0, 0, 0.9);
+    background: rgba(0, 0, 0, 0.95);
     z-index: 1;
   }
   .navigation li {
@@ -57,7 +57,7 @@
     margin-top: 20px;
   }
   .header {
-    background: rgba(0, 0, 0, 1);
+    background: rgba(0, 0, 0, 0.95);
     box-shadow: 0px 5px 5px 0px rgba(181, 54, 54, 0.9);
     height: 48px;
     position: fixed;
@@ -146,8 +146,8 @@
   }
   .flexslider {
     width: auto;
-    transform: translateY(-65%);
-    -webkit-transform: translateY(-65%);
+    transform: translateY(-55%);
+    -webkit-transform: translateY(-55%);
   }
   .flex-control-nav {
     bottom: -40px;
