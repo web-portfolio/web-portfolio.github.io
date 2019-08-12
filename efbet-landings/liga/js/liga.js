@@ -50,6 +50,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     $("html, body").animate({
       scrollTop: $(".scroll").offset().top - 100
     }, 500);
+    $("body").css("overflowY", "auto");
   });
 
   function fixedLogo() {
