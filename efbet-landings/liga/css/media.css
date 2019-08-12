@@ -51,7 +51,6 @@
     width: 100%;
     z-index: 4;
   }
-  
   .icon-top {
     position: fixed;
     width: 60px;
@@ -78,9 +77,6 @@
   }
   .nav-content * {
     all: initial;
-    * {
-      all: unset;
-    }
   }
   .nav-content {
     touch-action: none;
@@ -95,7 +91,7 @@
     width: 100%;
     box-sizing: border-box;
   }
-  .nav-container{
+  .nav-container {
     display: flex;
     flex-direction: column;
     justify-content: center;

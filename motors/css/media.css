@@ -43,7 +43,7 @@
     position: absolute;
     top: 50px;
     width: 100%;
-    background: rgba(0, 0, 0, 0.95);
+    background: rgba(0, 0, 0, 0.93);
     z-index: 1;
   }
   .navigation li {
@@ -220,4 +220,3 @@
     display: block !important;
   }
 }
-
