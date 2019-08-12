@@ -34,7 +34,7 @@
   .win-bonus>div {
     margin-right: 0px !important;
   }
-  .win-bonus>div:not(:first-child) {
+  .win-bonus>div {
     margin-top: 30px;
   }
 }

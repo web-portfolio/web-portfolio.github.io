@@ -39,7 +39,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
   function mobOverfllow() {
     if ($(".hamburger").hasClass("hamburger-active") && $(".hamburger").height() > 0) {
       $("body").css("overflowY", "hidden");
-      $("html, body").scrollTop($("html, body").offset().top);
     } else {
       $("body").css("overflowY", "auto");
     }
@@ -49,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     $(".nav-content").hide();
     $(".hamburger").removeClass("hamburger-active");
     $("html, body").animate({
-      scrollTop: $(".scroll").offset().top
+      scrollTop: $(".scroll").offset().top - 100
     }, 500);
   });
 
