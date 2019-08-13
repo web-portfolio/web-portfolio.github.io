@@ -79,7 +79,6 @@
     all: initial;
   }
   .nav-content {
-    touch-action: none;
     display: none;
     background-color: rgba(5, 13, 28, 0.93);
     padding: 10px 20px;

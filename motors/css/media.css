@@ -38,7 +38,6 @@
     display: none;
   }
   .navigation {
-    /* touch-action: none; */
     height: 100vh;
     position: absolute;
     top: 50px;

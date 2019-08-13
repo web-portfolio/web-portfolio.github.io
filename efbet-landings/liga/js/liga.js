@@ -39,10 +39,16 @@ document.addEventListener("DOMContentLoaded", function(event) {
   function mobOverfllow() {
     if ($(".hamburger").hasClass("hamburger-active") && $(".hamburger").height() > 0) {
       $("body").css("overflowY", "hidden");
+      document.addEventListener('touchmove', handleTouchMove, { passive: false });
     } else {
       $("body").css("overflowY", "auto");
+      document.removeEventListener('touchmove', handleTouchMove);
     }
   };
+
+  function handleTouchMove(e) {
+    e.preventDefault();
+  }
 
   $(".rules").click(function() {
     $(".nav-content").hide();
@@ -51,6 +57,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
       scrollTop: $(".scroll").offset().top - 100
     }, 500);
     $("body").css("overflowY", "auto");
+    document.removeEventListener('touchmove', handleTouchMove);
   });
 
   function fixedLogo() {
