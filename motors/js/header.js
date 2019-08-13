@@ -13,9 +13,9 @@ $(".hamburger").click(function() {
 
 function mobOverfllow() {
   if ($(".hamburger").hasClass("hamburger-active") && $(".hamburger").height() > 0) {
-    $("body").css("overflowY", "hidden");
+    $("body").css("overflow", "hidden");
   } else {
-    $("body").css("overflowY", "auto");
+    $("body").css("overflow", "auto");
   }
 };
 
