@@ -1,7 +1,3 @@
-document.addEventListener('touchmove', function(e) {
-  e.preventDefault();
-}, { passive: false });
-
 $(window).on("resize", function() {
   mobOverfllow();
 });
@@ -15,11 +11,21 @@ $(".hamburger").click(function() {
   mobOverfllow();
 });
 
+// document.addEventListener('touchmove', function(e) {
+//   e.preventDefault();
+// }, { passive: false });
+
+function handleTouchMove(e) {
+  e.preventDefault();
+}
+
 function mobOverfllow() {
   if ($(".hamburger").hasClass("hamburger-active") && $(".hamburger").height() > 0) {
     // $("body").css("overflowY", "hidden");
+    document.addEventListener('touchmove', handleTouchMove, { passive: false });
   } else {
     // $("body").css("overflowY", "auto");
+    document.removeEventListener('touchmove', handleTouchMove);
   }
 };
 
