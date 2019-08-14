@@ -52,6 +52,7 @@ body * {
 
 .cars>div img {
   max-width: 100%;
+  display: block;
 }
 
 .cars-hover {
