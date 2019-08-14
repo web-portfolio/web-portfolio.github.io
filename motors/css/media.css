@@ -25,6 +25,9 @@
   .car-item {
     width: 32%;
   }
+  .call-us{
+    display: none;
+  }
 }
 
 @media screen and (max-width: 850px) {
