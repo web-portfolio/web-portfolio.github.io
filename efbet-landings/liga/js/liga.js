@@ -39,14 +39,14 @@ document.addEventListener("DOMContentLoaded", function(event) {
   function mobOverfllow() {
     if ($(".hamburger").hasClass("hamburger-active") && $(".hamburger").height() > 0) {
       $("body").css("overflowY", "hidden");
-      document.addEventListener('touchmove', handleTouchMove, { passive: false });
+      document.addEventListener('touchmove', touchPreven, { passive: false });
     } else {
       $("body").css("overflowY", "auto");
-      document.removeEventListener('touchmove', handleTouchMove);
+      document.removeEventListener('touchmove', touchPreven);
     }
   };
 
-  function handleTouchMove(e) {
+  function touchPreven(e) {
     e.preventDefault();
   }
 
@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
       scrollTop: $(".scroll").offset().top - 100
     }, 500);
     $("body").css("overflowY", "auto");
-    document.removeEventListener('touchmove', handleTouchMove);
+    document.removeEventListener('touchmove', touchPreven);
   });
 
   function fixedLogo() {
