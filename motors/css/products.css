@@ -44,7 +44,7 @@ body * {
 }
 
 .cars>div {
-  display: flex;
+  /* display: flex; */
   cursor: pointer;
   position: relative;
   width: 25%;
