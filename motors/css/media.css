@@ -28,6 +28,43 @@
   .call-us{
     display: none;
   }
+
+  .call-us-mob{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 960px;
+    width: 90%;
+    margin: 0 auto;   
+    margin-top: 30px;
+    background-image: url("../img/call-us-mob.jpg");
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    background-position: right;
+    height: 100px;
+    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.75);
+    box-sizing: border-box;
+  }
+
+  .call-us-mob h3{
+    color: #000000;
+    font-weight: bold;
+    margin-bottom: 10px;
+    width: calc(100% - 155px);
+    text-align: center;
+  }
+  
+  .call-us-mob a{
+    text-decoration: none;
+    font-size: 1.3em;
+    color: #b53636;
+    display: block;
+    font-weight: bold;
+    user-select: none;
+    -webkit-user-select: none;
+    width: calc(100% - 155px);
+    text-align: center;
+  }
 }
 
 @media screen and (max-width: 850px) {
@@ -106,7 +143,7 @@
     flex-direction: column;
     width: 95%;
   }
-  .bottom-banner, .footer-top, .top-text, .cars, .categories {
+  .bottom-banner, .footer-top, .top-text, .cars, .categories, .call-us-mob {
     width: 95%;
   }
   .about-content1, .about-content2, .about-content3 {
@@ -220,5 +257,11 @@
 @media screen and (min-width: 768px) {
   .navigation {
     display: block !important;
+  }
+}
+
+@media screen and (min-width: 951px) {
+  .call-us-mob{
+    display: none;
   }
 }
