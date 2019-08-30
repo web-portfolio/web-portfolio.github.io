@@ -1,0 +1,189 @@
+<?php
+// We need to use sessions, so you should always start sessions using the below code.
+session_start();
+// If the user is not logged in redirect to the login page...
+if (!isset($_SESSION['loggedin'])) {
+    header('Location: index.html');
+    exit();
+}
+?>
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="css/media.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+</head>
+
+<body class="loggedin">
+    <nav class="navtop">
+        <div class="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div>
+            <h1>Институт за гората – БАН</h1>
+            <a href="home.php"><i class="fas fa-warehouse"></i>Home</a>
+            <a href="home.php"><i class="fas fa-plus-circle"></i>Home</a>
+            <a href="profile.php"><i class="fas fa-user-circle"></i>Profile</a>
+            <a href="logout.php"><i class="fas fa-sign-out-alt"></i>Logout</a>
+        </div>
+    </nav>
+    <div class="content">
+        <h2>Home Page</h2>
+    </div>
+
+
+
+    <!-- Контейнер за данни - НАЧАЛО -->
+    <div class="container">
+        <ul class="tab-link-container">
+            <li class="tab-link current" data-tab="tab-1">Tab 1</li>
+            <li class="tab-link" data-tab="tab-2">Tab 2</li>
+            <li class="tab-link" data-tab="tab-3">Tab 3</li>
+            <li class="tab-link" data-tab="tab-4">Tab 4</li>
+        </ul>
+        <div class="tab-content-container">
+            <div id="tab-1" class="tab-content current">
+
+                <!--Таблица за извеждане на записите - НАЧАЛО-->
+                <?php
+                $servername = "localhost";
+                $username = "root";
+                $password = "Aa123456";
+                $dbname = "test1";
+
+                // Create connection
+                $conn = new mysqli($servername, $username, $password, $dbname);
+                // Check connection
+                if ($conn->connect_error) {
+                    die("Connection failed: " . $conn->connect_error);
+                }
+
+                $sql = "SELECT ids , Institution , Name , Contact , Email 
+        FROM `satrudnik` ";
+                $result = $conn->query($sql);
+
+                if ($result->num_rows > 0) {
+                    //echo "<table style='border: solid 1px black;'>";
+                    echo "<table border='1'>";
+                    echo "<tr><td>ID</td><td>Institute</td><td>Name</td></td>";
+                    // output data of each row
+                    while ($row = $result->fetch_assoc()) {
+                        echo "<tr><td>" . $row["ids"] . "</td><td>" . $row["Institution"] . "</td><td>" . $row["Name"] . "</td></tr>";
+                    }
+                    echo "</table>";
+                } else {
+                    echo "0 results";
+                }
+
+                $conn->close();
+                ?>
+                <!--Таблица за извеждане на записите - КРАЙ-->
+
+
+            </div>
+            <div id="tab-2" class="tab-content">
+                <p>
+                    Tab 2 text text
+                </p>
+                <p>
+                    Tab 2 text text
+                </p>
+                <p>
+                    Tab 2 text text
+                </p>
+            </div>
+            <div id="tab-3" class="tab-content">
+                <p>
+                    Tab 3 text text
+                </p>
+                <p>
+                    Tab 3 text text
+                </p>
+                <p>
+                    Tab 3 text text
+                </p>
+            </div>
+            <div id="tab-4" class="tab-content">
+                <p>
+                    Tab 4 text text
+                </p>
+                <p>
+                    Tab 4 text text
+                </p>
+                <p>
+                    Tab 4 text text
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- SCRIPTS -->
+    <script src="js/jquery-3.4.1.js"></script>
+    <script src="js/index.js"></script>
+    <!-- Контейнер за данни - КРАЙ -->
+
+
+
+
+
+
+
+
+
+    <!-- Форма за въвеждане -->
+    <form action="insert.php" method="post">
+        <p>
+            <label for="firstName">First Name:</label>
+            <input type="text" name="first_name" id="firstName">
+        </p>
+        <p>
+            <label for="lastName">Last Name:</label>
+            <input type="text" name="last_name" id="lastName">
+        </p>
+        <p>
+            <label for="emailAddress">Email Address:</label>
+            <input type="text" name="email" id="emailAddress">
+        </p>
+        <input type="submit" value="Submit">
+    </form>
+
+    <br>
+    <br>
+    <br>
+
+    <!-- Проба за създаване на dropdown меню - НАЧАЛО -->
+    <?php
+    $sql = "SELECT ids,name FROM satrudnik order by name";
+
+    /* You can add order by clause to the sql statement if the names are to be displayed in alphabetical order */
+
+    echo "<select name=satrudnik value=''>Satrudnik Name</option>"; // list box select command
+
+    foreach ($dbo->query($sql) as $row) { //Array or records stored in $row
+
+        echo "<option value=$row[ids]>$row[name]</option>";
+
+        /* Option values are added by looping through the array */
+    }
+
+    echo "</select>"; // Closing of list box
+
+    ?>
+    <!-- Проба за създаване на dropdown меню - КРАЙ -->
+
+
+
+
+
+
+</body>
+
+</html>
+?>
