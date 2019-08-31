@@ -7,52 +7,52 @@ if (!isset($_SESSION['loggedin'])) {
     exit();
 }
 ?>
-<!DOCTYPE html>
-<html>
+  <!DOCTYPE html>
+  <html>
 
-<head>
+  <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
     <link href="css/style.css" rel="stylesheet" type="text/css">
     <link href="css/media.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
-</head>
+  </head>
 
-<body class="loggedin">
+  <body class="loggedin">
     <nav class="navtop">
-        <div class="hamburger">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-        <div>
-            <h1>Институт за гората – БАН</h1>
-            <a href="home.php"><i class="fas fa-warehouse"></i>Home</a>
-            <a href="home.php"><i class="fas fa-plus-circle"></i>Home</a>
-            <a href="profile.php"><i class="fas fa-user-circle"></i>Profile</a>
-            <a href="logout.php"><i class="fas fa-sign-out-alt"></i>Logout</a>
-        </div>
+      <div class="hamburger">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <h1>Институт за гората – БАН</h1>
+      <div class="nav-content">
+        <a href="home.php"><i class="fas fa-warehouse"></i>Home</a>
+        <a href="home.php"><i class="fas fa-plus-circle"></i>Home</a>
+        <a href="profile.php"><i class="fas fa-user-circle"></i>Profile</a>
+        <a href="logout.php"><i class="fas fa-sign-out-alt"></i>Logout</a>
+      </div>
     </nav>
     <div class="content">
-        <h2>Home Page</h2>
+      <h2>Home Page</h2>
     </div>
 
 
 
     <!-- Контейнер за данни - НАЧАЛО -->
     <div class="container">
-        <ul class="tab-link-container">
-            <li class="tab-link current" data-tab="tab-1">Tab 1</li>
-            <li class="tab-link" data-tab="tab-2">Tab 2</li>
-            <li class="tab-link" data-tab="tab-3">Tab 3</li>
-            <li class="tab-link" data-tab="tab-4">Tab 4</li>
-        </ul>
-        <div class="tab-content-container">
-            <div id="tab-1" class="tab-content current">
+      <ul class="tab-link-container">
+        <li class="tab-link current" data-tab="tab-1">Tab 1</li>
+        <li class="tab-link" data-tab="tab-2">Tab 2</li>
+        <li class="tab-link" data-tab="tab-3">Tab 3</li>
+        <li class="tab-link" data-tab="tab-4">Tab 4</li>
+      </ul>
+      <div class="tab-content-container">
+        <div id="tab-1" class="tab-content current">
 
-                <!--Таблица за извеждане на записите - НАЧАЛО-->
-                <?php
+          <!--Таблица за извеждане на записите - НАЧАЛО-->
+          <?php
                 $servername = "localhost";
                 $username = "root";
                 $password = "Aa123456";
@@ -84,44 +84,44 @@ if (!isset($_SESSION['loggedin'])) {
 
                 $conn->close();
                 ?>
-                <!--Таблица за извеждане на записите - КРАЙ-->
+            <!--Таблица за извеждане на записите - КРАЙ-->
 
 
-            </div>
-            <div id="tab-2" class="tab-content">
-                <p>
-                    Tab 2 text text
-                </p>
-                <p>
-                    Tab 2 text text
-                </p>
-                <p>
-                    Tab 2 text text
-                </p>
-            </div>
-            <div id="tab-3" class="tab-content">
-                <p>
-                    Tab 3 text text
-                </p>
-                <p>
-                    Tab 3 text text
-                </p>
-                <p>
-                    Tab 3 text text
-                </p>
-            </div>
-            <div id="tab-4" class="tab-content">
-                <p>
-                    Tab 4 text text
-                </p>
-                <p>
-                    Tab 4 text text
-                </p>
-                <p>
-                    Tab 4 text text
-                </p>
-            </div>
         </div>
+        <div id="tab-2" class="tab-content">
+          <p>
+            Tab 2 text text
+          </p>
+          <p>
+            Tab 2 text text
+          </p>
+          <p>
+            Tab 2 text text
+          </p>
+        </div>
+        <div id="tab-3" class="tab-content">
+          <p>
+            Tab 3 text text
+          </p>
+          <p>
+            Tab 3 text text
+          </p>
+          <p>
+            Tab 3 text text
+          </p>
+        </div>
+        <div id="tab-4" class="tab-content">
+          <p>
+            Tab 4 text text
+          </p>
+          <p>
+            Tab 4 text text
+          </p>
+          <p>
+            Tab 4 text text
+          </p>
+        </div>
+      </div>
     </div>
 
     <!-- SCRIPTS -->
@@ -139,19 +139,19 @@ if (!isset($_SESSION['loggedin'])) {
 
     <!-- Форма за въвеждане -->
     <form action="insert.php" method="post">
-        <p>
-            <label for="firstName">First Name:</label>
-            <input type="text" name="first_name" id="firstName">
-        </p>
-        <p>
-            <label for="lastName">Last Name:</label>
-            <input type="text" name="last_name" id="lastName">
-        </p>
-        <p>
-            <label for="emailAddress">Email Address:</label>
-            <input type="text" name="email" id="emailAddress">
-        </p>
-        <input type="submit" value="Submit">
+      <p>
+        <label for="firstName">First Name:</label>
+        <input type="text" name="first_name" id="firstName">
+      </p>
+      <p>
+        <label for="lastName">Last Name:</label>
+        <input type="text" name="last_name" id="lastName">
+      </p>
+      <p>
+        <label for="emailAddress">Email Address:</label>
+        <input type="text" name="email" id="emailAddress">
+      </p>
+      <input type="submit" value="Submit">
     </form>
 
     <br>
@@ -176,14 +176,14 @@ if (!isset($_SESSION['loggedin'])) {
     echo "</select>"; // Closing of list box
 
     ?>
-    <!-- Проба за създаване на dropdown меню - КРАЙ -->
+      <!-- Проба за създаване на dropdown меню - КРАЙ -->
 
 
 
 
 
 
-</body>
+  </body>
 
-</html>
-?>
+  </html>
+  ?>
