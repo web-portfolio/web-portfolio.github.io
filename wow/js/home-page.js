@@ -50,12 +50,12 @@ document.addEventListener("DOMContentLoaded", function(event) {
   //   $(".wide").addClass("inactive");
   // });
 
-  //da testvam s hide show
+  // slide da e po-burz
 
   $(".wide").click(function() {
     $(".wide, .grid").css("pointer-events", "none");
-    $(".last-patch-notes").hide();
-    $(".last-patch-notes-wide").show(function() {
+    $(".last-patch-notes").slideUp();
+    $(".last-patch-notes-wide").slideDown(function() {
       $(".wide, .grid").css("pointer-events", "all");
     });
     $(".grid").removeClass("grid-wide-active");
@@ -66,8 +66,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
   $(".grid").click(function() {
     $(".wide, .grid").css("pointer-events", "none");
-    $(".last-patch-notes-wide").stop(true, false).hide();
-    $(".last-patch-notes").stop(true, false).show(function() {
+    $(".last-patch-notes-wide").stop(true, false).slideUp();
+    $(".last-patch-notes").stop(true, false).slideDown(function() {
       $(".wide, .grid").css("pointer-events", "all");
     });
     $(".wide").removeClass("grid-wide-active");
