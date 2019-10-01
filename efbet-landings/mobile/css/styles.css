@@ -282,14 +282,14 @@ body {
   position: absolute;
   width: 90% !important;
   text-align: center;
-  bottom: 3vw;
-  left: 0%;
-  right: 0%;
+  bottom: 0;
+  left: 0;
+  right: 0;
   margin: 0 auto;
 }
 
 .footer-text p {
-  font-size: 2vw;
+  font-size: 2.4vw;
   color: #1a1a23;
   font-weight: bold;
   margin-bottom: 2%;
