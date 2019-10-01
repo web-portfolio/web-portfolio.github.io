@@ -32,9 +32,30 @@ document.addEventListener("DOMContentLoaded", function(event) {
     }
   });
 
+  // $(".wide").click(function() {
+  //   $(".last-patch-notes").stop(true, false).slideUp();
+  //   $(".last-patch-notes-wide").stop(true, false).slideDown();
+  //   $(".grid").removeClass("grid-wide-active");
+  //   $(this).addClass("grid-wide-active");
+  //   $(this).removeClass("inactive");
+  //   $(".grid").addClass("inactive");
+  // });
+
+  // $(".grid").click(function() {
+  //   $(".last-patch-notes-wide").stop(true, false).slideUp();
+  //   $(".last-patch-notes").stop(true, false).slideDown();
+  //   $(".wide").removeClass("grid-wide-active");
+  //   $(this).addClass("grid-wide-active");
+  //   $(this).removeClass("inactive");
+  //   $(".wide").addClass("inactive");
+  // });
+
   $(".wide").click(function() {
-    $(".last-patch-notes").stop(true, false).slideUp();
-    $(".last-patch-notes-wide").stop(true, false).slideDown();
+    $(".wide, .grid").css("pointer-events", "none");
+    $(".last-patch-notes").slideUp();
+    $(".last-patch-notes-wide").slideDown(function() {
+      $(".wide, .grid").css("pointer-events", "all");
+    });
     $(".grid").removeClass("grid-wide-active");
     $(this).addClass("grid-wide-active");
     $(this).removeClass("inactive");
@@ -42,43 +63,43 @@ document.addEventListener("DOMContentLoaded", function(event) {
   });
 
   $(".grid").click(function() {
+    $(".wide, .grid").css("pointer-events", "none");
     $(".last-patch-notes-wide").stop(true, false).slideUp();
-    $(".last-patch-notes").stop(true, false).slideDown();
+    $(".last-patch-notes").stop(true, false).slideDown(function() {
+      $(".wide, .grid").css("pointer-events", "all");
+    });
     $(".wide").removeClass("grid-wide-active");
     $(this).addClass("grid-wide-active");
     $(this).removeClass("inactive");
     $(".wide").addClass("inactive");
   });
 
-  // $(".tabs li").click(function() {
-  //   var data_id = $(this).attr("data-tab");
-  //   $(this).parent().addClass("current-parent");
-  //   $(this).parent().next().addClass("current-parent");
-  //   $(".current-parent .tab-link, .current-parent .tab-content").removeClass("current");
-  //   $(this).addClass("current");
-  //   $(".current-parent " + "#" + data_id).addClass("current");
-  //   $(this).parent().removeClass("current-parent");
-  //   $(this).parent().next().removeClass("current-parent");
-  // });
-
-
-
-  var last_id = localStorage.getItem("tab_id");
-  if (last_id) {
-    $(".tabs li").removeClass("current");
-    $(".tab-container div").removeClass("current");
-    $(".tabs li").eq(Number(last_id.match(/\d+/)[0]) - 1).addClass("current");
-    $("#" + last_id).addClass("current");
-  }
   $(".tabs li").click(function() {
-    var tab_id = $(this).attr("data-tab");
-    $(".tabs li").removeClass("current");
-    $(".tab-container div").removeClass("current");
+    var data_id = $(this).attr("data-tab");
+    $(this).parent().addClass("current-parent");
+    $(this).parent().next().addClass("current-parent");
+    $(".current-parent .tab-link, .current-parent .tab-content").removeClass("current");
     $(this).addClass("current");
-    $("#" + tab_id).addClass("current");
-    localStorage.setItem("tab_id", tab_id);
+    $(".current-parent " + "#" + data_id).addClass("current");
+    $(this).parent().removeClass("current-parent");
+    $(this).parent().next().removeClass("current-parent");
   });
 
+  // var last_id = localStorage.getItem("tab_id");
+  // if (last_id) {
+  //   $(".tabs li").removeClass("current");
+  //   $(".tab-container div").removeClass("current");
+  //   $(".tabs li").eq(Number(last_id.match(/\d+/)[0]) - 1).addClass("current");
+  //   $("#" + last_id).addClass("current");
+  // }
+  // $(".tabs li").click(function() {
+  //   var tab_id = $(this).attr("data-tab");
+  //   $(".tabs li").removeClass("current");
+  //   $(".tab-container div").removeClass("current");
+  //   $(this).addClass("current");
+  //   $("#" + tab_id).addClass("current");
+  //   localStorage.setItem("tab_id", tab_id);
+  // });
 
   var containerH = $(".last-patch-notes").outerHeight();
   var element, top, top1, top2, top3;
