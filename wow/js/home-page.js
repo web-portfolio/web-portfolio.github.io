@@ -50,24 +50,44 @@ document.addEventListener("DOMContentLoaded", function(event) {
   //   $(".wide").addClass("inactive");
   // });
 
-  // slide da e po-burz
+
+  // $(".wide").addClass(localStorage.getItem("ClassName"));
+  // $(".wide").on("click", function() {
+  //   if ($(this).hasClass('grid-wide-active')) {
+  //     $(this).removeClass("grid-wide-active").addClass("inactive");
+  //     localStorage.setItem('ClassName', 'inactive');
+  //   } else {
+  //     $(this).removeClass("inactive").addClass("grid-wide-active");
+  //     localStorage.setItem('ClassName', 'grid-wide-active');
+  //   }
+  // });
 
   $(".wide").click(function() {
+    $(this).addClass(localStorage.getItem("ClassName"));
+
     $(".wide, .grid").css("pointer-events", "none");
-    $(".last-patch-notes").slideUp();
-    $(".last-patch-notes-wide").slideDown(function() {
+    $(".last-patch-notes").slideUp(100);
+    $(".last-patch-notes-wide").slideDown(100, function() {
       $(".wide, .grid").css("pointer-events", "all");
     });
     $(".grid").removeClass("grid-wide-active");
-    $(this).addClass("grid-wide-active");
-    $(this).removeClass("inactive");
+    // $(this).addClass("grid-wide-active");
+    // $(this).removeClass("inactive");
     $(".grid").addClass("inactive");
+
+    if ($(this).hasClass('grid-wide-active')) {
+      $(this).removeClass("grid-wide-active").addClass("inactive");
+      localStorage.setItem('ClassName', 'inactive');
+    } else {
+      $(this).removeClass("inactive").addClass("grid-wide-active");
+      localStorage.setItem('ClassName', 'grid-wide-active');
+    }
   });
 
   $(".grid").click(function() {
     $(".wide, .grid").css("pointer-events", "none");
-    $(".last-patch-notes-wide").slideUp();
-    $(".last-patch-notes").slideDown(function() {
+    $(".last-patch-notes-wide").slideUp(100);
+    $(".last-patch-notes").slideDown(100, function() {
       $(".wide, .grid").css("pointer-events", "all");
     });
     $(".wide").removeClass("grid-wide-active");
