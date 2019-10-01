@@ -1,59 +1,60 @@
-body, html, div, ul, li, p{
+body, html, div, ul, li, p {
   margin: 0;
   padding: 0;
   font-family: "Open Sans", sans-serif;
   font-size: 8px;
 }
 
-.container{
+.container {
   position: relative;
   min-width: 320px;
 }
 
-body{
+body {
   background-color: #1a1a23;
   overflow-x: hidden;
 }
 
-body *{
+body * {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
-.header-top{
+.header-top {
   width: 100%;
   text-align: center;
   padding: 10px;
   box-sizing: border-box;
   height: 69px;
 }
-.header-top > div{
+
+.header-top>div {
   display: inline-block;
   vertical-align: middle;
 }
 
-.header-top-logo{
+.header-top-logo {
   height: 100%;
   -webkit-user-select: none;
   user-select: none;
 }
 
-.header-top-logo img{
-    width: 100%;
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
+.header-top-logo img {
+  width: 100%;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
-.header-top-logo, .header-top-btn{
+.header-top-logo, .header-top-btn {
   width: 160px;
 }
 
-.reg-arrows{
-   letter-spacing: -3px;
-   margin-left: 5px;
+.reg-arrows {
+  letter-spacing: -3px;
+  margin-left: 5px;
 }
 
-.header-top-text{
+.header-top-text {
   text-transform: uppercase;
   color: #ffffff;
   width: calc(90% - 320px);
@@ -61,7 +62,7 @@ body *{
   font-weight: bold;
 }
 
-.header-bottom-bg{
+.header-bottom-bg {
   position: absolute;
   top: 0;
   max-width: 100%;
@@ -69,21 +70,20 @@ body *{
   z-index: 1;
 }
 
-.header-bottom-content{
+.header-bottom-content {
   margin: 0 auto;
   width: 85%;
   box-sizing: border-box;
   z-index: 2;
 }
 
-
-.header-bottom-left{
+.header-bottom-left {
   width: 40%;
   box-sizing: border-box;
   overflow: hidden;
 }
 
-.bonus{
+.bonus {
   border: 3px solid rgb(42, 200, 76);
   width: 75%;
   margin: 0 auto;
@@ -91,59 +91,57 @@ body *{
   border-radius: 20%;
   margin-bottom: 15%;
   margin-top: 15%;
-  box-shadow:
-  0px 0px 60px 10px rgba(42, 200, 76, 0.4),
-  inset 0px 0px 60px 20px rgba(42, 200, 76, 0.4);
+  box-shadow: 0px 0px 60px 10px rgba(42, 200, 76, 0.4), inset 0px 0px 60px 20px rgba(42, 200, 76, 0.4);
   background-color: rgba(42, 200, 76, 0.1);
   text-align: center;
   padding: 20px;
 }
 
-.bonus-text1{
+.bonus-text1 {
   text-align: center;
   color: #ffc002;
   font-size: 2.2vw;
   font-weight: bold;
 }
 
-.bonus-text2{
+.bonus-text2 {
   text-align: center;
 }
 
-.bonus-text2 span:first-child{
+.bonus-text2 span:first-child {
   color: #ffffff;
   font-size: 5vw;
   font-weight: bold;
 }
 
-.bonus-text1, .bonus-text2{
+.bonus-text1, .bonus-text2 {
   text-shadow: 10px 13px 10px #000000;
 }
 
-.bonus-text2 span:last-child{
+.bonus-text2 span:last-child {
   color: #ffc002;
   font-size: 3vw;
   font-weight: bold;
 }
 
 .bonus-btn img {
-    width: 100%;
+  width: 100%;
 }
 
-.header-bottom-left-logos{
+.header-bottom-left-logos {
   text-align: center;
   margin-bottom: 20%;
 }
 
-.header-bottom-left-logos img{
+.header-bottom-left-logos img {
   max-width: 95%;
 }
 
-.registration>div{
+.registration>div {
   width: 100%;
 }
 
-.reg-title{
+.reg-title {
   font-weight: bold;
   color: #ffffff;
   text-align: center;
@@ -152,7 +150,7 @@ body *{
   margin-top: 20px;
 }
 
-.reg-img-top, .reg-img-bottom{
+.reg-img-top, .reg-img-bottom {
   text-align: center;
   margin-top: 60px;
   margin-bottom: 60px;
@@ -160,25 +158,25 @@ body *{
   user-select: none;
 }
 
-.steps{
+.steps {
   box-sizing: border-box;
   text-align: center;
 }
 
-.steps>div:not(:last-child){
+.steps>div:not(:last-child) {
   margin-right: 10%;
 }
 
-.steps>div, .reg-text>div{
+.steps>div, .reg-text>div {
   display: inline-block;
   vertical-align: top;
 }
 
-.steps>div{
+.steps>div {
   margin-bottom: 40px;
 }
 
-.reg-text-title{
+.reg-text-title {
   font-weight: bold;
   color: #ffd201;
   text-transform: uppercase;
@@ -189,7 +187,7 @@ body *{
   margin-bottom: 5px;
 }
 
-.reg-text-content{
+.reg-text-content {
   color: #ffffff;
   font-size: 1.5em;
   text-align: left;
@@ -197,7 +195,7 @@ body *{
   width: 206px;
 }
 
-.reg-text-num{
+.reg-text-num {
   vertical-align: top;
   color: #ffd201;
   font-size: 8em;
@@ -206,19 +204,19 @@ body *{
   font-weight: bold;
 }
 
-.reg-img-icon{
+.reg-img-icon {
   margin-bottom: 15px;
 }
 
-.reg-img-icon img{
+.reg-img-icon img {
   width: 70px;
 }
 
-.bonus-btn, .header-top-btn, .pop-up-btn, .registration-btn, .header-top-logo img{
+.bonus-btn, .header-top-btn, .pop-up-btn, .registration-btn, .header-top-logo img {
   cursor: pointer;
 }
 
-.follow{
+.follow {
   background-color: #ffc002;
   width: 100%;
   box-sizing: border-box;
@@ -226,7 +224,8 @@ body *{
   overflow: hidden;
   text-align: center;
 }
-.follow-text{
+
+.follow-text {
   font-weight: bold;
   font-size: 3em;
   text-transform: uppercase;
@@ -234,26 +233,26 @@ body *{
   margin-bottom: 40px;
 }
 
-.follow-logos{
+.follow-logos {
   text-align: center;
   margin-bottom: 30px;
 }
 
-.follow-logos li{
+.follow-logos li {
   height: 63px;
   display: inline-block;
   vertical-align: middle;
 }
 
-.follow-logos li img{
+.follow-logos li img {
   max-width: 100%;
 }
 
-.follow-logos li:not(:last-child){
+.follow-logos li:not(:last-child) {
   margin-right: 70px;
 }
 
-.footer{
+.footer {
   background-color: #000000;
   text-align: center;
   padding-top: 30px;
@@ -261,7 +260,7 @@ body *{
   color: #666666;
 }
 
-.footer-title, .footer-text{
+.footer-title, .footer-text {
   width: 70%;
   margin: 0 auto;
   line-height: 15px;
@@ -269,46 +268,47 @@ body *{
   font-size: 1.2em;
 }
 
-.footer-text p{
+.footer-text p {
   font-size: 1em;
 }
 
-.footer-title{
-margin-bottom: 20px;
+.footer-title {
+  margin-bottom: 20px;
 }
 
-.payment{
+.payment {
   margin-top: 30px;
   margin-bottom: 20px;
   text-align: center;
 }
 
-.payment1{
+.payment1 {
   width: 80%;
   margin: 0 auto;
   margin-bottom: 10px;
 }
 
-.payment1 img{
+.payment1 img {
   max-width: 100%;
 }
 
-.payment2{
+.payment2 {
   width: 20%;
   margin: 0 auto;
 }
 
-.payment2 img{
+.payment2 img {
   max-width: 100%;
 }
 
-.mob-peyment, .mob-header-bottom{
+.mob-peyment, .mob-header-bottom {
   display: none;
 }
 
-a{
+a {
   outline: none;
 }
+
 .pop-up-content {
   width: 90%;
   margin: 0 auto;
@@ -358,7 +358,7 @@ a{
   cursor: pointer;
 }
 
-.header-bottom{
+.header-bottom {
   background-image: url("../img/newbonus.png");
   background-position: center;
   background-repeat: no-repeat;
@@ -366,40 +366,41 @@ a{
   padding-bottom: 4%;
 }
 
-.header-top-btn, .registration-btn{
+.header-top-btn, .registration-btn {
   border: 2px solid #ffc002;
   padding: 5px;
   text-align: center;
-  border-radius: 10vw;
+  border-radius: 12vw;
 }
 
-.header-top-btn div, .registration-btn div{
+.header-top-btn div, .registration-btn div {
   background-color: #ffc002;
   font-size: 2.3em;
   width: 100%;
   font-weight: bold;
   padding: 5px;
   box-sizing: border-box;
-  border-radius: 10vw;
+  border-radius: 12vw;
 }
 
-.registration-btn{
+.registration-btn {
   width: 90%;
   margin: 0 auto;
   margin-top: 10px;
   margin-bottom: 20px;
 }
 
-.registration-btn div{
+.registration-btn div {
   padding: 15px;
   width: 100%;
   font-size: 1.5vw;
 }
 
-.reg-btn2{
-  width: 340px !important;
+.reg-btn2 {
+  width: 300px !important;
+  box-sizing: border-box;
 }
 
-.reg-btn2 div{
+.reg-btn2 div {
   font-size: 3em !important;
 }

@@ -1,174 +1,146 @@
-body,
-nav,
-div,
-button,
-ul,
-li,
-ol {
-    margin: 0;
-    padding: 0;
-    font-size: 10px;
-    font-family: "Roboto", sans-serif;
+body, nav, div, button, ul, li, ol {
+  margin: 0;
+  padding: 0;
+  font-size: 10px;
+  font-family: "Roboto", sans-serif;
 }
 
 body * {
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 body {
-    background-color: #021d28;
-    background-image: url("../img/bg-index.jpg");
-    background-position: top;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    /* position: fixed; */
-    /* width: 100vw; */
-    height: 100vh;
-}
-
-
-/* .fixed-bg {
+  background-color: #021d28;
   background-image: url("../img/bg-index.jpg");
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  position: fixed;
-  width: 100vw;
   height: 100vh;
-  z-index: -1;
-} */
-
-.container {
-    width: 100%;
-    max-width: 1024px;
-    margin: 0 auto;
 }
 
-.top-section,
-.bottom-section {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    margin: 0 auto;
-    margin-bottom: 3%;
+.container {
+  width: 100%;
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.top-section, .bottom-section {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 0 auto;
+  margin-bottom: 3%;
 }
 
 .top-section {
-    margin-bottom: 6%;
+  margin-bottom: 6%;
 }
 
-.top-section>div,
-.bottom-section>div {
-    width: 30%;
-    margin-top: 3%;
-    border: 2px solid #60a9ca;
-    border-radius: 10px;
-    position: relative;
-    cursor: pointer;
+.top-section>div, .bottom-section>div {
+  width: 30%;
+  margin-top: 3%;
+  border: 2px solid #60a9ca;
+  border-radius: 10px;
+  position: relative;
+  cursor: pointer;
 }
 
 .hover-info {
-    display: none;
-    box-sizing: border-box;
-    color: #ffffff;
-    font-size: 1.5em;
-    position: absolute;
-    border-bottom-left-radius: 8px;
-    border-bottom-right-radius: 8px;
-    width: 100%;
-    bottom: 0px;
-    background-color: rgba(0, 0, 0, 0.8);
-    padding: 5px;
+  display: none;
+  box-sizing: border-box;
+  color: #ffffff;
+  font-size: 1.5em;
+  position: absolute;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  width: 100%;
+  bottom: 0px;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 5px;
 }
 
 .efbet-app .hover-info span {
-    display: block;
+  display: block;
 }
 
 .hover-info-mobile {
-    color: #ff0000;
-    font-weight: bold;
+  color: #ff0000;
+  font-weight: bold;
 }
 
 .empty {
-    background: rgba(1, 8, 16, 0.7);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    perspective: 900000px;
-    -webkit-perspective: 900000px;
+  background: rgba(1, 8, 16, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 900000px;
+  -webkit-perspective: 900000px;
 }
 
 .efbet {
-    color: #ebc317;
-    text-align: center;
-    font-size: 3em;
+  color: #ebc317;
+  text-align: center;
+  font-size: 3em;
 }
 
-.wow,
-.motors,
-.efbet-liga,
-.efbet-casino,
-.efbet-sport,
-.efbet-app {
-    background-position: top;
-    background-repeat: no-repeat;
-    background-size: cover;
+.wow, .motors, .efbet-liga, .efbet-casino, .efbet-sport, .efbet-app {
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .wow {
-    background-image: url("../img/bg-wow.jpg");
+  background-image: url("../img/bg-wow.jpg");
 }
 
 .motors {
-    background-image: url("../img/bg-motors.jpg");
+  background-image: url("../img/bg-motors.jpg");
 }
 
 .efbet-liga {
-    background-image: url("../img/bg-liga.jpg");
+  background-image: url("../img/bg-liga.jpg");
 }
 
 .efbet-casino {
-    background-image: url("../img/bg-casino.jpg");
+  background-image: url("../img/bg-casino.jpg");
 }
 
 .efbet-sport {
-    background-image: url("../img/bg-sport.jpg");
+  background-image: url("../img/bg-sport.jpg");
 }
 
 .efbet-app {
-    background-image: url("../img/bg-app.jpg");
+  background-image: url("../img/bg-app.jpg");
 }
 
 @keyframes emptyDivRotate {
-    from {
-        transform: rotateY(0deg);
-    }
-    to {
-        transform: rotateY(360deg);
-    }
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
 }
 
 @-webkit-keyframes emptyDivRotate {
-    from {
-        -webkit-transform: rotateY(0deg);
-    }
-    to {
-        -webkit-transform: rotateY(360deg);
-    }
+  from {
+    -webkit-transform: rotateY(0deg);
+  }
+  to {
+    -webkit-transform: rotateY(360deg);
+  }
 }
 
 .image-spin {
-    animation-name: emptyDivRotate;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-duration: 4s;
-    -webkit-animation-name: emptyDivRotate;
-    -webkit-animation-timing-function: linear;
-    -webkit-animation-iteration-count: infinite;
-    -webkit-animation-duration: 4s;
-    max-width: 20vw;
+  animation-name: emptyDivRotate;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-duration: 4s;
+  -webkit-animation-name: emptyDivRotate;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-duration: 4s;
+  max-width: 20vw;
 }
