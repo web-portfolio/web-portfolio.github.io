@@ -66,8 +66,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
   $(".grid").click(function() {
     $(".wide, .grid").css("pointer-events", "none");
-    $(".last-patch-notes-wide").stop(true, false).slideUp();
-    $(".last-patch-notes").stop(true, false).slideDown(function() {
+    $(".last-patch-notes-wide").slideUp();
+    $(".last-patch-notes").slideDown(function() {
       $(".wide, .grid").css("pointer-events", "all");
     });
     $(".wide").removeClass("grid-wide-active");
