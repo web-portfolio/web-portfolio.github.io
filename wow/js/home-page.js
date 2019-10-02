@@ -32,23 +32,23 @@ document.addEventListener("DOMContentLoaded", function(event) {
     }
   });
 
-  // $(".wide").click(function() {
-  //   $(".last-patch-notes").stop(true, false).slideUp();
-  //   $(".last-patch-notes-wide").stop(true, false).slideDown();
-  //   $(".grid").removeClass("grid-wide-active");
-  //   $(this).addClass("grid-wide-active");
-  //   $(this).removeClass("inactive");
-  //   $(".grid").addClass("inactive");
-  // });
+  $(".wide").click(function() {
+    $(".last-patch-notes").stop(true, false).slideUp();
+    $(".last-patch-notes-wide").stop(true, false).slideDown();
+    $(".grid").removeClass("grid-wide-active");
+    $(this).addClass("grid-wide-active");
+    $(this).removeClass("inactive");
+    $(".grid").addClass("inactive");
+  });
 
-  // $(".grid").click(function() {
-  //   $(".last-patch-notes-wide").stop(true, false).slideUp();
-  //   $(".last-patch-notes").stop(true, false).slideDown();
-  //   $(".wide").removeClass("grid-wide-active");
-  //   $(this).addClass("grid-wide-active");
-  //   $(this).removeClass("inactive");
-  //   $(".wide").addClass("inactive");
-  // });
+  $(".grid").click(function() {
+    $(".last-patch-notes-wide").stop(true, false).slideUp();
+    $(".last-patch-notes").stop(true, false).slideDown();
+    $(".wide").removeClass("grid-wide-active");
+    $(this).addClass("grid-wide-active");
+    $(this).removeClass("inactive");
+    $(".wide").addClass("inactive");
+  });
 
 
   // $(".wide").addClass(localStorage.getItem("ClassName"));
@@ -62,39 +62,39 @@ document.addEventListener("DOMContentLoaded", function(event) {
   //   }
   // });
 
-  $(".wide").click(function() {
-    $(this).addClass(localStorage.getItem("ClassName"));
+  // $(".wide").click(function() {
+  //   $(this).addClass(localStorage.getItem("ClassName"));
 
-    $(".wide, .grid").css("pointer-events", "none");
-    $(".last-patch-notes").slideUp(100);
-    $(".last-patch-notes-wide").slideDown(100, function() {
-      $(".wide, .grid").css("pointer-events", "all");
-    });
-    $(".grid").removeClass("grid-wide-active");
-    // $(this).addClass("grid-wide-active");
-    // $(this).removeClass("inactive");
-    $(".grid").addClass("inactive");
+  //   $(".wide, .grid").css("pointer-events", "none");
+  //   $(".last-patch-notes").slideUp(100);
+  //   $(".last-patch-notes-wide").slideDown(100, function() {
+  //     $(".wide, .grid").css("pointer-events", "all");
+  //   });
+  //   $(".grid").removeClass("grid-wide-active");
+  //   // $(this).addClass("grid-wide-active");
+  //   // $(this).removeClass("inactive");
+  //   $(".grid").addClass("inactive");
 
-    if ($(this).hasClass('grid-wide-active')) {
-      $(this).removeClass("grid-wide-active").addClass("inactive");
-      localStorage.setItem('ClassName', 'inactive');
-    } else {
-      $(this).removeClass("inactive").addClass("grid-wide-active");
-      localStorage.setItem('ClassName', 'grid-wide-active');
-    }
-  });
+  //   if ($(this).hasClass('grid-wide-active')) {
+  //     $(this).removeClass("grid-wide-active").addClass("inactive");
+  //     localStorage.setItem('ClassName', 'inactive');
+  //   } else {
+  //     $(this).removeClass("inactive").addClass("grid-wide-active");
+  //     localStorage.setItem('ClassName', 'grid-wide-active');
+  //   }
+  // });
 
-  $(".grid").click(function() {
-    $(".wide, .grid").css("pointer-events", "none");
-    $(".last-patch-notes-wide").slideUp(100);
-    $(".last-patch-notes").slideDown(100, function() {
-      $(".wide, .grid").css("pointer-events", "all");
-    });
-    $(".wide").removeClass("grid-wide-active");
-    $(this).addClass("grid-wide-active");
-    $(this).removeClass("inactive");
-    $(".wide").addClass("inactive");
-  });
+  // $(".grid").click(function() {
+  //   $(".wide, .grid").css("pointer-events", "none");
+  //   $(".last-patch-notes-wide").slideUp(100);
+  //   $(".last-patch-notes").slideDown(100, function() {
+  //     $(".wide, .grid").css("pointer-events", "all");
+  //   });
+  //   $(".wide").removeClass("grid-wide-active");
+  //   $(this).addClass("grid-wide-active");
+  //   $(this).removeClass("inactive");
+  //   $(".wide").addClass("inactive");
+  // });
 
   $(".tabs li").click(function() {
     var data_id = $(this).attr("data-tab");

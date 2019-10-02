@@ -8,16 +8,16 @@ document.addEventListener("DOMContentLoaded", function(event) {
     $(this).addClass("car-names-active");
   });
 
-  $(".categories-car-names li").click(function() {
-    var data_id = $(this).attr("data-tab");
-    $(this).parent().addClass("current-parent");
-    $(".categories-content").addClass("current-parent");
-    $(".current-parent .tab-link, .current-parent .tab-content").removeClass("current");
-    $(this).addClass("current");
-    $(".current-parent " + "#" + data_id).addClass("current");
-    $(this).parent().removeClass("current-parent");
-    $(".categories-content").removeClass("current-parent");
-  });
+  // $(".categories-car-names li").click(function() {
+  //   var data_id = $(this).attr("data-tab");
+  //   $(this).parent().addClass("current-parent");
+  //   $(".categories-content").addClass("current-parent");
+  //   $(".current-parent .tab-link, .current-parent .tab-content").removeClass("current");
+  //   $(this).addClass("current");
+  //   $(".current-parent " + "#" + data_id).addClass("current");
+  //   $(this).parent().removeClass("current-parent");
+  //   $(".categories-content").removeClass("current-parent");
+  // });
 
   $(".car-pages li").click(function() {
     var data_id = $(this).attr("data-tab");
@@ -30,33 +30,33 @@ document.addEventListener("DOMContentLoaded", function(event) {
     $(".car-pages-container").removeClass("current-parent-pages");
   });
 
-  // var last_id_car_categories = localStorage.getItem("tab_id");
-  // if (last_id_car_categories) {
-  //   $(".categories-car-names li").removeClass("current");
-  //   $(".categories-content div").removeClass("current");
-  //   $(".categories-car-names li").eq(Number(last_id_car_categories.match(/\d+/)[0]) - 1).addClass("current");
-  //   $("#" + last_id_car_categories).addClass("current");
-  // }
-  // $(".categories-car-names li").click(function() {
-  //   var tab_id = $(this).attr("data-tab");
-  //   $(".categories-car-names li").removeClass("current");
-  //   $(".categories-content div").removeClass("current");
-  //   $(this).addClass("current");
-  //   $("#" + tab_id).addClass("current");
-  //   localStorage.setItem("tab_id", tab_id);
-  // });
+  var last_id_car_categories = localStorage.getItem("tab_id");
+  if (last_id_car_categories) {
+    $(".categories-car-names li").removeClass("current car-names-active");
+    $(".categories-content > div").removeClass("current");
+    $(".categories-car-names li").eq(Number(last_id_car_categories.match(/\d+/)[0]) - 1).addClass("current car-names-active");
+    $("#" + last_id_car_categories).addClass("current");
+  }
+  $(".categories-car-names li").click(function() {
+    var tab_id = $(this).attr("data-tab");
+    $(".categories-car-names li").removeClass("current");
+    $(".categories-content > div").removeClass("current");
+    $(this).addClass("current");
+    $("#" + tab_id).addClass("current");
+    localStorage.setItem("tab_id", tab_id);
+  });
 
   // var last_id_car = localStorage.getItem("tab_id");
   // if (last_id_car) {
   //   $(".car-pages li").removeClass("current");
-  //   $(".car-pages-container div").removeClass("current");
+  //   $(".car-pages-container > div").removeClass("current");
   //   $(".car-pages li").eq(Number(last_id_car.match(/\d+/)[0]) - 1).addClass("current");
   //   $("#" + last_id_car).addClass("current");
   // }
   // $(".car-pages li").click(function() {
   //   var tab_id = $(this).attr("data-tab");
   //   $(".car-pages li").removeClass("current");
-  //   $(".car-pages-container div").removeClass("current");
+  //   $(".car-pages-container > div").removeClass("current");
   //   $(this).addClass("current");
   //   $("#" + tab_id).addClass("current");
   //   localStorage.setItem("tab_id", tab_id);
