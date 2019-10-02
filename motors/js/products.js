@@ -3,33 +3,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
     loadElements();
   });
 
-  // $(".categories-car-names li").click(function() {
-  //   $(".categories-car-names li").removeClass("car-names-active");
-  //   $(this).addClass("car-names-active");
-  // });
-
-  // $(".categories-car-names li").click(function() {
-  //   var data_id = $(this).attr("data-tab");
-  //   $(this).parent().addClass("current-parent");
-  //   $(".categories-content").addClass("current-parent");
-  //   $(".current-parent .tab-link, .current-parent .tab-content").removeClass("current");
-  //   $(this).addClass("current");
-  //   $(".current-parent " + "#" + data_id).addClass("current");
-  //   $(this).parent().removeClass("current-parent");
-  //   $(".categories-content").removeClass("current-parent");
-  // });
-
-  // $(".car-pages li").click(function() {
-  //   var data_id = $(this).attr("data-tab");
-  //   $(this).parent().addClass("current-parent-pages");
-  //   $(this).parent().prev().addClass("current-parent-pages");
-  //   $(".current-parent-pages .car-tab-link, .current-parent-pages .car-tab-content").removeClass("current");
-  //   $(this).addClass("current");
-  //   $(".current-parent-pages " + "#" + data_id).addClass("current");
-  //   $(this).parent().removeClass("current-parent-pages");
-  //   $(".car-pages-container").removeClass("current-parent-pages");
-  // });
-
   var last_id_car_categories = localStorage.getItem("tab_id");
   if (last_id_car_categories) {
     $(".categories-car-names li").removeClass("current car-names-active");
