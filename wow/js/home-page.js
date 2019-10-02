@@ -33,8 +33,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
   });
 
   $(".wide").click(function() {
-    $(".last-patch-notes").stop(true, false).slideUp();
-    $(".last-patch-notes-wide").stop(true, false).slideDown();
+    $(".last-patch-notes").stop(true, false).slideUp(100);
+    $(".last-patch-notes-wide").stop(true, false).slideDown(100);
     $(".grid").removeClass("grid-wide-active");
     $(this).addClass("grid-wide-active");
     $(this).removeClass("inactive");
@@ -42,8 +42,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
   });
 
   $(".grid").click(function() {
-    $(".last-patch-notes-wide").stop(true, false).slideUp();
-    $(".last-patch-notes").stop(true, false).slideDown();
+    $(".last-patch-notes-wide").stop(true, false).slideUp(100);
+    $(".last-patch-notes").stop(true, false).slideDown(100);
     $(".wide").removeClass("grid-wide-active");
     $(this).addClass("grid-wide-active");
     $(this).removeClass("inactive");
