@@ -1,4 +1,3 @@
-
 .bottom-banner {
   max-width: 960px;
   width: 90%;
@@ -27,6 +26,7 @@
   width: calc(100% - 100px);
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/banner-bg.jpg") no-repeat left top;
   background: -webkit-linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/banner-bg.jpg") no-repeat left top;
+  background-size: cover;
   display: flex;
   align-items: center;
   color: #ffffff;
