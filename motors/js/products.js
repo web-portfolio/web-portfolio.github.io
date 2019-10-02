@@ -3,10 +3,10 @@ document.addEventListener("DOMContentLoaded", function(event) {
     loadElements();
   });
 
-  $(".categories-car-names li").click(function() {
-    $(".categories-car-names li").removeClass("car-names-active");
-    $(this).addClass("car-names-active");
-  });
+  // $(".categories-car-names li").click(function() {
+  //   $(".categories-car-names li").removeClass("car-names-active");
+  //   $(this).addClass("car-names-active");
+  // });
 
   // $(".categories-car-names li").click(function() {
   //   var data_id = $(this).attr("data-tab");
@@ -19,16 +19,16 @@ document.addEventListener("DOMContentLoaded", function(event) {
   //   $(".categories-content").removeClass("current-parent");
   // });
 
-  $(".car-pages li").click(function() {
-    var data_id = $(this).attr("data-tab");
-    $(this).parent().addClass("current-parent-pages");
-    $(this).parent().prev().addClass("current-parent-pages");
-    $(".current-parent-pages .car-tab-link, .current-parent-pages .car-tab-content").removeClass("current");
-    $(this).addClass("current");
-    $(".current-parent-pages " + "#" + data_id).addClass("current");
-    $(this).parent().removeClass("current-parent-pages");
-    $(".car-pages-container").removeClass("current-parent-pages");
-  });
+  // $(".car-pages li").click(function() {
+  //   var data_id = $(this).attr("data-tab");
+  //   $(this).parent().addClass("current-parent-pages");
+  //   $(this).parent().prev().addClass("current-parent-pages");
+  //   $(".current-parent-pages .car-tab-link, .current-parent-pages .car-tab-content").removeClass("current");
+  //   $(this).addClass("current");
+  //   $(".current-parent-pages " + "#" + data_id).addClass("current");
+  //   $(this).parent().removeClass("current-parent-pages");
+  //   $(".car-pages-container").removeClass("current-parent-pages");
+  // });
 
   var last_id_car_categories = localStorage.getItem("tab_id");
   if (last_id_car_categories) {
@@ -39,44 +39,44 @@ document.addEventListener("DOMContentLoaded", function(event) {
   }
   $(".categories-car-names li").click(function() {
     var tab_id = $(this).attr("data-tab");
-    $(".categories-car-names li").removeClass("current");
+    $(".categories-car-names li").removeClass("current car-names-active");
     $(".categories-content > div").removeClass("current");
-    $(this).addClass("current");
+    $(this).addClass("current car-names-active");
     $("#" + tab_id).addClass("current");
     localStorage.setItem("tab_id", tab_id);
   });
 
-  // var last_id_car_lamborgini = localStorage.getItem("tab_id_lamborgini");
-  // if (last_id_car_lamborgini) {
-  //   $(".car-pages-lamborgini li").removeClass("current");
-  //   $(".car-pages-container-lamborgini > div").removeClass("current");
-  //   $(".car-pages-lamborgini li").eq(Number(last_id_car_lamborgini.match(/\d+/)[0]) - 1).addClass("current");
-  //   $("#" + last_id_car_lamborgini).addClass("current");
-  // }
-  // $(".car-pages-lamborgini li").click(function() {
-  //   var tab_id_lamborgini = $(this).attr("data-tab");
-  //   $(".car-pages-lamborgini li").removeClass("current");
-  //   $(".car-pages-container-lamborgini > div").removeClass("current");
-  //   $(this).addClass("current");
-  //   $("#" + tab_id_lamborgini).addClass("current");
-  //   localStorage.setItem("tab_id_lamborgini", tab_id_lamborgini);
-  // });
+  var last_id_car_lamborgini = localStorage.getItem("tab_id_lamborgini");
+  if (last_id_car_lamborgini) {
+    $(".car-pages-lamborgini li").removeClass("current");
+    $(".car-pages-container-lamborgini > div").removeClass("current");
+    $(".car-pages-lamborgini li").eq(Number(last_id_car_lamborgini.match(/\d+/)[0]) - 1).addClass("current");
+    $("#" + last_id_car_lamborgini).addClass("current");
+  }
+  $(".car-pages-lamborgini li").click(function() {
+    var tab_id_lamborgini = $(this).attr("data-tab");
+    $(".car-pages-lamborgini li").removeClass("current");
+    $(".car-pages-container-lamborgini > div").removeClass("current");
+    $(this).addClass("current");
+    $("#" + tab_id_lamborgini).addClass("current");
+    localStorage.setItem("tab_id_lamborgini", tab_id_lamborgini);
+  });
 
-  // var last_id_car_porche = localStorage.getItem("tab_id_porche");
-  // if (last_id_car_porche) {
-  //   $(".car-pages-porche li").removeClass("current");
-  //   $(".car-pages-container-porche > div").removeClass("current");
-  //   $(".car-pages-porche li").eq(Number(last_id_car_porche.match(/\d+/)[0]) - 1).addClass("current");
-  //   $("#" + last_id_car_porche).addClass("current");
-  // }
-  // $(".car-pages-porche li").click(function() {
-  //   var tab_id_porche = $(this).attr("data-tab");
-  //   $(".car-pages-porche li").removeClass("current");
-  //   $(".car-pages-container-porche > div").removeClass("current");
-  //   $(this).addClass("current");
-  //   $("#" + tab_id_porche).addClass("current");
-  //   localStorage.setItem("tab_id_porche", tab_id_porche);
-  // });
+  var last_id_car_porche = localStorage.getItem("tab_id_porche");
+  if (last_id_car_porche) {
+    $(".car-pages-porche li").removeClass("current");
+    $(".car-pages-container-porche > div").removeClass("current");
+    $(".car-pages-porche li").eq(Number(last_id_car_porche.match(/\d+/)[0]) - 1).addClass("current");
+    $("#" + last_id_car_porche).addClass("current");
+  }
+  $(".car-pages-porche li").click(function() {
+    var tab_id_porche = $(this).attr("data-tab");
+    $(".car-pages-porche li").removeClass("current");
+    $(".car-pages-container-porche > div").removeClass("current");
+    $(this).addClass("current");
+    $("#" + tab_id_porche).addClass("current");
+    localStorage.setItem("tab_id_porche", tab_id_porche);
+  });
 
   $(".car-item .car-img").click(function() {
     $(this).parent().find(".img-gallery-container").fadeIn(500);
