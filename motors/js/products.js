@@ -46,20 +46,36 @@ document.addEventListener("DOMContentLoaded", function(event) {
     localStorage.setItem("tab_id", tab_id);
   });
 
-  // var last_id_car = localStorage.getItem("tab_id");
-  // if (last_id_car) {
-  //   $(".car-pages li").removeClass("current");
-  //   $(".car-pages-container > div").removeClass("current");
-  //   $(".car-pages li").eq(Number(last_id_car.match(/\d+/)[0]) - 1).addClass("current");
-  //   $("#" + last_id_car).addClass("current");
+  // var last_id_car_lamborgini = localStorage.getItem("tab_id_lamborgini");
+  // if (last_id_car_lamborgini) {
+  //   $(".car-pages-lamborgini li").removeClass("current");
+  //   $(".car-pages-container-lamborgini > div").removeClass("current");
+  //   $(".car-pages-lamborgini li").eq(Number(last_id_car_lamborgini.match(/\d+/)[0]) - 1).addClass("current");
+  //   $("#" + last_id_car_lamborgini).addClass("current");
   // }
-  // $(".car-pages li").click(function() {
-  //   var tab_id = $(this).attr("data-tab");
-  //   $(".car-pages li").removeClass("current");
-  //   $(".car-pages-container > div").removeClass("current");
+  // $(".car-pages-lamborgini li").click(function() {
+  //   var tab_id_lamborgini = $(this).attr("data-tab");
+  //   $(".car-pages-lamborgini li").removeClass("current");
+  //   $(".car-pages-container-lamborgini > div").removeClass("current");
   //   $(this).addClass("current");
-  //   $("#" + tab_id).addClass("current");
-  //   localStorage.setItem("tab_id", tab_id);
+  //   $("#" + tab_id_lamborgini).addClass("current");
+  //   localStorage.setItem("tab_id_lamborgini", tab_id_lamborgini);
+  // });
+
+  // var last_id_car_porche = localStorage.getItem("tab_id_porche");
+  // if (last_id_car_porche) {
+  //   $(".car-pages-porche li").removeClass("current");
+  //   $(".car-pages-container-porche > div").removeClass("current");
+  //   $(".car-pages-porche li").eq(Number(last_id_car_porche.match(/\d+/)[0]) - 1).addClass("current");
+  //   $("#" + last_id_car_porche).addClass("current");
+  // }
+  // $(".car-pages-porche li").click(function() {
+  //   var tab_id_porche = $(this).attr("data-tab");
+  //   $(".car-pages-porche li").removeClass("current");
+  //   $(".car-pages-container-porche > div").removeClass("current");
+  //   $(this).addClass("current");
+  //   $("#" + tab_id_porche).addClass("current");
+  //   localStorage.setItem("tab_id_porche", tab_id_porche);
   // });
 
   $(".car-item .car-img").click(function() {
