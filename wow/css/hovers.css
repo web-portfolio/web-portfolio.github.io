@@ -63,11 +63,11 @@
 }
 
 .inactive:hover {
-  border-color: #996019
+  border-color: #996019;
 }
 
 .inactive:hover div {
-  background: #996019
+  background: #996019;
 }
 
 .back-to-top:hover {

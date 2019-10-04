@@ -125,7 +125,7 @@ body * {
 
 .last-patch-notes-wide {
   color: white;
-  display: none
+  /* display: none */
 }
 
 .last-patch-notes-wide li {
@@ -199,6 +199,14 @@ body * {
   margin: 0 auto
 }
 
+.grid-content>div {
+  display: none;
+}
+
+.patch-active {
+  display: block !important;
+}
+
 .grid, .wide {
   border: 3px solid #34231a;
   width: 24px;
@@ -235,7 +243,8 @@ body * {
 }
 
 .grid-wide-active {
-  border-color: #1e1e1e
+  border-color: #1e1e1e;
+  cursor: default;
 }
 
 .grid-wide-active div {

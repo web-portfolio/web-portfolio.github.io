@@ -32,69 +32,23 @@ document.addEventListener("DOMContentLoaded", function(event) {
     }
   });
 
-  $(".wide").click(function() {
-    $(".last-patch-notes").stop(true, false).slideUp(100);
-    $(".last-patch-notes-wide").stop(true, false).slideDown(100);
-    $(".grid").removeClass("grid-wide-active");
-    $(this).addClass("grid-wide-active");
-    $(this).removeClass("inactive");
-    $(".grid").addClass("inactive");
+  var grid_last_id = localStorage.getItem("grid_tab_id");
+  if (grid_last_id) {
+    $(".grid-tabs > div").addClass("inactive");
+    $(".grid-tabs > div").removeClass("grid-wide-active");
+    $(".grid-content > div").removeClass("patch-active");
+    $(".grid-tabs > div").eq(Number(grid_last_id.match(/\d+/)[0]) - 1).addClass("grid-wide-active").removeClass("inactive");
+    $("#" + grid_last_id).addClass("patch-active");
+  }
+  $(".grid-tabs > div").click(function() {
+    var grid_tab_id = $(this).attr("data-tab");
+    $(".grid-tabs > div").addClass("inactive");
+    $(".grid-tabs > div").removeClass("grid-wide-active");
+    $(".grid-content > div").removeClass("patch-active");
+    $(this).addClass("grid-wide-active").removeClass("inactive");
+    $("#" + grid_tab_id).addClass("patch-active");
+    localStorage.setItem("grid_tab_id", grid_tab_id);
   });
-
-  $(".grid").click(function() {
-    $(".last-patch-notes-wide").stop(true, false).slideUp(100);
-    $(".last-patch-notes").stop(true, false).slideDown(100);
-    $(".wide").removeClass("grid-wide-active");
-    $(this).addClass("grid-wide-active");
-    $(this).removeClass("inactive");
-    $(".wide").addClass("inactive");
-  });
-
-
-  // $(".wide").addClass(localStorage.getItem("ClassName"));
-  // $(".wide").on("click", function() {
-  //   if ($(this).hasClass('grid-wide-active')) {
-  //     $(this).removeClass("grid-wide-active").addClass("inactive");
-  //     localStorage.setItem('ClassName', 'inactive');
-  //   } else {
-  //     $(this).removeClass("inactive").addClass("grid-wide-active");
-  //     localStorage.setItem('ClassName', 'grid-wide-active');
-  //   }
-  // });
-
-  // $(".wide").click(function() {
-  //   $(this).addClass(localStorage.getItem("ClassName"));
-
-  //   $(".wide, .grid").css("pointer-events", "none");
-  //   $(".last-patch-notes").slideUp(100);
-  //   $(".last-patch-notes-wide").slideDown(100, function() {
-  //     $(".wide, .grid").css("pointer-events", "all");
-  //   });
-  //   $(".grid").removeClass("grid-wide-active");
-  //   // $(this).addClass("grid-wide-active");
-  //   // $(this).removeClass("inactive");
-  //   $(".grid").addClass("inactive");
-
-  //   if ($(this).hasClass('grid-wide-active')) {
-  //     $(this).removeClass("grid-wide-active").addClass("inactive");
-  //     localStorage.setItem('ClassName', 'inactive');
-  //   } else {
-  //     $(this).removeClass("inactive").addClass("grid-wide-active");
-  //     localStorage.setItem('ClassName', 'grid-wide-active');
-  //   }
-  // });
-
-  // $(".grid").click(function() {
-  //   $(".wide, .grid").css("pointer-events", "none");
-  //   $(".last-patch-notes-wide").slideUp(100);
-  //   $(".last-patch-notes").slideDown(100, function() {
-  //     $(".wide, .grid").css("pointer-events", "all");
-  //   });
-  //   $(".wide").removeClass("grid-wide-active");
-  //   $(this).addClass("grid-wide-active");
-  //   $(this).removeClass("inactive");
-  //   $(".wide").addClass("inactive");
-  // });
 
   $(".tabs li").click(function() {
     var data_id = $(this).attr("data-tab");
@@ -107,20 +61,20 @@ document.addEventListener("DOMContentLoaded", function(event) {
     $(this).parent().next().removeClass("current-parent");
   });
 
-  // var last_id = localStorage.getItem("tab_id");
-  // if (last_id) {
-  //   $(".tabs li").removeClass("current");
-  //   $(".tab-container div").removeClass("current");
-  //   $(".tabs li").eq(Number(last_id.match(/\d+/)[0]) - 1).addClass("current");
-  //   $("#" + last_id).addClass("current");
+  // var grid_bc_last_id = localStorage.getItem("grid_tab_id");
+  // if (grid_bc_last_id) {
+  //   $(".grid-tabs > div").removeClass("grid-wide-active");
+  //   $(".grid-content > div").removeClass("patch-active");
+  //   $(".grid-tabs > div").eq(Number(grid_bc_last_id.match(/\d+/)[0]) - 1).addClass("grid-wide-active").;
+  //   $("#" + grid_bc_last_id).addClass("patch-active");
   // }
-  // $(".tabs li").click(function() {
-  //   var tab_id = $(this).attr("data-tab");
-  //   $(".tabs li").removeClass("current");
-  //   $(".tab-container div").removeClass("current");
-  //   $(this).addClass("current");
-  //   $("#" + tab_id).addClass("current");
-  //   localStorage.setItem("tab_id", tab_id);
+  // $(".grid-tabs > div").click(function() {
+  //   var grid_tab_id = $(this).attr("data-tab");
+  //   $(".grid-tabs > div").removeClass("grid-wide-active");
+  //   $(".grid-content > div").removeClass("patch-active");
+  //   $(this).addClass("grid-wide-active");
+  //   $("#" + grid_tab_id).addClass("patch-active");
+  //   localStorage.setItem("grid_tab_id", grid_tab_id);
   // });
 
   var containerH = $(".last-patch-notes").outerHeight();
