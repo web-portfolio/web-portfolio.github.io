@@ -50,32 +50,101 @@ document.addEventListener("DOMContentLoaded", function(event) {
     localStorage.setItem("grid_tab_id", grid_tab_id);
   });
 
-  $(".tabs li").click(function() {
-    var data_id = $(this).attr("data-tab");
-    $(this).parent().addClass("current-parent");
-    $(this).parent().next().addClass("current-parent");
-    $(".current-parent .tab-link, .current-parent .tab-content").removeClass("current");
+  var bc_last_id = localStorage.getItem("bc_tab_id");
+  if (bc_last_id) {
+    $(".tabs-bc li").removeClass("current");
+    $(".tab-container-bc > div").removeClass("current");
+    $(".tabs-bc li").eq(Number(bc_last_id.match(/\d+/)[0]) - 1).addClass("current");
+    $("#" + bc_last_id).addClass("current");
+  }
+  $(".tabs-bc li").click(function() {
+    var bc_tab_id = $(this).attr("data-tab");
+    $(".tabs-bc li").removeClass("current");
+    $(".tab-container-bc > div").removeClass("current");
     $(this).addClass("current");
-    $(".current-parent " + "#" + data_id).addClass("current");
-    $(this).parent().removeClass("current-parent");
-    $(this).parent().next().removeClass("current-parent");
+    $("#" + bc_tab_id).addClass("current");
+    localStorage.setItem("bc_tab_id", bc_tab_id);
   });
 
-  // var grid_bc_last_id = localStorage.getItem("grid_tab_id");
-  // if (grid_bc_last_id) {
-  //   $(".grid-tabs > div").removeClass("grid-wide-active");
-  //   $(".grid-content > div").removeClass("patch-active");
-  //   $(".grid-tabs > div").eq(Number(grid_bc_last_id.match(/\d+/)[0]) - 1).addClass("grid-wide-active").;
-  //   $("#" + grid_bc_last_id).addClass("patch-active");
-  // }
-  // $(".grid-tabs > div").click(function() {
-  //   var grid_tab_id = $(this).attr("data-tab");
-  //   $(".grid-tabs > div").removeClass("grid-wide-active");
-  //   $(".grid-content > div").removeClass("patch-active");
-  //   $(this).addClass("grid-wide-active");
-  //   $("#" + grid_tab_id).addClass("patch-active");
-  //   localStorage.setItem("grid_tab_id", grid_tab_id);
-  // });
+  var wolk_last_id = localStorage.getItem("wolk_tab_id");
+  if (wolk_last_id) {
+    $(".tabs-wolk li").removeClass("current");
+    $(".tab-container-wolk > div").removeClass("current");
+    $(".tabs-wolk li").eq(Number(wolk_last_id.match(/\d+/)[0]) - 1).addClass("current");
+    $("#" + wolk_last_id).addClass("current");
+  }
+  $(".tabs-wolk li").click(function() {
+    var wolk_tab_id = $(this).attr("data-tab");
+    $(".tabs-wolk li").removeClass("current");
+    $(".tab-container-wolk > div").removeClass("current");
+    $(this).addClass("current");
+    $("#" + wolk_tab_id).addClass("current");
+    localStorage.setItem("wolk_tab_id", wolk_tab_id);
+  });
+
+  var cata_last_id = localStorage.getItem("cata_tab_id");
+  if (cata_last_id) {
+    $(".tabs-cata li").removeClass("current");
+    $(".tab-container-cata > div").removeClass("current");
+    $(".tabs-cata li").eq(Number(cata_last_id.match(/\d+/)[0]) - 1).addClass("current");
+    $("#" + cata_last_id).addClass("current");
+  }
+  $(".tabs-cata li").click(function() {
+    var cata_tab_id = $(this).attr("data-tab");
+    $(".tabs-cata li").removeClass("current");
+    $(".tab-container-cata > div").removeClass("current");
+    $(this).addClass("current");
+    $("#" + cata_tab_id).addClass("current");
+    localStorage.setItem("cata_tab_id", cata_tab_id);
+  });
+
+  var pandaria_last_id = localStorage.getItem("pandaria_tab_id");
+  if (pandaria_last_id) {
+    $(".tabs-pandaria li").removeClass("current");
+    $(".tab-container-pandaria > div").removeClass("current");
+    $(".tabs-pandaria li").eq(Number(pandaria_last_id.match(/\d+/)[0]) - 1).addClass("current");
+    $("#" + pandaria_last_id).addClass("current");
+  }
+  $(".tabs-pandaria li").click(function() {
+    var pandaria_tab_id = $(this).attr("data-tab");
+    $(".tabs-pandaria li").removeClass("current");
+    $(".tab-container-pandaria > div").removeClass("current");
+    $(this).addClass("current");
+    $("#" + pandaria_tab_id).addClass("current");
+    localStorage.setItem("pandaria_tab_id", pandaria_tab_id);
+  });
+
+  var wod_last_id = localStorage.getItem("wod_tab_id");
+  if (wod_last_id) {
+    $(".tabs-wod li").removeClass("current");
+    $(".tab-container-wod > div").removeClass("current");
+    $(".tabs-wod li").eq(Number(wod_last_id.match(/\d+/)[0]) - 1).addClass("current");
+    $("#" + wod_last_id).addClass("current");
+  }
+  $(".tabs-wod li").click(function() {
+    var wod_tab_id = $(this).attr("data-tab");
+    $(".tabs-wod li").removeClass("current");
+    $(".tab-container-wod > div").removeClass("current");
+    $(this).addClass("current");
+    $("#" + wod_tab_id).addClass("current");
+    localStorage.setItem("wod_tab_id", wod_tab_id);
+  });
+
+  var legion_last_id = localStorage.getItem("legion_tab_id");
+  if (legion_last_id) {
+    $(".tabs-legion li").removeClass("current");
+    $(".tab-container-legion > div").removeClass("current");
+    $(".tabs-legion li").eq(Number(legion_last_id.match(/\d+/)[0]) - 1).addClass("current");
+    $("#" + legion_last_id).addClass("current");
+  }
+  $(".tabs-legion li").click(function() {
+    var legion_tab_id = $(this).attr("data-tab");
+    $(".tabs-legion li").removeClass("current");
+    $(".tab-container-legion > div").removeClass("current");
+    $(this).addClass("current");
+    $("#" + legion_tab_id).addClass("current");
+    localStorage.setItem("legion_tab_id", legion_tab_id);
+  });
 
   var containerH = $(".last-patch-notes").outerHeight();
   var element, top, top1, top2, top3;
