@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function(event) {
-  $(window).on("load resize", function(){
+  $(window).on("load resize", function() {
     resize();
     getMobileOperatingSystem();
   });
@@ -7,8 +7,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
   $(window).on("load", function() {
     $(".loader-bg").fadeOut(1000);
   });
-  
-  function resize(){
+
+  function resize() {
     var productCircle = $(".product-circle").width();
     var pintCircle = $(".point-circle").width();
     var ww = $(window).width();
@@ -17,16 +17,16 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
     $(".product-circle").height(productCircle);
     $(".point-circle").height(pintCircle);
-    $(".bonus-article-border").height(bonusArticle*1.26666666);
-    $(".footer").height(ww*0.6362451);
-    $(".points").height(ww*1.22425032594524);
+    $(".bonus-article-border").height(bonusArticle * 1.26666666);
+    $(".footer").height(ww * 0.6362451);
+    $(".points").height(ww * 1.22425032594524);
     $(".information-msg").height(wh);
 
-    if(ww>wh){
-      $(".top-content-wide").height(ww*0.640625)
+    if (ww > wh) {
+      $(".top-content-wide").height(ww * 0.640625)
       $(".top-content").hide();
       $(".top-content-wide").show();
-    } else{
+    } else {
       $(".top-content").show();
       $(".top-content-wide").hide();
     }

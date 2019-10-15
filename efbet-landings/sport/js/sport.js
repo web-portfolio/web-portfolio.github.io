@@ -3,30 +3,23 @@ document.addEventListener("DOMContentLoaded", function(event) {
     $(".loader-bg").fadeOut(500);
   });
 
-  $(window).on("load resize", function(){
-    popUpBtn();
+  $(window).on("load resize", function() {
     getMobileOperatingSystem();
   });
 
-  setTimeout(function(){
+  setTimeout(function() {
     $(".pop-up").slideToggle();
-  },1500);
+  }, 1500);
 
-  $(".pop-up-btn").click(function(){
+  $(".pop-up-btn").click(function() {
     $(".pop-up").slideToggle();
   })
 
-  function popUpBtn(){
-    var popUpH = (($(".pop-up").outerHeight()/2)-28);
-    $(".pop-up-btn").css({ "margin-top": popUpH});
-  }
-
-
   function getMobileOperatingSystem() {
-  var userAgent = navigator.userAgent || navigator.vendor || window.opera;
-  var winPhone = /windows phone/i.test(userAgent);
-  var ios = /iPad|iPhone|iPod/.test(userAgent) && !window.MSStream;
-  var android = /android/i.test(userAgent);
+    var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+    var winPhone = /windows phone/i.test(userAgent);
+    var ios = /iPad|iPhone|iPod/.test(userAgent) && !window.MSStream;
+    var android = /android/i.test(userAgent);
 
     if (winPhone || ios || android) {
       $('link[href="css/hovers.css"]').prop('disabled', true);
