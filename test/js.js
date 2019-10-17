@@ -19,8 +19,13 @@ document.addEventListener("DOMContentLoaded", function(event) {
     inputs[i].onclick = switchLayer;
   }
 
-
   // za full screen
   // butoni za zoom i vurtene
   // custom icons
+
+  $(document).on("keydown", function(e) {
+    if ((e.metaKey || e.altKey) && (String.fromCharCode(e.which).toLowerCase() === "h")) {
+      $("#map").slideToggle();
+    }
+  });
 });
