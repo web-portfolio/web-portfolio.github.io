@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   // mapboxgl.accessToken = "pk.eyJ1IjoibmFza285MCIsImEiOiJjazFrdjhucDQwMDc3M2JsanhocjE5em9sIn0.LOBSHBPTHrQnuWOd7NbKMg";  
   var map = new mapboxgl.Map({
     container: "map",
-    style: "mapbox://styles/mapbox/streets-v11",
+    style: "mapbox://styles/mapbox/outdoors-v11",
     center: [23.325691223144528, 42.69795509187187],
     zoom: 13
   });
@@ -15,7 +15,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
     var layerId = layer.target.id;
     map.setStyle('mapbox://styles/mapbox/' + layerId);
   }
-
   for (var i = 0; i < inputs.length; i++) {
     inputs[i].onclick = switchLayer;
   }
