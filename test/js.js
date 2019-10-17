@@ -19,6 +19,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
     inputs[i].onclick = switchLayer;
   }
 
+  // Add zoom and rotation controls to the map.
+  map.addControl(new mapboxgl.NavigationControl());
+
   // za full screen
   // butoni za zoom i vurtene
   // custom icons
