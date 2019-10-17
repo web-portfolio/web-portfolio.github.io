@@ -22,8 +22,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
   // Add zoom and rotation controls to the map.
   map.addControl(new mapboxgl.NavigationControl());
 
-  // za full screen
-  // butoni za zoom i vurtene
+  //Add full screen option
+  map.addControl(new mapboxgl.FullscreenControl());
+
   // custom icons
 
   $(document).on("keydown", function(e) {
