@@ -2,6 +2,23 @@
 <html lang="en">
 
 <head>
+  <style>
+    body,
+    nav,
+    div,
+    button,
+    ul,
+    li,
+    ol,
+    p,
+    h2,
+    h3 {
+      margin: 0;
+      padding: 0;
+      font-size: 15px;
+      font-family: "Rubik", sans-serif;
+    }
+  </style>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -14,15 +31,15 @@
 
 <body>
   <div id="map"></div>
-  <div id='menu'>
-    <input id='streets-v11' type='radio' name='rtoggle' value='streets' checked='checked'>
-    <label for='streets'>streets</label>
-    <input id='light-v10' type='radio' name='rtoggle' value='light'>
-    <label for='light'>light</label>
-    <input id='dark-v10' type='radio' name='rtoggle' value='dark'>
-    <label for='dark'>dark</label>
-    <input id='satellite-v9' type='radio' name='rtoggle' value='satellite'>
-    <label for='satellite'>satellite</label>
+  <div id="menu">
+    <input id="streets-v11" type="radio" name="rtoggle" value="streets">
+    <label for="streets">Streets</label>
+    <input id="light-v10" type="radio" name="rtoggle" value="light">
+    <label for="light">Light</label>
+    <input id="dark-v10" type="radio" name="rtoggle" value="dark" checked="checked">
+    <label for="dark">Dark</label>
+    <input id="satellite-v9" type="radio" name="rtoggle" value="satellite">
+    <label for="satellite">Satellite</label>
   </div>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>

@@ -194,7 +194,7 @@ body * {
   filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#b27b7b', endColorstr='#b24c4c', GradientType=0);
 }
 
-.call-us{  
+.call-us {
   margin-top: 20px;
   padding: 20px;
   height: 250px;
@@ -202,15 +202,14 @@ body * {
   box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.75);
 }
 
-.call-us h3{
+.call-us h3 {
   color: #000000;
   font-weight: bold;
   text-align: center;
   margin-bottom: 20px;
 }
 
-.call-us a{
-  text-decoration: none;
+.call-us a {
   font-size: 1.3em;
   color: #b53636;
   display: block;

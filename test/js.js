@@ -4,12 +4,13 @@ document.addEventListener("DOMContentLoaded", function(event) {
   var map = new mapboxgl.Map({
     container: "map",
     style: "mapbox://styles/mapbox/outdoors-v11",
-    center: [23.325304985046387, 42.67382218833651],
+    center: [23.32496166229248, 42.67864951904835],
     zoom: 13
   });
   // map vision
   var layerList = document.getElementById("menu");
   var inputs = layerList.getElementsByTagName("input");
+  map.setStyle("mapbox://styles/mapbox/dark-v10")
 
   function switchLayer(layer) {
     var layerId = layer.target.id;
@@ -31,8 +32,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
     "features": [{
         "type": "Feature",
         "properties": {
-          "message": "Location text 1",
-          "description": '<h3><a href="https://www.google.com/"></a></h3>',
+          "title": "<p class='marker-title'>Title text 1</p>",
+          "description": "<p class='marker-description'>Some description text 1</p>",
+          "tel": "<p class='marker-tel'> tel: <a href='tel:+359111111111'>+359 111 111 111</a></p>",
           "iconSize": [20, 30]
         },
         "geometry": {
@@ -43,7 +45,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
       {
         "type": "Feature",
         "properties": {
-          "message": "Location text 2",
+          "title": "<p class='marker-title'>Title text 2</p>",
+          "description": "<p class='marker-description'>Some description text 2</p>",
+          "tel": "<p class='marker-tel'> tel: <a href='tel:+359222222222'>+359 222 222 222</a></p>",
           "iconSize": [20, 30]
         },
         "geometry": {
@@ -54,7 +58,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
       {
         "type": "Feature",
         "properties": {
-          "message": "Location text 3",
+          "title": "<p class='marker-title'>Title text 3</p>",
+          "description": "<p class='marker-description'>Some description text 3</p>",
+          "tel": "<p class='marker-tel'> tel: <a href='tel:+359333333333'>+359 333 333 333</a></p>",
           "iconSize": [20, 30]
         },
         "geometry": {
@@ -73,7 +79,10 @@ document.addEventListener("DOMContentLoaded", function(event) {
     el.style.width = marker.properties.iconSize[0] + "px";
     el.style.height = marker.properties.iconSize[1] + "px";
     // create the popup
-    var popup = new mapboxgl.Popup({ offset: 25 }).setText(marker.properties.message);
+    var title = marker.properties.title;
+    var description = marker.properties.description;
+    var tel = marker.properties.tel;
+    var popup = new mapboxgl.Popup({ offset: 25 }).setHTML(title + description + tel);
     // add marker to map
     new mapboxgl.Marker(el)
       .setLngLat(marker.geometry.coordinates)
