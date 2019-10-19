@@ -111,11 +111,4 @@ document.addEventListener("DOMContentLoaded", function(event) {
       .setPopup(popup)
       .addTo(map);
   });
-
-
-  $(document).on("keydown", function(e) {
-    if ((e.metaKey || e.altKey) && (String.fromCharCode(e.which).toLowerCase() === "h")) {
-      $("#map").toggle();
-    }
-  });
 });
