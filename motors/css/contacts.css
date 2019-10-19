@@ -17,3 +17,104 @@ body {
 body * {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
+
+.container {
+  min-width: 320px;
+  max-width: 1920px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.mail-form-container {
+  max-width: 960px;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 30px;
+  background-color: #ffffff;
+  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.75);
+  padding: 20px;
+  box-sizing: border-box;
+  background-image: url("../img/contact-form-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  position: relative;
+}
+
+.mail-form {
+  margin-top: 20px;
+}
+
+.mail-form input, .mail-form textarea {
+  outline-color: #b53636;
+  background-color: rgba(240, 240, 240, 0.5);
+  border: 1px solid #8e8e8d;
+  font-size: 1.2em;
+  padding: 5px;
+}
+
+.inputs * {
+  display: block;
+  width: 90%;
+  height: 35px;
+  margin-bottom: 20px;
+}
+
+.inputs, textarea {
+  display: inline-block;
+  vertical-align: top;
+  width: calc(50% - 10px);
+}
+
+textarea {
+  resize: none;
+  height: 170px;
+  margin-bottom: 20px;
+}
+
+.mail-form button {
+  background-color: #b53636;
+  color: #ffffff;
+  border: none;
+  outline: none;
+  height: 45px;
+  padding: 10px;
+  cursor: pointer;
+  width: 45.5%;
+  font-size: 1.2em;
+  background: linear-gradient(to left, #b53636 35%, #1e1e1e 65%);
+  background-size: 300% 100%;
+  background-position: right bottom;
+  transition: all 0.5s ease;
+  border-left: 5px solid #1e1e1e;
+}
+
+.thankyou_message {
+  position: absolute;
+  font-size: 1.2em;
+  background-color: #eae9ef;
+  padding: 20px;
+  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.75);
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  text-align: center;
+  min-width: 288px;
+  box-sizing: border-box;
+  display: none;
+}
+
+.ok-button {
+  margin: 0 auto;
+  background-color: #b53636;
+  color: #ffffff;
+  padding: 10px;
+  cursor: pointer;
+  width: 100px;
+  background: linear-gradient(to left, #b53636 35%, #1e1e1e 65%);
+  background-size: 300% 100%;
+  background-position: right bottom;
+  transition: all 0.5s ease;
+  border-left: 5px solid #1e1e1e;
+  margin-top: 20px;
+}

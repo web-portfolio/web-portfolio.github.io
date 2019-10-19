@@ -24,7 +24,7 @@
 
 /* Slider Hovers END*/
 
-.about-btns:hover {
+.about-btns:hover, .mail-form button:hover, .ok-button:hover {
   background-position: left bottom;
   color: #b53636;
 }
