@@ -34,6 +34,6 @@ $(".nav-products").click(function() {
   window.location = "products.html";
 });
 
-$(".nav-services").click(function() {
-  window.location = "services.html";
+$(".nav-contacts").click(function() {
+  window.location = "contacts.html";
 });
