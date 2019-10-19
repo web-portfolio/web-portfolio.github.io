@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", function(event) {
-  mapboxgl.accessToken = "pk.eyJ1IjoibmFza285MCIsImEiOiJjazFqMHB5bXgwc3VtM3BqeWJ3Z2F6N2p1In0.UIeRf1hLbffdYk6bibVbLg";
-  // mapboxgl.accessToken = "pk.eyJ1IjoibmFza285MCIsImEiOiJjazFrdjhucDQwMDc3M2JsanhocjE5em9sIn0.LOBSHBPTHrQnuWOd7NbKMg";  
+  mapboxgl.accessToken = "pk.eyJ1IjoibmFza285MCIsImEiOiJjazFrdjhucDQwMDc3M2JsanhocjE5em9sIn0.LOBSHBPTHrQnuWOd7NbKMg";
   var map = new mapboxgl.Map({
     container: "map",
     style: "mapbox://styles/mapbox/outdoors-v11",
