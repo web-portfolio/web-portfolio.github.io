@@ -53,4 +53,22 @@
 .inactive-menu {
   color: #8e8e8d !important;
   cursor: url("../img/inactive.png"), auto !important;
+  position: relative;
+}
+
+.inactive-popup {
+  display: none;
+  position: absolute;
+  color: #b53636;
+  font-size: 0.8em;
+  white-space: nowrap;
+  top: -80%;
+  left: -80%;
+}
+
+.inactive-menu-bg {
+  background-image: url("../img/inactive.png");
+  background-repeat: no-repeat;
+  background-size: 22px 22px;
+  background-position-x: 30%;
 }

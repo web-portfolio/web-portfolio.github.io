@@ -64,3 +64,7 @@
 
 
 /* Gallery Hovers END*/
+
+.inactive-menu:hover .inactive-popup {
+  display: block;
+}

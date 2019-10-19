@@ -13,6 +13,12 @@ function getMobileOperatingSystem() {
   if (winPhone || ios || android) {
     $('link[href="css/hovers.css"]').prop("disabled", true);
     $("body *").unbind("mouseenter mouseleave");
+    $(".inactive-menu").click(function() {
+      $(this).addClass("inactive-menu-bg");
+      setTimeout(function() {
+        $(".inactive-menu").removeClass("inactive-menu-bg");
+      }, 2000)
+    });
 
     return "Phone Device";
   } else {
