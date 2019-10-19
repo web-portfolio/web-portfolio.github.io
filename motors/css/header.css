@@ -49,3 +49,8 @@
   background: url("../img/nav-underline.png") center 80% no-repeat;
   background-position-y: 12px;
 }
+
+.inactive-menu {
+  color: #8e8e8d !important;
+  cursor: url("../img/inactive.png"), auto !important;
+}

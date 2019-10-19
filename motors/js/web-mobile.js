@@ -19,7 +19,9 @@ function getMobileOperatingSystem() {
     $('link[href="css/hovers.css"]').prop("disabled", false);
     $(".navigation li")
       .mouseenter(function() {
-        $(this).addClass("nav-active-hover");
+        if (!$(this).hasClass("inactive-menu")) {
+          $(this).addClass("nav-active-hover");
+        }
       })
       .mouseleave(function() {
         $(this).removeClass("nav-active-hover");

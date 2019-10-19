@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function (event) {
+document.addEventListener("DOMContentLoaded", function(event) {
   $(window).on("load", function() {
     loadElements();
   });
@@ -29,6 +29,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
   function changeCurrentLi() {
     $(".navigation li").removeClass("nav-active");
-    $(".nav-services").addClass("nav-active");
+    $(".nav-contacts").addClass("nav-active");
   };
 });
