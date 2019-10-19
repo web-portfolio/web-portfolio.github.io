@@ -67,7 +67,6 @@ body {
 
 .hover-info-mobile {
   color: #ff0000;
-  font-weight: bold;
 }
 
 .empty {
@@ -83,6 +82,8 @@ body {
   color: #ebc317;
   text-align: center;
   font-size: 3em;
+  user-select: none;
+  -webkit-user-select: none;
 }
 
 .wow, .motors, .efbet-liga, .efbet-casino, .efbet-sport, .efbet-app {
@@ -113,4 +114,8 @@ body {
 
 .efbet-app {
   background-image: url("../img/bg-app.jpg");
+}
+
+.landings {
+  display: none;
 }
