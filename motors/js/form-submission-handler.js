@@ -4,14 +4,14 @@
     return re.test(email);
   }
 
-  function validateHuman(honeypot) {
-    if (honeypot) { //if hidden form filled up
-      console.log("Robot Detected!");
-      return true;
-    } else {
-      console.log("Welcome Human!");
-    }
-  }
+  // function validateHuman(honeypot) {
+  //   if (honeypot) { //if hidden form filled up
+  //     console.log("Robot Detected!");
+  //     return true;
+  //   } else {
+  //     console.log("Welcome Human!");
+  //   }
+  // }
 
   // get all data in form and return object
   function getFormData(form) {
@@ -55,7 +55,7 @@
     formData.formGoogleSheetName = form.dataset.sheet || "responses"; // default sheet name
     formData.formGoogleSendEmail = form.dataset.email || ""; // no email by default
 
-    console.log(formData);
+    // console.log(formData);
     return formData;
   }
 
@@ -84,8 +84,8 @@
       // xhr.withCredentials = true;
       xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
       xhr.onreadystatechange = function() {
-        console.log(xhr.status, xhr.statusText);
-        console.log(xhr.responseText);
+        // console.log(xhr.status, xhr.statusText);
+        // console.log(xhr.responseText);
         var formElements = form.querySelector(".form-elements")
         if (formElements) {
           formElements.style.display = "none"; // hide form
@@ -119,12 +119,14 @@
     for (var i = 0; i < buttons.length; i++) {
       buttons[i].disabled = true;
     }
-    // $("html, body").animate({
-    //   scrollTop: $(".mail-form-container").offset().top
-    // }, 1000);
+    $("html, body").animate({
+      scrollTop: $(".mail-form-container").offset().top
+    }, 500);
   }
 
-  // $(".ok-button").click(function() {
-  //   $(".thankyou_message").fadeOut();
-  // });
+  $(".ok-button").click(function() {
+    $(".thankyou_message").fadeOut();
+    $(".mail-form button").prop("disabled", false);
+    $(".inputs *, textarea").val("");
+  });
 })();
