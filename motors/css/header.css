@@ -51,7 +51,7 @@
 }
 
 .inactive-menu {
-  color: #8e8e8d !important;
+  color: #6b6b6a !important;
   cursor: url("../img/inactive.png"), auto !important;
   position: relative;
 }
