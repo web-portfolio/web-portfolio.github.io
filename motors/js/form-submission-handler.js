@@ -54,6 +54,7 @@
     formData.formDataNameOrder = JSON.stringify(fields);
     formData.formGoogleSheetName = form.dataset.sheet || "responses"; // default sheet name
     formData.formGoogleSendEmail = form.dataset.email || ""; // no email by default
+    formData.formGoogleSendEmail = form.dataset.phone || "";
 
     // console.log(formData);
     return formData;

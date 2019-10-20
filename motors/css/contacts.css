@@ -90,6 +90,16 @@ textarea {
 
 .thankyou_message {
   position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0 auto;
+  display: none;
+}
+
+.thankyou_message-popup {
+  position: absolute;
   font-size: 1.2em;
   background-color: #eae9ef;
   padding: 20px;
@@ -101,7 +111,6 @@ textarea {
   text-align: center;
   min-width: 288px;
   box-sizing: border-box;
-  display: none;
 }
 
 .ok-button {
@@ -117,4 +126,9 @@ textarea {
   transition: all 0.5s ease;
   border-left: 5px solid #1e1e1e;
   margin-top: 20px;
+}
+
+input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }

@@ -202,6 +202,20 @@
   .img_gallery li {
     width: 45%;
   }
+  .inputs, textarea {
+    display: block;
+    width: 100%;
+  }
+  .inputs *, textarea {
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .inputs * {
+    height: 45px;
+  }
+  .mail-form button {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 550px) {
