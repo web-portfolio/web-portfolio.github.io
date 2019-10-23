@@ -16,10 +16,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
   var clickCount = 0;
   $("body").click(function() {
-    clickCount = clickCount + 1;
+    clickCount += 1;
     if (clickCount == 5) {
       $(".landings").toggle();
-      clickCount = 0;
     }
   });
   window.setInterval(function() {
