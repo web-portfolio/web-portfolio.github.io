@@ -21,16 +21,14 @@ document.addEventListener("DOMContentLoaded", function(event) {
       scrollTop: $(".current-scroll").offset().top
     }, 500);
   });
-
+  $('.tab-content').each(function() {
+    var x = ($(this).offset().top);
+    console.log(x);
+  });
   $(window).scroll(function() {
-    var elementTop = $(".tab-content").offset().top;
-    console.log(elementTop);
-    // if ($(this).scrollTop() >= 250) {
+    var winTop = $(window).scrollTop();
+    var winHalf = $(window).height() / 2;
+    console.log("window= " + (winTop + winHalf));
 
-    // } else {
-
-    // }
-    // var elementTop = $(this).offset().top;
-    // alert(elementTop);
   });
 });
