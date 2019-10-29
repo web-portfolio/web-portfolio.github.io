@@ -10,9 +10,6 @@
   background-image: url("../img/home-page-bg.jpg");
   background-position: center;
   background-size: cover;
-  border-radius: 70% / 4.5%;
-  border-top-left-radius: 0%;
-  border-top-right-radius: 0%;
 }
 
 .header img {

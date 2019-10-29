@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function(event) {
-  $("#nav-menu li").click(function() {
+  $(".tab-link").click(function() {
     var tab_id = $(this).attr("data-tab");
     $(".tab-content").removeClass("current-scroll");
     $("#" + tab_id).addClass("current-scroll");
