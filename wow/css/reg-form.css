@@ -38,7 +38,7 @@ body * {
   user-select: none;
 }
 
-.free-acc {
+.reg-header {
   position: fixed;
   z-index: 10;
   top: 0;
@@ -51,6 +51,11 @@ body * {
   text-align: center;
   text-align: center;
   min-width: 320px;
+}
+
+.free-acc {
+  max-width: 1920px;
+  margin: 0 auto;
 }
 
 .free-acc>* {

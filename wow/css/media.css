@@ -1,12 +1,3 @@
-@media screen and (min-width: 1921px) {
-  .container, .privacy-content, .cookie-content {
-    width: 1920px;
-  }
-  .nav-bar, .buy-games, .free-acc {
-    width: inherit;
-  }
-}
-
 @media screen and (max-width: 1024px) {
   .trailers>div {
     width: 47%;

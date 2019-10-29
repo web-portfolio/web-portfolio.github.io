@@ -185,6 +185,7 @@
 }
 
 .privacy-content>div, .cookie-content>div {
+  max-width: 1920px;
   width: 80%;
   height: 100%;
   padding: 20px;

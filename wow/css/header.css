@@ -1,14 +1,20 @@
-.nav-bar {
-  position: fixed;
-  z-index: 10;
-  top: 0;
+.header {
+  width: 100%;
   padding: 10px 0px 5px 0px;
   background: #0f0f0f;
   border: 3px solid #34231a;
-  opacity: .95;
+  position: fixed;
+  z-index: 10;
   box-sizing: border-box;
   text-align: center;
+  top: 0;
+  opacity: .95;
+}
+
+.nav-bar {
+  max-width: 1920px;
   width: 100%;
+  margin: 0 auto;
 }
 
 .nav-bar * {
@@ -93,14 +99,17 @@
 
 .buy-games {
   width: 100%;
+  max-width: 1920px;
+  position: fixed;
   background: #0f0f0f;
   border: 3px solid #34231a;
   opacity: .95;
-  position: fixed;
   z-index: 4;
   top: 76px;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
   padding: 20px 20px 10px 20px;
-  text-align: center;
   box-sizing: border-box;
   border-bottom-left-radius: 50px;
   border-bottom-right-radius: 50px;
