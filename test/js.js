@@ -1,42 +1,18 @@
 document.addEventListener("DOMContentLoaded", function(event) {
-  // $(window).on("load", function() {
-  //   $("#nav-menu a,a[href="#top"],a[rel="m_PageScroll2id"]").mPageScroll2id({
-  //     highlightSelector: "#nav-menu a"
-  //   });
-
-  //   $("a[rel="next"]").click(function(e) {
-  //     e.preventDefault();
-  //     var to = $(this).parent().parent("section").next().attr("id");
-  //     $.mPageScroll2id("scrollTo", to);
-  //   });
-  // });
-
   $("#nav-menu li").click(function() {
     var tab_id = $(this).attr("data-tab");
-    $("#nav-menu li").removeClass("current");
     $(".tab-content").removeClass("current-scroll");
-    $(this).addClass("current");
     $("#" + tab_id).addClass("current-scroll");
     $("html, body").stop(true, false).animate({
       scrollTop: $(".current-scroll").offset().top
-    }, 500);
+    }, 1000);
   });
-
-  // $(".tab-content").each(function() {
-  //   var x = ($(this).offset().top);
-  //   console.log(x);
-  // });
-  // $(window).scroll(function() {
-  //   var winTop = $(window).scrollTop();
-  //   var winHalf = $(window).height() / 2;
-  //   console.log("window= " + (winTop + winHalf));
-  // });
 
   $.fn.isInViewport = function() {
     var elementTop = $(this).offset().top;
     var elementBottom = elementTop + $(this).outerHeight();
-    var viewportTop = $(window).scrollTop();
-    var viewportBottom = viewportTop + $(window).height();
+    var viewportTop = $(window).scrollTop() + $(window).height() / 2;
+    var viewportBottom = viewportTop + 1;
     return elementBottom > viewportTop && elementTop < viewportBottom;
   };
 
