@@ -27,8 +27,26 @@ document.addEventListener("DOMContentLoaded", function(event) {
       }
     });
   });
+
+  function chnageBackground() {
+    var img_array = ["1.jpg", "2.jpg", "3.jpg", "4.jpg"];
+
+    for (var i = 0; i < img_array.length; i++) {
+      $("#slider-web").append("<div class='slider-bg-" + i + "'></div>");
+      $(".slider-bg-" + i).css("background-image", "url(" + img_array[i] + ")");
+      if (i == 0) {
+        $(".slider-bg-" + i).css("opacity", "1");
+      } else {
+        $(".slider-bg-" + i).css("opacity", "0");
+      }
+    }
+
+
+  }
+
   $(window).on("load", function() {
-    changeBgWeb();
+    // changeBgWeb();
+    chnageBackground()
   });
 
   function changeBgWeb() {
@@ -72,6 +90,12 @@ document.addEventListener("DOMContentLoaded", function(event) {
         }
       }
     }
+
+
+
+
+
+
 
     function startBackgroundOpacityToggle() {
       elem = $('#background-slide-web' + _curIndex);
