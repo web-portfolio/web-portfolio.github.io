@@ -31,18 +31,47 @@ document.addEventListener("DOMContentLoaded", function(event) {
   function chnageBackground() {
     var img_array = ["1.jpg", "2.jpg", "3.jpg", "4.jpg"];
 
-    for (var i = 0; i < img_array.length; i++) {
-      $("#slider-web").append("<div class='slider-bg-" + i + "'></div>");
-      $(".slider-bg-" + i).css("background-image", "url(" + img_array[i] + ")");
-      if (i == 0) {
-        $(".slider-bg-" + i).css("opacity", "1");
-      } else {
-        $(".slider-bg-" + i).css("opacity", "0");
+    function assignBackgrounds() {
+      for (var i = 0; i < img_array.length; i++) {
+        $("#slider-web").append("<div class='slider-bg-" + i + "'></div>");
+        $(".slider-bg-" + i).css("background-image", "url(" + img_array[i] + ")");
+        if (i == 0) {
+          $(".slider-bg-" + i).show();
+        } else {
+          $(".slider-bg-" + i).hide();
+        }
       }
     }
 
+    function changeOpacity() {
+      var element = $(".slider-bg-0"),
+        firstIndex = 0,
+        secondIndex = firstIndex + 1;
+      element.fadeOut(1000);
+      $(".slider-bg-" + secondIndex).fadeIn(1000);
+    }
 
+    assignBackgrounds();
+    changeOpacity();
   }
+
+
+
+
+
+
+
+
+  // function startBackgroundOpacityToggle() {
+  //   elem = $('#background-slide-web' + _curIndex);
+  //   elem.animate({
+  //     opacity: (elem.css('opacity') == 0) ? 1 : 0
+  //   }, {
+  //     duration: 1000,
+  //     start: finishBackgroundOpacityToggle
+  //   });
+  // };
+
 
   $(window).on("load", function() {
     // changeBgWeb();
@@ -90,12 +119,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
         }
       }
     }
-
-
-
-
-
-
 
     function startBackgroundOpacityToggle() {
       elem = $('#background-slide-web' + _curIndex);
