@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     }, 1000);
   });
 
-  $.fn.isInViewport = function() {
+  $.fn.isInViewportPixel = function() {
     var elementTop = $(this).offset().top;
     var elementBottom = elementTop + $(this).outerHeight();
     var viewportTop = $(window).scrollTop() + $(window).height() / 2;
@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     $(".tab-content").each(function() {
       var elementId = $(this).attr("id");
       var tabData = $(".tab-link[data-tab=" + elementId + "]");
-      if ($(this).isInViewport()) {
+      if ($(this).isInViewportPixel()) {
         tabData.addClass("current")
       } else {
         tabData.removeClass("current")
@@ -65,4 +65,10 @@ document.addEventListener("DOMContentLoaded", function(event) {
     assignBackgrounds();
     changeVisibility();
   }
+
+  $(window).scroll(function() {
+    if ($(this).scrollTop() + $(this).height() / 2 >= $("#tab-2").offset().top) {
+      $("#tab-2").addClass("bounceInDown");
+    }
+  });
 });
