@@ -42,21 +42,21 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
     function assignBackgrounds() {
       for (var i = 0; i < img_array.length; i++) {
-        $(".slider-bgs").append("<div class='slider-bg-" + i + "'></div>");
-        $(".slider-bg-" + i).css("background-image", "url(" + img_array[i] + ")");
+        $(".bg-container").append("<div class='bg-item-" + i + "'></div>");
+        $(".bg-item-" + i).css("background-image", "url(" + img_array[i] + ")");
         if (i == 0) {
-          $(".slider-bg-" + i).show();
+          $(".bg-item-" + i).show();
         } else {
-          $(".slider-bg-" + i).hide();
+          $(".bg-item-" + i).hide();
         }
       }
     }
 
     function changeVisibility() {
       setInterval(function() {
-        element = $(".slider-bg-" + currentIndex);
+        element = $(".bg-item-" + currentIndex);
         element.fadeOut(fadeTime);
-        $(".slider-bg-" + nextIndex).fadeIn(fadeTime);
+        $(".bg-item-" + nextIndex).fadeIn(fadeTime);
         currentIndex = nextIndex;
         nextIndex = (nextIndex + 1) % img_array.length;
       }, interval)

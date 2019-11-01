@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
+  <link rel="stylesheet" href="animate.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="js.js"></script>
 
@@ -39,7 +40,7 @@
       border: 1px solid gray;
     }
     
-    .slider-bgs {
+    .bg-container {
       width: 200px;
       height: 200px;
       border: 1px solid gray;
@@ -49,7 +50,7 @@
       z-index: -1;
     }
     
-    .slider-bgs div {
+    .bg-container div {
       width: 100%;
       height: 100%;
       background-size: cover;
@@ -59,7 +60,7 @@
     }
     
     .test {
-      position: relative;
+      /* position: relative; */
       z-index: 2;
       height: 300px;
     }
@@ -67,9 +68,9 @@
 </head>
 
 <body>
-  <div class="test">
+  <div class="test bounceInDown">
     dasdadad
-    <div class="slider-bgs"></div>
+    <div class="bg-container"></div>
   </div>
 
   <!-- <ul id="nav-menu2">
