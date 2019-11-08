@@ -1,0 +1,165 @@
+@media screen and (max-width: 1023px) {
+  #section-2>div {
+    flex-direction: column;
+  }
+  #section-2>div>div {
+    width: 100%;
+  }
+  .about-fitness {
+    margin-bottom: 5%;
+  }
+  .about-info {
+    bottom: -5%;
+  }
+  .text-title {
+    letter-spacing: 3px;
+  }
+  .price-types {
+    flex-flow: wrap;
+  }
+  .price-item {
+    width: 47%;
+  }
+  .price-item:nth-child(3) {
+    margin: 0 auto;
+    margin-top: 20px;
+    animation-delay: 0;
+    -webkit-animation-delay: 0;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .hamburger {
+    position: absolute;
+    width: 30px;
+    height: 20px;
+    margin: 20px 5%;
+    cursor: pointer;
+    right: 0;
+    z-index: 2;
+  }
+  .hamburger div {
+    width: 100%;
+    background: #505050;
+    height: 4px;
+    -webkit-transition: 0.30s ease-in-out;
+    transition: 0.30s ease-in-out;
+  }
+  .hamburger div:not(:last-child) {
+    margin-bottom: 3px;
+  }
+  .hamburger-active div:nth-child(1) {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    margin-top: 0.7em;
+  }
+  .hamburger-active div:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger-active div:nth-child(3) {
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    margin-top: -1em;
+  }
+  .hamburger ul {
+    position: absolute;
+    color: #ffffff;
+  }
+  .nav-right {
+    display: none;
+  }
+  #section-2 {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  .nav-right {
+    border-top: 2px solid #505050;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    height: calc(100vh - 60px);
+    z-index: 6;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .nav-map {
+    padding: 2px;
+  }
+  .footer-content {
+    flex-direction: column;
+  }
+  .footer-content>div {
+    width: 100%;
+  }
+  .footer-about p {
+    text-align: center;
+  }
+  .trainers {
+    flex-direction: column;
+  }
+  .trainers>div {
+    width: 100%;
+  }
+  .trainer-2, .trainer-3 {
+    animation-delay: 0s;
+    -webkit-animation-delay: 0s;
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .price-item {
+    width: 100%;
+  }
+  .price-item:nth-child(2) {
+    margin-top: 20px;
+    animation-delay: 0;
+    -webkit-animation-delay: 0;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .about-info {
+    position: relative;
+    width: 100%;
+    box-shadow: none;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    margin-top: -3px;
+  }
+  .about-fitness {
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.75);
+    border-radius: 5px;
+  }
+  .about-fitness img {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+  .nl-inputs {
+    box-sizing: border-box;
+  }
+  .nl-inputs input {
+    width: 100%;
+    margin: 0;
+    margin-bottom: 20px;
+  }
+  .header-text h1 {
+    letter-spacing: 0;
+    font-size: 2.3em;
+  }
+  .header-text h3 {
+    letter-spacing: 0;
+  }
+}
+
+@media screen and (min-width: 851px) {
+  .nav-right {
+    display: flex !important;
+  }
+}

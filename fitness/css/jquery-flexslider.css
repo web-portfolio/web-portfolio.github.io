@@ -1,0 +1,129 @@
+/*
+ * jQuery FlexSlider v2.6.2
+ * http://www.woothemes.com/flexslider/
+ *
+ * Copyright 2012 WooThemes
+ * Free to use under the GPLv2 and later license.
+ * http://www.gnu.org/licenses/gpl-2.0.html
+ *
+ * Contributing author: Tyler Smith (@mbmufffin)
+ *
+ */
+
+
+/* ====================================================================================================================
+ * RESETS
+ * ====================================================================================================================*/
+
+.slides, .slides>li, .flex-control-nav, .flex-direction-nav {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+
+/* ====================================================================================================================
+ * BASE STYLES
+ * ====================================================================================================================*/
+
+.flexslider {
+  margin: 0;
+  padding: 0;
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+.slider-content h2 {
+  letter-spacing: 0;
+  font-style: italic;
+  color: #26253a;
+}
+
+.flexslider .slides>li {
+  display: none;
+  -webkit-backface-visibility: hidden;
+}
+
+
+/* ====================================================================================================================
+ * DEFAULT THEME
+ * ====================================================================================================================*/
+
+.flexslider {
+  position: relative;
+  zoom: 1;
+}
+
+.flexslider .slides {
+  zoom: 1;
+}
+
+.flexslider .slides img {
+  height: auto;
+  -moz-user-select: none;
+}
+
+.flex-control-nav {
+  text-align: center;
+}
+
+.flex-control-nav li {
+  margin: 0 6px;
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+}
+
+.flex-control-paging li a {
+  width: 10px;
+  height: 10px;
+  display: block;
+  background-color: #fff;
+  border: 2px solid #26253a;
+  border-radius: 50%;
+  opacity: 0.5;
+  cursor: pointer;
+  text-indent: -9999px;
+  margin-right: -9px;
+}
+
+.flex-control-paging li a.flex-active {
+  background: #26253a;
+  opacity: 1;
+  cursor: pointer;
+}
+
+.flex-direction-nav {
+  position: absolute;
+  top: 40%;
+  width: 100%;
+}
+
+.flex-prev, .flex-next {
+  display: none;
+  position: absolute;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 60px;
+  background: #0f0f0f;
+  border: 3px solid #34231a;
+  opacity: 0.9;
+  color: #996019;
+  width: 33px;
+  height: 62px;
+  line-height: 55px;
+}
+
+.flex-prev {
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+  border-left: none;
+}
+
+.flex-next {
+  text-indent: 5px;
+  right: 0;
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+  border-right: none;
+}

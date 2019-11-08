@@ -65,6 +65,7 @@ body * {
   background-size: 300% 100%;
   background-position: right bottom;
   transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
   box-sizing: border-box;
   border-left: 5px solid #1e1e1e;
   user-select: none;

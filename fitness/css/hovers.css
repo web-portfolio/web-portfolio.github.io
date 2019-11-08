@@ -1,0 +1,17 @@
+.nav-right li:hover {
+  color: #000;
+}
+
+.light-hover-btn:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.dark-hover-btn:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.nav-map li:hover {
+  background-color: #008AE6;
+}

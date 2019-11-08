@@ -74,7 +74,7 @@
     display: none;
   }
   .navigation {
-    height: 100vh;
+    height: calc(100vh - 48px);
     position: absolute;
     top: 50px;
     width: 100%;
