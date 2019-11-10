@@ -1,20 +1,9 @@
-/* 
-- da iz4istq css-a nav, ol, ul
-- setinterval, fona se zapo4va da se smenq po-burzo
-- snimka za motors
-- pri resaiz kato se skrie menuto na mobilno
-- tuny img
- - jquery ext link
- - footara podska4a ot animaciqta
- - index 5te klika
-*/
-
-body, nav, div, button, ul, li, ol, p, h1, h2, h3 {
+body, div, ul, li, p, h1, h2, h3 {
   margin: 0;
   padding: 0;
   font-size: 15px;
-  /* font-family: "Rubik", sans-serif; */
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: "Lora", serif;
+  font-style: italic;
 }
 
 body {
@@ -22,10 +11,10 @@ body {
   background-color: #eae9ef;
 }
 
-
-/* ::selection {
-  background: #b53636;
-} */
+::selection {
+  background: #26253a;
+  color: #fff;
+}
 
 body * {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -85,7 +74,6 @@ body * {
 .header-text h3 {
   font-size: 1.5em;
   letter-spacing: 3px;
-  font-style: italic;
   margin-bottom: 40px;
 }
 
@@ -111,6 +99,7 @@ body * {
   -webkit-transition: 1s;
   user-select: none;
   -webkit-user-select: none;
+  font-style: normal;
 }
 
 .learn-more-btn {
@@ -158,6 +147,8 @@ body * {
   font-size: 1.5em;
   transition: 1s;
   -webkit-transition: 1s;
+  font-style: normal;
+  font-family: "Courgette", cursive;
 }
 
 .nav-right li:not(:last-of-type) {
@@ -171,7 +162,7 @@ body * {
 
 .nav-map {
   position: fixed;
-  z-index: 5;
+  z-index: 7;
   right: 0;
   top: 50%;
   transform: translateY(-50%);
@@ -251,6 +242,10 @@ body * {
   border-top-right-radius: 5px;
 }
 
+.trainer-info {
+  font-family: "Courgette", cursive;
+}
+
 .trainer-2, .price-item:nth-child(2), .footer-content>div:nth-child(2) {
   animation-delay: 0.1s;
   -webkit-animation-delay: 0.1s;
@@ -297,7 +292,6 @@ body * {
 
 .trainer-role {
   font-size: 1.6em;
-  font-style: italic;
   margin-bottom: 20px;
   font-weight: bold;
   letter-spacing: 3px;
@@ -324,7 +318,6 @@ body * {
   cursor: pointer;
   background-color: rgba(38, 37, 58, 0.9);
   border-radius: 50%;
-  font-style: italic;
   color: #fff;
   line-height: 25px;
   font-weight: bold;
@@ -364,12 +357,16 @@ body * {
   margin: 0 auto;
 }
 
+.about-fitness-info h2 {
+  padding: 0;
+}
+
 .about-info {
   position: absolute;
   bottom: 0;
   right: 0;
   width: 80%;
-  font-style: italic;
+  font-family: "Courgette", cursive;
   background-color: rgba(255, 255, 255, 0.9);
   padding-top: 20px !important;
   box-sizing: border-box;
@@ -442,7 +439,6 @@ body * {
 
 .price-item-title {
   font-size: 2.2em;
-  font-style: italic;
   margin-bottom: 20px;
 }
 

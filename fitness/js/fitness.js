@@ -90,10 +90,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
   }
 
   $(".nav-tab-link").click(function() {
-    $(".nav-right").slideUp(500);
-    $(".hamburger").removeClass("hamburger-active");
-    $("body").css("overflowY", "auto");
-    document.removeEventListener("touchmove", touchPreven);
     var tab_id = $(this).attr("data-tab");
     $(".nav-tab-content").removeClass("current-scroll");
     $("#" + tab_id).addClass("current-scroll");
@@ -213,6 +209,12 @@ document.addEventListener("DOMContentLoaded", function(event) {
         $(this).parent().fadeOut(500)
       });
       $(".assign-animation").css("visibility", "visible").removeClass("assign-animation").addClass("no-animation");
+      $(".nav-tab-link").click(function() {
+        $(".nav-right").slideUp(500);
+        $(".hamburger").removeClass("hamburger-active");
+        $("body").css("overflowY", "auto");
+        document.removeEventListener("touchmove", touchPreven);
+      });
       return "Phone Device";
     } else {
       $('link[href="css/hovers.css"]').prop("disabled", false);

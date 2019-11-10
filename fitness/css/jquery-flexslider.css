@@ -35,8 +35,8 @@
 
 .slider-content h2 {
   letter-spacing: 0;
-  font-style: italic;
   color: #26253a;
+  font-family: "Courgette", cursive;
 }
 
 .flexslider .slides>li {
