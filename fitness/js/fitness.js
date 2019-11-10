@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", function(event) {
   $(window).on("load", function() {
     chnageBackground();
-    stickyNav();
   });
 
   $(window).on("resize", function() {
@@ -74,7 +73,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
     changeVisibility();
   }
 
-  function stickyNav() {
+  var navHeight = $(".navigation").height();
+
+  function fixedNav() {
     if ($(window).scrollTop() > 40) {
       $(".navigation").stop(true, false).animate({
         "opacity": "1",
@@ -83,12 +84,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
     } else {
       $(".navigation").stop(true, false).animate({
         "opacity": "0",
-        "top": "-60"
+        "top": -navHeight
       });
     }
   }
 
-  var navHeight = $(".navigation").height();
   $(".nav-tab-link").click(function() {
     $(".nav-right").slideUp(500);
     $(".hamburger").removeClass("hamburger-active");
@@ -112,8 +112,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
     }, 1000);
   });
 
-  console.log(navHeight)
-
   $.fn.isInViewportPixel = function() {
     var elementTop = $(this).offset().top;
     var elementBottom = elementTop + $(this).outerHeight();
@@ -136,11 +134,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
     return elementTop > viewportBottom || elementBottom < viewportTop;
   };
 
-  var lastScroll = 0;
   $(".assign-animation").prepend('<div class="remove-animation"></div>');
-  $(".assign-animation").css("visibility", "visible");
+  $(".assign-animation").css("visibility", "hidden");
+  var lastScroll = 0;
   $(window).on("resize scroll load", function() {
-    stickyNav();
+    fixedNav();
     $(".nav-tab-content").each(function() {
       var elementId = $(this).attr("id");
       var tabData = $(".nav-tab-link[data-tab=" + elementId + "]");
@@ -210,10 +208,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
       $(".mob-close-btn, .mob-info").show();
       $(".mob-info").click(function() {
         $(this).parent().find($(".trainer-social")).fadeIn(500).css("display", "flex");
-      })
+      });
       $(".mob-close-btn").click(function() {
         $(this).parent().fadeOut(500)
-      })
+      });
+      $(".assign-animation").css("visibility", "visible").removeClass("assign-animation").addClass("no-animation");
       return "Phone Device";
     } else {
       $('link[href="css/hovers.css"]').prop("disabled", false);
@@ -223,6 +222,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
         $(this).find(".trainer-social").stop(true, false).fadeOut(500);
       });
       $(".mob-close-btn, .mob-info").hide();
+      $(".no-animation").css("visibility", "hidden").removeClass("no-animation").addClass("assign-animation");
       return "Desktop";
     }
   };

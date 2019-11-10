@@ -311,6 +311,7 @@ body * {
 
 .trainer-follow li {
   list-style: none;
+  cursor: pointer;
 }
 
 .mob-info {
