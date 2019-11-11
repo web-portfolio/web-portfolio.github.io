@@ -4,7 +4,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
   });
 
   $(window).on("load resize", function() {
-    popUpBtn();
     getMobileOperatingSystem();
   });
 
