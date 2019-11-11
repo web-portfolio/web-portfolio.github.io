@@ -196,11 +196,7 @@ body * {
   height: 100%;
   top: 0;
   left: 0;
-  background-size: cover;
-}
-
-.bg-item-0 {
-  background-position: center;
+  background-size: cover !important;
 }
 
 .text-title {
@@ -376,13 +372,17 @@ body * {
 }
 
 #section-4 {
-  background-image: url("../img/price-bg.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.95)), url("../img/price-bg.jpg");
+  background: -webkit-linear-gradient(rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.95)), url("../img/price-bg.jpg");
   background-size: cover;
+  background-position: bottom;
 }
 
 #section-5 {
-  background-image: url("../img/newsletter-bg.jpg");
+  background: linear-gradient(rgba(38, 37, 58, 0.95), rgba(38, 37, 58, 0.95)), url("../img/newsletter-bg.jpg");
+  background: -webkit-linear-gradient(rgba(38, 37, 58, 0.95), rgba(38, 37, 58, 0.95)), url("../img/newsletter-bg.jpg");
   background-size: cover;
+  background-position: top;
 }
 
 #section-5 .text-title, #section-4 .text-title {
@@ -463,7 +463,10 @@ body * {
 }
 
 .footer {
-  background: #26253a;
+  background: linear-gradient(rgba(38, 37, 58, 0.95), rgba(38, 37, 58, 0.95)), url("../img/footer-bg.jpg");
+  background: -webkit-linear-gradient(rgba(38, 37, 58, 0.95), rgba(38, 37, 58, 0.95)), url("../img/footer-bg.jpg");
+  background-size: cover;
+  background-position: top right;
   color: #fff;
 }
 

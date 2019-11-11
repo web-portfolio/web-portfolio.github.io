@@ -26,6 +26,9 @@
     animation-delay: 0;
     -webkit-animation-delay: 0;
   }
+  .nav-right li:not(:last-of-type) {
+    margin-right: 15px;
+  }
 }
 
 @media screen and (max-width: 850px) {

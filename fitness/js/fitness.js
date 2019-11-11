@@ -50,7 +50,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
     function assignBackgrounds() {
       for (var i = 0; i < img_array.length; i++) {
         $(".bg-container").append("<div class='bg-item-" + i + "'></div>");
-        $(".bg-item-" + i).css("background-image", "url(" + img_array[i] + ")");
+        $(".bg-item-" + i).css({
+          "background": "linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(" + img_array[i] + ")"
+        });
         if (i == 0) {
           $(".bg-item-" + i).show();
         } else {
