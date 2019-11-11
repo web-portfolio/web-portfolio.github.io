@@ -1,2 +1,3 @@
+- setinterval goes faster
 - pri resaiz kato se skrie menuto na mobilno
 - tuny img
