@@ -86,7 +86,7 @@ body {
   -webkit-user-select: none;
 }
 
-.wow, .motors, .efbet-liga, .efbet-casino, .efbet-sport, .efbet-app {
+.wow, .motors, .fitness, .efbet-liga, .efbet-casino, .efbet-sport, .efbet-app {
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
@@ -98,6 +98,10 @@ body {
 
 .motors {
   background-image: url("../img/bg-motors.jpg");
+}
+
+.fitness {
+  background-image: url("../img/bg-fitness.jpg");
 }
 
 .efbet-liga {

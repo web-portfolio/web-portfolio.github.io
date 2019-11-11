@@ -61,6 +61,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
   $(".motors").click(function() {
     window.location = "motors/home-page.html";
   });
+  $(".fitness").click(function() {
+    window.location = "fitness/fitness.html";
+  });
   $(".efbet-liga").click(function() {
     window.location = "efbet-landings/liga/liga.html";
   });
