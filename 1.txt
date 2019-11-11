@@ -1,3 +1,4 @@
 - setinterval goes faster
 - pri resaiz kato se skrie menuto na mobilno
 - resize na web mobilno na topa se gubqt bukvite
+- bg-te
