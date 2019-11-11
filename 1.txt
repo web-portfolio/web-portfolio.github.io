@@ -1,6 +1,3 @@
-- setinterval, fona zapo4va da se smenq po-burzo
-- snimka za motors
 - pri resaiz kato se skrie menuto na mobilno
 - tuny img
 - footara podska4a ot animaciqta
-- index 5te klika
