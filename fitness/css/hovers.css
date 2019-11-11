@@ -15,3 +15,7 @@
 .nav-map li:hover {
   background-color: #008AE6;
 }
+
+.f1:hover::after, .f2:hover::after, .f3:hover::after, .f4:hover::after, .back-to-top:hover {
+  opacity: 1;
+}

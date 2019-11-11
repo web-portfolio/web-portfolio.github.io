@@ -110,8 +110,7 @@
 }
 
 .f1, .f2, .f3, .f4 {
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-size: cover;
   width: 40px;
   height: 40px;
   border-radius: 5px;
@@ -152,8 +151,8 @@
 
 .f1::after, .f2::after, .f3::after, .f4::after {
   content: "";
-  display: inline-block;
-  background-size: 100% 100%;
+  display: block;
+  background-size: cover;
   opacity: 0;
   width: 40px;
   height: 40px;
