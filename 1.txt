@@ -2,5 +2,4 @@
 - pri resaiz kato se skrie menuto na mobilno
 - resize na web mobilno na topa se gubqt bukvite
 - bg-te
-- X na treaner na mobilno
 - og image
