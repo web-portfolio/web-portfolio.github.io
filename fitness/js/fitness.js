@@ -72,6 +72,10 @@ document.addEventListener("DOMContentLoaded", function(event) {
       }, interval)
     }
 
+    // function mobileBackgrounds() {
+    //   alert("test")
+    // }
+
     assignBackgrounds();
     changeVisibility();
   }
