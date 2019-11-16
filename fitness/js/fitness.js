@@ -27,11 +27,15 @@ document.addEventListener("DOMContentLoaded", function(event) {
     $(".chose-trainer").height($(".chose-trainer").width() * 1.248945147679325);
     var padd = ((widnowWidth - 1920) / 2) + (widnowWidth * 0.05);
     if (widnowWidth > 1920) {
-      $(".navigation").css("padding-left", padd);
-      $(".navigation").css("padding-right", padd);
+      $(".navigation").css({
+        "padding-left": padd,
+        "padding-right": padd
+      });
     } else {
-      $(".navigation").css("padding-left", widnowWidth * 0.05);
-      $(".navigation").css("padding-right", widnowWidth * 0.05);
+      $(".navigation").css({
+        "padding-left": widnowWidth * 0.05,
+        "padding-right": widnowWidth * 0.05,
+      });
     }
     if (widnowWidth > windowHeight) {
       $(".nav-right li").css("padding", "5px")
@@ -71,10 +75,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
         nextIndex = (nextIndex + 1) % img_array.length;
       }, interval)
     }
-
-    // function mobileBackgrounds() {
-    //   alert("test")
-    // }
 
     assignBackgrounds();
     changeVisibility();
