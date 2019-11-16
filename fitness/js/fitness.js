@@ -25,6 +25,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     var windowHeight = $(window).height();
     $(".header, .header-text").outerWidth(widnowWidth).outerHeight(windowHeight);
     $(".chose-trainer").height($(".chose-trainer").width() * 1.248945147679325);
+
     var padd = ((widnowWidth - 1920) / 2) + (widnowWidth * 0.05);
     if (widnowWidth > 1920) {
       $(".navigation").css({
@@ -37,10 +38,19 @@ document.addEventListener("DOMContentLoaded", function(event) {
         "padding-right": widnowWidth * 0.05,
       });
     }
+
     if (widnowWidth > windowHeight) {
       $(".nav-right li").css("padding", "5px")
     } else {
       $(".nav-right li").css("padding", "10px")
+    }
+
+    if (widnowWidth < windowHeight) {
+      $(".bg-item-0").css("background-position-x", "-26vh");
+      $(".bg-item-1").css("background-position-x", "-75vh");
+    } else {
+      $(".bg-item-0").css("background-position-x", "left");
+      $(".bg-item-1").css("background-position-x", "center");
     }
   }
 
