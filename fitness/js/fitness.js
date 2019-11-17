@@ -46,11 +46,13 @@ document.addEventListener("DOMContentLoaded", function(event) {
     }
 
     if (widnowWidth < windowHeight) {
-      $(".bg-item-0").css("background-position-x", "-26vh");
-      $(".bg-item-1").css("background-position-x", "-75vh");
+      $(".bg-item-0").css("background-position-x", "25%");
+      $(".bg-item-1").css("background-position-x", "60%");
+      $("#section-4").css("background-position-x", "59%");
     } else {
       $(".bg-item-0").css("background-position-x", "left");
       $(".bg-item-1").css("background-position-x", "center");
+      $("#section-4").css("background-position-x", "center");
     }
   }
 
