@@ -49,10 +49,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
       $(".bg-item-0").css("background-position-x", "25%");
       $(".bg-item-1").css("background-position-x", "60%");
       $("#section-4").css("background-position-x", "59%");
+      $("#section-5").css("background-position-x", "25%");
     } else {
-      $(".bg-item-0").css("background-position-x", "left");
-      $(".bg-item-1").css("background-position-x", "center");
-      $("#section-4").css("background-position-x", "center");
+      $(".bg-item-0, .bg-item-1, #section-4, #section-5").css("background-position-x", "center");
     }
   }
 
