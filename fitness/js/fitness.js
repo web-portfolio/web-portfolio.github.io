@@ -52,7 +52,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
       $("#section-5").css("background-position-x", "25%");
       $(".footer").css("background-position-x", "75%");
     } else {
-      $(".bg-item-0, .bg-item-1, #section-4, #section-5").css("background-position-x", "center");
+      $(".bg-item-1, #section-4, #section-5").css("background-position-x", "center");
+      $(".bg-item-0").css("background-position-x", "left");
       $(".footer").css("background-position-x", "right");
     }
   }
