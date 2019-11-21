@@ -234,6 +234,8 @@
   background-repeat: no-repeat;
   background-size: 20px;
   padding-left: 26px !important;
+  transition: background-image .1s ease-in-out;
+  -webkit-transition: background-image .1s ease-in-out;
 }
 
 .footer-email {
@@ -242,6 +244,8 @@
   background-repeat: no-repeat;
   background-size: 20px;
   padding-left: 26px !important;
+  transition: background-image .1s ease-in-out;
+  -webkit-transition: background-image .1s ease-in-out;
 }
 
 .live-chat {
@@ -250,6 +254,8 @@
   background-repeat: no-repeat;
   background-size: 20px;
   padding-left: 26px !important;
+  transition: background-image .1s ease-in-out;
+  -webkit-transition: background-image .1s ease-in-out;
 }
 
 .cookie {
@@ -258,6 +264,8 @@
   background-repeat: no-repeat;
   background-size: 19px;
   padding-left: 26px !important;
+  transition: background-image .1s ease-in-out;
+  -webkit-transition: background-image .1s ease-in-out;
 }
 
 .privacy {
@@ -266,4 +274,6 @@
   background-repeat: no-repeat;
   background-size: 17px;
   padding-left: 26px !important;
+  transition: background-image .1s ease-in-out;
+  -webkit-transition: background-image .1s ease-in-out;
 }
