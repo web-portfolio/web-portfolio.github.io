@@ -70,6 +70,20 @@ function getMobileOperatingSystem() {
     });
 
     // FOOTER
+
+    function preload(arrayOfImages) {
+      $(arrayOfImages).each(function() {
+        $("<img/>")[0].src = this;
+      });
+    }
+    preload([
+      "img/ico/privacy-hover.png",
+      "img/ico/cookie-hover.png",
+      "img/ico/phone-hover.png",
+      "img/ico/mail-hover.png",
+      "img/ico/chat-hover.png"
+    ]);
+
     $(".back-to-top").mouseenter(function() {
       x = true;
       animate();
