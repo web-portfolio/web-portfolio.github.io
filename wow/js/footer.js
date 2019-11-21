@@ -80,23 +80,6 @@ function policyFlowResize() {
   $(".privacy-content .policy-flow, .cookie-content .policy-flow").outerHeight(pc - 155);
 }
 
-function preload(arrayOfImages) {
-  $(arrayOfImages).each(function() {
-    $("<img/>")[0].src = this;
-  });
-}
-preload([
-  "img/ico/privacy-hover.png",
-  "img/ico/cookie-hover.png",
-  "img/ico/phone-hover.png",
-  "img/ico/mail-hover.png",
-  "img/ico/chat-hover.png",
-  "img/ico/f1-hover.png",
-  "img/ico/f2-hover.png",
-  "img/ico/f3-hover.png",
-  "img/ico/f4-hover.png"
-]);
-
 // JS LINKS
 $(".f1").click(function() {
   window.open("https://bg-bg.facebook.com/Warcraft", "_blank");
