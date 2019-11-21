@@ -36,6 +36,26 @@
   color: #c1b575;
 }
 
+.footer-phone:hover {
+  background-image: url("../img/ico/phone-hover.png");
+}
+
+.footer-email:hover {
+  background-image: url("../img/ico/mail-hover.png");
+}
+
+.live-chat:hover {
+  background-image: url("../img/ico/chat-hover.png");
+}
+
+.cookie:hover {
+  background-image: url("../img/ico/cookie-hover.png");
+}
+
+.privacy:hover {
+  background-image: url("../img/ico/privacy-hover.png");
+}
+
 .purchase-close-btn:hover {
   cursor: pointer;
   color: #c1b575;
