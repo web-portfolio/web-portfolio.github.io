@@ -46,10 +46,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
     }
 
     if (widnowWidth < windowHeight) {
-      $(".bg-item-0").css("background-position-x", "25%");
+      $(".bg-item-0, #section-5").css("background-position-x", "25%");
       $(".bg-item-1").css("background-position-x", "60%");
       $("#section-4").css("background-position-x", "59%");
-      $("#section-5").css("background-position-x", "25%");
       $(".footer").css("background-position-x", "75%");
     } else {
       $(".bg-item-1, #section-4, #section-5").css("background-position-x", "center");
@@ -63,8 +62,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
       currentIndex = 0,
       nextIndex = 1,
       fadeTime = 1000,
-      interval = 3000,
-      element;
+      interval = 3000;
 
     function assignBackgrounds() {
       for (var i = 0; i < img_array.length; i++) {
@@ -82,8 +80,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
     function changeVisibility() {
       setInterval(function() {
-        element = $(".bg-item-" + currentIndex);
-        element.fadeOut(fadeTime);
+        $(".bg-item-" + currentIndex).fadeOut(fadeTime);
         $(".bg-item-" + nextIndex).fadeIn(fadeTime);
         currentIndex = nextIndex;
         nextIndex = (nextIndex + 1) % img_array.length;
