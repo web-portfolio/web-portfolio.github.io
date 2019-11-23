@@ -1,0 +1,18 @@
+.slider {
+  width: 500px;
+  height: 250px;
+  border: 1px solid gray;
+  /* margin: 0 auto; */
+  overflow: hidden;
+}
+
+.slider-content {
+  height: 100%;
+  position: relative;
+  display: flex;
+}
+
+.slider-content>div {
+  /* position: relative; */
+  background-color: gray;
+}
