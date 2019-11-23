@@ -43,7 +43,13 @@ document.addEventListener("DOMContentLoaded", function(event) {
     alert("swipe right")
   })
 
+  $("p").on("swipeleft", function(e) {
+    $(this).hide();
+  });
 
+  // $(".slider").on("swiperight", function() {
+  //   console.log("test")
+  // });
 
 
   // console.log(numOfSlides)
