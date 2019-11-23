@@ -35,18 +35,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
     autoSlide = setInterval(moveLeft, interval)
   })
 
-  $(".slider").on("swipeleft", function() {
-    alert("swipe left")
-  })
-
-  $(".slider").on("swiperight", function() {
-    alert("swipe right")
-  })
-
-  $("p").on("swipeleft", function(e) {
-    $(this).hide();
-  });
-
   // $(".slider").on("swiperight", function() {
   //   console.log("test")
   // });
