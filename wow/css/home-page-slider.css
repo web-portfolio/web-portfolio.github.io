@@ -110,13 +110,13 @@
   width: 33px;
   height: 62px;
   line-height: 55px;
+  text-align: center;
 }
 
 .flex-prev {
   border-top-right-radius: 6px;
   border-bottom-right-radius: 6px;
   border-left: none;
-  text-align: left;
 }
 
 .flex-next {
@@ -125,5 +125,4 @@
   border-top-left-radius: 6px;
   border-bottom-left-radius: 6px;
   border-right: none;
-  text-align: right;
 }
