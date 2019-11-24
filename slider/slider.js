@@ -84,13 +84,15 @@ document.addEventListener("DOMContentLoaded", function(event) {
         moveLeft();
       }
     } else {
-      for (var i = 1; i <= step * -1; i++) {
+      step = step * -1;
+      for (var i = 1; i <= step; i++) {
         moveRight();
       }
     }
     setTimeout(function() {
       autoSlide = setInterval(moveLeft, interval);
       $(".slider-nav").css("pointer-events", "all");
+      console.log("test")
     }, step * slideTime);
   });
 });
