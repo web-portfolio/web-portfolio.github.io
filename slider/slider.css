@@ -59,8 +59,12 @@
 .slider-nav>div {
   width: 50px;
   height: 7px;
-  background-color: red;
+  background-color: #000;
   cursor: pointer;
+}
+
+.slider-nav .slider-active {
+  background-color: #fff;
 }
 
 .slider-nav>div:not(:last-child) {

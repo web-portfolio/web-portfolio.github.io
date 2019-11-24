@@ -13,15 +13,21 @@ document.addEventListener("DOMContentLoaded", function(event) {
   $(".slider").append('<div class="slider-nav"></div>');
 
   for (var i = 1; i <= numOfSlides; i++) {
-    $(".slider-nav").append('<div data-number="' + i + '"></div>')
+    $(".slider-nav").append('<div id="tab-' + i + '" data-number="' + i + '"></div>')
+    if (i == 1) {
+      $("#tab-1").addClass("slider-active");
+    }
   }
 
   function moveLeft() {
     $(".slider-content").animate({
       left: -sliderWidth * 2
     }, slideTime, function() {
+      $(".slider-content>div").removeClass("slider-active");
       $(".slider-content div:first-child").appendTo($(".slider-content"));
       $(".slider-content").css("left", -sliderWidth);
+      $(".slider-content div:nth-child(2)").addClass("slider-active");
+      assigneNav();
     });
   };
 
@@ -29,17 +35,26 @@ document.addEventListener("DOMContentLoaded", function(event) {
     $(".slider-content").animate({
       left: 0
     }, slideTime, function() {
+      $(".slider-content>div").removeClass("slider-active");
       $(".slider-content div:last-child").prependTo($(".slider-content"));
       $(".slider-content").css("left", -sliderWidth);
+      $(".slider-content div:nth-child(2)").addClass("slider-active");
+      assigneNav();
     });
   };
+
+  function assigneNav() {
+    var activeSliderId = $(".slider-active").attr("data-tab");
+    $(".slider-nav>div").removeClass("slider-active");
+    $("#" + activeSliderId).addClass("slider-active");
+  }
 
   var autoSlide = setInterval(moveLeft, interval);
 
   $(".slider-controll-left").click(function() {
     clearInterval(autoSlide);
     $(this).css("pointer-events", "none");
-    moveLeft();
+    moveRight();
     setTimeout(function() {
       $(".slider-controll-left").css("pointer-events", "all");
       autoSlide = setInterval(moveLeft, interval);
@@ -49,7 +64,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   $(".slider-controll-right").click(function() {
     clearInterval(autoSlide);
     $(this).css("pointer-events", "none");
-    moveRight();
+    moveLeft();
     setTimeout(function() {
       $(".slider-controll-right").css("pointer-events", "all");
       autoSlide = setInterval(moveLeft, interval);
@@ -57,10 +72,13 @@ document.addEventListener("DOMContentLoaded", function(event) {
   });
 
   $(".slider-nav > div").click(function() {
-    clearInterval(autoSlide);
     var newSlide = $(this).attr("data-number"),
-      currentSlide = $(".slider-active").attr("data-number"),
+      currentSlide = $(".slider-nav .slider-active").attr("data-number"),
       step = newSlide - currentSlide;
+
+    clearInterval(autoSlide);
+    $(".slider-nav").css("pointer-events", "none");
+
     if (step > 0) {
       for (var i = 1; i <= step; i++) {
         moveLeft();
@@ -72,6 +90,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     }
     setTimeout(function() {
       autoSlide = setInterval(moveLeft, interval);
+      $(".slider-nav").css("pointer-events", "all");
     }, step * slideTime);
   });
 });
