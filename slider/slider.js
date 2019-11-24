@@ -23,10 +23,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     $(".slider-content").animate({
       left: -sliderWidth * 2
     }, slideTime, function() {
-      $(".slider-content>div").removeClass("slider-active");
       $(".slider-content div:first-child").appendTo($(".slider-content"));
-      $(".slider-content").css("left", -sliderWidth);
-      $(".slider-content div:nth-child(2)").addClass("slider-active");
       assigneNav();
     });
   };
@@ -35,15 +32,16 @@ document.addEventListener("DOMContentLoaded", function(event) {
     $(".slider-content").animate({
       left: 0
     }, slideTime, function() {
-      $(".slider-content>div").removeClass("slider-active");
       $(".slider-content div:last-child").prependTo($(".slider-content"));
-      $(".slider-content").css("left", -sliderWidth);
-      $(".slider-content div:nth-child(2)").addClass("slider-active");
       assigneNav();
     });
   };
 
   function assigneNav() {
+    $(".slider-content>div").removeClass("slider-active");
+    $(".slider-content").css("left", -sliderWidth);
+    $(".slider-content div:nth-child(2)").addClass("slider-active");
+
     var activeSliderId = $(".slider-content .slider-active").attr("data-tab");
     $(".slider-nav>div").removeClass("slider-active");
     $("#" + activeSliderId).addClass("slider-active");
