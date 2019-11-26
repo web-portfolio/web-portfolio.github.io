@@ -114,10 +114,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
   }
 
   function fixedMapNav() {
-    var deviceHeight = window.screen.availHeight;
+    var deviceHeight = window.screen.height;
     var navMapHeight = $(".nav-map").height();
     $(".nav-map").css("top", deviceHeight / 2 - navMapHeight / 2);
-    console.log(deviceHeight)
   }
 
   $(".nav-tab-link").click(function() {
