@@ -49,31 +49,15 @@ document.addEventListener("DOMContentLoaded", function(event) {
   }
 
   var autoSlide = setInterval(moveLeft, interval);
-  // document.addEventListener("visibilitychange", function() {
-  //   if (document.visibilityState == "hidden") {
-  //     clearInterval(autoSlide);
-  //   } else {
-  //     autoSlide = setInterval(moveLeft, interval);
-  //   }
-  // });
-
   $(document).on("visibilitychange", function() {
-    if (document.visibilityState == "hidden") {
-      clearInterval(autoSlide);
+    if (document.visibilityState == "visible") {
+      // clearInterval(autoSlide);
       console.log("stop")
     } else {
-      autoSlide = setInterval(moveLeft, interval);
-      console.log("start")
+      // autoSlide = setInterval(moveLeft, interval);
+      // console.log("start")
     }
   });
-
-  // if (!document.hidden) {
-  //   console.log("not hidden");
-  //   autoSlide = setInterval(moveLeft, interval);
-  // } else {
-  //   console.log("hidden");
-  //   clearInterval(autoSlide);
-  // }
 
   $(".slider-controll-left").click(function() {
     clearInterval(autoSlide);
