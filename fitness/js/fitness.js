@@ -11,7 +11,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
   $(window).on("load resize", function() {
     resize();
     getMobileOperatingSystem();
-    fixedMapNav();
   });
 
   $(".flexslider").flexslider({
@@ -111,12 +110,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
         "top": -navHeight
       });
     }
-  }
-
-  function fixedMapNav() {
-    var deviceHeight = window.screen.height;
-    var navMapHeight = $(".nav-map").height();
-    $(".nav-map").css("top", deviceHeight / 2 - navMapHeight / 2);
   }
 
   $(".nav-tab-link").click(function() {
