@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
       currentIndex = 0,
       nextIndex = 1,
       fadeTime = 1000,
-      interval = 3000;
+      interval = 3500;
 
     function assignBackgrounds() {
       for (var i = 0; i < img_array.length; i++) {
