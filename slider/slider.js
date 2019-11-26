@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     numOfSlides = $(".slider-content > div").length,
     autoSlide,
     interval = 3500,
-    slideTime = 300;
+    slideTime = 250;
 
   $(".slider-content").width(numOfSlides * sliderWidth).css("left", -sliderWidth);
   $(".slider-content > div").width(sliderWidth).height(sliderHeight);
@@ -100,4 +100,10 @@ document.addEventListener("DOMContentLoaded", function(event) {
       $(".slider-nav").css("pointer-events", "all");
     }, step * slideTime);
   });
+
+  document.addEventListener('touchmove', function(e) {
+    e.preventDefault();
+    var touch = e.touches[0];
+    console.log(touch.pageX + " - " + touch.pageY);
+  }, false);
 });

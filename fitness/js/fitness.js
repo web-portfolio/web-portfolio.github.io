@@ -86,7 +86,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
     }
 
     assignBackgrounds();
-
     var autoStop = setInterval(changeVisibility, interval);
     $(document).on("visibilitychange", function() {
       if (document.visibilityState == "hidden") {
