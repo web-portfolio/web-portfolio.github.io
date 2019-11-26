@@ -79,16 +79,22 @@ document.addEventListener("DOMContentLoaded", function(event) {
     }
 
     function changeVisibility() {
-      setInterval(function() {
-        $(".bg-item-" + currentIndex).fadeOut(fadeTime);
-        $(".bg-item-" + nextIndex).fadeIn(fadeTime);
-        currentIndex = nextIndex;
-        nextIndex = (nextIndex + 1) % img_array.length;
-      }, interval)
+      $(".bg-item-" + currentIndex).fadeOut(fadeTime);
+      $(".bg-item-" + nextIndex).fadeIn(fadeTime);
+      currentIndex = nextIndex;
+      nextIndex = (nextIndex + 1) % img_array.length;
     }
 
     assignBackgrounds();
-    changeVisibility();
+
+    var autoStop = setInterval(changeVisibility, interval);
+    document.addEventListener("visibilitychange", function() {
+      if (document.visibilityState == "hidden") {
+        clearInterval(autoStop);
+      } else {
+        autoStop = setInterval(changeVisibility, interval);
+      }
+    });
   }
 
   var navHeight = $(".navigation").height();
