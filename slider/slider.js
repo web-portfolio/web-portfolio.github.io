@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   var sliderWidth = $(".slider").width(),
     sliderHeight = $(".slider").height(),
     numOfSlides = $(".slider-content > div").length,
+    autoSlide,
     interval = 3500,
     slideTime = 300;
 
@@ -48,6 +49,13 @@ document.addEventListener("DOMContentLoaded", function(event) {
   }
 
   var autoSlide = setInterval(moveLeft, interval);
+  document.addEventListener("visibilitychange", function() {
+    if (document.visibilityState == "hidden") {
+      clearInterval(autoSlide);
+    } else {
+      autoSlide = setInterval(moveLeft, interval);
+    }
+  });
 
   $(".slider-controll-left").click(function() {
     clearInterval(autoSlide);
