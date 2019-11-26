@@ -49,13 +49,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
   }
 
   var autoSlide = setInterval(moveLeft, interval);
-  $(document).on("visibilitychange", function() {
-    if (document.visibilityState == "visible") {
-      // clearInterval(autoSlide);
-      console.log("stop")
+  $(document).on("visibilitychange load", function() {
+    if (document.visibilityState == "hidden") {
+      clearInterval(autoSlide);
     } else {
-      // autoSlide = setInterval(moveLeft, interval);
-      // console.log("start")
+      autoSlide = setInterval(moveLeft, interval);
     }
   });
 
