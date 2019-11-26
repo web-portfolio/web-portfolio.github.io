@@ -57,6 +57,14 @@ document.addEventListener("DOMContentLoaded", function(event) {
     }
   });
 
+  // if (!document.hidden) {
+  //   console.log("not hidden");
+  //   autoSlide = setInterval(moveLeft, interval);
+  // } else {
+  //   console.log("hidden");
+  //   clearInterval(autoSlide);
+  // }
+
   $(".slider-controll-left").click(function() {
     clearInterval(autoSlide);
     $(this).css("pointer-events", "none");
