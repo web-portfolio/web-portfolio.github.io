@@ -1,28 +1,16 @@
 /* Slider Hovers */
 
-.flex-container a:hover, .flex-slider a:hover {
-  outline: none;
+.slider:hover .slider-controlls {
+  display: flex;
 }
 
-.flex-control-paging li a:hover {
-  background: #c1b575;
-  opacity: 0.5;
-}
-
-.flex-prev:hover, .flex-next:hover {
+.slider-controlls:hover {
   color: #c1b575;
+  background-color: #000;
 }
 
-.flexslider:hover .flex-next, .flexslider:hover .flex-prev {
-  display: block;
-}
-
-.flex-prev:hover, .flex-next:hover {
-  background-color: black;
-}
-
-.slides li img:hover {
-  cursor: pointer;
+.slider-nav>div:hover {
+  background-color: #c1b575;
 }
 
 
