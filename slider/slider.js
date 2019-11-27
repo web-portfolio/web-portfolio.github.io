@@ -101,9 +101,23 @@ document.addEventListener("DOMContentLoaded", function(event) {
     }, step * slideTime);
   });
 
-  document.addEventListener('touchmove', function(e) {
-    e.preventDefault();
-    var touch = e.touches[0];
-    console.log(touch.pageX + " - " + touch.pageY);
-  }, false);
+  var xs, xm, xe;
+  $(".slider").on("touchstart", function(event) {
+    xs = event.touches[0].clientX;
+    clearInterval(autoSlide);
+  });
+  $(".slider").on("touchmove", function(event) {
+    xm = event.touches[0].clientX;
+    $(".slider-content").animate({
+      left: -sliderWidth - (xs - xm)
+    }, 1);
+  });
+  $(".slider").on("touchend", function() {
+    if (xs - xm > 0) {
+      moveLeft();
+    } else {
+      moveRight();
+    }
+    autoSlide = setInterval(moveLeft, interval);
+  });
 });
