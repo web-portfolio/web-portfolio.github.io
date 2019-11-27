@@ -60,9 +60,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
   $(".slider-controll-left").click(function() {
     clearInterval(autoSlide);
     $(this).css("pointer-events", "none");
+    $(".slider-content").css("pointer-events", "none");
     moveRight();
     setTimeout(function() {
       $(".slider-controll-left").css("pointer-events", "all");
+      $(".slider-content").css("pointer-events", "all");
       autoSlide = setInterval(moveLeft, interval);
     }, slideTime);
   });
@@ -70,9 +72,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
   $(".slider-controll-right").click(function() {
     clearInterval(autoSlide);
     $(this).css("pointer-events", "none");
+    $(".slider-content").css("pointer-events", "none");
     moveLeft();
     setTimeout(function() {
       $(".slider-controll-right").css("pointer-events", "all");
+      $(".slider-content").css("pointer-events", "all");
       autoSlide = setInterval(moveLeft, interval);
     }, slideTime);
   });
@@ -84,6 +88,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
     clearInterval(autoSlide);
     $(".slider-nav").css("pointer-events", "none");
+    $(".slider-content").css("pointer-events", "none");
 
     if (step > 0) {
       for (var i = 1; i <= step; i++) {
@@ -98,26 +103,38 @@ document.addEventListener("DOMContentLoaded", function(event) {
     setTimeout(function() {
       autoSlide = setInterval(moveLeft, interval);
       $(".slider-nav").css("pointer-events", "all");
+      $(".slider-content").css("pointer-events", "all");
     }, step * slideTime);
   });
 
-  var xs, xm, xe;
-  $(".slider").on("touchstart", function(event) {
+  var xs, xm;
+  $(".slider-content").on("touchstart", function(event) {
+    $(".slider-nav").css("pointer-events", "none");
+    $(".slider-controll-left").css("pointer-events", "none");
+    $(".slider-controll-right").css("pointer-events", "none");
     xs = event.touches[0].clientX;
     clearInterval(autoSlide);
   });
-  $(".slider").on("touchmove", function(event) {
+  $(".slider-content").on("touchmove", function(event) {
     xm = event.touches[0].clientX;
-    $(".slider-content").animate({
+    $(this).animate({
       left: -sliderWidth - (xs - xm)
     }, 1);
   });
-  $(".slider").on("touchend", function() {
-    if (xs - xm > 0) {
+  $(".slider-content").on("touchend", function() {
+    if (xs - xm > 30) {
       moveLeft();
-    } else {
+    } else if ((xs - xm) * -1 > 30) {
       moveRight();
+    } else {
+      $(this).animate({
+        left: -sliderWidth
+      }, slideTime)
     }
+    xm = undefined;
     autoSlide = setInterval(moveLeft, interval);
+    $(".slider-nav").css("pointer-events", "all");
+    $(".slider-controll-left").css("pointer-events", "all");
+    $(".slider-controll-right").css("pointer-events", "all");
   });
 });

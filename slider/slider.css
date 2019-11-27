@@ -7,6 +7,26 @@
   -webkit-user-select: none;
 }
 
+[data-tab="slider-tab-1"], [data-tab="slider-tab-2"], [data-tab="slider-tab-3"], [data-tab="slider-tab-3"] {
+  background-size: cover;
+}
+
+[data-tab="slider-tab-1"] {
+  background-image: url("1.jpg");
+}
+
+[data-tab="slider-tab-2"] {
+  background-image: url("2.jpg");
+}
+
+[data-tab="slider-tab-3"] {
+  background-image: url("3.jpg");
+}
+
+[data-tab="slider-tab-4"] {
+  background-image: url("4.jpg");
+}
+
 .slider * {
   user-select: none;
   -webkit-user-select: none;
