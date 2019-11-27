@@ -1,0 +1,114 @@
+.slider {
+  width: 100%;
+  margin-top: 74px;
+  overflow: hidden;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+[data-tab="slider-tab-1"], [data-tab="slider-tab-2"], [data-tab="slider-tab-3"], [data-tab="slider-tab-4"], [data-tab="slider-tab-5"], [data-tab="slider-tab-6"], [data-tab="slider-tab-7"] {
+  background-size: cover;
+  cursor: pointer;
+}
+
+[data-tab="slider-tab-1"] {
+  background-image: url("../img/slider/bc.jpg");
+}
+
+[data-tab="slider-tab-2"] {
+  background-image: url("../img/slider/wolk.jpg");
+}
+
+[data-tab="slider-tab-3"] {
+  background-image: url("../img/slider/cata.jpg");
+}
+
+[data-tab="slider-tab-4"] {
+  background-image: url("../img/slider/pandaria.jpg");
+}
+
+[data-tab="slider-tab-5"] {
+  background-image: url("../img/slider/wod.jpg");
+}
+
+[data-tab="slider-tab-6"] {
+  background-image: url("../img/slider/legion.jpg");
+}
+
+[data-tab="slider-tab-7"] {
+  background-image: url("../img/slider/boa.jpg");
+}
+
+.slider * {
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.slider-content {
+  height: 100%;
+  position: relative;
+  z-index: 1;
+  display: flex;
+}
+
+.slider-controlls {
+  font-family: "Times New Roman", Times, serif;
+  display: none;
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  justify-content: center;
+  align-items: center;
+  font-size: 60px;
+  padding: 0 8px 5px 8px;
+  cursor: pointer;
+  background-color: #0f0f0f;
+  border: 3px solid #34231a;
+  opacity: 0.9;
+  color: #996019;
+}
+
+.slider-controll-right {
+  right: 0;
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+  border-right: none;
+}
+
+.slider-controll-left {
+  left: 0;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+  border-left: none;
+}
+
+.slider-nav {
+  position: absolute;
+  z-index: 2;
+  right: 2%;
+  bottom: 2%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider-nav>div {
+  width: 50px;
+  height: 7px;
+  background-color: #787878;
+  cursor: pointer;
+  opacity: 0.5;
+  box-shadow: 0px 0px 5px 1px #000;
+}
+
+.slider-nav .slider-active {
+  background-color: #996019 !important;
+  opacity: 1;
+}
+
+.slider-nav>div:not(:last-child) {
+  margin-right: 3px;
+}
