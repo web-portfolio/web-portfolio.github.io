@@ -88,8 +88,9 @@
 .slider-nav {
   position: absolute;
   z-index: 2;
-  right: 2%;
-  bottom: 2%;
+  right: 0;
+  bottom: 0;
+  padding: 5% 2% 2% 2%;
   display: flex;
   justify-content: center;
   align-items: center;
