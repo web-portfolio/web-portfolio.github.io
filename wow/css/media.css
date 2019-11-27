@@ -101,9 +101,6 @@
 }
 
 @media screen and (max-width: 440px) {
-  .footer-nav {
-    margin-top: 60px;
-  }
   .login-form {
     width: 100%;
   }
@@ -118,6 +115,11 @@
   }
   .tab-link {
     width: 28% !important;
+  }
+  .slider-nav {
+    right: 50%;
+    transform: translate(50%);
+    -webkit-transform: translate(50%);
   }
 }
 
@@ -134,5 +136,9 @@
   }
   .free-acc-text p {
     font-size: 13vw;
+  }
+  .slider-nav>div {
+    width: 40px;
+    height: 10px;
   }
 }
