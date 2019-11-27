@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   }
 
   var autoSlide = setInterval(moveLeft, interval);
-  $(document).on("visibilitychange load", function() {
+  $(document).on("visibilitychange", function() {
     if (document.visibilityState == "hidden") {
       clearInterval(autoSlide);
     } else {
