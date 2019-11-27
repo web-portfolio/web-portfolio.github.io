@@ -1,6 +1,13 @@
 document.addEventListener("DOMContentLoaded", function(event) {
+  $(window).on("resize", function() {
+    sliderWidth = $(".slider").width();
+    sliderHeight = $(".slider").height(sliderWidth * 0.4427083333333333);
+    $(".slider-content").width(numOfSlides * sliderWidth).css("left", -sliderWidth);
+    $(".slider-content > div").width(sliderWidth).height(sliderHeight);
+  });
+
   var sliderWidth = $(".slider").width(),
-    sliderHeight = $(".slider").height(),
+    sliderHeight = $(".slider").height(sliderWidth * 0.4427083333333333),
     numOfSlides = $(".slider-content > div").length,
     autoSlide,
     interval = 3500,

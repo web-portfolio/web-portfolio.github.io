@@ -1,13 +1,14 @@
 .slider {
-  width: 500px;
-  height: 250px;
+  /* width: 500px;
+  height: 250px; */
+  width: 100%;
   overflow: hidden;
   position: relative;
   user-select: none;
   -webkit-user-select: none;
 }
 
-[data-tab="slider-tab-1"], [data-tab="slider-tab-2"], [data-tab="slider-tab-3"], [data-tab="slider-tab-3"] {
+[data-tab="slider-tab-1"], [data-tab="slider-tab-2"], [data-tab="slider-tab-3"], [data-tab="slider-tab-4"] {
   background-size: cover;
 }
 
