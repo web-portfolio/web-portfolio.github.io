@@ -25,13 +25,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
     $("head .media").before('<link rel="stylesheet" href="css/simplebar.css">');
   };
 
-  $(".flexslider").flexslider({
-    animation: "slide",
-    start: function(slider) {
-      $("body").removeClass("loading");
-    }
-  });
-
   var grid_last_id = localStorage.getItem("grid_tab_id");
   if (grid_last_id) {
     $(".grid-tabs > div").addClass("inactive");
