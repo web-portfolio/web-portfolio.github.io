@@ -1,9 +1,6 @@
 document.addEventListener("DOMContentLoaded", function(event) {
-  $(window).on("resize", function() {
-    sliderWidth = $(".slider").width();
-    sliderHeight = $(".slider").height(sliderWidth * 0.4427083333333333);
-    $(".slider-content").width(numOfSlides * sliderWidth).css("left", -sliderWidth);
-    $(".slider-content > div").width(sliderWidth).height(sliderHeight);
+  $(window).on("load resize", function() {
+    variables();
   });
 
   function preload(arrayOfImages) {
@@ -21,12 +18,18 @@ document.addEventListener("DOMContentLoaded", function(event) {
     "img/slider/boa.jpg"
   ]);
 
-  var sliderWidth = $(".slider").width(),
-    sliderHeight = $(".slider").height(sliderWidth * 0.4427083333333333),
+  var sliderWidth, sliderHeight,
     numOfSlides = $(".slider-content > div").length,
     autoSlide,
     interval = 4000,
     slideTime = 400;
+
+  function variables() {
+    sliderWidth = $(".slider").width();
+    sliderHeight = $(".slider").height(sliderWidth * 0.4427083333333333);
+    $(".slider-content").width(numOfSlides * sliderWidth).css("left", -sliderWidth);
+    $(".slider-content > div").width(sliderWidth).height(sliderHeight);
+  }
 
   $(".slider-content").width(numOfSlides * sliderWidth).css("left", -sliderWidth);
   $(".slider-content > div").width(sliderWidth).height(sliderHeight);
