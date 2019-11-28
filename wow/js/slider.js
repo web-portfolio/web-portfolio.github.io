@@ -25,8 +25,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
     sliderHeight = $(".slider").height(sliderWidth * 0.4427083333333333),
     numOfSlides = $(".slider-content > div").length,
     autoSlide,
-    interval = 3500,
-    slideTime = 250;
+    interval = 4000,
+    slideTime = 400;
 
   $(".slider-content").width(numOfSlides * sliderWidth).css("left", -sliderWidth);
   $(".slider-content > div").width(sliderWidth).height(sliderHeight);
@@ -43,11 +43,19 @@ document.addEventListener("DOMContentLoaded", function(event) {
   }
 
   function moveLeft() {
+    $(".slider-controll-left").css("pointer-events", "none");
+    $(".slider-controll-right").css("pointer-events", "none");
+    $(".slider-content").css("pointer-events", "none");
+    $(".slider-nav").css("pointer-events", "none");
     $(".slider-content").animate({
       left: -sliderWidth * 2
     }, slideTime, function() {
       $(".slider-content div:first-child").appendTo($(".slider-content"));
       assigneNav();
+      $(".slider-controll-left").css("pointer-events", "all");
+      $(".slider-controll-right").css("pointer-events", "all");
+      $(".slider-content").css("pointer-events", "all");
+      $(".slider-nav").css("pointer-events", "all");
     });
   };
 
