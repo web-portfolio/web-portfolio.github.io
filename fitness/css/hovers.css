@@ -1,3 +1,20 @@
+/* Slider Hovers */
+
+.slider:hover .slider-controlls {
+  display: flex;
+}
+
+.slider-controlls:hover {
+  color: #26253a;
+}
+
+.slider-nav>div:hover {
+  background-color: #26253a;
+}
+
+
+/* Slider Hovers END*/
+
 .nav-right li:hover {
   color: #000;
 }

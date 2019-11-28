@@ -13,13 +13,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
     getMobileOperatingSystem();
   });
 
-  $(".flexslider").flexslider({
-    animation: "slide",
-    start: function(slider) {
-      $("body").removeClass("loading");
-    }
-  });
-
   function resize() {
     var widnowWidth = $(window).width();
     var windowHeight = $(window).height();
