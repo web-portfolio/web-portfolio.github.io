@@ -6,17 +6,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
   function loadElements() {
     $(".top-content").load("header.html .container > *", function() {
       $.getScript("js/header.js");
-
-      $(".flexslider").flexslider({
-        animation: "slide",
-        start: function(slider) {
-          $("body").removeClass("loading");
-        }
-      });
-
+      $.getScript("js/slider.js");
       changeCurrentLi();
     });
-    $("head .media").before('<link rel="stylesheet" href="css/header.css">');    
+    $("head .media").before('<link rel="stylesheet" href="css/header.css">');
+    $("head .media").before('<link rel="stylesheet" href="css/slider.css">');
 
     $(".bottom-banner").load("footer.html .footer-top-content > *");
     $(".footer").load("footer.html .footer-bottom-content > *", function() {

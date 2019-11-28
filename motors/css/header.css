@@ -10,6 +10,7 @@
   background-image: url("../img/home-page-bg.jpg");
   background-position: center;
   background-size: cover;
+  overflow: hidden;
 }
 
 .header img {

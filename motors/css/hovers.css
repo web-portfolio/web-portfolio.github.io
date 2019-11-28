@@ -1,24 +1,15 @@
 /* Slider Hovers */
 
-.flex-container a:hover, .flex-slider a:hover {
-  outline: none;
+.slider:hover .slider-controlls {
+  display: flex;
 }
 
-.flex-control-paging li a:hover {
-  background: #b53636;
-  opacity: 0.5;
-}
-
-.flex-prev:hover, .flex-next:hover, .footer-menu ul li:not(:first-child):hover, .categories-car-names li:hover, .buy-car div:nth-child(2):hover {
+.slider-controlls:hover {
   color: #b53636;
 }
 
-.flexslider:hover .flex-next, .flexslider:hover .flex-prev {
-  display: block;
-}
-
-.slides li img:hover {
-  cursor: pointer;
+.slider-nav>div:hover {
+  background-color: #b53636;
 }
 
 

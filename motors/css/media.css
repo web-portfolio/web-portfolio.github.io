@@ -169,23 +169,20 @@
   .footer-follow>div:not(:last-of-type) {
     margin-right: 10px;
   }
-  .slider-content {
+  .slider-content>div {
     flex-direction: column;
   }
-  .slider-content>div {
+  .slider-content>div>div {
     width: 100%;
     text-align: center;
   }
   .slider-img {
     margin: 20px 0px;
   }
-  .flexslider {
-    width: auto;
-    transform: translateY(-55%);
-    -webkit-transform: translateY(-55%);
-  }
-  .flex-control-nav {
-    bottom: -40px;
+  .slider {
+    width: 100%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
   }
 }
 

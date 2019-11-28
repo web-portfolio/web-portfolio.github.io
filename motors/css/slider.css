@@ -1,53 +1,36 @@
-/*
- * jQuery FlexSlider v2.6.2
- * http://www.woothemes.com/flexslider/
- *
- * Copyright 2012 WooThemes
- * Free to use under the GPLv2 and later license.
- * http://www.gnu.org/licenses/gpl-2.0.html
- *
- * Contributing author: Tyler Smith (@mbmufffin)
- *
- */
-
-
-/* ====================================================================================================================
- * RESETS
- * ====================================================================================================================*/
-
-.slides, .slides>li, .flex-control-nav, .flex-direction-nav {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-
-/* ====================================================================================================================
- * BASE STYLES
- * ====================================================================================================================*/
-
-.flexslider {
-  margin: 0;
-  padding: 0;
+.slider {
   width: 80%;
   max-width: 1132px;
   margin: 0 auto;
-  padding: 0px 40px;
+  overflow: hidden;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  padding-bottom: 40px;
   top: 50%;
-  transform: translateY(-85%);
-  -webkit-transform: translateY(-85%);
+  transform: translateY(-80%);
+  -webkit-transform: translateY(-80%);
 }
 
-.flexslider .slides>li {
-  display: none;
-  -webkit-backface-visibility: hidden;
+.slider * {
+  user-select: none;
+  -webkit-user-select: none;
 }
 
-.slider-content{
+.slider-content {
+  height: 100%;
+  position: relative;
+  z-index: 1;
   display: flex;
 }
 
-.slider-info{
+.slider-content>div {
+  display: flex;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+.slider-info {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -75,99 +58,72 @@
   width: calc(100% - 260px)
 }
 
-h2{
+h2 {
   font-size: 1.3em;
   margin: 10px 0;
 }
 
-h3{
+h3 {
   font-size: 1.1em;
 }
 
-/* ====================================================================================================================
- * DEFAULT THEME
- * ====================================================================================================================*/
-
-.flexslider {
-  position: relative;
-  zoom: 1;
-}
-
-.flexslider .slides {
-  zoom: 1;
-}
-
-.flexslider .slides img {
-  height: auto;
-  -moz-user-select: none;
-}
-
-.flex-control-nav {
-  position: absolute;
-  bottom: -30px;
-  right: 50%;
-  transform: translateX(50%);
-  -webkit-transform: translateX(50%);
-}
-
-.flex-control-nav li {
-  margin: 0 6px;
-  display: inline-block;
-  zoom: 1;
-  *display: inline;
-}
-
-.flex-control-paging li a {
-  width: 50px;
-  height: 7px;
-  display: block;
-  background: #ffffff;
-  opacity: 0.6;
-  cursor: pointer;
-  text-indent: -9999px;
-  margin-right: -9px;
-}
-
-.flex-control-paging li a.flex-active {
-  background: #b53636;
-  opacity: 1;
-  cursor: pointer;
-}
-
-.flex-direction-nav {
-  position: absolute;
-  top: 40%;
-  width: 100%;
-}
-
-.flex-prev, .flex-next {
+.slider-controlls {
+  font-family: "Times New Roman", Times, serif;
   display: none;
   position: absolute;
-  cursor: pointer;
-  text-decoration: none;
+  z-index: 2;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  justify-content: center;
+  align-items: center;
   font-size: 60px;
+  padding: 0 8px 5px 8px;
+  cursor: pointer;
   opacity: 0.9;
-  color: #ffffff;
-  width: 33px;
-  height: 62px;
-  line-height: 55px;
-  transition: .5s;
-  -webkit-transition: .5s;
-  font-family: "Times New Roman", Times, serif;
+  color: #fff;
 }
 
-.flex-prev {
-  border-top-right-radius: 6px;
-  border-bottom-right-radius: 6px;
-  border-left: none;
-  left: -40px;
-}
-
-.flex-next {
-  text-indent: 5px;
+.slider-controll-right {
   right: 0;
   border-top-left-radius: 6px;
   border-bottom-left-radius: 6px;
   border-right: none;
-  right: 40px;
+}
+
+.slider-controll-left {
+  left: 0;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+  border-left: none;
+}
+
+.slider-nav {
+  position: absolute;
+  z-index: 2;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  bottom: 0;
+  padding: 5% 2% 0 2%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider-nav>div {
+  width: 50px;
+  height: 7px;
+  background-color: #fff;
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.slider-nav .slider-active {
+  background-color: #b53636 !important;
+  opacity: 1;
+}
+
+.slider-nav>div:not(:last-child) {
+  margin-right: 3px;
 }
