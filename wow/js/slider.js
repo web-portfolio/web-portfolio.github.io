@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     $(".slider *").css("pointer-events", "all");
   }
 
-  autoSlide = setInterval(moveLeft, interval);
+  // autoSlide = setInterval(moveLeft, interval);
   $(document).on("visibilitychange", function() {
     if (document.visibilityState == "hidden") {
       clearInterval(autoSlide);
@@ -82,7 +82,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
     }, slideTime);
   });
 
-  var test = false;
   $(".slider-nav > div").click(function() {
     var newSlide = $(this).attr("data-number"),
       currentSlide = $(".slider-nav .slider-active").attr("data-number"),
@@ -92,11 +91,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
     if (step > 0) {
       for (var i = 1; i <= step; i++) {
-        test = true;
         moveLeft();
       }
     } else {
-      test = true;
       step = step * -1;
       for (var i = 1; i <= step; i++) {
         moveRight();
@@ -105,7 +102,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
     setTimeout(function() {
       autoSlide = setInterval(moveLeft, interval);
     }, step * slideTime);
-    test = false;
   });
 
   var xs, xm;
