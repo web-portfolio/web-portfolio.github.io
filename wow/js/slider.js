@@ -69,7 +69,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
     var activeSliderId = $(".slider-content .slider-active").attr("data-tab");
     $(".slider-nav>div").removeClass("slider-active");
     $("#" + activeSliderId).addClass("slider-active");
-    $(".slider *").css("pointer-events", "all");
+    if (step > 0) {
+      $(".slider *").css("pointer-events", "none");
+    } else {
+      $(".slider *").css("pointer-events", "all");
+    }
   }
 
   autoSlide = setInterval(moveLeft, interval);
@@ -96,11 +100,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
       autoSlide = setInterval(moveLeft, interval);
     }, slideTime);
   });
-
+  var step
   $(".slider-nav > div").click(function() {
     var newSlide = $(this).attr("data-number"),
-      currentSlide = $(".slider-nav .slider-active").attr("data-number"),
-      step = newSlide - currentSlide;
+      currentSlide = $(".slider-nav .slider-active").attr("data-number");
+    step = newSlide - currentSlide;
 
     clearInterval(autoSlide);
 
@@ -116,6 +120,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     }
     setTimeout(function() {
       autoSlide = setInterval(moveLeft, interval);
+      step = 0;
     }, step * slideTime);
   });
 
