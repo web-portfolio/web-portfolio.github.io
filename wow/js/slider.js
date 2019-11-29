@@ -27,23 +27,18 @@ document.addEventListener("DOMContentLoaded", function(event) {
   }
 
   function moveLeft() {
-    $(".slider-controll-left").css("pointer-events", "none");
-    $(".slider-controll-right").css("pointer-events", "none");
-    $(".slider-content").css("pointer-events", "none");
-    $(".slider-nav").css("pointer-events", "none");
+    $(".slider *").css("pointer-events", "none");
+    console.log("stoped")
     $(".slider-content").animate({
       left: -sliderWidth * 2
     }, slideTime, function() {
       $(".slider-content > div:first-child").appendTo($(".slider-content"));
       assigneNav();
-      $(".slider-controll-left").css("pointer-events", "all");
-      $(".slider-controll-right").css("pointer-events", "all");
-      $(".slider-content").css("pointer-events", "all");
-      $(".slider-nav").css("pointer-events", "all");
     });
   };
 
   function moveRight() {
+    $(".slider *").css("pointer-events", "none");
     $(".slider-content").animate({
       left: 0
     }, slideTime, function() {
@@ -60,9 +55,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
     var activeSliderId = $(".slider-content .slider-active").attr("data-tab");
     $(".slider-nav>div").removeClass("slider-active");
     $("#" + activeSliderId).addClass("slider-active");
+    $(".slider *").css("pointer-events", "all");
+    console.log("started")
   }
 
-  var autoSlide = setInterval(moveLeft, interval);
+  autoSlide = setInterval(moveLeft, interval);
   $(document).on("visibilitychange", function() {
     if (document.visibilityState == "hidden") {
       clearInterval(autoSlide);
@@ -73,42 +70,35 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
   $(".slider-controll-left").click(function() {
     clearInterval(autoSlide);
-    $(this).css("pointer-events", "none");
-    $(".slider-content").css("pointer-events", "none");
     moveRight();
     setTimeout(function() {
-      $(".slider-controll-left").css("pointer-events", "all");
-      $(".slider-content").css("pointer-events", "all");
       autoSlide = setInterval(moveLeft, interval);
     }, slideTime);
   });
 
   $(".slider-controll-right").click(function() {
     clearInterval(autoSlide);
-    $(this).css("pointer-events", "none");
-    $(".slider-content").css("pointer-events", "none");
     moveLeft();
     setTimeout(function() {
-      $(".slider-controll-right").css("pointer-events", "all");
-      $(".slider-content").css("pointer-events", "all");
       autoSlide = setInterval(moveLeft, interval);
     }, slideTime);
   });
 
+  var test = false;
   $(".slider-nav > div").click(function() {
     var newSlide = $(this).attr("data-number"),
       currentSlide = $(".slider-nav .slider-active").attr("data-number"),
       step = newSlide - currentSlide;
 
     clearInterval(autoSlide);
-    $(".slider-nav").css("pointer-events", "none");
-    $(".slider-content").css("pointer-events", "none");
 
     if (step > 0) {
       for (var i = 1; i <= step; i++) {
+        test = true;
         moveLeft();
       }
     } else {
+      test = true;
       step = step * -1;
       for (var i = 1; i <= step; i++) {
         moveRight();
@@ -116,16 +106,13 @@ document.addEventListener("DOMContentLoaded", function(event) {
     }
     setTimeout(function() {
       autoSlide = setInterval(moveLeft, interval);
-      $(".slider-nav").css("pointer-events", "all");
-      $(".slider-content").css("pointer-events", "all");
     }, step * slideTime);
+    test = false;
   });
 
   var xs, xm;
   $(".slider-content").on("touchstart", function(event) {
-    $(".slider-nav").css("pointer-events", "none");
-    $(".slider-controll-left").css("pointer-events", "none");
-    $(".slider-controll-right").css("pointer-events", "none");
+    $(".slider *").css("pointer-events", "none");
     xs = event.touches[0].clientX;
     clearInterval(autoSlide);
   });
@@ -147,8 +134,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
     }
     xm = undefined;
     autoSlide = setInterval(moveLeft, interval);
-    $(".slider-nav").css("pointer-events", "all");
-    $(".slider-controll-left").css("pointer-events", "all");
-    $(".slider-controll-right").css("pointer-events", "all");
+    $(".slider *").css("pointer-events", "all");
   });
 });
