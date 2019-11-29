@@ -28,7 +28,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
   function moveLeft() {
     $(".slider *").css("pointer-events", "none");
-    console.log("stoped")
     $(".slider-content").animate({
       left: -sliderWidth * 2
     }, slideTime, function() {
@@ -56,7 +55,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
     $(".slider-nav>div").removeClass("slider-active");
     $("#" + activeSliderId).addClass("slider-active");
     $(".slider *").css("pointer-events", "all");
-    console.log("started")
   }
 
   autoSlide = setInterval(moveLeft, interval);
