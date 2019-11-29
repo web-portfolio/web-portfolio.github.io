@@ -7,39 +7,6 @@
   -webkit-user-select: none;
 }
 
-[data-tab="slider-tab-1"], [data-tab="slider-tab-2"], [data-tab="slider-tab-3"], [data-tab="slider-tab-4"], [data-tab="slider-tab-5"], [data-tab="slider-tab-6"], [data-tab="slider-tab-7"] {
-  background-size: cover;
-  cursor: pointer;
-}
-
-[data-tab="slider-tab-1"] {
-  background-image: url("../img/slider/bc.jpg");
-}
-
-[data-tab="slider-tab-2"] {
-  background-image: url("../img/slider/wolk.jpg");
-}
-
-[data-tab="slider-tab-3"] {
-  background-image: url("../img/slider/cata.jpg");
-}
-
-[data-tab="slider-tab-4"] {
-  background-image: url("../img/slider/pandaria.jpg");
-}
-
-[data-tab="slider-tab-5"] {
-  background-image: url("../img/slider/wod.jpg");
-}
-
-[data-tab="slider-tab-6"] {
-  background-image: url("../img/slider/legion.jpg");
-}
-
-[data-tab="slider-tab-7"] {
-  background-image: url("../img/slider/boa.jpg");
-}
-
 .slider * {
   user-select: none;
   -webkit-user-select: none;
@@ -50,6 +17,10 @@
   position: relative;
   z-index: 1;
   display: flex;
+}
+
+.slider-content>div img {
+  width: 100%;
 }
 
 .slider-controlls {

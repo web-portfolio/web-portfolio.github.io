@@ -3,32 +3,15 @@ document.addEventListener("DOMContentLoaded", function(event) {
     variables();
   });
 
-  function preload(arrayOfImages) {
-    $(arrayOfImages).each(function() {
-      $("<img/>")[0].src = this;
-    });
-  }
-  preload([
-    "img/slider/bc.jpg",
-    "img/slider/wolk.jpg",
-    "img/slider/cata.jpg",
-    "img/slider/pandaria.jpg",
-    "img/slider/wod.jpg",
-    "img/slider/legion.jpg",
-    "img/slider/boa.jpg"
-  ]);
-
-  var sliderWidth, sliderHeight,
+  var sliderWidth, autoSlide,
     numOfSlides = $(".slider-content > div").length,
-    autoSlide,
     interval = 4000,
     slideTime = 400;
 
   function variables() {
     sliderWidth = $(".slider").width();
-    sliderHeight = $(".slider").height(sliderWidth * 0.4427083333333333);
     $(".slider-content").width(numOfSlides * sliderWidth).css("left", -sliderWidth);
-    $(".slider-content > div").width(sliderWidth).height(sliderHeight);
+    $(".slider-content > div").width(sliderWidth);
   }
 
   $(".slider-content > div:last-child").prependTo($(".slider-content"));
