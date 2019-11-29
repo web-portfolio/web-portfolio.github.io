@@ -3,6 +3,21 @@ document.addEventListener("DOMContentLoaded", function(event) {
     variables();
   });
 
+  function preload(arrayOfImages) {
+    $(arrayOfImages).each(function() {
+      $("<img/>")[0].src = this;
+    });
+  }
+  preload([
+    "img/slider/bc.jpg",
+    "img/slider/wolk.jpg",
+    "img/slider/cata.jpg",
+    "img/slider/pandaria.jpg",
+    "img/slider/wod.jpg",
+    "img/slider/legion.jpg",
+    "img/slider/boa.jpg"
+  ]);
+
   var sliderWidth, autoSlide,
     numOfSlides = $(".slider-content > div").length,
     interval = 4000,
@@ -57,7 +72,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     $(".slider *").css("pointer-events", "all");
   }
 
-  // autoSlide = setInterval(moveLeft, interval);
+  autoSlide = setInterval(moveLeft, interval);
   $(document).on("visibilitychange", function() {
     if (document.visibilityState == "hidden") {
       clearInterval(autoSlide);
