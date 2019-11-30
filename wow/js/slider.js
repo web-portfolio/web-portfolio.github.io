@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     "img/slider/boa.jpg"
   ]);
 
-  var sliderWidth, autoSlide,
+  var sliderWidth, autoSlide, started = false,
     numOfSlides = $(".slider-content > div").length,
     interval = 4000,
     slideTime = 400;
@@ -76,38 +76,65 @@ document.addEventListener("DOMContentLoaded", function(event) {
     }
   }
 
-  autoSlide = setInterval(moveLeft, interval);
+  $.fn.isInViewport = function() {
+    var elementTop = $(this).offset().top,
+      elementBottom = elementTop + $(this).height(),
+      viewportTop = $(window).scrollTop(),
+      viewportBottom = viewportTop + $(window).height();
+    return elementBottom > viewportTop && elementTop < viewportBottom;
+  };
+
+  function sliderStart() {
+    autoSlide = setInterval(moveLeft, interval);
+    started = true;
+  }
+
+  function sliderStop() {
+    clearInterval(autoSlide);
+    started = false;
+  }
+
+  $(window).on("scroll load", function() {
+    if ($(".slider").isInViewport() && started == false) {
+      sliderStart();
+    } else if (($(".slider").isInViewport() && started == true)) {
+      return false;
+    } else {
+      sliderStop();
+    }
+  });
+
   $(document).on("visibilitychange", function() {
     if (document.visibilityState == "hidden") {
-      clearInterval(autoSlide);
-    } else {
-      autoSlide = setInterval(moveLeft, interval);
+      sliderStop();
+      started = false;
+    } else if (document.visibilityState == "visible" && started == false) {
+      sliderStart();
     }
   });
 
   $(".slider-controll-left").click(function() {
-    clearInterval(autoSlide);
+    sliderStop();
     moveRight();
     setTimeout(function() {
-      autoSlide = setInterval(moveLeft, interval);
+      sliderStart();
     }, slideTime);
   });
 
   $(".slider-controll-right").click(function() {
-    clearInterval(autoSlide);
+    sliderStop();
     moveLeft();
     setTimeout(function() {
-      autoSlide = setInterval(moveLeft, interval);
+      sliderStart();
     }, slideTime);
   });
+
   var step
   $(".slider-nav > div").click(function() {
     var newSlide = $(this).attr("data-number"),
       currentSlide = $(".slider-nav .slider-active").attr("data-number");
     step = newSlide - currentSlide;
-
-    clearInterval(autoSlide);
-
+    sliderStop();
     if (step > 0) {
       for (var i = 1; i <= step; i++) {
         moveLeft();
@@ -119,7 +146,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
       }
     }
     setTimeout(function() {
-      autoSlide = setInterval(moveLeft, interval);
+      sliderStart();
       step = 0;
     }, step * slideTime);
   });
@@ -128,7 +155,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   $(".slider-content").on("touchstart", function(event) {
     $(".slider *").css("pointer-events", "none");
     xs = event.touches[0].clientX;
-    clearInterval(autoSlide);
+    sliderStop();
   });
   $(".slider-content").on("touchmove", function(event) {
     xm = event.touches[0].clientX;
@@ -147,7 +174,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
       }, slideTime)
     }
     xm = undefined;
-    autoSlide = setInterval(moveLeft, interval);
+    sliderStart();
     $(".slider *").css("pointer-events", "all");
   });
 });
