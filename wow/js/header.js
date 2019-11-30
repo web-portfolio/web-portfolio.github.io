@@ -6,6 +6,22 @@ $(window).on("resize", function() {
   fixedLoginForm();
 });
 
+function preload(arrayOfImages) {
+  $(arrayOfImages).each(function() {
+    $("<img/>")[0].src = this;
+  });
+}
+preload([
+  "img/ico/buy.png",
+  "img/ico/buy-hover.png",
+  "img/ico/profile.png",
+  "img/ico/profile-hover.png",
+  "img/ico/setup.png",
+  "img/ico/setup-hover.png",
+  "img/nav-logo.png",
+  "img/nav-logo-hover.png"
+]);
+
 function widthResize() {
   var headerWidth = $(".header").width();
   $(".nav-bar").outerWidth(headerWidth);
@@ -85,7 +101,7 @@ $(".lp-email-send-bt").click(function() {
 
 $(".games").click(function() {
   $(this).css("pointer-events", "none");
-  $(".buy-games").slideToggle(function(){
+  $(".buy-games").slideToggle(function() {
     $(".games").css("pointer-events", "all");
   });
   $(this).toggleClass("games-active");
@@ -95,7 +111,7 @@ $(".games").click(function() {
 
 $(".profile").click(function() {
   $(this).css("pointer-events", "none");
-  $(".login-form").slideToggle(function(){
+  $(".login-form").slideToggle(function() {
     $(".profile").css("pointer-events", "all");
   });
   $(this).toggleClass("profile-active");
