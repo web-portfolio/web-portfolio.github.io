@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     variables();
   });
 
-  var sliderWidth, autoSlide,
+  var sliderWidth, autoSlide, started = false,
     numOfSlides = $(".slider-content > div").length,
     interval = 4000,
     slideTime = 400;
@@ -27,23 +27,17 @@ document.addEventListener("DOMContentLoaded", function(event) {
   }
 
   function moveLeft() {
-    $(".slider-controll-left").css("pointer-events", "none");
-    $(".slider-controll-right").css("pointer-events", "none");
-    $(".slider-content").css("pointer-events", "none");
-    $(".slider-nav").css("pointer-events", "none");
+    $(".slider *").css("pointer-events", "none");
     $(".slider-content").animate({
       left: -sliderWidth * 2
     }, slideTime, function() {
       $(".slider-content > div:first-child").appendTo($(".slider-content"));
       assigneNav();
-      $(".slider-controll-left").css("pointer-events", "all");
-      $(".slider-controll-right").css("pointer-events", "all");
-      $(".slider-content").css("pointer-events", "all");
-      $(".slider-nav").css("pointer-events", "all");
     });
   };
 
   function moveRight() {
+    $(".slider *").css("pointer-events", "none");
     $(".slider-content").animate({
       left: 0
     }, slideTime, function() {
@@ -60,50 +54,72 @@ document.addEventListener("DOMContentLoaded", function(event) {
     var activeSliderId = $(".slider-content .slider-active").attr("data-tab");
     $(".slider-nav>div").removeClass("slider-active");
     $("#" + activeSliderId).addClass("slider-active");
+    if (step > 0) {
+      $(".slider *").css("pointer-events", "none");
+    } else {
+      $(".slider *").css("pointer-events", "all");
+    }
   }
 
-  var autoSlide = setInterval(moveLeft, interval);
+  $.fn.isInViewport = function() {
+    var elementTop = $(this).offset().top,
+      elementBottom = elementTop + $(this).height(),
+      viewportTop = $(window).scrollTop(),
+      viewportBottom = viewportTop + $(window).height();
+    return elementBottom > viewportTop && elementTop < viewportBottom;
+  };
+
+  function sliderStart() {
+    autoSlide = setInterval(moveLeft, interval);
+    started = true;
+  }
+
+  function sliderStop() {
+    clearInterval(autoSlide);
+    started = false;
+  }
+
+  $(window).on("scroll load", function() {
+    if ($(".slider").isInViewport() && started == false) {
+      sliderStart();
+    } else if (($(".slider").isInViewport() && started == true)) {
+      return false;
+    } else {
+      sliderStop();
+    }
+  });
+
   $(document).on("visibilitychange", function() {
     if (document.visibilityState == "hidden") {
-      clearInterval(autoSlide);
-    } else {
-      autoSlide = setInterval(moveLeft, interval);
+      sliderStop();
+      started = false;
+    } else if (document.visibilityState == "visible" && started == false) {
+      sliderStart();
     }
   });
 
   $(".slider-controll-left").click(function() {
-    clearInterval(autoSlide);
-    $(this).css("pointer-events", "none");
-    $(".slider-content").css("pointer-events", "none");
+    sliderStop();
     moveRight();
     setTimeout(function() {
-      $(".slider-controll-left").css("pointer-events", "all");
-      $(".slider-content").css("pointer-events", "all");
-      autoSlide = setInterval(moveLeft, interval);
+      sliderStart();
     }, slideTime);
   });
 
   $(".slider-controll-right").click(function() {
-    clearInterval(autoSlide);
-    $(this).css("pointer-events", "none");
-    $(".slider-content").css("pointer-events", "none");
+    sliderStop();
     moveLeft();
     setTimeout(function() {
-      $(".slider-controll-right").css("pointer-events", "all");
-      $(".slider-content").css("pointer-events", "all");
-      autoSlide = setInterval(moveLeft, interval);
+      sliderStart();
     }, slideTime);
   });
 
+  var step
   $(".slider-nav > div").click(function() {
     var newSlide = $(this).attr("data-number"),
-      currentSlide = $(".slider-nav .slider-active").attr("data-number"),
-      step = newSlide - currentSlide;
-
-    clearInterval(autoSlide);
-    $(".slider-nav").css("pointer-events", "none");
-    $(".slider-content").css("pointer-events", "none");
-
+      currentSlide = $(".slider-nav .slider-active").attr("data-number");
+    step = newSlide - currentSlide;
+    sliderStop();
     if (step > 0) {
       for (var i = 1; i <= step; i++) {
         moveLeft();
@@ -115,19 +131,16 @@ document.addEventListener("DOMContentLoaded", function(event) {
       }
     }
     setTimeout(function() {
-      autoSlide = setInterval(moveLeft, interval);
-      $(".slider-nav").css("pointer-events", "all");
-      $(".slider-content").css("pointer-events", "all");
+      sliderStart();
+      step = 0;
     }, step * slideTime);
   });
 
   var xs, xm;
   $(".slider-content").on("touchstart", function(event) {
-    $(".slider-nav").css("pointer-events", "none");
-    $(".slider-controll-left").css("pointer-events", "none");
-    $(".slider-controll-right").css("pointer-events", "none");
+    $(".slider *").css("pointer-events", "none");
     xs = event.touches[0].clientX;
-    clearInterval(autoSlide);
+    sliderStop();
   });
   $(".slider-content").on("touchmove", function(event) {
     xm = event.touches[0].clientX;
@@ -146,9 +159,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
       }, slideTime)
     }
     xm = undefined;
-    autoSlide = setInterval(moveLeft, interval);
-    $(".slider-nav").css("pointer-events", "all");
-    $(".slider-controll-left").css("pointer-events", "all");
-    $(".slider-controll-right").css("pointer-events", "all");
+    sliderStart();
+    $(".slider *").css("pointer-events", "all");
   });
 });

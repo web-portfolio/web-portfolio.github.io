@@ -50,6 +50,16 @@ document.addEventListener("DOMContentLoaded", function(event) {
     }
   }
 
+  function preload(arrayOfImages) {
+    $(arrayOfImages).each(function() {
+      $("<img/>")[0].src = this;
+    });
+  }
+  preload([
+    "img/nav-bg-1.jpg",
+    "img/nav-bg-2.jpg"
+  ]);
+
   function chnageBackground() {
     var img_array = ["img/nav-bg-1.jpg", "img/nav-bg-2.jpg"],
       currentIndex = 0,
