@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", function(event) {
   $(window).on("load", function() {
-    chnageBackground();
     $(".loader-bg").fadeOut(500);
   });
 
@@ -60,44 +59,72 @@ document.addEventListener("DOMContentLoaded", function(event) {
     "img/nav-bg-2.jpg"
   ]);
 
-  function chnageBackground() {
-    var img_array = ["img/nav-bg-1.jpg", "img/nav-bg-2.jpg"],
-      currentIndex = 0,
-      nextIndex = 1,
-      fadeTime = 1000,
-      interval = 4000;
+  $.fn.isInViewport = function() {
+    var elementTop = $(this).offset().top,
+      elementBottom = elementTop + $(this).height(),
+      viewportTop = $(window).scrollTop(),
+      viewportBottom = viewportTop + $(window).height();
+    return elementBottom > viewportTop && elementTop < viewportBottom;
+  };
 
-    function assignBackgrounds() {
-      for (var i = 0; i < img_array.length; i++) {
-        $(".bg-container").append("<div class='bg-item-" + i + "'></div>");
-        $(".bg-item-" + i).css({
-          "background": "linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(" + img_array[i] + ")"
-        });
-        if (i == 0) {
-          $(".bg-item-" + i).show();
-        } else {
-          $(".bg-item-" + i).hide();
-        }
-      }
-    }
+  var img_array = ["img/nav-bg-1.jpg", "img/nav-bg-2.jpg"],
+    started = false,
+    autoSlide,
+    currentIndex = 0,
+    nextIndex = 1,
+    fadeTime = 1000,
+    interval = 4000;
 
-    function changeVisibility() {
-      $(".bg-item-" + currentIndex).fadeOut(fadeTime);
-      $(".bg-item-" + nextIndex).fadeIn(fadeTime);
-      currentIndex = nextIndex;
-      nextIndex = (nextIndex + 1) % img_array.length;
-    }
-
-    assignBackgrounds();
-    var autoStop = setInterval(changeVisibility, interval);
-    $(document).on("visibilitychange", function() {
-      if (document.visibilityState == "hidden") {
-        clearInterval(autoStop);
+  function assignBackgrounds() {
+    for (var i = 0; i < img_array.length; i++) {
+      $(".bg-container").append("<div class='bg-item-" + i + "'></div>");
+      $(".bg-item-" + i).css({
+        "background": "linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(" + img_array[i] + ")"
+      });
+      if (i == 0) {
+        $(".bg-item-" + i).show();
       } else {
-        autoStop = setInterval(changeVisibility, interval);
+        $(".bg-item-" + i).hide();
       }
-    });
+    }
   }
+  assignBackgrounds();
+
+  function changeVisibility() {
+    $(".bg-item-" + currentIndex).fadeOut(fadeTime);
+    $(".bg-item-" + nextIndex).fadeIn(fadeTime);
+    currentIndex = nextIndex;
+    nextIndex = (nextIndex + 1) % img_array.length;
+  }
+
+  function sliderStart() {
+    autoSlide = setInterval(changeVisibility, interval);
+    started = true;
+  }
+
+  function sliderStop() {
+    clearInterval(autoSlide);
+    started = false;
+  }
+
+  $(window).on("scroll load", function() {
+    if ($(".bg-container").isInViewport() && started == false) {
+      sliderStart();
+    } else if (($(".bg-container").isInViewport() && started == true)) {
+      return false;
+    } else {
+      sliderStop();
+    }
+  });
+
+  $(document).on("visibilitychange", function() {
+    if (document.visibilityState == "hidden") {
+      sliderStop();
+      started = false;
+    } else if (document.visibilityState == "visible" && started == false) {
+      sliderStart();
+    }
+  });
 
   var navHeight = $(".navigation").height();
 
