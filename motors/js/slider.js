@@ -27,6 +27,7 @@ for (var i = 1; i <= numOfSlides; i++) {
 }
 
 function moveLeft() {
+  sliderStop();
   $(".slider *").css("pointer-events", "none");
   $(".slider-content").animate({
     left: -sliderWidth * 2
@@ -37,6 +38,7 @@ function moveLeft() {
 };
 
 function moveRight() {
+  sliderStop();
   $(".slider *").css("pointer-events", "none");
   $(".slider-content").animate({
     left: 0
@@ -58,6 +60,7 @@ function assigneNav() {
     $(".slider *").css("pointer-events", "none");
   } else {
     $(".slider *").css("pointer-events", "all");
+    sliderStart();
   }
 }
 
@@ -72,14 +75,12 @@ $.fn.isInViewport = function() {
 function sliderStart() {
   autoSlide = setInterval(moveLeft, interval);
   started = true;
-  console.log("start")
 }
 sliderStart();
 
 function sliderStop() {
   clearInterval(autoSlide);
   started = false;
-  console.log("stop")
 }
 
 $(window).on("scroll", function() {
@@ -102,19 +103,11 @@ $(document).on("visibilitychange", function() {
 });
 
 $(".slider-controll-left").click(function() {
-  sliderStop();
   moveRight();
-  setTimeout(function() {
-    sliderStart();
-  }, slideTime);
 });
 
 $(".slider-controll-right").click(function() {
-  sliderStop();
   moveLeft();
-  setTimeout(function() {
-    sliderStart();
-  }, slideTime);
 });
 
 var step
@@ -122,7 +115,6 @@ $(".slider-nav > div").click(function() {
   var newSlide = $(this).attr("data-number"),
     currentSlide = $(".slider-nav .slider-active").attr("data-number");
   step = newSlide - currentSlide;
-  sliderStop();
   if (step > 0) {
     for (var i = 1; i <= step; i++) {
       moveLeft();
@@ -134,14 +126,12 @@ $(".slider-nav > div").click(function() {
     }
   }
   setTimeout(function() {
-    sliderStart();
     step = 0;
   }, step * slideTime);
 });
 
 var xs, xm;
 $(".slider-content").on("touchstart", function(event) {
-  $(".slider *").css("pointer-events", "none");
   xs = event.touches[0].clientX;
   sliderStop();
 });
@@ -162,6 +152,4 @@ $(".slider-content").on("touchend", function() {
     }, slideTime)
   }
   xm = undefined;
-  sliderStart();
-  $(".slider *").css("pointer-events", "all");
 });
