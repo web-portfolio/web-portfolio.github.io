@@ -27,7 +27,6 @@ for (var i = 1; i <= numOfSlides; i++) {
 }
 
 function moveLeft() {
-  $(".slider *").css("pointer-events", "none");
   $(".slider-content").animate({
     left: -sliderWidth * 2
   }, slideTime, function() {
@@ -37,7 +36,6 @@ function moveLeft() {
 };
 
 function moveRight() {
-  $(".slider *").css("pointer-events", "none");
   $(".slider-content").animate({
     left: 0
   }, slideTime, function() {
@@ -54,11 +52,6 @@ function assigneNav() {
   var activeSliderId = $(".slider-content .slider-active").attr("data-tab");
   $(".slider-nav>div").removeClass("slider-active");
   $("#" + activeSliderId).addClass("slider-active");
-  if (step > 0) {
-    $(".slider *").css("pointer-events", "none");
-  } else {
-    $(".slider *").css("pointer-events", "all");
-  }
 }
 
 $.fn.isInViewport = function() {
@@ -71,15 +64,15 @@ $.fn.isInViewport = function() {
 
 function sliderStart() {
   autoSlide = setInterval(moveLeft, interval);
+  $(".slider *").css("pointer-events", "all");
   started = true;
-  console.log("start")
 }
-sliderStart()
+sliderStart();
 
 function sliderStop() {
   clearInterval(autoSlide);
+  $(".slider *").css("pointer-events", "none");
   started = false;
-  console.log("stop")
 }
 
 function toggleScroll() {
@@ -91,7 +84,7 @@ function toggleScroll() {
     sliderStop();
   }
 }
-$(window).on("scroll", toggleScroll);
+$(window).on("scroll load", toggleScroll);
 
 $(document).on("visibilitychange", function() {
   if (document.visibilityState == "hidden") {
@@ -118,11 +111,10 @@ $(".slider-controll-right").click(function() {
   }, slideTime);
 });
 
-var step
 $(".slider-nav > div").click(function() {
   var newSlide = $(this).attr("data-number"),
-    currentSlide = $(".slider-nav .slider-active").attr("data-number");
-  step = newSlide - currentSlide;
+    currentSlide = $(".slider-nav .slider-active").attr("data-number"),
+    step = newSlide - currentSlide;
   sliderStop();
   if (step > 0) {
     for (var i = 1; i <= step; i++) {
@@ -136,7 +128,6 @@ $(".slider-nav > div").click(function() {
   }
   setTimeout(function() {
     sliderStart();
-    step = 0;
   }, step * slideTime);
 });
 
@@ -145,7 +136,6 @@ $(".slider-content").on("touchstart", function(event) {
   xs = event.touches[0].clientX;
   sliderStop();
   $(window).off("scroll", toggleScroll);
-
 });
 $(".slider-content").on("touchmove", function(event) {
   xm = event.touches[0].clientX;
