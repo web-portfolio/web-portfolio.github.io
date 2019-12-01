@@ -103,13 +103,15 @@ body * {
   opacity: 0.85;
 }
 
-.title-paragraph, .title-paragraph-wide {
+.title-paragraph {
   border: 3px solid #34231a;
   border-bottom-left-radius: 50px;
   border-bottom-right-radius: 50px;
   font-size: 1.2em;
   padding: 5px;
-  color: #c1b575
+  color: #c1b575;
+  text-align: center;
+  margin-top: 10px
 }
 
 .patch-btn-content {
@@ -180,11 +182,6 @@ body * {
 
 .tabs .current {
   color: #c1b575
-}
-
-.title-paragraph-wide {
-  text-align: center;
-  margin-top: 10px
 }
 
 .tab-link {

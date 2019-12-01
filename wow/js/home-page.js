@@ -170,6 +170,40 @@ document.addEventListener("DOMContentLoaded", function(event) {
     }
   });
 
+  function appendText(takeTaxt, insertText) {
+    var array = [];
+    for (var i = 0; i < takeTaxt.length; i++) {
+      array.push(takeTaxt[i]);
+    }
+    for (var i = 0; i < insertText.length; i++) {
+      $(insertText[i]).text($(array[i]).text());
+    }
+  }
+  appendText($(".bc-btn"), $(".bc-btn-append"));
+  appendText($(".wotlk-btn"), $(".wotlk-btn-append"));
+  appendText($(".cata-btn"), $(".cata-btn-append"));
+  appendText($(".pandaria-btn"), $(".pandaria-btn-append"));
+  appendText($(".wod-btn"), $(".wod-btn-append"));
+  appendText($(".legion-btn"), $(".legion-btn-append"));
+  appendText($(".bfa-btn"), $(".bfa-btn-append"));
+
+  function appendContent(takeContent, insertContent) {
+    var array = [];
+    for (var i = 0; i < takeContent.length; i++) {
+      array.push(takeContent[i]);
+    }
+    for (var i = 0; i < insertContent.length; i++) {
+      $(array[i]).contents().clone().appendTo($(insertContent[i]));
+    }
+  }
+  appendContent($(".bc-text"), $(".bc-text-append"));
+  appendContent($(".wotlk-text"), $(".wotlk-text-append"));
+  appendContent($(".cata-text"), $(".cata-text-append"));
+  appendContent($(".pandaria-text"), $(".pandaria-text-append"));
+  appendContent($(".wod-text"), $(".wod-text-append"));
+  appendContent($(".legion-text"), $(".legion-text-append"));
+  appendContent($(".bfa-text"), $(".bfa-text-append"));
+
   $(".close-trailer-btn").click(function() {
     $(this).next().prop("src", "");
     $(this).toggle();
