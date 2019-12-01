@@ -73,6 +73,7 @@ function sliderStart() {
   autoSlide = setInterval(moveLeft, interval);
   started = true;
 }
+sliderStart();
 
 function sliderStop() {
   clearInterval(autoSlide);
@@ -88,7 +89,6 @@ $(window).on("scroll", function() {
     sliderStop();
   }
 });
-sliderStart();
 
 $(document).on("visibilitychange", function() {
   if (document.visibilityState == "hidden") {
