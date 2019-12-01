@@ -23,12 +23,10 @@ $(".hamburger").click(function() {
 function mobOverfllow() {
   if ($(".hamburger").hasClass("hamburger-active") && $(".hamburger").height() > 0) {
     $("body").css("overflowY", "hidden");
-    $(document).on("touchmove", touchPreven, { passive: false });
-    // document.addEventListener("touchmove", touchPreven, { passive: false });
+    document.addEventListener("touchmove", touchPreven, { passive: false });
   } else {
     $("body").css("overflowY", "auto");
-    $(document).off("touchmove", touchPreven);
-    // document.removeEventListener("touchmove", touchPreven);
+    document.removeEventListener("touchmove", touchPreven);
   }
 };
 
