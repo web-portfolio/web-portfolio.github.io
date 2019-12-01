@@ -130,15 +130,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
   function fixedNav() {
     if ($(window).scrollTop() > 40) {
-      $(".navigation").stop(true, false).animate({
-        "opacity": "1",
-        "top": "0"
-      });
+      $(".navigation").slideDown(300);
     } else {
-      $(".navigation").stop(true, false).animate({
-        "opacity": "0",
-        "top": -navHeight
-      });
+      $(".navigation").slideUp(300);
     }
   }
 
