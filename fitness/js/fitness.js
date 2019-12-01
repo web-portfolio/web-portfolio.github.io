@@ -130,9 +130,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
   function fixedNav() {
     if ($(window).scrollTop() > 40) {
-      $(".navigation").slideDown(300);
+      $(".navigation").addClass("nav-slide-down");
     } else {
-      $(".navigation").slideUp(300);
+      $(".navigation").removeClass("nav-slide-down");
     }
   }
 
