@@ -72,12 +72,14 @@ $.fn.isInViewport = function() {
 function sliderStart() {
   autoSlide = setInterval(moveLeft, interval);
   started = true;
+  console.log("start")
 }
 sliderStart()
 
 function sliderStop() {
   clearInterval(autoSlide);
   started = false;
+  console.log("stop")
 }
 
 function toggleScroll() {
@@ -140,7 +142,6 @@ $(".slider-nav > div").click(function() {
 
 var xs, xm;
 $(".slider-content").on("touchstart", function(event) {
-  $(".slider *").css("pointer-events", "none");
   xs = event.touches[0].clientX;
   sliderStop();
   $(window).off("scroll", toggleScroll);
@@ -165,5 +166,4 @@ $(".slider-content").on("touchend", function() {
   xm = undefined;
   sliderStart();
   $(window).on("scroll", toggleScroll);
-  $(".slider *").css("pointer-events", "all");
 });
