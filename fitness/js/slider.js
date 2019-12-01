@@ -79,7 +79,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     started = false;
   }
 
-  $(window).on("scroll load", function() {
+  function toggleScroll() {
     if ($(".slider").isInViewport() && started == false) {
       sliderStart();
     } else if (($(".slider").isInViewport() && started == true)) {
@@ -87,7 +87,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
     } else {
       sliderStop();
     }
-  });
+  }
+  $(window).on("scroll load", toggleScroll)
 
   $(document).on("visibilitychange", function() {
     if (document.visibilityState == "hidden") {
@@ -141,6 +142,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     $(".slider *").css("pointer-events", "none");
     xs = event.touches[0].clientX;
     sliderStop();
+    $(window).off("scroll", toggleScroll);
   });
   $(".slider-content").on("touchmove", function(event) {
     xm = event.touches[0].clientX;
@@ -160,6 +162,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     }
     xm = undefined;
     sliderStart();
+    $(window).on("scroll", toggleScroll);
     $(".slider *").css("pointer-events", "all");
   });
 });
