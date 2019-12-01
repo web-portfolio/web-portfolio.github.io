@@ -42,6 +42,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   }
 
   function moveLeft() {
+    $(".slider *").css("pointer-events", "none");
     $(".slider-content").animate({
       left: -sliderWidth * 2
     }, slideTime, function() {
@@ -51,6 +52,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   };
 
   function moveRight() {
+    $(".slider *").css("pointer-events", "none");
     $(".slider-content").animate({
       left: 0
     }, slideTime, function() {
@@ -67,6 +69,13 @@ document.addEventListener("DOMContentLoaded", function(event) {
     var activeSliderId = $(".slider-content .slider-active").attr("data-tab");
     $(".slider-nav>div").removeClass("slider-active");
     $("#" + activeSliderId).addClass("slider-active");
+    if (step > 0) {
+      setTimeout(function() {
+        $(".slider *").css("pointer-events", "all");
+      }, step * slideTime)
+    } else {
+      $(".slider *").css("pointer-events", "all");
+    }
   }
 
   $.fn.isInViewport = function() {
@@ -125,10 +134,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
     }, slideTime);
   });
 
+  var step;
   $(".slider-nav > div").click(function() {
     var newSlide = $(this).attr("data-number"),
-      currentSlide = $(".slider-nav .slider-active").attr("data-number"),
-      step = newSlide - currentSlide;
+      currentSlide = $(".slider-nav .slider-active").attr("data-number");
+    step = newSlide - currentSlide;
     sliderStop();
     if (step > 0) {
       for (var i = 1; i <= step; i++) {
@@ -142,6 +152,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     }
     setTimeout(function() {
       sliderStart();
+      step = 0;
     }, step * slideTime);
   });
 
