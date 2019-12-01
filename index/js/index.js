@@ -8,6 +8,21 @@ document.addEventListener("DOMContentLoaded", function(event) {
     getMobileOperatingSystem();
   });
 
+  function preload(arrayOfImages) {
+    $(arrayOfImages).each(function() {
+      $("<img/>")[0].src = this;
+    });
+  }
+  preload([
+    "img/bg-motors.jpg",
+    "img/bg-fitness.jpg",
+    "img/bg-wow.jpg",
+    "img/bg-liga.jpg",
+    "img/bg-app.jpg",
+    "img/bg-sport.jpg",
+    "img/bg-casino.jpg"
+  ]);
+
   $(document).on("keydown", function(e) {
     if ((e.metaKey || e.altKey) && (String.fromCharCode(e.which).toLowerCase() === "h")) {
       $(".landings").toggle();
