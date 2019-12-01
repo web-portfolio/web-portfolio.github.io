@@ -16,6 +16,10 @@
 
 /* Slider Hovers END*/
 
+.start-trailer-btn:hover, .close-trailer-btn:hover {
+  background-color: #FF0000;
+}
+
 .tabs li:hover, .months li:hover, .countries li:hover, .questions li:hover {
   background: #1e1e1e
 }

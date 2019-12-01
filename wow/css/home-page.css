@@ -331,7 +331,9 @@ body * {
   position: absolute;
   color: white;
   font-size: 2em;
-  background-color: #FF0000;
+  background-color: #996019;
+  transition: 1s;
+  -webkit-transition: 1s;
   border-radius: 10px;
   width: 80px;
   top: 50%;
@@ -347,7 +349,9 @@ body * {
   position: absolute;
   color: white;
   font-size: 1em;
-  background-color: #FF0000;
+  background-color: #996019;
+  transition: 1s;
+  -webkit-transition: 1s;
   padding: 3px 5px 3px 5px;
   border-radius: 0px;
   top: 0px;
