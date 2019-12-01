@@ -139,17 +139,11 @@ $(".slider-nav > div").click(function() {
   }, step * slideTime);
 });
 
-function touchPreven(e) {
-  e.preventDefault();
-}
-
 var xs, xm;
 $(".slider-content").on("touchstart", function(event) {
   $(".slider *").css("pointer-events", "none");
   xs = event.touches[0].clientX;
   sliderStop();
-  $("body").css("overflowY", "hidden");
-  document.addEventListener("touchmove", touchPreven, { passive: false });
 });
 $(".slider-content").on("touchmove", function(event) {
   xm = event.touches[0].clientX;
@@ -169,7 +163,5 @@ $(".slider-content").on("touchend", function() {
   }
   xm = undefined;
   sliderStart();
-  $("body").css("overflowY", "auto");
-  document.removeEventListener("touchmove", touchPreven);
   $(".slider *").css("pointer-events", "all");
 });
