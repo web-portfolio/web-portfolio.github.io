@@ -142,23 +142,17 @@ $(".slider-nav > div").click(function() {
   }, step * slideTime);
 });
 
-var xs, xm, ys, ym;
+var xs, xm;
 $(".slider-content").on("touchstart", function(event) {
   xs = event.touches[0].clientX;
-  ys = event.touches[0].clientY;
   sliderStop();
   $(window).off("scroll", toggleScroll);
 });
 $(".slider-content").on("touchmove", function(event) {
   xm = event.touches[0].clientX;
-  ym = event.touches[0].clientY;
-  if (Math.abs(ys - ym) > 30) {
-    console.log(ys - ym)
-  } else {
-    $(this).animate({
-      left: -sliderWidth - (xs - xm)
-    }, 1);
-  }
+  $(this).animate({
+    left: -sliderWidth - (xs - xm)
+  }, 1);
 });
 $(".slider-content").on("touchend", function() {
   if (xs - xm > 30) {
