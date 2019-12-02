@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", function(event) {
   $(window).on("load", function() {
     $(".loader-bg").fadeOut(500);
+    test();
   });
 
   $(window).on("resize", function() {
@@ -11,6 +12,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
     resize();
     getMobileOperatingSystem();
   });
+
+  function test() {
+    var x = ($(window).height() - ($(".nav-map li").height() * 6 + 50)) / 1.35;
+    $(".nav-map").height(x);
+  }
 
   function resize() {
     var widnowWidth = $(window).width();
