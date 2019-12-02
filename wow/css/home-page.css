@@ -329,19 +329,41 @@ body * {
 .start-trailer-btn {
   cursor: pointer;
   position: absolute;
-  color: white;
-  font-size: 2em;
   background-color: #996019;
+  border-radius: 50% / 10%;
+  width: 61px;
+  height: 48px;
+  text-align: center;
   transition: 1s;
   -webkit-transition: 1s;
-  border-radius: 10px;
-  width: 80px;
   top: 50%;
   left: 50%;
-  margin-top: -23.5px;
-  margin-left: -40px;
-  padding: 5px 0px 5px 3px;
-  box-sizing: border-box;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+}
+
+.start-trailer-btn::before {
+  background: inherit;
+  border-radius: 5% / 50%;
+  content: "";
+  position: absolute;
+  top: 9%;
+  bottom: 9%;
+  right: -5%;
+  left: -5%;
+}
+
+.start-trailer-btn::after {
+  border-style: solid;
+  content: "";
+  font-size: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  border-width: 10px 0 10px 15px;
+  border-color: transparent transparent transparent rgb(255, 255, 255);
 }
 
 .close-trailer-btn {
