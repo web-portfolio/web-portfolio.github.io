@@ -14,13 +14,13 @@ document.addEventListener("DOMContentLoaded", function(event) {
     });
   }
   preload([
-    "img/bg-motors.jpg",
-    "img/bg-fitness.jpg",
-    "img/bg-wow.jpg",
-    "img/bg-liga.jpg",
-    "img/bg-app.jpg",
-    "img/bg-sport.jpg",
-    "img/bg-casino.jpg"
+    "index/img/bg-motors.jpg",
+    "index/img/bg-fitness.jpg",
+    "index/img/bg-wow.jpg",
+    "index/img/bg-liga.jpg",
+    "index/img/bg-app.jpg",
+    "index/img/bg-sport.jpg",
+    "index/img/bg-casino.jpg"
   ]);
 
   $(document).on("keydown", function(e) {
