@@ -1,2 +1,4 @@
 fitness side nav map
 on scroll lock slider X
+
+yt icon and buttons
