@@ -8,9 +8,9 @@ $(window).on("resize", function() {
 
 $(window).scroll(function() {
   if ($(this).scrollTop() >= 250) {
-    $(".back-to-top").fadeIn(500)
+    $(".back-to-top").stop(true, false).fadeIn(500)
   } else {
-    $(".back-to-top").fadeOut(500)
+    $(".back-to-top").stop(true, false).fadeOut(500)
   }
 });
 
