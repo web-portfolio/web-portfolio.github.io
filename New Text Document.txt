@@ -1,3 +1,2 @@
 fitness side nav map
 on scroll lock slider X
-back to top
