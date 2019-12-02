@@ -171,11 +171,10 @@ body * {
   position: fixed;
   z-index: 7;
   right: 0;
-  /* top: 50%;
+  top: 50%;
   transform: translateY(-50%);
   -webkit-transform: translateY(-50%);
-  padding: 10px; */
-  bottom: 0;
+  padding: 10px;
 }
 
 .nav-map li {
