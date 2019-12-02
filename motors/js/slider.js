@@ -142,28 +142,19 @@ $(".slider-nav > div").click(function() {
   }, step * slideTime);
 });
 
-
 var xs, xm;
-
-function test(event) {
-  xm = event.touches[0].clientX;
-  $(this).animate({
-    left: -sliderWidth - (xs - xm)
-  }, 1);
-}
-
 $(".slider-content").on("touchstart", function(event) {
   xs = event.touches[0].clientX;
   sliderStop();
   $(window).off("scroll", toggleScroll);
-  $(window).on("scroll", function() {
-    $(".slider-content").off("touchmove", test);
-  });
 });
-$(".slider-content").on("touchmove", test);
+$(".slider-content").on("touchmove", function(event) {
+  xm = event.touches[0].clientX;
+  $(this).animate({
+    left: -sliderWidth - (xs - xm)
+  }, 1);
+});
 $(".slider-content").on("touchend", function() {
-  $(".slider-content").on("touchmove", test);
-
   if (xs - xm > 30) {
     moveLeft();
   } else if ((xs - xm) * -1 > 30) {
