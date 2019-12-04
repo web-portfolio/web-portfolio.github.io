@@ -4,7 +4,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
   });
 
   $(window).on("load resize", function() {
-    topResize();
     gameInfoResize();
   });
 
@@ -22,11 +21,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
     });
     $("head .media").before('<link rel="stylesheet" href="css/footer.css">');
     $("head .media").before('<link rel="stylesheet" href="css/simplebar.css">');
-  };
-
-  function topResize() {
-    var topImgH = $(".top-image img").height();
-    $(".top-image").height(topImgH);
   };
 
   function gameInfoResize() {

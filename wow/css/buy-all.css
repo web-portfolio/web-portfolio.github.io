@@ -79,10 +79,6 @@ body * {
 
 .top-image img {
   max-width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
   margin: 0 auto;
   border-bottom: 5px solid #34231a;
   border-bottom-left-radius: 50px;
