@@ -1,4 +1,4 @@
-$(window).on("load resize", function() {
+$(window).on("resize", function() {
   variables();
 });
 
@@ -76,7 +76,6 @@ function sliderStart() {
   $(".slider *").css("pointer-events", "all");
   started = true;
 }
-sliderStart();
 
 function sliderStop() {
   clearInterval(autoSlide);
@@ -93,7 +92,8 @@ function toggleScroll() {
     sliderStop();
   }
 }
-$(window).on("scroll load", toggleScroll);
+toggleScroll();
+$(window).on("scroll", toggleScroll);
 
 $(document).on("visibilitychange", function() {
   if (document.visibilityState == "hidden") {
