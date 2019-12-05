@@ -3,6 +3,15 @@ document.addEventListener("DOMContentLoaded", function(event) {
     loadElements();
   });
 
+  function preload(arrayOfImages) {
+    $(arrayOfImages).each(function() {
+      $("<img/>")[0].src = this;
+    });
+  }
+  preload([
+    "img/home-page-bg.jpg"
+  ]);
+
   function loadElements() {
     $(".top-content").load("header.html .container > *", function() {
       $.getScript("js/header.js");
