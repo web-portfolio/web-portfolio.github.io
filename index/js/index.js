@@ -35,10 +35,10 @@ document.addEventListener("DOMContentLoaded", function(event) {
     if (clickCount == 5) {
       $(".landings").toggle();
     }
+    setTimeout(function() {
+      clickCount = 0;
+    }, 2000)
   });
-  window.setInterval(function() {
-    clickCount = 0;
-  }, 2000);
 
   function gridResize() {
     var w = $(".top-section > div").width();
