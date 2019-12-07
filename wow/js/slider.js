@@ -173,12 +173,13 @@ document.addEventListener("DOMContentLoaded", function(event) {
     xm = event.touches[0].clientX;
     ym = event.touches[0].clientY;
     if (currentTop == windowTop && Math.abs(xs - xm) > Math.abs(ys - ym)) {
-      $(".slider-content").animate({
+      $(".slider-content").stop(true, true).animate({
         left: -sliderWidth - (xs - xm)
       }, 1);
       document.addEventListener("touchmove", touchPreven, { passive: false });
     } else {
       xm = ym = windowTop = undefined;
+      console.log("test")
     }
   });
   $(".slider").on("touchend", function() {
