@@ -156,30 +156,47 @@ document.addEventListener("DOMContentLoaded", function(event) {
     }, step * slideTime);
   });
 
-  var xs, xm;
+  function touchPreven(e) {
+    e.preventDefault();
+  }
+
+  var xs, xm, ys, endCheck = false,
+    ym, windowTop = currentTop = $(window).scrollTop();
   $(".slider-content").on("touchstart", function(event) {
     xs = event.touches[0].clientX;
+    ys = event.touches[0].clientY;
     sliderStop();
     $(window).off("scroll", toggleScroll);
   });
   $(".slider-content").on("touchmove", function(event) {
+    currentTop = $(window).scrollTop();
     xm = event.touches[0].clientX;
-    $(this).animate({
-      left: -sliderWidth - (xs - xm)
-    }, 1);
+    ym = event.touches[0].clientY;
+    if (currentTop == windowTop && Math.abs(xs - xm) > Math.abs(ys - ym)) {
+      $(this).animate({
+        left: -sliderWidth - (xs - xm)
+      }, 1);
+      endCheck = true;
+      document.addEventListener("touchmove", touchPreven, { passive: false });
+    } else {
+      windowTop = currentTop + 1;
+    }
   });
   $(".slider-content").on("touchend", function() {
-    if (xs - xm > 30) {
+    if (endCheck == true && xs - xm > 30) {
       moveLeft();
-    } else if ((xs - xm) * -1 > 30) {
+    } else if (endCheck == true && (xs - xm) * -1 > 30) {
       moveRight();
     } else {
       $(this).animate({
         left: -sliderWidth
       }, slideTime)
     }
-    xm = undefined;
+    endCheck = false;
+    xm = ym = undefined;
     sliderStart();
     $(window).on("scroll", toggleScroll);
+    windowTop = currentTop;
+    document.removeEventListener("touchmove", touchPreven);
   });
 });
