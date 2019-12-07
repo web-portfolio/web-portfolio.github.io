@@ -14,9 +14,10 @@ function getMobileOperatingSystem() {
     $('link[href="css/hovers.css"]').prop("disabled", true);
     $("body *").off("mouseenter mouseleave");
     $(".inactive-menu").click(function() {
-      $(this).addClass("inactive-menu-bg");
+      var inactiveMenu = $(this);
+      inactiveMenu.addClass("inactive-menu-bg");
       setTimeout(function() {
-        $(".inactive-menu").removeClass("inactive-menu-bg");
+        inactiveMenu.removeClass("inactive-menu-bg");
       }, 2000)
     });
 
