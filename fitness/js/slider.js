@@ -145,7 +145,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     e.preventDefault();
   }
 
-  var xs, xm, ys, ym, windowTop, currentTop;
+  var xs, xm, ys, ym, windowTop, currentTop, slide;
   $(".slider").on("touchstart", function(event) {
     windowTop = currentTop = $(window).scrollTop();
     xs = event.touches[0].clientX;
@@ -157,7 +157,10 @@ document.addEventListener("DOMContentLoaded", function(event) {
     currentTop = $(window).scrollTop();
     xm = event.touches[0].clientX;
     ym = event.touches[0].clientY;
-    if (currentTop == windowTop && Math.abs(xs - xm) > Math.abs(ys - ym)) {
+    if (Math.abs(xs - xm) > Math.abs(ys - ym)) {
+      slide = true
+    }
+    if (currentTop == windowTop && slide == true) {
       $(".slider-content").stop(true, true).animate({
         left: -sliderWidth - (xs - xm)
       }, 1);
@@ -177,6 +180,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
       }, slideTime)
     }
     xm = ym = undefined;
+    slide = false;
     sliderStart();
     $(window).on("scroll", toggleScroll);
     windowTop = currentTop;
