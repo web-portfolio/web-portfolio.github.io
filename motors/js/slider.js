@@ -159,7 +159,7 @@ $(".slider").on("touchmove", function(event) {
   xm = event.touches[0].clientX;
   ym = event.touches[0].clientY;
   if (currentTop == windowTop && Math.abs(xs - xm) > Math.abs(ys - ym)) {
-    $(".slider-content").animate({
+    $(".slider-content").stop(true, true).animate({
       left: -sliderWidth - (xs - xm)
     }, 1);
     document.addEventListener("touchmove", touchPreven, { passive: false });
