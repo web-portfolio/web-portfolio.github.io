@@ -160,39 +160,37 @@ document.addEventListener("DOMContentLoaded", function(event) {
     e.preventDefault();
   }
 
-  var xs, xm, ys, endCheck = false,
-    ym, windowTop = currentTop = $(window).scrollTop();
-  $(".slider-content").on("touchstart", function(event) {
+  var xs, xm, ys, ym, windowTop, currentTop;
+  $(".slider").on("touchstart", function(event) {
+    windowTop = currentTop = $(window).scrollTop();
     xs = event.touches[0].clientX;
     ys = event.touches[0].clientY;
     sliderStop();
     $(window).off("scroll", toggleScroll);
   });
-  $(".slider-content").on("touchmove", function(event) {
+  $(".slider").on("touchmove", function(event) {
     currentTop = $(window).scrollTop();
     xm = event.touches[0].clientX;
     ym = event.touches[0].clientY;
     if (currentTop == windowTop && Math.abs(xs - xm) > Math.abs(ys - ym)) {
-      $(this).animate({
+      $(".slider-content").animate({
         left: -sliderWidth - (xs - xm)
       }, 1);
-      endCheck = true;
       document.addEventListener("touchmove", touchPreven, { passive: false });
     } else {
-      windowTop = currentTop + 1;
+      xm = ym = windowTop = undefined;
     }
   });
-  $(".slider-content").on("touchend", function() {
-    if (endCheck == true && xs - xm > 30) {
+  $(".slider").on("touchend", function() {
+    if (xs - xm > 30) {
       moveLeft();
-    } else if (endCheck == true && (xs - xm) * -1 > 30) {
+    } else if ((xs - xm) * -1 > 30) {
       moveRight();
     } else {
-      $(this).animate({
+      $(".slider-content").animate({
         left: -sliderWidth
       }, slideTime)
     }
-    endCheck = false;
     xm = ym = undefined;
     sliderStart();
     $(window).on("scroll", toggleScroll);
