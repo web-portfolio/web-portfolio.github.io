@@ -247,7 +247,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
     if (winPhone || ios || android) {
       $('link[href="css/hovers.css"]').prop("disabled", true);
-      $("body *").unbind("mouseenter mouseleave");
+      $("body *").off("mouseenter mouseleave");
       $(".mob-close-btn, .mob-info").show();
       $(".mob-info").click(function() {
         $(this).parent().find($(".trainer-social")).fadeIn(500).css("display", "flex");

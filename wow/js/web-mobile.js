@@ -12,7 +12,7 @@ function getMobileOperatingSystem() {
 
   if (winPhone || ios || android) {
     $('link[href="css/hovers.css"]').prop('disabled', true);
-    $("body *").unbind("mouseenter mouseleave");
+    $("body *").off("mouseenter mouseleave");
     //HEADER
     $(".mob-close").show();
     $(".game > img").click(function() {
