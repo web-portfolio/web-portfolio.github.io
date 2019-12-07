@@ -119,11 +119,15 @@ document.addEventListener("DOMContentLoaded", function(event) {
     }, slideTime);
   });
 
-  var step;
+  var step, currentSlideTime = slideTime;
   $(".slider-nav > div").click(function() {
     var newSlide = $(this).attr("data-number"),
       currentSlide = $(".slider-nav .slider-active").attr("data-number");
     step = newSlide - currentSlide;
+    slideTime = slideTime / Math.abs(step);
+    if (slideTime < 100) {
+      slideTime = 100;
+    }
     sliderStop();
     if (step > 0) {
       for (var i = 1; i <= step; i++) {
@@ -139,6 +143,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
       sliderStart();
       step = 0;
     }, step * slideTime);
+    slideTime = currentSlideTime;
   });
 
   function touchPreven(e) {
