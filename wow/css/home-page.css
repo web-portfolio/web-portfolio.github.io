@@ -374,10 +374,13 @@ body * {
   background-color: #996019;
   transition: 1s;
   -webkit-transition: 1s;
-  padding: 3px 5px 3px 5px;
-  border-radius: 0px;
   top: 0px;
   right: 0px;
-  opacity: 0.2;
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+  border-radius: 3px;
+  opacity: 0.5;
+  text-align: center;
   display: none;
 }
