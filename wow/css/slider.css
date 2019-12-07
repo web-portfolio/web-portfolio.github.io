@@ -3,11 +3,9 @@
   margin-top: 74px;
   overflow: hidden;
   position: relative;
-  user-select: none;
-  -webkit-user-select: none;
 }
 
-.slider * {
+.slider img {
   user-select: none;
   -webkit-user-select: none;
 }

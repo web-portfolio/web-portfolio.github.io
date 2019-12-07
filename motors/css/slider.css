@@ -4,15 +4,13 @@
   margin: 0 auto;
   overflow: hidden;
   position: relative;
-  user-select: none;
-  -webkit-user-select: none;
   padding-bottom: 40px;
   top: 50%;
   transform: translateY(-80%);
   -webkit-transform: translateY(-80%);
 }
 
-.slider * {
+.slider img {
   user-select: none;
   -webkit-user-select: none;
 }

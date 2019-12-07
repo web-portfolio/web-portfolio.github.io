@@ -3,12 +3,10 @@
   margin: 0 auto;
   overflow: hidden;
   position: relative;
-  user-select: none;
-  -webkit-user-select: none;
   padding-bottom: 20px;
 }
 
-.slider * {
+.slider img {
   user-select: none;
   -webkit-user-select: none;
 }
