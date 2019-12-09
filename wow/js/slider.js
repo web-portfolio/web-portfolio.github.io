@@ -87,9 +87,13 @@ document.addEventListener("DOMContentLoaded", function(event) {
   };
 
   function sliderStart() {
-    autoSlide = setInterval(moveLeft, interval);
-    $(".slider *").css("pointer-events", "all");
-    started = true;
+    if (started == true) {
+      return false;
+    } else {
+      autoSlide = setInterval(moveLeft, interval);
+      $(".slider *").css("pointer-events", "all");
+      started = true;
+    }
   }
 
   function sliderStop() {
