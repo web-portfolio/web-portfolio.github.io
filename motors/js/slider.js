@@ -189,6 +189,5 @@ $(".slider").on("touchend", function() {
   slide = false;
   sliderStart();
   $(window).on("scroll", toggleScroll);
-  windowTop = currentTop;
   document.removeEventListener("touchmove", touchPreven);
 });

@@ -203,7 +203,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
     slide = false;
     sliderStart();
     $(window).on("scroll", toggleScroll);
-    windowTop = currentTop;
     document.removeEventListener("touchmove", touchPreven);
   });
 });
