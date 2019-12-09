@@ -152,14 +152,14 @@ function touchPreven(e) {
 }
 
 var xs, xm, ys, ym, windowTop, currentTop, slide;
-$(".slider").on("touchstart", function(event) {
+$(".slider-content").on("touchstart", function(event) {
   windowTop = currentTop = $(window).scrollTop();
   xs = event.touches[0].clientX;
   ys = event.touches[0].clientY;
   sliderStop();
   $(window).off("scroll", toggleScroll);
 });
-$(".slider").on("touchmove", function(event) {
+$(".slider-content").on("touchmove", function(event) {
   currentTop = $(window).scrollTop();
   xm = event.touches[0].clientX;
   ym = event.touches[0].clientY;
@@ -167,7 +167,7 @@ $(".slider").on("touchmove", function(event) {
     slide = true
   }
   if (currentTop == windowTop && slide == true) {
-    $(".slider-content").stop(true, true).animate({
+    $(this).stop(true, true).animate({
       left: -sliderWidth - (xs - xm)
     }, 1);
     document.addEventListener("touchmove", touchPreven, { passive: false });
@@ -175,13 +175,13 @@ $(".slider").on("touchmove", function(event) {
     xm = ym = windowTop = undefined;
   }
 });
-$(".slider").on("touchend", function() {
+$(".slider-content").on("touchend", function() {
   if (xs - xm > 30) {
     moveLeft();
   } else if ((xs - xm) * -1 > 30) {
     moveRight();
   } else {
-    $(".slider-content").animate({
+    $(this).animate({
       left: -sliderWidth
     }, slideTime)
   }
