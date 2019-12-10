@@ -9,13 +9,16 @@ document.addEventListener("DOMContentLoaded", function(event) {
     var text_id = $(".to_be_converted GamesContainer Game:nth-child(" + i + ") GameID").text();
     $(".to_be_converted GamesContainer Game:nth-child(" + i + ")").addClass(text_id);
   }
-  var counter = 0;
+
   $(".split_game_names").click(function() {
     var game_name_string = $(".game_names").val();
     var game_name_array = game_name_string.split("\n");
+    var no_space_array = game_name_array.filter(function(el) {
+      return el != null && el != "";
+    });
 
-    for (var i = 0; i < game_name_array.length; i++) {
-      $("." + game_name_array[i]).appendTo(".ready GamesContainer");
+    for (var i = 0; i < no_space_array.length; i++) {
+      $("." + no_space_array[i]).appendTo(".ready GamesContainer");
     }
     $(".games_count_ready").text($(".ready .games GamesContainer Game").length);
     $(".games_count").text(game_id.length - $(".ready .games GamesContainer Game").length);
@@ -23,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
   $(".export").click(function() {
     $(".ready GamesContainer Game").removeAttr("class");
-    download("game_order_com.html", $(".ready .games").html());
+    download("game_order_ro.html", $(".ready .games").html());
   });
 
   function download(filename, text) {
