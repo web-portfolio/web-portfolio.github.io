@@ -1,0 +1,101 @@
+body {
+  font-size: 15px;
+  background-image: url("../img/bg.png");
+}
+
+body, body * {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  margin: 0;
+  padding: 0;
+}
+
+.game_names {
+  width: 100%;
+  height: 90vh;
+  resize: none;
+  box-sizing: border-box;
+  background-color: #d3d3d3;
+  color: #0000ff;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.game_columns {
+  display: flex;
+  justify-content: space-between;
+}
+
+.game_columns>div {
+  width: 32%;
+}
+
+.to_be_converted GamesContainer *, .ready GamesContainer * {
+  display: block;
+}
+
+.to_be_converted GamesContainer Game, .ready GamesContainer Game {
+  margin-bottom: 5px;
+}
+
+.to_be_converted GamesContainer Game Provider, .to_be_converted GamesContainer Game GameID, .to_be_converted GamesContainer Game HoverText, .ready GamesContainer Game Provider, .ready GamesContainer Game GameID, .ready GamesContainer Game HoverText {
+  display: none;
+}
+
+.split_game_names, .export {
+  width: 300px;
+  font-weight: bold;
+  font-size: 1.3em;
+  text-align: center;
+  padding: 10px;
+  margin: 0 auto;
+  border-radius: 5px;
+  cursor: pointer;
+  background: rgba(252, 234, 187, 1);
+  background: -moz-linear-gradient(top, rgba(252, 234, 187, 1) 0%, rgba(252, 205, 77, 1) 50%, rgba(248, 181, 0, 1) 51%, rgba(251, 223, 147, 1) 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(252, 234, 187, 1)), color-stop(50%, rgba(252, 205, 77, 1)), color-stop(51%, rgba(248, 181, 0, 1)), color-stop(100%, rgba(251, 223, 147, 1)));
+  background: -webkit-linear-gradient(top, rgba(252, 234, 187, 1) 0%, rgba(252, 205, 77, 1) 50%, rgba(248, 181, 0, 1) 51%, rgba(251, 223, 147, 1) 100%);
+  background: -o-linear-gradient(top, rgba(252, 234, 187, 1) 0%, rgba(252, 205, 77, 1) 50%, rgba(248, 181, 0, 1) 51%, rgba(251, 223, 147, 1) 100%);
+  background: -ms-linear-gradient(top, rgba(252, 234, 187, 1) 0%, rgba(252, 205, 77, 1) 50%, rgba(248, 181, 0, 1) 51%, rgba(251, 223, 147, 1) 100%);
+  background: linear-gradient(to bottom, rgba(252, 234, 187, 1) 0%, rgba(252, 205, 77, 1) 50%, rgba(248, 181, 0, 1) 51%, rgba(251, 223, 147, 1) 100%);
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#fceabb', endColorstr='#fbdf93', GradientType=0);
+}
+
+.top_items {
+  height: 80px;
+  padding: 5px;
+}
+
+.top_items p {
+  font-size: 2em;
+  color: #ebc317;
+  font-weight: bold;
+  text-align: center;
+}
+
+.games {
+  border: 1px solid #555;
+  height: 90vh;
+  box-sizing: border-box;
+  background-color: #d3d3d3;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.to_be_converted .games * {
+  color: #e50000;
+}
+
+.ready .games * {
+  color: #006600;
+}
+
+.to_be_converted .games, .ready .games, .game_names {
+  font-size: 1.2em;
+  overflow-y: scroll;
+}
+
+.top_items span {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #ebc317;
+}
