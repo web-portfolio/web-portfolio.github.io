@@ -30,29 +30,29 @@ document.addEventListener("DOMContentLoaded", function(event) {
   function toXML() {
     xml += "<GamesContainer>";
     $(".ready .games GamesContainer Game").each(function(i, Game) {
-      xml += "\n" + "<Game>";
+      xml += "\n" + "  " + "<Game>";
       Game = $(Game);
       Game.find("Provider").each(function(i, Provider) {
-        xml += "\n" + "<Provider>";
+        xml += "\n" + "    " + "<Provider>";
         xml += $.trim($(Provider).text());
         xml += "</Provider>";
       });
       Game.find("GameID").each(function(i, GameID) {
-        xml += "\n" + "<GameID>";
+        xml += "\n" + "    " + "<GameID>";
         xml += $.trim($(GameID).text());
         xml += "</GameID>";
       });
       Game.find("Name").each(function(i, Name) {
-        xml += "\n" + "<Name>";
+        xml += "\n" + "    " + "<Name>";
         xml += $.trim($(Name).text());
         xml += "</Name>";
       });
       Game.find("HoverText").each(function(i, HoverText) {
-        xml += "\n" + "<HoverText>";
+        xml += "\n" + "    " + "<HoverText>";
         xml += $.trim($(HoverText).text());
         xml += "</HoverText>";
       });
-      xml += "\n" + "</Game>";
+      xml += "\n" + "  " + "</Game>";
     });
     xml += "\n" + "</GamesContainer>";
     xmlAmp = xml.replace(/\&/g, "&amp;");
@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
   $(".export").click(function() {
     $(".ready GamesContainer Game").removeAttr("class");
-    download("game_order_ro.html", xmlAmp);
+    download("game_order_com.html", xmlAmp);
   });
 
   function download(filename, text) {
