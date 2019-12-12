@@ -4,6 +4,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
     $(".loader-bg").fadeOut(500);
   });
 
+  var xml = "";
+  var xmlAmp = "";
   var game_id = $(".to_be_converted GamesContainer Game");
   for (var i = 1; i <= game_id.length; i++) {
     var text_id = $(".to_be_converted GamesContainer Game:nth-child(" + i + ") GameID").text();
@@ -22,11 +24,43 @@ document.addEventListener("DOMContentLoaded", function(event) {
     }
     $(".games_count_ready").text($(".ready .games GamesContainer Game").length);
     $(".games_count").text(game_id.length - $(".ready .games GamesContainer Game").length);
+    toXML();
   })
+
+  function toXML() {
+    xml += "<GamesContainer>";
+    $(".ready .games GamesContainer Game").each(function(i, Game) {
+      xml += "\n" + "<Game>";
+      Game = $(Game);
+      Game.find("Provider").each(function(i, Provider) {
+        xml += "\n" + "<Provider>";
+        xml += $.trim($(Provider).text());
+        xml += "</Provider>";
+      });
+      Game.find("GameID").each(function(i, GameID) {
+        xml += "\n" + "<GameID>";
+        xml += $.trim($(GameID).text());
+        xml += "</GameID>";
+      });
+      Game.find("Name").each(function(i, Name) {
+        xml += "\n" + "<Name>";
+        xml += $.trim($(Name).text());
+        xml += "</Name>";
+      });
+      Game.find("HoverText").each(function(i, HoverText) {
+        xml += "\n" + "<HoverText>";
+        xml += $.trim($(HoverText).text());
+        xml += "</HoverText>";
+      });
+      xml += "\n" + "</Game>";
+    });
+    xml += "\n" + "</GamesContainer>";
+    xmlAmp = xml.replace(/\&/g, "&amp;");
+  }
 
   $(".export").click(function() {
     $(".ready GamesContainer Game").removeAttr("class");
-    download("game_order_com.html", $(".ready .games").html());
+    download("game_order_com.html", xmlAmp);
   });
 
   function download(filename, text) {
