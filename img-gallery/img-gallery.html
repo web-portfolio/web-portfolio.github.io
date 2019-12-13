@@ -6,22 +6,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
+
+
+  <link rel="stylesheet" href="img-gallery.css">
 </head>
 
 <body>
   <div class="img_gallery">
-    <ul>
-      <li>
-        <a href="img/img1.jpg" data-imagelightbox="g" data-ilb2-caption=""><img src="img/thumb1.jpg"></a>
-      </li>
-      <li>
-        <a href="img/img2.jpg" data-imagelightbox="g" data-ilb2-caption=""><img src="img/thumb2.jpg"></a>
-      </li>
-      <li>
-        <a href="img/img3.jpg" data-imagelightbox="g" data-ilb2-caption=""><img src="img/thumb3.jpg"></a>
-      </li>
-    </ul>
+    <div class="img_items">
+      <div>
+        <img src="img/img1.jpg">
+      </div>
+      <div>
+        <img src="img/img2.jpg">
+      </div>
+      <div>
+        <img src="img/img3.jpg">
+      </div>
+    </div>
   </div>
+
+  <!-- SCRIPTS -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="img-gallery.js"></script>
 </body>
 
 </html>
