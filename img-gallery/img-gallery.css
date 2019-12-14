@@ -28,10 +28,19 @@
 
 /* ################################################## */
 
+.slider-overlay {
+  background-color: rgba(0, 0, 0, 0.80);
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* display: none; */
+}
+
 .slider {
   width: 500px;
   margin: 0 auto;
-  margin-top: 74px;
   overflow: hidden;
   position: relative;
 }

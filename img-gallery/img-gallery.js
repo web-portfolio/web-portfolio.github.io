@@ -15,16 +15,21 @@ document.addEventListener("DOMContentLoaded", function(event) {
   ]);
 
   var imgCount = $(".img_gallery .img_items > div").length;
-  $(".img_gallery").append('<div class="slider"></div>');
+  $(".img_gallery").append('<div class="slider-overlay"></div>');
+  $(".slider-overlay").append('<div class="slider"></div>');
+  $(".slider").prepend('<div class="slider-controlls slider-controll-right">&#8250;</div>');
+  $(".slider").prepend('<div class="slider-controlls slider-controll-left">&#8249;</div>');
   $(".slider").append('<div class="slider-content"></div>');
+  $(".slider").append('<div class="slider-nav"></div>');
 
   for (var i = 1; i <= imgCount; i++) {
     $(".img_gallery .img_items div:nth-child(" + i + ")").clone().appendTo($(".slider-content"));
+    $(".img_gallery .img_items>div:nth-child(" + i + ")>img").attr("data-tab", "img_item_" + i);
+    $(".slider-nav").append('<div id="slider-tab-' + i + '" data-number="' + i + '"></div>');
+    // 
   }
 
-  for (var i = 1; i <= imgCount; i++) {
-    $(".img_gallery .img_items>div>img:nth-child(" + i + ")").attr("data-tab", "img_item_" + i);
-  }
+  $(".slider-content > div:last-child").prependTo($(".slider-content"));
 
   var sliderWidth, slideTime = 400;
 
@@ -34,14 +39,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
     $(".slider-content > div").width(sliderWidth);
   }
 
-  $(".slider-content > div:last-child").prependTo($(".slider-content"));
-  $(".slider").prepend('<div class="slider-controlls slider-controll-right">&#8250;</div>');
-  $(".slider").prepend('<div class="slider-controlls slider-controll-left">&#8249;</div>');
-  $(".slider").append('<div class="slider-nav"></div>');
-
-  for (var i = 1; i <= imgCount; i++) {
-    // 
-    $(".slider-nav").append('<div id="slider-tab-' + i + '" data-number="' + i + '"></div>')
+  // 
+  function touchPreven(e) {
+    e.preventDefault();
   }
 
   function moveLeft() {
@@ -109,38 +109,21 @@ document.addEventListener("DOMContentLoaded", function(event) {
       }
     }
     setTimeout(function() {
+      sliderStart();
       step = 0;
     }, step * slideTime);
     slideTime = currentSlideTime;
   });
 
-  function touchPreven(e) {
-    e.preventDefault();
-  }
-
-  var xs, xm, ys, ym, windowTop, currentTop, slide;
+  var xs, xm;
   $(".slider-content").on("touchstart", function(event) {
-    windowTop = currentTop = $(window).scrollTop();
     xs = event.touches[0].clientX;
-    ys = event.touches[0].clientY;
-    // sliderStop();
-    // $(window).off("scroll", toggleScroll);
   });
   $(".slider-content").on("touchmove", function(event) {
-    currentTop = $(window).scrollTop();
     xm = event.touches[0].clientX;
-    ym = event.touches[0].clientY;
-    if (Math.abs(xs - xm) > Math.abs(ys - ym)) {
-      slide = true
-    }
-    if (currentTop == windowTop && slide == true) {
-      $(this).stop(true, true).animate({
-        left: -sliderWidth - (xs - xm)
-      }, 1);
-      document.addEventListener("touchmove", touchPreven, { passive: false });
-    } else {
-      xm = ym = windowTop = undefined;
-    }
+    $(this).stop(true, true).animate({
+      left: -sliderWidth - (xs - xm)
+    }, 1);
   });
   $(".slider-content").on("touchend", function() {
     if (xs - xm > 30) {
@@ -152,10 +135,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
         left: -sliderWidth
       }, slideTime)
     }
-    xm = ym = undefined;
-    slide = false;
-    // sliderStart();
-    // $(window).on("scroll", toggleScroll);
-    document.removeEventListener("touchmove", touchPreven);
+    xm = undefined;
   });
 });

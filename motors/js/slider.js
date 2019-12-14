@@ -146,6 +146,7 @@ $(".slider-nav > div").click(function() {
   }
   setTimeout(function() {
     sliderStart();
+    step = 0;
   }, step * slideTime);
   slideTime = currentSlideTime;
 });
