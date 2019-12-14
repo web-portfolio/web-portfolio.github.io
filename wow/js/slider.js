@@ -160,7 +160,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
     }
     setTimeout(function() {
       sliderStart();
-      step = 0;
     }, step * slideTime);
     slideTime = currentSlideTime;
   });

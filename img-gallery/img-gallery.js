@@ -26,9 +26,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     $(".img_gallery .img_items>div>img:nth-child(" + i + ")").attr("data-tab", "img_item_" + i);
   }
 
-  var sliderWidth, autoSlide, started = false,
-    interval = 4000,
-    slideTime = 400;
+  var sliderWidth, slideTime = 400;
 
   function variables() {
     sliderWidth = $(".slider").width();
@@ -42,10 +40,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
   $(".slider").append('<div class="slider-nav"></div>');
 
   for (var i = 1; i <= imgCount; i++) {
+    // 
     $(".slider-nav").append('<div id="slider-tab-' + i + '" data-number="' + i + '"></div>')
-      // if (i == 1) {
-      //   $("#slider-tab-1").addClass("slider-active");
-      // }
   }
 
   function moveLeft() {
@@ -85,65 +81,12 @@ document.addEventListener("DOMContentLoaded", function(event) {
     }
   }
 
-  // $.fn.isInViewport = function() {
-  //   var elementTop = $(this).offset().top,
-  //     elementBottom = elementTop + $(this).height(),
-  //     viewportTop = $(window).scrollTop(),
-  //     viewportBottom = viewportTop + $(window).height();
-  //   return elementBottom > viewportTop && elementTop < viewportBottom;
-  // };
-
-  // function sliderStart() {
-  //   if (started == true) {
-  //     return false;
-  //   } else {
-  //     autoSlide = setInterval(moveLeft, interval);
-  //     $(".slider *").css("pointer-events", "all");
-  //     started = true;
-  //   }
-  // }
-
-  // function sliderStop() {
-  //   clearInterval(autoSlide);
-  //   $(".slider *").css("pointer-events", "none");
-  //   started = false;
-  // }
-
-  // function toggleScroll() {
-  //   if ($(".slider").isInViewport() && started == false) {
-  //     sliderStart();
-  //   } else if (($(".slider").isInViewport() && started == true)) {
-  //     return false;
-  //   } else {
-  //     sliderStop();
-  //   }
-  // }
-
-  // $(window).on("scroll load", toggleScroll);
-
-  // $(document).on("visibilitychange", function() {
-  //   if (document.visibilityState == "hidden") {
-  //     sliderStop();
-  //     started = false;
-  //   } else if (document.visibilityState == "visible" && started == false) {
-  //     sliderStart();
-  //   }
-  // });
-
   $(".slider-controll-left").click(function() {
-    // sliderStop();
     moveRight();
-    // setTimeout(function() {
-    //   // sliderStart();
-    // }, slideTime);
   });
 
   $(".slider-controll-right").click(function() {
-    // sliderStop();
     moveLeft();
-    // setTimeout(function() {
-    //   // sliderStart();
-    // }, slideTime);
   });
 
   var step, currentSlideTime = slideTime;
@@ -155,7 +98,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
     if (slideTime < 100) {
       slideTime = 100;
     }
-    // sliderStop();
     if (step > 0) {
       for (var i = 1; i <= step; i++) {
         moveLeft();
@@ -167,7 +109,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
       }
     }
     setTimeout(function() {
-      // sliderStart();
       step = 0;
     }, step * slideTime);
     slideTime = currentSlideTime;

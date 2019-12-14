@@ -21,6 +21,7 @@
 }
 
 .img_items>div>img {
+  width: 100%;
   display: block;
 }
 
@@ -28,7 +29,8 @@
 /* ################################################## */
 
 .slider {
-  width: 100%;
+  width: 500px;
+  margin: 0 auto;
   margin-top: 74px;
   overflow: hidden;
   position: relative;
