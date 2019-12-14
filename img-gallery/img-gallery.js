@@ -19,6 +19,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   $(".slider-overlay").append('<div class="slider"></div>');
   $(".slider").prepend('<div class="slider-controlls slider-controll-right">&#8250;</div>');
   $(".slider").prepend('<div class="slider-controlls slider-controll-left">&#8249;</div>');
+  $(".slider").prepend('<div class="slider-close-btn">X</div>');
   $(".slider").append('<div class="slider-content"></div>');
   $(".slider").append('<div class="slider-nav"></div>');
 
@@ -92,6 +93,10 @@ document.addEventListener("DOMContentLoaded", function(event) {
     }
     slideTime = currentSlideTime;
     $(".slider-overlay").fadeIn(slideTime);
+  });
+
+  $(".slider-close-btn").click(function() {
+    $(".slider-overlay").fadeOut(slideTime);
   });
 
   $(".slider-controll-left").click(function() {
