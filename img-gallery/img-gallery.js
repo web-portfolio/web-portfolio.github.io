@@ -43,9 +43,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
   for (var i = 1; i <= imgCount; i++) {
     $(".slider-nav").append('<div id="slider-tab-' + i + '" data-number="' + i + '"></div>')
-    if (i == 1) {
-      $("#slider-tab-1").addClass("slider-active");
-    }
+      // if (i == 1) {
+      //   $("#slider-tab-1").addClass("slider-active");
+      // }
   }
 
   function moveLeft() {
