@@ -97,9 +97,10 @@ document.addEventListener("DOMContentLoaded", function(event) {
   });
 
   $(".slider-close-btn").click(function() {
-    $(".slider-overlay").fadeOut(slideTime);
+    var imgNumBack = $(".slider-nav .slider-active").attr("data-number");
     $("body").css("overflowY", "auto");
     document.removeEventListener("touchmove", touchPreven);
+    $(".slider-overlay").fadeOut(slideTime);
   });
 
   $(".slider-controll-left").click(function() {
