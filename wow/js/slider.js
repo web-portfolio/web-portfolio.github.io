@@ -91,14 +91,12 @@ document.addEventListener("DOMContentLoaded", function(event) {
       return false;
     } else {
       autoSlide = setInterval(moveLeft, interval);
-      $(".slider *").css("pointer-events", "all");
       started = true;
     }
   }
 
   function sliderStop() {
     clearInterval(autoSlide);
-    $(".slider *").css("pointer-events", "none");
     started = false;
   }
 
