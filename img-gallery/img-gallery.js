@@ -80,12 +80,13 @@ document.addEventListener("DOMContentLoaded", function(event) {
     }
   }
 
-  // 
   function touchPreven(e) {
     e.preventDefault();
   }
 
   $(".img_items > div").click(function() {
+    $("body").css("overflowY", "hidden");
+    document.addEventListener("touchmove", touchPreven, { passive: false });
     slideTime = 0;
     var imgNum = $(this).attr("data-img-item");
     for (var i = 1; i <= imgNum; i++) {
@@ -97,6 +98,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
   $(".slider-close-btn").click(function() {
     $(".slider-overlay").fadeOut(slideTime);
+    $("body").css("overflowY", "auto");
+    document.removeEventListener("touchmove", touchPreven);
   });
 
   $(".slider-controll-left").click(function() {
