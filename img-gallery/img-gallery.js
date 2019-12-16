@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   for (var i = 1; i <= imgCount; i++) {
     $(".img_gallery .img_items div:nth-child(" + i + ")").clone().appendTo($(".slider-content"));
     $(".slider-content div:nth-child(" + i + ")").attr("data-tab", "slider-tab-" + i);
-    $(".img_gallery .img_items>div:nth-child(" + i + ")").attr("data-img-item", i - 1);
+    $(".img_gallery .img_items>div:nth-child(" + i + ")").attr("data-img-item", i);
     $(".slider-nav").append('<div id="slider-tab-' + i + '" data-number="' + i + '"></div>');
     if (i == 1) {
       $("#slider-tab-1").addClass("slider-active");
@@ -89,7 +89,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     document.addEventListener("touchmove", touchPreven, { passive: false });
     slideTime = 0;
     var imgNum = $(this).attr("data-img-item");
-    for (var i = 1; i <= imgNum; i++) {
+    for (var i = 1; i < imgNum; i++) {
       moveLeft();
     }
     slideTime = currentSlideTime;
@@ -102,13 +102,12 @@ document.addEventListener("DOMContentLoaded", function(event) {
     document.removeEventListener("touchmove", touchPreven);
     $(".slider-overlay").fadeOut(slideTime);
     setTimeout(function() {
-        slideTime = 0;
-        for (var i = 1; i < imgNumBack; i++) {
-          moveRight();
-        }
-        slideTime = currentSlideTime;
-      }, slideTime)
-      // $(".slider-overlay").fadeOut(slideTime);
+      slideTime = 0;
+      for (var i = 1; i < imgNumBack; i++) {
+        moveRight();
+      }
+      slideTime = currentSlideTime;
+    }, slideTime)
   });
 
   $(".slider-controll-left").click(function() {
