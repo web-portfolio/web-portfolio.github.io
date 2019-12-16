@@ -93,14 +93,14 @@ document.addEventListener("DOMContentLoaded", function(event) {
       moveLeft();
     }
     slideTime = currentSlideTime;
-    $(".slider-overlay").fadeIn(slideTime);
+    $(".slider-overlay").fadeIn(slideTime).css("display", "flex");
   });
 
   $(".slider-close-btn").click(function() {
     var imgNumBack = $(".slider-nav .slider-active").attr("data-number");
     $("body").css("overflowY", "auto");
     document.removeEventListener("touchmove", touchPreven);
-    $(".slider-overlay").fadeOut(slideTime);
+    // $(".slider-overlay").fadeOut(slideTime);
   });
 
   $(".slider-controll-left").click(function() {
@@ -117,8 +117,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
       currentSlide = $(".slider-nav .slider-active").attr("data-number");
     step = newSlide - currentSlide;
     slideTime = slideTime / Math.abs(step);
-    if (slideTime < 100) {
-      slideTime = 100;
+    if (slideTime < 50) {
+      slideTime = 50;
     }
     if (step > 0) {
       for (var i = 1; i <= step; i++) {
