@@ -100,7 +100,15 @@ document.addEventListener("DOMContentLoaded", function(event) {
     var imgNumBack = $(".slider-nav .slider-active").attr("data-number");
     $("body").css("overflowY", "auto");
     document.removeEventListener("touchmove", touchPreven);
-    // $(".slider-overlay").fadeOut(slideTime);
+    $(".slider-overlay").fadeOut(slideTime);
+    setTimeout(function() {
+        slideTime = 0;
+        for (var i = 1; i < imgNumBack; i++) {
+          moveRight();
+        }
+        slideTime = currentSlideTime;
+      }, slideTime)
+      // $(".slider-overlay").fadeOut(slideTime);
   });
 
   $(".slider-controll-left").click(function() {
