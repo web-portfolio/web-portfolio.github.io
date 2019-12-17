@@ -25,6 +25,24 @@
   display: block;
 }
 
+.slider-close-btn {
+  width: 25px;
+  height: 25px;
+  line-height: 25px;
+  text-align: center;
+  position: fixed;
+  border-radius: 50%;
+  background-color: #0f0f0f;
+  border: 2px solid #34231a;
+  color: #996019;
+  font-weight: bold;
+  top: 10px;
+  right: 10px;
+  z-index: 5;
+  cursor: pointer;
+  font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif
+}
+
 
 /* ################################################## */
 
