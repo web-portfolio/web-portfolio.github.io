@@ -1,3 +1,21 @@
+/* Slider Hovers */
+
+.slider:hover .slider-controlls {
+  display: flex;
+}
+
+.slider-controlls:hover {
+  color: #c1b575;
+  background-color: #000;
+}
+
+.slider-nav>div:hover {
+  background-color: #c1b575;
+}
+
+
+/* Slider Hovers END*/
+
 .img_gallery {
   max-width: 767px;
   padding: 10px;
@@ -37,14 +55,10 @@
   color: #996019;
   font-weight: bold;
   top: 10px;
-  right: 10px;
   z-index: 5;
   cursor: pointer;
   font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif
 }
-
-
-/* ################################################## */
 
 .slider-overlay {
   background-color: rgba(0, 0, 0, 0.80);
@@ -59,7 +73,8 @@
 }
 
 .slider {
-  width: 500px;
+  width: 90%;
+  max-width: 1920px;
   margin: 0 auto;
   overflow: hidden;
   position: relative;
@@ -85,7 +100,7 @@
 .slider-controlls {
   font-family: "Times New Roman", Times, serif;
   display: none;
-  position: absolute;
+  position: fixed;
   z-index: 2;
   top: 50%;
   transform: translateY(-50%);
@@ -102,14 +117,12 @@
 }
 
 .slider-controll-right {
-  right: 0;
   border-top-left-radius: 6px;
   border-bottom-left-radius: 6px;
   border-right: none;
 }
 
 .slider-controll-left {
-  left: 0;
   border-top-right-radius: 6px;
   border-bottom-right-radius: 6px;
   border-left: none;
@@ -118,15 +131,17 @@
 .slider-nav {
   position: absolute;
   z-index: 2;
-  right: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  width: 100%;
   bottom: 0;
   padding: 5% 2% 2% 2%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  text-align: center;
 }
 
 .slider-nav>div {
+  display: inline-block;
   width: 50px;
   height: 7px;
   background-color: #787878;

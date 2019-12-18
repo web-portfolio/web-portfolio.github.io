@@ -35,12 +35,37 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
   $(".slider-content > div:last-child").prependTo($(".slider-content"));
 
-  var sliderWidth, slideTime = 400;
+  var sliderWidth, slideTime = 400,
+    winW, winH, padd, paddArrows;
 
   function variables() {
+    winW = $(window).width();
+    winH = $(window).height();
     sliderWidth = $(".slider").width();
     $(".slider-content").width(imgCount * sliderWidth).css("left", -sliderWidth);
     $(".slider-content > div").width(sliderWidth);
+    if (winW < winH) {
+      $(".slider").css({
+        "padding-bottom": "60px",
+        "margin-bottom": "-60px"
+      });
+    } else {
+      $(".slider").css({
+        "padding-bottom": "0",
+        "margin-bottom": "0"
+      });
+    }
+    if (winW > 1920) {
+      padd = (winW - 1920) / 2;
+      paddArrows = (winW - sliderWidth) / 2;
+      $(".slider-close-btn").css("right", padd);
+      $(".slider-controll-left").css("left", paddArrows);
+      $(".slider-controll-right").css("right", paddArrows);
+    } else {
+      $(".slider-close-btn").css("right", "10px");
+      $(".slider-controll-left").css("left", "0");
+      $(".slider-controll-right").css("right", "0");
+    }
   }
 
   function moveLeft() {
@@ -94,6 +119,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     }
     slideTime = currentSlideTime;
     $(".slider-overlay").fadeIn(slideTime).css("display", "flex");
+    variables();
   });
 
   $(".slider-close-btn").click(function() {
