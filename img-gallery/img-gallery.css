@@ -29,7 +29,7 @@
 
 .img_items>div {
   display: inline-block;
-  min-width: 160px;
+  min-width: 130px;
   width: 30%;
   border-radius: 5px;
   border: 3px solid #34231a;
@@ -73,7 +73,6 @@
 }
 
 .slider {
-  width: 90%;
   max-width: 1920px;
   margin: 0 auto;
   overflow: hidden;

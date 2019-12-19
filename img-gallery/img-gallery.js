@@ -41,20 +41,22 @@ document.addEventListener("DOMContentLoaded", function(event) {
   function variables() {
     winW = $(window).width();
     winH = $(window).height();
-    sliderWidth = $(".slider").width();
-    $(".slider-content").width(imgCount * sliderWidth).css("left", -sliderWidth);
-    $(".slider-content > div").width(sliderWidth);
     if (winW < winH) {
       $(".slider").css({
         "padding-bottom": "60px",
-        "margin-bottom": "-60px"
+        "margin-bottom": "-60px",
+        "width": "90%"
       });
     } else {
       $(".slider").css({
         "padding-bottom": "0",
-        "margin-bottom": "0"
+        "margin-bottom": "0",
+        "width": "70%"
       });
     }
+    sliderWidth = $(".slider").width();
+    $(".slider-content").width(imgCount * sliderWidth).css("left", -sliderWidth);
+    $(".slider-content > div").width(sliderWidth);
     if (winW > 1920) {
       padd = (winW - 1920) / 2;
       paddArrows = (winW - sliderWidth) / 2;
