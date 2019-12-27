@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   $(".slider-overlay").append('<div class="slider"></div>');
   $(".slider").prepend('<div class="slider-controlls slider-controll-right">&#8250;</div>');
   $(".slider").prepend('<div class="slider-controlls slider-controll-left">&#8249;</div>');
-  $(".slider").prepend('<div class="slider-close-btn">X</div>');
+  $(".slider-overlay").prepend('<div class="slider-close-btn">X</div>');
   $(".slider").append('<div class="slider-content"></div>');
   $(".slider").append('<div class="slider-nav"></div>');
 
@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   $(".slider-content > div:last-child").prependTo($(".slider-content"));
 
   var sliderWidth, slideTime = 400,
-    winW, winH, padd, paddArrows;
+    winW, winH, padd;
 
   function variables() {
     winW = $(window).width();
@@ -59,14 +59,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
     $(".slider-content > div").width(sliderWidth);
     if (winW > 1920) {
       padd = (winW - 1920) / 2;
-      paddArrows = (winW - sliderWidth) / 2;
-      $(".slider-close-btn").css("right", padd);
-      $(".slider-controll-left").css("left", paddArrows);
-      $(".slider-controll-right").css("right", paddArrows);
+      $(".slider-close-btn").css("right", padd + 10);
     } else {
       $(".slider-close-btn").css("right", "10px");
-      $(".slider-controll-left").css("left", "0");
-      $(".slider-controll-right").css("right", "0");
     }
   }
 

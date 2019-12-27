@@ -4,7 +4,7 @@
   display: flex;
 }
 
-.slider-controlls:hover {
+.slider-controlls:hover, .slider-close-btn:hover {
   color: #c1b575;
   background-color: #000;
 }
@@ -44,9 +44,9 @@
 }
 
 .slider-close-btn {
-  width: 25px;
-  height: 25px;
-  line-height: 25px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
   text-align: center;
   position: fixed;
   border-radius: 50%;
@@ -54,6 +54,7 @@
   border: 2px solid #34231a;
   color: #996019;
   font-weight: bold;
+  font-size: 23px;
   top: 10px;
   z-index: 5;
   cursor: pointer;
@@ -99,7 +100,7 @@
 .slider-controlls {
   font-family: "Times New Roman", Times, serif;
   display: none;
-  position: fixed;
+  position: absolute;
   z-index: 2;
   top: 50%;
   transform: translateY(-50%);
@@ -116,12 +117,14 @@
 }
 
 .slider-controll-right {
+  right: 0;
   border-top-left-radius: 6px;
   border-bottom-left-radius: 6px;
   border-right: none;
 }
 
 .slider-controll-left {
+  left: 0;
   border-top-right-radius: 6px;
   border-bottom-right-radius: 6px;
   border-left: none;
