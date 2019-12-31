@@ -1,5 +1,6 @@
 slider(4000, 400, $(".slider"));
 
+
 function slider(interval, slideTime, $slider) {
   $(window).on("resize", function() {
     variables();
