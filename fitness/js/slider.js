@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", function(event) {
   slider(4000, 400, $(".slider"));
 
-
   function slider(interval, slideTime, $slider) {
     $(window).on("load resize", function() {
       variables();
