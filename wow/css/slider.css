@@ -1,11 +1,11 @@
-.slider {
+.slider-body {
   width: 100%;
   margin-top: 74px;
   overflow: hidden;
   position: relative;
 }
 
-.slider img {
+.slider-body img {
   user-select: none;
   -webkit-user-select: none;
 }

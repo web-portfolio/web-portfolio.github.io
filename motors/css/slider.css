@@ -1,4 +1,4 @@
-.slider {
+.slider-body {
   width: 80%;
   max-width: 1132px;
   margin: 0 auto;
@@ -10,7 +10,7 @@
   -webkit-transform: translateY(-80%);
 }
 
-.slider img {
+.slider-body img {
   user-select: none;
   -webkit-user-select: none;
 }

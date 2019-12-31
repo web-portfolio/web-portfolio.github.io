@@ -1,4 +1,4 @@
-.slider {
+.slider-body {
   max-width: 750px;
   margin: 0 auto;
   overflow: hidden;
@@ -6,7 +6,7 @@
   padding-bottom: 20px;
 }
 
-.slider img {
+.slider-body img {
   user-select: none;
   -webkit-user-select: none;
 }
