@@ -17,7 +17,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
       $slider.find($(".slider-content > div")).width(sliderWidth);
     }
 
-    $slider.find($(".slider-content > div:last-child")).prependTo($slider.find($(".slider-content")));
     $slider.prepend('<div class="slider-controlls slider-controll-right">&#8250;</div>');
     $slider.prepend('<div class="slider-controlls slider-controll-left">&#8249;</div>');
     $slider.append('<div class="slider-nav"></div>');
@@ -29,6 +28,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
         $slider.find($(".slider-tab-1")).addClass("slider-active");
       }
     }
+
+    $slider.find($(".slider-content > div:last-child")).prependTo($slider.find($(".slider-content")));
 
     function moveLeft() {
       $slider.children().css("pointer-events", "none");
