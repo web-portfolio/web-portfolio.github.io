@@ -464,7 +464,7 @@ body * {
   font-weight: bold;
   top: 10px;
   right: 15px;
-  text-align: right;
+  position: absolute;
 }
 
 .open-rules {
