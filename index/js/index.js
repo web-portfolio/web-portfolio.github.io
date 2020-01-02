@@ -68,23 +68,17 @@ document.addEventListener("DOMContentLoaded", function(event) {
   };
 
   // JS LINKS
-  $(".wow").click(function() {
-    window.location = "wow/home-page.html";
-  });
   $(".motors").click(function() {
     window.location = "motors/home-page.html";
   });
   $(".fitness").click(function() {
     window.location = "fitness/fitness.html";
   });
+  $(".wow").click(function() {
+    window.location = "wow/home-page.html";
+  });
   $(".efbet-liga").click(function() {
     window.location = "efbet-landings/liga/liga.html";
-  });
-  $(".efbet-casino").click(function() {
-    window.location = "efbet-landings/casino/casino.html";
-  });
-  $(".efbet-sport").click(function() {
-    window.location = "efbet-landings/sport/sport.html";
   });
   $(".efbet-app").click(function() {
     window.location = "efbet-landings/mobile/BG.html";
