@@ -18,9 +18,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     "index/img/bg-fitness.jpg",
     "index/img/bg-wow.jpg",
     "index/img/bg-liga.jpg",
-    "index/img/bg-app.jpg",
-    "index/img/bg-sport.jpg",
-    "index/img/bg-casino.jpg"
+    "index/img/bg-app.jpg"
   ]);
 
   $(document).on("keydown", function(e) {
