@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function(event) {
-  var H = $(".scrollable").outerHeight(true);
+  var H = $(".scrollable").outerHeight();
   var sH = $(".scrollable")[0].scrollHeight;
   var sbH = H * H / sH;
 
@@ -9,22 +9,20 @@ document.addEventListener("DOMContentLoaded", function(event) {
     $(".scrollbar").css({ top: $(".scrollable").scrollTop() / H * sbH });
   });
 
-  var ys, ym, mDown;
-  $(".scrollbar").on("mousedown", function(event) {
-    ys = event.clientY;
+  var ym, mDown;
+  $(".scrollbar").on("mousedown", function() {
     mDown = true;
-    console.log(mDown);
   });
-  $(".scrollbar").on("mousemove", function(event) {
+
+  $(window).on("mousemove", function(event) {
     ym = event.clientY;
     if (mDown == true) {
-      $(this).css({ top: $(".scrollable").scrollTop(sH / H * ym) });
+      $(".scrollable").css({ top: $(".scrollable").scrollTop(sH / H * ym) });
     }
   });
-  $(".scrollbar").on("mouseup", function() {
-    mDown = false;
-    console.log(mDown);
 
+  $(window).on("mouseup", function() {
+    mDown = false;
   });
 
   // var ys, ym, mDown;

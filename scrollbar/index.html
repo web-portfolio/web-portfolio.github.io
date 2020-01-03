@@ -7,50 +7,172 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
   <style>
-    html {
-      height: 100%;
+    .scrollable {
+      margin: 0 auto;
+      width: 500px;
+      padding: 0% 10%;
+      position: relative;
+      border: 1px solid gray;
       overflow: hidden;
+      height: 300px;
     }
     
-    .custom_scroll {
+    .scrollable.showScroll::after {
+      position: absolute;
+      content: '';
+      top: 5%;
+      right: 7px;
+      height: 90%;
+      width: 3px;
+      background: rgba(224, 224, 255, .3);
+    }
+    
+    .scrollable .content-wrapper {
+      width: 100%;
       height: 100%;
+      padding-right: 50%;
       overflow-y: scroll;
-      scrollbar-width: thin;
-      scrollbar-color: #444 #ddd;
     }
     
-    .custom_scroll::-webkit-scrollbar {
-      width: 10px;
-    }
-    
-    .custom_scroll::-webkit-scrollbar-track {
-      background: #ddd;
-    }
-    
-    .custom_scroll::-webkit-scrollbar-thumb {
-      background-color: #444;
-      border-radius: 5px;
-      border: 0px solid #ddd;
+    .scroller {
+      z-index: 5;
       cursor: pointer;
+      position: absolute;
+      width: 10px;
+      border-radius: 5px;
+      background: rgb(111, 111, 190);
+      top: 0px;
+      right: 3px;
+      -webkit-transition: top .08s;
+      -moz-transition: top .08s;
+      -ms-transition: top .08s;
+      -o-transition: top .08s;
+      transition: top .08s;
+    }
+    
+    .content {
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
     }
   </style>
 </head>
 
-<body class="custom_scroll">
-  <div style="height: 2000px; border: 1px solid gray; width: 90%">
-    <div class="custom_scroll" style="border: 1px solid gray; width: 500px; height: 500px">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis eos minima veniam porro non quod laudantium quae velit officia, voluptatem fugit omnis a ab nulla, explicabo sit numquam nam quibusdam. Nulla obcaecati expedita nostrum unde, perferendis
-      eaque eius placeat blanditiis assumenda necessitatibus nesciunt molestiae veniam, non dolore sapiente aspernatur maxime tempora ea, facere corporis vel architecto. Nostrum odit doloremque non! Dolor esse corrupti quia dolores dolorum voluptate totam
-      eius? Eaque laboriosam beatae vitae veritatis distinctio labore tempora, aspernatur blanditiis, voluptates repellat recusandae! Commodi suscipit similique blanditiis asperiores omnis delectus rem! Laboriosam tempore voluptates sed debitis repellendus
-      autem velit unde amet recusandae optio architecto, repudiandae, rem provident aliquam, minima esse nobis quaerat odio tenetur! Voluptas iure eum, accusamus repellendus id nobis. Rem deserunt molestias pariatur suscipit voluptatem asperiores fuga
-      aperiam corporis enim itaque, culpa dolore quis at provident. Adipisci atque labore enim! Odio doloremque commodi sunt adipisci, sit nesciunt a impedit! Necessitatibus ea labore corrupti accusantium qui excepturi, dolore minima iure officia doloribus
-      dolorem laborum, rem provident id? Quod nobis ipsa illum, animi explicabo quos sed. Repellat quidem nesciunt qui. Molestiae? Voluptas aliquam veniam voluptatibus explicabo totam, excepturi eligendi quas eius dignissimos maiores. Iusto provident
-      nam numquam dolorem esse rem qui deleniti eos illo aliquam suscipit, harum amet illum assumenda est. Quae laborum voluptas excepturi voluptate dignissimos maxime perspiciatis necessitatibus ducimus aut ipsam, laboriosam recusandae fuga ad ratione
-      quos eum, molestiae provident commodi sapiente impedit cumque natus nulla mollitia veritatis. Adipisci. Pariatur facere odit iste qui. Quidem eum facere temporibus sunt vitae atque officia neque eligendi animi rem soluta obcaecati aperiam, impedit
-      veritatis? Tempore quibusdam iure expedita id cupiditate nihil commodi! Quidem voluptatum ad, in ullam incidunt explicabo aspernatur vel, harum quam consectetur adipisci commodi sit maiores nisi doloribus earum. Praesentium assumenda culpa modi
-      obcaecati impedit magnam mollitia, pariatur nulla doloremque?
+<body>
+  <div id="main" class="scrollable">
+    <div class="content-wrapper">
+      <div class="content">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt accusamus maxime voluptatem quasi. Recusandae optio nobis ratione iste consectetur consequatur cupiditate saepe laborum natus neque a provident eum explicabo delectus qui accusantium
+          nostrum reiciendis soluta hic ut at sed laboriosam possimus repudiandae deserunt velit rerum. Aliquam ratione itaque corrupti aperiam quisquam unde aspernatur odio id repellendus corporis eaque expedita in ab minus possimus! Quo tempore consequatur
+          repellat consectetur nemo molestiae perferendis ipsum esse nesciunt blanditiis nobis dicta? Laudantium quaerat inventore deleniti exercitationem explicabo quos pariatur sunt earum labore sed eius blanditiis architecto consequuntur ad consectetur
+          unde sapiente nisi. Sunt eos.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt accusamus maxime voluptatem quasi. Recusandae optio nobis ratione iste consectetur consequatur cupiditate saepe laborum natus neque a provident eum explicabo delectus qui accusantium
+          nostrum reiciendis soluta hic ut at sed laboriosam possimus repudiandae deserunt velit rerum. Aliquam ratione itaque corrupti aperiam quisquam unde aspernatur odio id repellendus corporis eaque expedita in ab minus possimus! Quo tempore consequatur
+          repellat consectetur nemo molestiae perferendis ipsum esse nesciunt blanditiis nobis dicta? Laudantium quaerat inventore deleniti exercitationem explicabo quos pariatur sunt earum labore sed eius blanditiis architecto consequuntur ad consectetur
+          unde sapiente nisi. Sunt eos.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt accusamus maxime voluptatem quasi. Recusandae optio nobis ratione iste consectetur consequatur cupiditate saepe laborum natus neque a provident eum explicabo delectus qui accusantium
+          nostrum reiciendis soluta hic ut at sed laboriosam possimus repudiandae deserunt velit rerum. Aliquam ratione itaque corrupti aperiam quisquam unde aspernatur odio id repellendus corporis eaque expedita in ab minus possimus! Quo tempore consequatur
+          repellat consectetur nemo molestiae perferendis ipsum esse nesciunt blanditiis nobis dicta? Laudantium quaerat inventore deleniti exercitationem explicabo quos pariatur sunt earum labore sed eius blanditiis architecto consequuntur ad consectetur
+          unde sapiente nisi. Sunt eos.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt accusamus maxime voluptatem quasi. Recusandae optio nobis ratione iste consectetur consequatur cupiditate saepe laborum natus neque a provident eum explicabo delectus qui accusantium
+          nostrum reiciendis soluta hic ut at sed laboriosam possimus repudiandae deserunt velit rerum. Aliquam ratione itaque corrupti aperiam quisquam unde aspernatur odio id repellendus corporis eaque expedita in ab minus possimus! Quo tempore consequatur
+          repellat consectetur nemo molestiae perferendis ipsum esse nesciunt blanditiis nobis dicta? Laudantium quaerat inventore deleniti exercitationem explicabo quos pariatur sunt earum labore sed eius blanditiis architecto consequuntur ad consectetur
+          unde sapiente nisi. Sunt eos.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt accusamus maxime voluptatem quasi. Recusandae optio nobis ratione iste consectetur consequatur cupiditate saepe laborum natus neque a provident eum explicabo delectus qui accusantium
+          nostrum reiciendis soluta hic ut at sed laboriosam possimus repudiandae deserunt velit rerum. Aliquam ratione itaque corrupti aperiam quisquam unde aspernatur odio id repellendus corporis eaque expedita in ab minus possimus! Quo tempore consequatur
+          repellat consectetur nemo molestiae perferendis ipsum esse nesciunt blanditiis nobis dicta? Laudantium quaerat inventore deleniti exercitationem explicabo quos pariatur sunt earum labore sed eius blanditiis architecto consequuntur ad consectetur
+          unde sapiente nisi. Sunt eos.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt accusamus maxime voluptatem quasi. Recusandae optio nobis ratione iste consectetur consequatur cupiditate saepe laborum natus neque a provident eum explicabo delectus qui accusantium
+          nostrum reiciendis soluta hic ut at sed laboriosam possimus repudiandae deserunt velit rerum. Aliquam ratione itaque corrupti aperiam quisquam unde aspernatur odio id repellendus corporis eaque expedita in ab minus possimus! Quo tempore consequatur
+          repellat consectetur nemo molestiae perferendis ipsum esse nesciunt blanditiis nobis dicta? Laudantium quaerat inventore deleniti exercitationem explicabo quos pariatur sunt earum labore sed eius blanditiis architecto consequuntur ad consectetur
+          unde sapiente nisi. Sunt eos.</p>
+      </div>
     </div>
   </div>
+
+  <script>
+    (function() {
+
+      var scrollContainer = document.querySelector('.scrollable'),
+        scrollContentWrapper = document.querySelector('.scrollable .content-wrapper'),
+        scrollContent = document.querySelector('.scrollable .content'),
+        contentPosition = 0,
+        scrollerBeingDragged = false,
+        scroller,
+        topPosition,
+        scrollerHeight;
+
+      function calculateScrollerHeight() {
+        // *Calculation of how tall scroller should be
+        var visibleRatio = scrollContainer.offsetHeight / scrollContentWrapper.scrollHeight;
+        return visibleRatio * scrollContainer.offsetHeight;
+      }
+
+      function moveScroller(evt) {
+        // Move Scroll bar to top offset
+        var scrollPercentage = evt.target.scrollTop / scrollContentWrapper.scrollHeight;
+        topPosition = scrollPercentage * (scrollContainer.offsetHeight - 5); // 5px arbitrary offset so scroll bar doesn't move too far beyond content wrapper bounding box
+        scroller.style.top = topPosition + 'px';
+      }
+
+      function startDrag(evt) {
+        normalizedPosition = evt.pageY;
+        contentPosition = scrollContentWrapper.scrollTop;
+        scrollerBeingDragged = true;
+        console.log(scrollerBeingDragged);
+
+      }
+
+      function stopDrag(evt) {
+        scrollerBeingDragged = false;
+        console.log(scrollerBeingDragged);
+      }
+
+      function scrollBarScroll(evt) {
+        if (scrollerBeingDragged === true) {
+          var mouseDifferential = evt.pageY - normalizedPosition;
+          var scrollEquivalent = mouseDifferential * (scrollContentWrapper.scrollHeight / scrollContainer.offsetHeight);
+          scrollContentWrapper.scrollTop = contentPosition + scrollEquivalent;
+        }
+      }
+
+      function createScroller() {
+        // *Creates scroller element and appends to '.scrollable' div
+        // create scroller element
+        scroller = document.createElement("div");
+        scroller.className = 'scroller';
+
+        // determine how big scroller should be based on content
+        scrollerHeight = calculateScrollerHeight();
+
+        if (scrollerHeight / scrollContainer.offsetHeight < 1) {
+          // *If there is a need to have scroll bar based on content size
+          scroller.style.height = scrollerHeight + 'px';
+
+          // append scroller to scrollContainer div
+          scrollContainer.appendChild(scroller);
+
+          // show scroll path divot
+          scrollContainer.className += ' showScroll';
+
+          // attach related draggable listeners
+          scroller.addEventListener('mousedown', startDrag);
+          window.addEventListener('mouseup', stopDrag);
+          window.addEventListener('mousemove', scrollBarScroll)
+        }
+
+      }
+
+      createScroller();
+
+
+      // *** Listeners ***
+      scrollContentWrapper.addEventListener('scroll', moveScroller);
+    }());
+  </script>
 </body>
 
 </html>
