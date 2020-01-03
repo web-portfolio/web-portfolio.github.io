@@ -2,7 +2,16 @@ document.addEventListener("DOMContentLoaded", function(event) {
   customeSlider($(".parent1"));
 
   function customeSlider($customSlider) {
+    var contentWidth = $customSlider.outerWidth(),
+      contentHeight = $customSlider.outerHeight();
+
     $customSlider.addClass("scrollable");
+    $(".scrollable").wrap('<div class="custom-scrollbar"></div>');
+    $(".scrollable, .custom-scrollbar").width(contentWidth).height(contentHeight);
+    // $(".custom-scrollbar").prepend('<div class="scrollbar-content"><div class="scrollbar"></div></div>');
+
+
+
 
 
     var H = $(".scrollable").outerHeight();
