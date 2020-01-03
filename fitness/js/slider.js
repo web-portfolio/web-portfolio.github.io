@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
     $slider.addClass("slider-body");
 
-    var interval, slideTime, $slider, sliderWidth, autoSlide, started = false,
+    var sliderWidth, autoSlide, started = false,
       numOfSlides = $slider.find($(".slider-content > div")).length;
 
     function variables() {
