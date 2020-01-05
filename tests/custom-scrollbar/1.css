@@ -23,20 +23,17 @@ body {
   position: relative;
   overflow: hidden;
   background-color: #ddd;
+  padding: 0 20px 0 0;
 }
 
 .scrollable {
   overflow-y: scroll;
   position: absolute;
-  padding: 0 20px 0 0;
-  /* width: 100%;
-  height: 100%; */
+  /* padding: 0 20px 0 0; */
 }
 
 .scrollbar {
   position: absolute;
-  overflow: auto;
-  top: 0px;
   right: 0px;
   z-index: 2;
   width: 100%;
@@ -51,8 +48,4 @@ body {
   position: absolute;
   right: 0;
   z-index: 1;
-}
-
-.scrollbar:hover {
-  background-color: red;
 }
