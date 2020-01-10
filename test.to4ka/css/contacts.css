@@ -1,0 +1,173 @@
+body, nav, div, button, ul, li, ol, p, h2, h3 {
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+  font-family: "Rubik", sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: #eae9ef;
+}
+
+::selection {
+  background: #b53636;
+}
+
+body * {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.container {
+  min-width: 320px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.mail-form-container {
+  max-width: 960px;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 30px;
+  background-color: #ffffff;
+  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.75);
+  padding: 20px;
+  box-sizing: border-box;
+  background-image: url("../img/contact-form-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  position: relative;
+}
+
+.mail-form {
+  margin-top: 20px;
+}
+
+.mail-form input, .mail-form textarea {
+  outline-color: #b53636;
+  background-color: rgba(240, 240, 240, 0.5);
+  border: 1px solid #8e8e8d;
+  font-size: 1.2em;
+  padding: 5px;
+}
+
+.inputs * {
+  display: block;
+  width: 90%;
+  height: 35px;
+  margin-bottom: 20px;
+}
+
+.inputs, textarea {
+  display: inline-block;
+  vertical-align: top;
+  width: calc(50% - 10px);
+}
+
+textarea {
+  resize: none;
+  height: 170px;
+  margin-bottom: 20px;
+}
+
+.mail-form button {
+  background-color: #b53636;
+  color: #ffffff;
+  border: none;
+  outline: none;
+  height: 45px;
+  padding: 10px;
+  cursor: pointer;
+  width: 45.5%;
+  font-size: 1.2em;
+  background: linear-gradient(to left, #b53636 35%, #1e1e1e 65%);
+  background-size: 300% 100%;
+  background-position: right bottom;
+  transition: all 0.5s ease;
+  border-left: 5px solid #1e1e1e;
+}
+
+.thankyou_message {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0 auto;
+  display: none;
+}
+
+.thankyou_message-popup {
+  position: absolute;
+  font-size: 1.2em;
+  background-color: #eae9ef;
+  padding: 20px;
+  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.75);
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  text-align: center;
+  min-width: 288px;
+  box-sizing: border-box;
+}
+
+.ok-button {
+  margin: 0 auto;
+  background-color: #b53636;
+  color: #ffffff;
+  padding: 10px;
+  cursor: pointer;
+  width: 100px;
+  background: linear-gradient(to left, #b53636 35%, #1e1e1e 65%);
+  background-size: 300% 100%;
+  background-position: right bottom;
+  transition: all 0.5s ease;
+  border-left: 5px solid #1e1e1e;
+  margin-top: 20px;
+}
+
+input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.contacts-call-us {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 960px;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 30px;
+  background-image: url("../img/call-us-mob.jpg");
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-position: right;
+  height: 100px;
+  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.75);
+  box-sizing: border-box;
+}
+
+.contacts-call-us h3 {
+  color: #000000;
+  font-weight: bold;
+  margin-bottom: 10px;
+  width: calc(100% - 155px);
+  text-align: center;
+}
+
+.contacts-call-us a {
+  font-size: 1.3em;
+  color: #b53636;
+  display: block;
+  font-weight: bold;
+  user-select: none;
+  -webkit-user-select: none;
+  width: calc(100% - 155px);
+  text-align: center;
+}

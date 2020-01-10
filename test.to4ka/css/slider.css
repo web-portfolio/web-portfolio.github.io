@@ -1,0 +1,127 @@
+.slider-body {
+  width: 80%;
+  max-width: 1132px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  padding-bottom: 40px;
+  top: 50%;
+  transform: translateY(-80%);
+  -webkit-transform: translateY(-80%);
+}
+
+.slider-body img {
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.slider-content {
+  height: 100%;
+  position: relative;
+  z-index: 1;
+  display: flex;
+}
+
+.slider-content>div {
+  display: flex;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+.slider-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.slider-info {
+  text-align: justify;
+  color: #ffffff;
+}
+
+.slider-info h3 {
+  color: #b53636;
+}
+
+.slider-info h3::selection {
+  color: #ffffff;
+}
+
+.slider-img {
+  width: 234px;
+  margin-right: 20px;
+}
+
+.slider-info {
+  width: calc(100% - 260px)
+}
+
+h2 {
+  font-size: 1.3em;
+  margin: 10px 0;
+}
+
+h3 {
+  font-size: 1.1em;
+}
+
+.slider-controlls {
+  font-family: "Times New Roman", Times, serif;
+  display: none;
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  justify-content: center;
+  align-items: center;
+  font-size: 60px;
+  padding: 0 8px 5px 8px;
+  cursor: pointer;
+  opacity: 0.9;
+  color: #fff;
+}
+
+.slider-controll-right {
+  right: 0;
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+  border-right: none;
+}
+
+.slider-controll-left {
+  left: 0;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+  border-left: none;
+}
+
+.slider-nav {
+  position: absolute;
+  z-index: 2;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  bottom: 0;
+  padding: 5% 2% 0 2%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider-nav>div {
+  width: 50px;
+  height: 7px;
+  background-color: #fff;
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.slider-nav .slider-active {
+  background-color: #b53636 !important;
+  opacity: 1;
+}
+
+.slider-nav>div:not(:last-child) {
+  margin-right: 3px;
+}
