@@ -21,23 +21,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
     "index/img/bg-app.jpg"
   ]);
 
-  $(document).on("keydown", function(e) {
-    if ((e.metaKey || e.altKey) && (String.fromCharCode(e.which).toLowerCase() === "h")) {
-      $(".landings").toggle();
-    }
-  });
-
-  var clickCount = 0;
-  $("body").click(function() {
-    clickCount += 1;
-    if (clickCount == 5) {
-      $(".landings").toggle();
-    }
-    setTimeout(function() {
-      clickCount = 0;
-    }, 2000)
-  });
-
   function gridResize() {
     var w = $(".top-section > div").width();
     var h = (w * 56.2060889929742) / 100;
