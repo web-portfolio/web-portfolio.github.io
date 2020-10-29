@@ -1,18 +1,15 @@
-body, nav, div, button, ul, li, ol {
+* {
   margin: 0;
   padding: 0;
   font-size: 10px;
-  font-family: "Roboto", sans-serif;
-}
-
-body * {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  font-family: "Roboto", sans-serif;
 }
 
 body {
   background-color: #021d28;
   background-image: url("../img/bg-index.jpg");
-  background-position: top;
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -22,25 +19,44 @@ body {
 .container {
   width: 100%;
   max-width: 1024px;
+  min-width: 320px;
+  padding: 5%;
   margin: 0 auto;
 }
 
-.top-section{
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  margin: 0 auto;
-  margin-bottom: 3%;
+img {
+  user-select: none;
+  -Webkit-user-select: none;
+  max-width: 100%;
 }
 
-.top-section>div {
-  width: 45%;
-  margin-top: 3%;
+.logo {
+  margin: 0 auto;
+  width: 50px;
+  height: 50px;
+  background-size: cover;
+}
+
+.angular-logo {
+  background-image: url("../img/angular.png");
+}
+
+.jquery-logo {
+  background-image: url("../img/jquery.png");
+}
+
+.site {
   border: 2px solid #60a9ca;
   border-radius: 10px;
-  position: relative;
   cursor: pointer;
+  margin-bottom: 20px;
+  position: relative;
+  width: calc(100% - 70px);
+}
+
+.site>img {
+  border-radius: 10px;
+  display: block;
 }
 
 .hover-info {
@@ -57,65 +73,38 @@ body {
   padding: 5px;
 }
 
-.efbet-app .hover-info span {
-  display: block;
-}
-
-.hover-info-mobile {
-  color: #ff0000;
-}
-
-.empty {
-  background: rgba(1, 8, 16, 0.7);
+.site-element {
   display: flex;
-  justify-content: center;
   align-items: center;
-  perspective: 900000px;
-  -webkit-perspective: 900000px;
+  justify-content: space-between;
 }
 
-.efbet {
-  color: #ebc317;
-  text-align: center;
-  font-size: 3em;
-  user-select: none;
-  -webkit-user-select: none;
+@media not all and (pointer: coarse) {
+  .site:hover {
+    border-color: #a0dcf7;
+  }
+  .site-element:hover .hover-info {
+    display: block;
+  }
 }
 
-.wow, .motors, .fitness, .efbet-liga, .efbet-casino, .efbet-sport, .efbet-app {
-  background-position: top;
-  background-repeat: no-repeat;
-  background-size: cover;
+@media screen and (min-width: 540px) {
+  .logo {
+    width: 80px;
+    height: 80px;
+  }
+  .site {
+    width: calc(100% - 120px);
+  }
 }
 
-.wow {
-  background-image: url("../img/bg-wow.jpg");
-}
-
-.motors {
-  background-image: url("../img/bg-motors.jpg");
-}
-
-.fitness {
-  background-image: url("../img/bg-fitness.jpg");
-}
-
-.efbet-liga {
-  background-image: url("../img/bg-liga.jpg");
-}
-
-.efbet-casino {
-  background-image: url("../img/bg-casino.jpg");
-}
-
-.efbet-sport {
-  background-image: url("../img/bg-sport.jpg");
-}
-
-.efbet-app {
-  background-image: url("../img/bg-app.jpg");
-}
-
-.landings {
-  display: none;
+@media screen and (min-width: 767px) {
+  .container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .site-element {
+    width: 45%;
+  }
 }
