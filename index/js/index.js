@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     });
   }
   preload([
+    "index/img/bg-angular-motors.jpg",
     "index/img/bg-motors.jpg",
     "index/img/bg-fitness.jpg",
     "index/img/bg-wow.jpg"
